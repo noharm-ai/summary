@@ -1,6 +1,8 @@
 # NoHarm Discharge Summary
 **Improving Care  Transition with LLM**
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/noharm-ai/summary/blob/main/discharge-summary.ipynb)
+
 The transition of care is a major challenge for the healthcare system. Physicians have difficulty organizing the most important information about an inpatient's hospitalization. NoHarm Discharge Summary is artificial intelligence, based on large language models. This tool extracts the most important information from inpatients' records then writes the discharge summary for physicians to validate (as a clinical decision support system). 
 
 **Summary Elements:**
