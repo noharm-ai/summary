@@ -37,3 +37,5 @@ The transition of care is a major challenge for the healthcare system. Physician
 - NER model ensure that no personal information goes to LLM prompt by selecting pre-trained entities. It decrease gender/race bias probability in LLM generation.
 - Few-shot learning narrow LLM output into examples presented, preventing hallucination and improving text generation results.
 - Survey with patients and  primary care professionals to evaluate the NER + LLM discharge summaries.
+
+Github link for [Summary Discharge Interface](https://github.com/noharm-ai/frontend/blob/develop/src/features/summary/Summary.jsx)
