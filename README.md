@@ -44,3 +44,19 @@ The transition of care is a major challenge for the healthcare system. Physician
 - Survey with patients and  primary care professionals to evaluate the NER + LLM discharge summaries.
 
 Github link for [Summary Discharge Interface](https://github.com/noharm-ai/frontend/blob/develop/src/features/summary/Summary.jsx)
+
+
+## Running LLM Evaluation
+
+To run the evaluation of LLMs, follow these steps:
+
+1 - Clone the repository.
+2 - Execute the file EvalLLM.py with: python EvalLLM.py
+
+The "Data" folder contains the output files of the LLMs evaluated by our work. That is, each file is a list of diagnoses that each language model evaluated as a response to an output from our NER system.
+
+The "ResultTables" folder stores the metrics calculated by the automatic evaluator (GPT-4).
+
+The python file "EvalLLM.py" is where we preprocess the files from the "Data" folder to match the format of our evaluation prompt; and also where we do the prompting and store the responses in .tsv format.
+
+To configure your connection to the API of an LLM, it should be done in the file "ResourcesChatGPT.py". We use the Azure service, if you use another service, change this part of the code. In this python file are also our prompts for few-shot learning and a definition called "get_response" that queries the LLM via API.
