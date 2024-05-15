@@ -1,6 +1,6 @@
 **Improving Care  Transition with LLM**
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/noharm-ai/summary/blob/main/discharge_summary.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/noharm-ai/summary/blob/main/discharge_summary.ipynb)  [![Concept Video](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=8sFziTdPw60)
 
 **Authors:** Joaquim santos, Henrique Dias, Ana Helena Ulbrich,  Juliana Damasio, Julia Couto, Marcelo Arocha, Arthur Tabbal, Augusto Santos, Fábio Tabalipa, Manuela Martins, Rodrigo Nogueira
 
