@@ -1,0 +1,972 @@
+"GT"	"LLM"	"RESPONSES"
+"*Hipertensão Arterial Sistêmica (HAS) 
+*Doença Arterial Obstrutiva Periférica (DAOP) 
+*Diabetes Mellitus (DM) 
+*Insuficiência Cardíaca (IC) Perfil B 
+*Ateromatose em coronárias 
+*Infecção da ferida operatória 
+*Dislipidemia (DLP) 
+*Amputação transtibial em membro inferior direito (MID) 
+*Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente"	"*Hipertensão arterial sistêmica (HAS) 
+*Diabetes mellitus (DM) 
+*Doença arterial coronariana (ateromatose) 
+*Infarto agudo do miocárdio (IAM) 
+*Disfunção ventricular esquerda (IC Perfil B) 
+*Insuficiência cardíaca (IC) 
+*Derrame pleural bilateral moderado 
+*Atelectasia pulmonar passiva 
+*Doença pulmonar obstrutiva crônica (DPOC) 
+*Diabetes avançada com neuropatia periférica e amputação transtibial (DAOP) 
+*Infecção de ferida operatória"	"Verdadeiros Positivos (VP):
+* Hipertensão arterial sistêmica (HAS)
+* Diabetes mellitus (DM)
+* Infecção de ferida operatória
+* Insuficiência cardíaca (IC) - ""Disfunção ventricular esquerda (IC Perfil B)"" é considerada um sinônimo
+* Derrame pleural bilateral moderado - similar a ""Moderado derrame pleural bilateral...""
+* Atelectasia pulmonar passiva - parte de ""Moderado derrame pleural bilateral com atelectasia passiva...""
+
+Falsos Positivos (FP):
+* Doença arterial coronariana (ateromatose) - ""Ateromatose em coronárias"" é mais preciso
+* Infarto agudo do miocárdio (IAM) - não mencionado na lista de referência
+* Doença pulmonar obstrutiva crônica (DPOC) - não mencionado na lista de referência
+* Diabetes avançada com neuropatia periférica e amputação transtibial (DAOP) - ""Doença Arterial Obstrutiva Periférica (DAOP)"" e ""Amputação transtibial em membro inferior direito (MID)"" são listados separadamente na referência
+
+Falsos Negativos (FN):
+* Doença Arterial Obstrutiva Periférica (DAOP)
+* Ateromatose em coronárias
+* Dislipidemia (DLP)
+* Amputação transtibial em membro inferior direito (MID)
+* Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente (completo)
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 6 / (6 + 4) = 6 / 10 = 0.6 (60%)
+Recall = VP / (VP + FN) = 6 / (6 + 5) = 6 / 11 ≈ 0.545 (54.55%)
+
+(Precisão, Recall) = (0.6, 0.545)"
+"*Osteomielite 
+*Infecção de sítio cirúrgico (prótese de fêmur esquerdo) 
+*Dislipidemia (DLP)  
+*Carcinoma de Face 
+*Alzheimer "	"*Osteomielite 
+*Diabetes mellitus (DM) 
+*Doença de Alzheimer 
+*Carcinoma de face 
+*Infecção de sítio cirúrgico 
+*Prótese femoral esquerda"	"Verdadeiros Positivos (VP):
+* Osteomielite
+* Carcinoma de Face
+* Doença de Alzheimer (considerado como Alzheimer)
+
+Falsos Positivos (FP):
+* Diabetes mellitus (DM) – não está na lista de referência
+* Infecção de sítio cirúrgico – similar, mas incompleto (não especifica prótese de fêmur esquerdo)
+* Prótese femoral esquerda – não está na lista de referência, e não completa a informação sobre ""Infecção de sítio cirúrgico (prótese de fêmur esquerdo)""
+
+Falsos Negativos (FN):
+* Dislipidemia (DLP) – não está na lista de hipótese
+* Infecção de sítio cirúrgico (prótese de fêmur esquerdo) – especificidade ausente
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 3 / (3 + 3) = 3 / 6 = 0.5 (50%)
+Recall = VP / (VP + FN) = 3 / (3 + 2) = 3 / 5 = 0.6 (60%)
+
+(Precisão, Recall) = (0.5, 0.6)
+
+"
+"*Transtorno conversivo 
+*Calcificações parietais nas artérias carótidas internas intracranianas ou Ateromatose difusa 
+*Bloqueio atrioventricular de 1º grau 
+*Choque septico de foco pulmonar 
+*Diabetes Mellitus (DM) tipo 2 
+*Doença Renal Crônica (DRC) agudizada KDIGO 3 
+*Espondilose dorsolombar  
+*Anemia Macrocítica, Anemia Crônica 
+*Epilepsia 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Gastrite 
+*Angiodisplasia de colon, Malformações vasculares do colon 
+*Doença diverticular não complicada do cólon direito 
+*Delirium hiperativo 
+*Meningite prévia 
+*Traumatismo Cranioencefálico (TCE) por queda da própria altura, Traumatismo Cranioencefálico (TCE) 
+*Hemorragia Digestiva Baixa (HDB) 
+*Disfagia Orofaringea 
+*Insuficiência Cardiaca (IC) compensada  
+*Sinais de microangiopatia / gliose  
+* Síndrome Demencial"	"*Transtorno conversivo 
+*Bloqueio A-V de 1o grau 
+*Sepse de foco a esclarecer (pulmão) 
+*Infecção do trato respiratório (pneumonia) 
+*Diabetes mellitus 
+*Insuficiência renal aguda (IRA) KDIGO 3 
+*Espondilose dorsal 
+*Aterosclerose carotídea 
+*Choque séptico de foco pulmonar 
+*Mal estar 
+*Anemia 
+*Epilepsia 
+*Tireoidite autoimune 
+*Anemia da doença renal crônica 
+*Angiodisplasia 
+*Choque séptico de foco pulmonar (LRA) KDIGO 3 
+*Delírio hiperativo 
+*Melena 
+*Delirium tremens 
+*Disfagia 
+*Diabetes tipo 2 
+*Insuficiência renal crônica estágio G3 
+*Angiodisplasia de colon 
+*Anemia 
+*Epilepsia 
+*Tiróide 
+*Anemia da doença renal crônica 
+*Choque séptico de foco pulmonar 
+*Delirium hiperativo 
+*Transição crânio-cervical usual 
+*Sepse foco pulmonar 
+*Doença diverticular não complicada do cólon direito 
+*Meningite"	"Verdadeiros Positivos (VP):
+* Transtorno conversivo
+* Bloqueio atrioventricular de 1º grau (Bloqueio A-V de 1º grau)
+* Choque séptico de foco pulmonar
+* Diabetes Mellitus tipo 2 (Diabetes mellitus)
+* Epilepsia
+* Doença diverticular não complicada do cólon direito
+* Delirium hiperativo
+
+Falsos Positivos (FP):
+* Sepse de foco a esclarecer (pulmão) - não mencionado na ""referência""
+* Infecção do trato respiratório (pneumonia) - não mencionado na ""referência""
+* Insuficiência renal aguda (IRA) KDIGO 3 - não mencionado na ""referência""
+* Espondilose dorsal - menos completo que ""Espondilose dorsolombar""
+* Aterosclerose carotídea - similar a ""Calcificações parietais nas artérias carótidas internas intracranianas ou Ateromatose difusa""
+* Mal estar - não mencionado na ""referência""
+* Anemia - diagnóstico menos completo de ""Anemia Macrocítica, Anemia Crônica""
+* Tireoidite autoimune - não mencionado na ""referência""
+* Anemia da doença renal crônica - diagnóstico menos completo de ""Anemia Macrocítica, Anemia Crônica""
+* Angiodisplasia - diagnóstico menos completo de ""Angiodisplasia de colon, Malformações vasculares do colon""
+* Delirium tremens - diagnóstico diferente de ""Delirium hiperativo""
+* Disfagia - diagnóstico menos completo de ""Disfagia Orofaringea""
+* Melena - não mencionado na ""referência""
+* Insuficiência renal crônica estágio G3 - não mencionado na ""referência""
+* Tiróide - não mencionado na ""referência""
+* Transição crânio-cervical usual - não mencionado na ""referência""
+* Sepse foco pulmonar - similar a ""Choque séptico de foco pulmonar""
+* Meningite - diagnóstico diferente de ""Meningite prévia""
+
+Falsos Negativos (FN):
+* Calcificações parietais nas artérias carótidas internas intracranianas ou Ateromatose difusa
+* Doença Renal Crônica (DRC) agudizada KDIGO 3
+* Espondilose dorsolombar
+* Anemia Macrocítica, Anemia Crônica
+* Gastrite
+* Angiodisplasia de colon, Malformações vasculares do colon
+* Traumatismo Cranioencefálico (TCE) por queda da própria altura, Traumatismo Cranioencefálico (TCE)
+* Hemorragia Digestiva Baixa (HDB)
+* Insuficiência Cardíaca (IC) compensada
+* Sinais de microangiopatia / gliose
+* Síndrome Demencial
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 7 / (7 + 18) = 7 / 25 = 0.28 (28%)
+
+Recall = VP / (VP + FN) = 7 / (7 + 11) = 7 / 18 ≈ 0.39 (39%)
+
+(Precisão, Recall) = (0.28, 0.39)"
+"*Nasofaringite Aguda 
+*Pneumonia Bacteriana ou Broncopneumonia aspirativa 
+*Dermatite em membro superior esquerdo (MSE) 
+*Doença de Parkinson, Parkinson 
+*Derrame pleural   
+*Disfagia orofaringea 
+*Tromboembolismo pulmonar (TEP),  
+*Trombose venosa profunda (TVP) 
+*Espondilose torácica 
+*Adenoma na adrenal esquerda 
+*Ateromatose na aorta torácica e nos troncos supra-aórticos 
+* Deformidade do cotovelo 
+* Alterações degenerativas na coluna estudada"	"*Nasofaringite aguda 
+*Pneumonia bacteriana 
+*Us torácico extracardíaco 
+*Dermatite MSE 
+*Doença de Parkinson 
+*Derrame pleural 
+*Neumonia bacteriana 
+*PAC 
+*PNM bacteriana 
+*TEP 
+*TVP 
+*Cistos renais 
+*Espondilose torácica 
+*DP com exsudato + TVP + TEP 
+*Dermatite MSE 
+*Infecção pulmonar 
+*Toracocentese 
+*Adenoma na adrenal esquerda 
+*PNM 
+*Broncopneumonia 
+*Ateromatose na aorta torácica e nos troncos supra-aórticos 
+*PAC PORT IV"	"Verdadeiros Positivos (VP):
+* Nasofaringite aguda
+* Pneumonia bacteriana (considerando como equivalente a ""Pneumonia Bacteriana ou Broncopneumonia aspirativa"")
+* Dermatite MSE (considerando como equivalente a ""Dermatite em membro superior esquerdo"")
+* Doença de Parkinson
+* Derrame pleural
+* Adenoma na adrenal esquerda
+* Espondilose torácica
+* TVP
+* TEP
+* Ateromatose na aorta torácica e nos troncos supra-aórticos
+
+Falsos Positivos (FP):
+* Us torácico extracardíaco - não listado na referência
+* Neumonia bacteriana - variação informal de ""Pneumonia bacteriana"" (considerado repetido)
+* PAC - terminologia vaga, não listado na referência
+* PNM bacteriana - variação informal de ""Pneumonia bacteriana"" (considerado repetido)
+* Dermatite MSE (repetido)
+* DP com exsudato + TVP + TEP - já são incluídos individualmente
+* Infecção pulmonar - vago, não listado na referência
+* Toracocentese - procedimento, não listado na referência
+* PNM - terminologia vaga, não listado na referência
+* Broncopneumonia - variação de ""Pneumonia bacteriana ou Broncopneumonia aspirativa"" (considerado repetido)
+* PAC PORT IV - variação informal, não listado na referência
+* Cistos renais - não listado na referência
+
+Falsos Negativos (FN):
+* Disfagia orofaringea
+* Trombose venosa profunda - conhecido por sua sigla TVP
+* Tromboembolismo pulmonar - conhecido por sua sigla TEP
+* Deformidade do cotovelo
+* Alterações degenerativas na coluna estudada
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 10 / (10 + 12) = 10 / 22 ≈ 0.4545 (45.45%)
+Recall = VP / (VP + FN) = 10 / (10 + 5) = 10 / 15 ≈ 0.6667 (66.67%)
+
+(Precisão, Recall) = (0.4545, 0.6667)"
+"*Tromboembolismo pulmonar  (TEP) 
+*Asma,  
+*Obesidade Grau III 
+*Anemia Ferropriva Secundária a menotrorragia 
+*Síndrome Astênica  
+*Miomatose 
+*Insuficência Cardíaca (IC) 
+*Parada cardiorrespiratória (PCR) por hipóxia em 1999 
+*Hipertensão Arterial Sistêmica (HAS)"	"*Tromboembolismo pulmonar (TEP) agudo 
+*Tromboembolismo pulmonar (TEP) submaciço 
+*Obesidade 
+*Asma 
+*Bronquite 
+*Embolia pulmonar 
+*Anemia ferropriva secundária a menometrorragia 
+*Síndrome astenica 
+*Hipertensão arterial sistêmica (HAS) 
+*Insuficiência cardíaca (IC) 
+*Alterações degenerativas incipientes na coluna 
+*Hipóxia (baixa concentração de oxigênio no sangue) 
+*TEP recorrente"	"Verdadeiros Positivos (VP):
+* Tromboembolismo pulmonar (TEP) agudo (mais completo)
+* Asma
+* Obesidade 
+* Anemia ferropriva secundária a menometrorragia (equivalente)
+* Síndrome astenica
+* Insuficiência cardíaca (IC)
+* Hipertensão arterial sistêmica (HAS)
+
+Falsos Positivos (FP):
+* Tromboembolismo pulmonar (TEP) submaciço (1) - z similar
+* Bronquite - não está na lista de referência
+* Embolia pulmonar - similar a TEP
+* Alterações degenerativas incipientes na coluna - não está na lista de referência
+* Hipóxia (baixa concentração de oxigênio no sangue) - similar à PCR por hipóxia, mas não especificado
+* TEP recorrente (1) - similar ao TEP
+
+Falsos Negativos (FN):
+* Obesidade Grau III - especificidade não mencionada na Hipótese
+* Miomatose
+* Parada cardiorrespiratória (PCR) por hipóxia em 1999 - não especificado na Hipótese
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 7 / (7 + 6) = 7 / 13 ≈ 0.54 (54%)
+Recall = VP / (VP + FN) = 7 / (7 + 3) = 7 / 10 = 0.7 (70%)
+
+(Precisão, Recall) = (0.54, 0.7)"
+"*Epilepsia 
+*Disfagia Orofaringea 
+*Pneumonia Comunitária 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Dupla hemiparesia (grau IV D e III a E) 
+*Infecção Trato Urinário (ITU) comunitária 
+*Acidentes Vasculares Cerebrais prévios 
+*Lesão de Lábio e mordedura na região lateral e língua"	"*Epilepsia 
+*Hipertensão arterial sistêmica (HAS) 
+*Pneumonia comunitária"	"Verdadeiros Positivos (VP):
+* Epilepsia
+* Hipertensão arterial sistêmica (HAS)
+* Pneumonia comunitária
+
+Falsos Positivos (FP):
+Nenhum
+
+Falsos Negativos (FN):
+* Disfagia Orofaringea
+* Dupla hemiparesia (grau IV D e III a E)
+* Infecção Trato Urinário (ITU) comunitária
+* Acidentes Vasculares Cerebrais prévios
+* Lesão de Lábio e mordedura na região lateral e língua
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 3 / (3 + 0) = 3 / 3 = 1 (100%)
+Recall = VP / (VP + FN) = 3 / (3 + 5) = 3 / 8 = 0.375 (37.5%)
+
+(Precisão, Recall) = (1, 0.375)"
+"*Insuficência Mitral 
+*Fibrilação atrial Crônica (FA Crônica) 
+*Ateromatose incipiente 
+*Insuficiência Cardíaca (IC) Perfil B 
+*Artrose 
+*Acidente Vascular Cerebral Hemorrágico (AVCh) há 5 anos 
+*Disfunção Renal Aguda 
+*Osteoporose 
+* Alterações degenerativas da coluna vertebral 
+*Trombose Venosa Profunda em Membro Inferior Esquerdo (TVP em MIE) 
+*Pneumonia 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Varizes Calibrosas"	"*Dispnéia leve 
+*Insuficiência mitral (IM) 
+*Fibrilação atrial (FA) com arritmia de reentrada ventricular (ARV) 
+*Fibrilação atrial crônica (FA) 
+*Ateromatose incipiente 
+*Insuficiência cardíaca (IC) perfil B 
+*Artrose avançada 
+*Hipertensão arterial sistêmica (HAS) 
+*Varizes calibrosas 
+*Disfunção renal aguda (DRA) 
+*Miopatia do calf (MCP) 
+*Osteoporose 
+*Alterações degenerativas da coluna vertebral 
+*Trombose venosa profunda (TVP) em membros inferiores (MIE) 
+*Insuficiência cardíaca congestiva (ICC) 
+*Pneumonia 
+*Descongestão 
+*IC descompensada perfil B 
+*Bloqueio de ramo (Bundle) 
+*Insuficiência cardíaca (IC) 
+*Hipotensão arterial (HA) 
+*Fibrilação atrial permanente (FA) 
+*TVP em MIE"	"Verdadeiros Positivos (VP):
+* Insuficiência mitral (IM)
+* Fibrilação atrial crônica (FA crônica)
+* Ateromatose incipiente
+* Insuficiência cardíaca (IC) perfil B - (similar a Insuficiência Cardíaca (IC) Perfil B)
+* Artrose
+* Osteoporose
+* Alterações degenerativas da coluna vertebral
+* Trombose venosa profunda (TVP) em membros inferiores (MIE) - (similar a Trombose Venosa Profunda em Membro Inferior Esquerdo (TVP em MIE))
+* Pneumonia
+* Hipertensão arterial sistêmica (HAS) 
+* Varizes calibrosas
+* Disfunção renal aguda (DRA)
+
+Falsos Positivos (FP):
+* Dispnéia leve - não está na lista de referência
+* Fibrilação atrial (FA) com arritmia de reentrada ventricular (ARV) - diagnóstico mais específico não listado na referência
+* Artrose avançada - nível de detalhe a mais
+* Miopatia do calf (MCP) - não está na lista de referência
+* Insuficiência cardíaca congestiva (ICC) - diagnóstico adicional, mas não precisamente igual
+* Descongestão - não está na lista de referência
+* IC descompensada perfil B - redundante a Insuficiência cardíaca (IC) perfil B
+* Bloqueio de ramo (Bundle) - não está na lista de referência
+* Hipotensão arterial (HA) - não está na lista de referência
+* Fibrilação atrial permanente (FA) - diagnóstico variado de Fibrilação atrial crônica (FA crônica)
+* TVP em MIE - duplicada da Falsa Positivo: Trombose Venosa Profunda em Membro Inferior Esquerdo é similar a ""Trombose venosa em membros inferiores (MIE)
+
+Falsos Negativos (FN):
+* Acidente Vascular Cerebral Hemorrágico (AVCh) há 5 anos - não está na lista de hipótese
+
+Cálculo de precisão e recall:
+Precisão = VP / (VP + FP) = 12 / (12 + 8) = 12 / 20 = 0.6 (60%)
+Recall = VP / (VP + FN) = 12 / (12 + 1) = 12 / 13 = 0.923 (92.3%)
+
+(Precisão, Recall) = (0.6, 0.923)"
+"*Hiponatremia 
+*Depressão 
+*Insufciência Cardiaca Perfil B,  
+*Asma 
+*Infeccão Trato Urinário (ITU) 
+*Dislipidemia (DLP) 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Disfunção diastólica do ventrículo esquerdo de grau II 
+*Hipertensão Pulmonar"	"*Contratilidade miocárdica preservada 
+*Hiponatremia 
+*Depressão 
+*Insuficiência cardíaca (IC) com fração de ejeção preservada (FEp) 
+*Asma 
+*Infecção do trato urinário (ITU) 
+*Insuficiência cardíaca direita (ICD) 
+*Disfunção diastólica do ventrículo esquerdo (DLP) 
+*Hipertensão arterial sistêmica (HAS) 
+*Insuficiência cardíaca com fração de ejeção preservada (ICFEp) perfil B 
+*Insuficiência cardíaca perfil B 
+*Presença de hipertensão pulmonar (PSAP= 44 mmHg, estimada pelo refluxo tricuspídeo)"	"Verdadeiros Positivos (VP):
+* Hiponatremia
+* Depressão
+* Asma
+* Infecção do trato urinário (ITU)
+* Hipertensão arterial sistêmica (HAS)
+* Insuficiência cardíaca com fração de ejeção preservada (ICFEp) perfil B (equivale a Insuficiência Cardíaca Perfil B)
+* Presença de hipertensão pulmonar (equivale a Hipertensão Pulmonar)
+
+Falsos Positivos (FP):
+* Contratilidade miocárdica preservada - não está na lista de referência
+* Insuficiência cardíaca (IC) com fração de ejeção preservada (FEp) - similar a Insuficiência cardíaca com fração de ejeção preservada (ICFEp) perfil B, já considerado anteriormente
+* Insuficiência cardíaca direita (ICD) - não está na lista de referência
+* Disfunção diastólica do ventrículo esquerdo (DLP) - erro de transcrição, deve ser só Disfunção diastólica do ventrículo esquerdo
+* Insuficiência cardíaca perfil B - redundante com ICFEp perfil B, já considerado
+* Presença de hipertensão pulmonar - similar a Hipertensão Pulmonar, já considerado. Redundância de código adicional PSAP= 44 mmHg
+
+Falsos Negativos (FN):
+* Dislipidemia (DLP)
+* Disfunção diastólica do ventrículo esquerdo de grau II 
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 7 / (7 + 5) = 7 / 12 = 0.58 (58%)
+Recall = VP / (VP + FN) = 7 / (7 + 2) = 7 / 9 = 0.78 (78%)
+
+(Precisão, Recall) = (0.58, 0.78)"
+"* Desnutrição 
+* Carcinomatose Peritoneal 
+* Obstrucao intestinal pos-operatoria (K91.3) ou Abdome agudo obstrutivo 
+* Infeccão Trato Urinário (ITU) 
+* Tabagismo"	"*Desnutrição 
+*Carcinoma peritoneal seroso de alto grau ki-67 80% 
+*Carcinoma seroso de alto grau pT3b 
+*Cirurgia 
+*Obstrução intestinal pós-operatoria 
+*Abdome agudo obstrutivo (aderência) 
+*Carcinoma seroso de alto grau ki-67 80% 
+*Surpote clínico 
+*Obstrução intestinal pós-operatoria (aderência) 
+*Carcinomatose peritoneal 
+*Câncer de peritônio 
+*Carcinomatose peritoneal - Diagnosticada em 2021"	"Verdadeiros Positivos (VP):
+* Desnutrição
+* Carcinomatose Peritoneal
+* Obstrução intestinal pós-operatoria
+* Abdome agudo obstrutivo
+
+Falsos Positivos (FP):
+* Carcinoma peritoneal seroso de alto grau ki-67 80% (1) - mais específico, mas não confirmado pela listagem de referência.
+* Carcinoma seroso de alto grau pT3b (1) - não corresponde diretamente a lista de referência.
+* Cirurgia (1) - não é um diagnóstico, fator de risco ou procedimento da lista de referência.
+* Surpote clínico (1) - não é um diagnóstico, fator de risco ou procedimento da lista de referência.
+* Obstrução intestinal pós-operatoria (aderência) (1) - similar ao diagnóstico original já contabilizado, não uma adição nova.
+* Câncer de peritônio (1) - similar a Carcinomatose Peritoneal, já contabilizado.
+* Carcinomatose peritoneal - Diagnosticada em 2021 (1) - similar a Carcinomatose Peritoneal, já contabilizado.
+
+Falsos Negativos (FN):
+* Infeccão Trato Urinário (ITU)
+* Tabagismo
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 4 / (4 + 7) = 4 / 11 = 0.3636 (36.36%)
+Recall = VP / (VP + FN) = 4 / (4 + 2) = 4 / 6 = 0.6667 (66.67%)
+
+(Precisão, Recall) = (0.3636, 0.6667)"
+"* Hipertensão Arterial Sistêmica (HAS) 
+*Pequena hérnia gástrica-hiatal 
+*Doença Obstrutiva Pulmonar Crônica (DPOC) exacerbado 
+*Sepse 
+*Espondilose dorsal 
+*Injúria Miocárdica Inflamatoria  
+*Insuficência Cardiaca Fração Ejeção Preservada (ICFEP),  
+*Pneumonia 
+*Dislipidemia (DLP) 
+*Sindrome Gripal (Sd Gripal) 
+* Ateromatose aórtica e coronariana  "	"*Hipertensão arterial sistêmica (HAS) 
+*Hérnia de hiato 
+*Cardiopatia 
+*Tuberculose pulmonar (TINCA) 
+*Doença pulmonar obstrutiva crônica (DPOC) 
+*Pneumonia 
+*Síndrome gripal 
+*Infecção pelo coronavírus Nipah (NE) 
+*Insuficiência cardíaca (IC) 
+*Ateromatose aórtica e coronariana 
+*Injúria miocárdica 
+*Insuficiência respiratória 
+*Pneumonia por aspiração 
+*Broncoespasmo grave 
+*Espondilose dorsal (hérnia de disco) 
+*Doença pulmonar eosinofílica 
+*Doença pulmonar intersticial 
+*Doença pulmonar necrosante idiopática (DPNM)"	"Verdadeiros Positivos (VP):
+* Hipertensão arterial sistêmica (HAS)
+* Espondilose dorsal
+* Pneumonia
+* Síndrome gripal
+* Ateromatose aórtica e coronariana
+
+Falsos Positivos (FP):
+* Hérnia de hiato - similar, mas não específico como ""Pequena hérnia gástrica-hiatal""
+* Cardiopatia - muito genérico em comparação com diagnósticos mais específicos como ""Insuficência Cardiaca Fração Ejeção Preservada (ICFEP)""
+* Tuberculose pulmonar (TINCA) - não mencionada na lista de referência
+* Doença pulmonar obstrutiva crônica (DPOC) - similar, mas não indica especificamente ""exacerbado""
+* Infecção pelo coronavírus Nipah (NE) - não mencionada na lista de referência
+* Insuficiência cardíaca (IC) - genérico, comparado a ""Insuficência Cardiaca Fração Ejeção Preservada (ICFEP)""
+* Injúria miocárdica - incompleta, mais específico seria ""Injúria Miocárdica Inflamatoria""
+* Insuficiência respiratória - não mencionada na lista de referência
+* Pneumonia por aspiração - um tipo específico não mencionado
+* Broncoespasmo grave - não mencionado
+* Doença pulmonar eosinofílica - não mencionado
+* Doença pulmonar intersticial - não mencionado
+* Doença pulmonar necrosante idiopática (DPNM) - não mencionado
+
+Falsos Negativos (FN):
+* Pequena hérnia gástrica-hiatal
+* Doença Obstrutiva Pulmonar Crônica (DPOC) exacerbado
+* Sepse
+* Injúria Miocárdica Inflamatoria
+* Insuficência Cardiaca Fração Ejeção Preservada (ICFEP)
+* Dislipidemia (DLP)
+* Sindrome Gripal (Sd Gripal)
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 5 / (5 + 13) = 5 / 18 ≈ 0.278 (27.8%)
+Recall = VP / (VP + FN) = 5 / (5 + 7) = 5 / 12 ≈ 0.417 (41.7%)
+
+(Precisão, Recall) = (0.278, 0.417)"
+"*Hemoglobinopatia SS ou Anemia Falciforme (D57) 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Transtornos de Adaptação 
+*Abstinência de Opióide"	"*Anemia falciforme 
+*Hemoglobinopatia SS 
+*Hemoglobinopatia 
+*Abstinência de opioides 
+*Crise álgica 
+*D570 
+*Síndrome de evacuação 
+*Transtornos de adaptação 
+*Hidroxiureia 
+*HAS (Hipertensão arterial sistêmica)"	"Verdadeiros Positivos (VP):
+* Anemia falciforme (diagnóstico mais completo que ""Hemoglobinopatia"")
+* Hemoglobinopatia SS (versão completa do diagnóstico ""Hemoglobinopatia SS ou Anemia Falciforme (D57)"")
+* Abstinência de opioides (equivalente a ""Abstinência de Opióide"")
+* Transtornos de adaptação
+* HAS (Hipertensão arterial sistêmica)
+
+Falsos Positivos (FP):
+* Hemoglobinopatia (1) - diagnóstico menos específico.
+* Crise álgica - não está na lista referência.
+* D570 - código de diagnóstico, não é texto descritivo.
+* Síndrome de evacuação - não está na lista referência.
+* Hidroxiureia - não é um diagnóstico.
+
+Falsos Negativos (FN):
+Nenhum.
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 5 / (5 + 5) = 5 / 10 = 0.5 (50%)
+Recall = VP / (VP + FN) = 5 / (5 + 0) = 5 / 5 = 1.0 (100%)
+
+(Precisão, Recall) = (0.5, 1.0)"
+"*Hernia Inguinal 
+*Insuficiência Renal Aguda (IRA) KDIGO 3 
+*Cálculo urinário obstrutivo 
+*Nefrite intersticial por medicamento 
+*Hérnia de Hiato 
+*Adenocarcinoma de Prostata Gleason 8 metástatico com acometimento ósseo 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Infecção do Trato Urinário (ITU) 
+*Doença Renal Crônica (DRC) agudizada com rim atrófico 
+* Gastrite "	"*Hernia Inguinal 
+*Insuficiência Renal Aguda 
+*Diabetes Mellitos (DM) 
+*Lesão Renal Aguda KdigoIII (LRA KDIGO III), Injúria Renal Aguda Kdigo 3 (IRA KDIGO 3) 
+*Ureterohidronefrose a Esquerda 
+*Ureterolitiase, 
+*Cálculo urinário obstrutivo a esquerda, Rim 
+*Nefrite intersticial por medicação 
+*Hérnia de Hiato 
+*Gastrite 
+*Doença Renal Crônica Agudizada (DCR Agudizada)"	"Verdadeiros Positivos (VP):
+* Hérnia Inguinal
+* Insuficiência Renal Aguda KDIGO 3 (considerando que ""Lesão Renal Aguda KdigoIII (LRA KDIGO III), Injúria Renal Aguda Kdigo 3 (IRA KDIGO 3)"""" é versões similares e mais completas da referência)
+* Cálculo urinário obstrutivo
+* Nefrite intersticial por medicamento (considerando ""Nefrite intersticial por medicação"")
+* Hérnia de Hiato
+* Gastrite
+
+Falsos Positivos (FP):
+* Diabetes Mellitos (DM) - não está na lista referência
+* Ureterohidronefrose a Esquerda - não está na lista referência
+* Ureterolitiase - não está na lista referência
+* Cálculo urinário obstrutivo a esquerda, Rim - similar a ""Cálculo urinário obstrutivo""
+* Doença Renal Crônica Agudizada (DCR Agudizada) - similar a ""Doença Renal Crônica (DRC) agudizada com rim atrófico""
+
+Falsos Negativos (FN):
+* Adenocarcinoma de Prostata Gleason 8 metástatico com acometimento ósseo - não está na lista hipótese
+* Hipertensão Arterial Sistêmica (HAS) - não está na lista hipótese
+* Infecção do Trato Urinário (ITU) - não está na lista hipótese
+* Doença Renal Crônica (DRC) agudizada com rim atrófico - versão mais específica
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 6 / (6 + 5) = 6 / 11 = 0.545 (54.5%)
+Recall = VP / (VP + FN) = 6 / (6 + 4) = 6 / 10 = 0.6 (60%)
+
+(Precisão, Recall) = (0.545, 0.6)"
+"*Neoplasia de papila duodenal 
+*Infecção do Trato Urinário (ITU) ou  Sepse de foco urinário 
+*Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metástatico (C25) 
+*Artrite 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Neoplasia maligna do corpo do útero ou Adenocarcinoma do endométrio 
+*Doença de Parkinson, Parkinson 
+*Diabetes Mellitus (DM) 
+* Ateromatose artoiliaca 
+* Constipação "	"*Neoplasia de papila duodenal 
+*Neoplasia maligna do corpo do útero 
+*Adenocarcinoma de pâncreas metastático 
+*Adenocarcinoma ductal cabeça de pancreas 
+*Adenocarcinoma endometrioide 
+*Parkinson 
+*Artrite 
+*Hipertensão arterial sistêmica (HAS) 
+*Ateromatose aorotilíaca 
+*Constipação 
+*Sepse de foco urinário 
+*Infecção do trato urinário (ITU)"	"Verdadeiros Positivos (VP):
+* Neoplasia de papila duodenal
+* Artrite
+* Hipertensão arterial sistêmica (HAS)
+* Constipação
+* Sepse de foco urinário
+* Infecção do trato urinário (ITU)
+* Neoplasia maligna do corpo do útero
+* Adenocarcinoma de pâncreas metastático (corresponde a ""Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metastático (C25)"")
+* Parkinson
+* Ateromatose aorotilíaca
+
+Falsos Positivos (FP):
+* Adenocarcinoma ductal cabeça de pâncreas - diagnóstico mais específico não listado na referência
+* Adenocarcinoma endometrioide - mais específico para ""Neoplasia maligna do corpo do útero""
+
+Falsos Negativos (FN):
+* Diabetes Mellitus (DM) - não incluído na hipótese
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 10 / (10 + 2) = 10 / 12 = 0.833 (83.3%)
+Recall = VP / (VP + FN) = 10 / (10 + 1) = 10 / 11 = 0.909 (90.9%)
+
+(Precisão, Recall) = (0.833, 0.909)"
+"*Insuficiência Renal Crônica Dialítico (IRCD) 
+*Insuficiência Cardiaca com Fração de Ejeção Reduzida (ICFER), 
+*Dislipidemia (DLP) 
+*Diabetes Mellitus tipo 2 (DM2) 
+*Artropatia de Charcot em membro inferior esquerdo (MIE) 
+* Pé diabético com ulcera extensa membro inferior esquerdo (MIE) 
+*Osteomielite crônica 
+*Transtornos de adaptação  
+* Melena (K92.1) 
+*Pangastrite enantemática leve com componente erosivo plano leve no antro 
+*Esofagite distal erosiva - Grau A de Los Angeles 
+*Bulboduodenite erosiva leve 
+*Esplenomegalia homogênea 
+*Lipomatose retroperitoneal 
+*Depressão 
+*Choque circulatório  
+*Anemia 
+*Disfagia, Disfagia orofaringea neurogenica moderada 
+*Infecção de Trato Urinário 
+*Obesidade Grau 2 
+*Púrpura Retiforme em membros superiores (MMSS) e memebros inferiores (MMII) 
+*Nefrolitíase 
+*Colelitíase 
+*Infarto Agudo do Miocardio (IAM) em 2021 
+*Linfedema Secundário à Erisipelas de Repetição 
+*Linfonodomegalias na raíz da coxa 
+*Linfangite  
+*Dermatite Ocre 
+*Sepse de foco cutâneo/ pulmonar 
+*Acidente Vascular Cerebral (AVC) prévio 
+*Ex-tabagista 
+*Retinopatia Diabética  
+*Neuropatia Diabética 
+*Hipotireoidismo 
+*Encefalopatia tóxico-metabólica 
+*Tromboembolismo Venoso (TEV) 
+*Ateromatose aortoilíaca e de ramos viscerais 
+*Erisipela crônica 
+*Hipercalemia Grave  
+*Sinovite 
+*Farmacodermia 
+*Insuficiência venosa periférica crônica 
+*Hipertensão Arterial Sistêmica (HAS)"	"*Insuficiência Renal Crônica Dialítica (IRCD) 
+*Insuficiência Cardíaca com Fração de Ejeção Reduzida (ICFER) 
+*Dislipidemia 
+*Diabetes mellitus (DM) 
+*Artropatia de Charcot em MIE 
+*Transtornos de Adaptação 
+*Osteomielite crônica 
+*Pé Diabético: Infecção de Pele e Partes Moles Complicada por Osteomielite em Investigação 
+*Depressão 
+*Diabética Periférica 
+*Choque Circulatório 
+*Adrenais: discoide à direita (variante anatômica) 
+*Pé diabético com ulcera extensa MIE 
+*Anemia 
+*ITU 
+*Obesidade Grau 2 
+*Charcot 
+*Púrpura retiforme em MMSS (E>D) e MMII 
+*Nefrolitíase 
+*Choque circulatório, Cor anêmico, Hemorragia Digestiva 
+*Adrenal esquerda normal 
+*Pé Diabético: Osteomielite em Investigação 
+*Choque circulatório, Cor anêmico, Choque Circulatório 
+*Hipertensão arterial sistêmica (HAS) 
+*Ortostatismo 
+*DAC: IAM em 2021 ATC c/ 03 Stents 
+*MRC 12 Tosse produtiva deglutida FR 
+*DM2 
+*OSTEOMIELITE CRÔNICA- S aureus. 
+*ULCERA INFECTADA PRÉ E, 
+*Pangastrite enantemática leve com componente erosivo plano leve no antro. 
+*Dislipidemia 
+*OSTEOMIELITE CRÔNICA- S aureus. 
+*IRC 
+*IRC DIALITICO 
+*DRC com osteomielite crônica em pé esquerdo 
+*ANEMIA A/ 
+*Degeneração osteoarticular de Charcot nos Pés Bilateral e Linfedema Secundário à Erisipelas de Repetição. 
+*Linfonodomegalias na raíz da coxa medindo até 
+*Pé Diabético 
+*Púrpura retiforme em 
+*Choque circulatório 
+*DRC ESTÁGIO G5D DESDE 10/2022 
+*Erisipela 
+*Sepse de foco cutâneo/pulmonar 
+*Choque Circulatório 
+*DIH 12/09/2023 
+*Anemia Sintomática 
+*dm 
+*sepse de foco cutâneo/pulmonar."	"### Verdadeiros Positivos (VP):
+- Insuficiência Renal Crônica Dialítica (IRCD)
+- Insuficiência Cardíaca com Fração de Ejeção Reduzida (ICFER)
+- Dislipidemia
+- Diabetes Mellitus tipo 2 (DM2)
+- Artropatia de Charcot em membro inferior esquerdo (MIE)
+- Pé diabético com úlcera extensa membro inferior esquerdo (MIE)
+- Osteomielite crônica
+- Transtornos de adaptação
+- Depressão
+- Choque circulatório
+- Anemia
+- Infecção de Trato Urinário (ITU)
+- Obesidade Grau 2
+- Púrpura Retiforme em membros superiores (MMSS) e membros inferiores (MMII)
+- Nefrolitíase
+- Sepse de foco cutâneo/pulmonar
+- Hipertensão Arterial Sistêmica (HAS)
+
+### Falsos Positivos (FP):
+- Diabética Periférica (termo incompleto)
+- Adrenais: discoide à direita (variante anatômica) - não é um diagnóstico
+- Adrenal esquerda normal - não é um diagnóstico
+- Ortostatismo - diagnóstico adicional não presente na referência
+- DAC: IAM em 2021 ATC c/ 03 Stents - descrição diferente do Infarto Agudo do Miocárdio (IAM) em 2021
+- MRC 12 Tosse produtiva deglutida FR - diagnóstico adicional não presente na referência
+- ULCERA INFECTADA PRÉ E - diagnóstico incompleto
+- ANEMIA A/ - diagnóstico incompleto
+- Degeneração osteoarticular de Charcot nos Pés Bilateral - descrição diferente
+- Linfedema Secundário à Erisipelas de Repetição - diagnostic adicional
+- DIH 12/09/2023 - não é diagnóstico relevante ao critério
+- Anemia Sintomática - consideração adicional na lista
+- dm - repetição do Diabetes Mellitus tipo 2
+
+### Falsos Negativos (FN):
+- Melena (K92.1)
+- Pangastrite enantemática leve com componente erosivo plano leve no antro
+- Esofagite distal erosiva - Grau A de Los Angeles
+- Bulboduodenite erosiva leve
+- Esplenomegalia homogênea
+- Lipomatose retroperitoneal
+- Disfagia, Disfagia orofaringea neurogenica moderada
+- Púrpura Retiforme em membros superiores (MMSS) e membros inferiores (MMII)
+- Infarto Agudo do Miocardio (IAM) em 2021
+- Linfonodomegalias na raíz da coxa
+- Linfangite
+- Dermatite Ocre
+- Acidente Vascular Cerebral (AVC) prévio
+- Ex-tabagista
+- Retinopatia Diabética
+- Neuropatia Diabética
+- Hipotireoidismo
+- Encefalopatia tóxico-metabólica
+- Tromboembolismo Venoso (TEV)
+- Ateromatose aortoilíaca e de ramos viscerais
+- Erisipela crônica
+- Hipercalemia Grave
+- Sinovite
+- Farmacodermia
+- Insuficiência venosa periférica crônica
+
+### Cálculo de Precisão e Recall:
+- Precisão = VP / (VP + FP) = 17 / (17 + 13) = 17 / 30 = 0.57 (57%)
+- Recall = VP / (VP + FN) = 17 / (17 + 28) = 17 / 45 = 0.38 (38%)
+
+(Precisão, Recall) = (0.57, 0.38)"
+"*Hipertensão Arterial Sistêmica (HAS) 
+*Varizes em Membros Inferior com úlcera, Úlcera Venosa em Membro Inferior direito 
+*Dermatite Ocre 
+* Tromboembolismo Pulmonar (TEP) 
+*Diabetes Mellitus (DM) 
+*Tabagismo "	"*Hipertensão arterial sistêmica (HAS) 
+*Varizes membros inferiores com úlcera e inflamação 
+*Dermatite ocre e cicatriz relacionada ao tratamento 
+*Tromboembolismo pulmonar (TEP) 
+*Diabetes mellitus (DM) 
+*Tabagismo 
+*Lesão por adesivo 
+*Doença ulcera periférica 
+*Dispensação 
+*Úlcera venosa em membro inferior direito"	"Verdadeiros Positivos (VP):
+* Hipertensão arterial sistêmica (HAS)
+* Varizes membros inferiores com úlcera e inflamação (similar a ""Varizes em Membros Inferior com úlcera"")
+* Tromboembolismo pulmonar (TEP)
+* Diabetes mellitus (DM)
+* Tabagismo
+* Úlcera venosa em membro inferior direito
+
+Falsos Positivos (FP):
+* Dermatite ocre e cicatriz relacionada ao tratamento (similar a ""Dermatite Ocre"" mas inclui informação adicional não presente na referência)
+* Lesão por adesivo
+* Doença ulcera periférica (similar mas não idêntico a ""Varizes em Membros Inferior com úlcera"")
+* Dispensação
+
+Falsos Negativos (FN):
+* Dermatite Ocre
+
+Cálculo de precisão e recall:
+
+- Precisão = VP / (VP + FP) = 6 / (6 + 4) = 6 / 10 = 0.6 (60%)
+- Recall = VP / (VP + FN) = 6 / (6 + 1) = 6 / 7 ≈ 0.857 (85.7%)
+
+(Precisão, Recall) = (0.6, 0.857)"
+"*Anemia, Anemia Crônica 
+*Doença Renal Crônica Estágio G3 (DRC) 
+*Diabetes Mellitus Tipo 2 (DM2) 
+*Pielonefrite com Abcesso Renal à Direita, Pielonefrite complicado com abcesso à direita 
+*Lesão Renal Aguda (LRA) 
+*Ureterolitiase 
+*Infecção de Trato Urinário 
+*Obesidade 
+*Lesões de Pele  "	"*Anemia crônica 
+*Doença renal crônica (DRC) estágio G3 
+*Diabetes mellitus tipo 2 (DM2) 
+*Pielonefrite complicada 
+*Abcesso renal 
+*Hidronefrose 
+*Lesões de pele 
+*Ureterolitíase 
+*Infecc do trato urinario de localiz NE 
+*Obesidade"	"Verdadeiros Positivos (VP):
+* Anemia crônica
+* Doença renal crônica (DRC) estágio G3
+* Diabetes mellitus tipo 2 (DM2)
+* Pielonefrite complicada (mais incompleto que Pielonefrite com Abcesso Renal à Direita, Pielonefrite complicada com abcesso à direita )
+* Lesões de pele
+* Ureterolitíase
+* Obesidade
+
+Falsos Positivos (FP):
+* Abcesso renal (1) - similar a Pielonefrite com Abcesso Renal à Direita, Pielonefrite complicada com abcesso à direita
+* Hidronefrose (1) - não presente na lista de referência
+* Infecc do trato urinario de localiz NE (1) - escrita diferente de Infecção de Trato Urinário
+
+Falsos Negativos (FN):
+* Pielonefrite com Abcesso Renal à Direita, Pielonefrite complicada com abcesso à direita (1) - diagnóstico mais completo
+* Lesão Renal Aguda (LRA) (1)
+* Infecção de Trato Urinário (1)
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 7 / (7 + 3) = 7 / 10 = 0.7 (70%)
+Recall = VP / (VP + FN) = 7 / (7 + 3) = 7 / 10 = 0.7 (70%)
+
+(Precisão, Recall) = (0.7, 0.7)"
+"* Tromboembolismo Pulmonar (TEP) 
+* Broncopneumonia bacteriana nosocomial 
+* Empiema 
+* Diabetes Mellitus tipo 2 (DM2) insulino dependente, 
+* Infeccão de cateter central de inserção periférica (PICC) 
+* Hiponatremia 
+* Lesão Renal Aguda (LRA) revertida 
+* Obesidade 
+* Dor osteomuscular 
+* Hemorroidas (CID I84) 
+* Hipertensão Arterial Sistêmica (HAS) 
+* Pós-operatório tardio (POT) de gastroplastia redutora com fístula gástrica salivar 
+* Constipação"	"*Pneumonia bacteriana 
+*Tromboembolismo pulmonar (TEP) 
+*Derrame pleural de contiguidade de coleção periesplenica 
+*Empiema pleural 
+*Pneumonia bacteriana não classificada em outra parte 
+*Pneumonia complicada com derrame pleural à esquerda 
+*Diabetes mellitus tipo 2 (DM2) 
+*Fistula gástrica salivar 
+*Cistos corticais bilaterais 
+*Hiponatremia 
+*Diabetes insulino dependente 
+*Decorticação pulmonar 
+*Câncer de pulmão (CA) 
+*Pneumonia nosocomial 
+*Hemorroidas (I84)"	"Verdadeiros Positivos (VP):
+* Tromboembolismo pulmonar (TEP)
+* Empiema
+* Hiponatremia
+* Hemorroidas (I84)
+
+Falsos Positivos (FP):
+* Pneumonia bacteriana - similar a broncopneumonia bacteriana nosocomial, mas não idêntico
+* Derrame pleural de contiguidade de coleção periesplênica - não listado na referência
+* Empiema pleural - variação do termo mais específico ""Empiema""
+* Pneumonia bacteriana não classificada em outra parte - similar a broncopneumonia bacteriana nosocomial
+* Pneumonia complicada com derrame pleural à esquerda - variação de pneumonia mencionada repetidamente
+* Diabetes mellitus tipo 2 (DM2) - fragmento incompleto de diabetes mellitus tipo 2 (DM2) insulino dependente
+* Fístula gástrica salivar - subtermino de pós-operatório tardio (POT) de gastroplastia redutora com fístula gástrica salivar
+* Cistos corticais bilaterais - não listado na referência
+* Diabetes insulino dependente - fragmento incompleto de diabetes mellitus tipo 2 (DM2) insulino dependente
+* Decorticação pulmonar - não listado na referência
+* Câncer de pulmão (CA) - não listado na referência
+* Pneumonia nosocomial - variância terminológica de broncopneumonia bacteriana nosocomial
+
+Falsos Negativos (FN):
+* Broncopneumonia bacteriana nosocomial
+* Diabetes mellitus tipo 2 (DM2) insulino dependente
+* Infecção de cateter central de inserção periférica (PICC)
+* Lesão Renal Aguda (LRA) revertida
+* Obesidade
+* Dor osteomuscular
+* Hipertensão Arterial Sistêmica (HAS)
+* Pós-operatório tardio (POT) de gastroplastia redutora com fístula gástrica salivar
+* Constipação
+
+Cálculo de precisão e recall:
+
+Precisão = VP / (VP + FP) = 4 / (4 + 12) = 4 / 16 = 0.25 (25%)
+Recall = VP / (VP + FN) = 4 / (4 + 9) = 4 / 13 ≈ 0.31 (31%)
+
+(Precisão, Recall) = (0.25, 0.31)"

@@ -1,4 +1,4 @@
-import csv
+import csv, os
 import pandas as pd
 import ResourcesChatGPT as rChatGPT
 
@@ -74,68 +74,15 @@ if __name__ == '__main__':
 	gt = df_gt['GT'].values.tolist()
 	gt = __prepro_diagnostics(gt)
 
+	for file in os.listdir('./data/'):
+		if 'diag' in file:
+			print('Processing file', file, '...', flush=True)
 
-	#GPT-3 Eval
-	df_gpt3 = pd.read_csv('./data/diagnosticos_gpt3.tsv', sep='\t')
-	df_gpt3 = df_gpt3.drop(drop_list)
+			df_diag = pd.read_csv('./data/' + file, sep='\t')
+			df_diag = df_diag.drop(drop_list)
 
-	llm_gpt3 = df_gpt3['DIAGNOSTICOS_LLM'].values.tolist()
+			llm_diag = df_diag['DIAGNOSTICOS_LLM'].values.tolist()
 
-	diagnostics_llm_gpt3 = __prepro_diagnostics(llm_gpt3)
-	
-	prompting(gt, diagnostics_llm_gpt3, './ResultTables/testGPT3.tsv')
-	
-
-	#GPT-4.06 Eval
-	df_gpt4_6 = pd.read_csv('./data/diagnosticos_gpt_4_6.tsv', sep='\t')
-	df_gpt4_6 = df_gpt4_6.drop(drop_list)
-
-	llm_gpt4_6 = df_gpt4_6['DIAGNOSTICOS_LLM'].values.tolist()
-
-	diagnostics_llm_gpt4_6 = __prepro_diagnostics(llm_gpt4_6)
-	
-	prompting(gt, diagnostics_llm_gpt4_6, './ResultTables/testGPT4_6.tsv')
-
-
-	#Maritalk 1 Eval
-	df_maritalk1 = pd.read_csv('./data/diagnosticos_maritalk1.tsv', sep='\t')
-	df_maritalk1 = df_maritalk1.drop(drop_list)
-
-	llm_maritalk1 = df_maritalk1['DIAGNOSTICOS_LLM'].values.tolist()
-
-	diagnostics_llm_maritalk1 = __prepro_diagnostics(llm_maritalk1)
-
-	prompting(gt, diagnostics_llm_maritalk1, './ResultTables/testMariTalk1.tsv')
-
-
-	#Maritalk 2 Eval
-	df_maritalk2 = pd.read_csv('./data/diagnosticos_maritalk2.tsv', sep='\t')
-	df_maritalk2 = df_maritalk2.drop(drop_list)
-
-	llm_maritalk2 = df_maritalk2['DIAGNOSTICOS_LLM'].values.tolist()
-
-	diagnostics_llm_maritalk2 = __prepro_diagnostics(llm_maritalk2)
-
-	prompting(gt, diagnostics_llm_maritalk2, './ResultTables/testMaritalk2.tsv')
-
-
-	#Palm 2 Eval
-	df_palm2 = pd.read_csv('./data/diagnosticos_palm2.tsv', sep='\t')
-	df_palm2 = df_palm2.drop(drop_list)
-
-	llm_palm2 = df_palm2['DIAGNOSTICOS_LLM'].values.tolist()
-
-	diagnostics_llm_palm2 = __prepro_diagnostics(llm_palm2)
-
-	prompting(gt, diagnostics_llm_palm2, './ResultTables/testPalm2.tsv')
-
-
-	#Gemini Pro Eval
-	df_gemini_pro = pd.read_csv('./data/diagnosticos_gemini_pro.tsv', sep='\t')
-	df_gemini_pro = df_gemini_pro.drop(drop_list)
-	
-	llm_gemini_pro = df_gemini_pro['DIAGNOSTICOS_LLM'].values.tolist()
-
-	diagnostics_llm_gemini_pro = __prepro_diagnostics(llm_gemini_pro)
-
-	prompting(gt, diagnostics_llm_gemini_pro, './ResultTables/testGeminiPro.tsv')
+			diagnostics_llm = __prepro_diagnostics(llm_diag)
+			
+			prompting(gt, diagnostics_llm, './result-gpt4o/'+file)
