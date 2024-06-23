@@ -76,6 +76,10 @@ if __name__ == '__main__':
 
 	for file in os.listdir('./data/'):
 		if 'diag' in file:
+			if os.path.exists('./result-gpt4o/'+file):
+				print('[Ignoring] File already processed', file, '...', flush=True)
+				continue
+
 			print('Processing file', file, '...', flush=True)
 
 			df_diag = pd.read_csv('./data/' + file, sep='\t')
