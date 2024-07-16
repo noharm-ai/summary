@@ -24,7 +24,7 @@ def prompting(gt, llm, output_file_path):
 	for diagnostics_gt, diagnostics_llm in zip(gt, llm):
 		txt_gt = '\n'.join(diagnostics_gt)
 		txt_llm = '\n'.join(diagnostics_llm)
-		prompt = f"""A tarefa é comparar a lista “referência” com a lista “hipótese”. Todos os diagnósticos, fatores de risco ou procedimentos da lista “referência” devem estar presentes na lista “hipótese”.
+		prompt = f"""[Instrução] A tarefa é comparar a lista "referência" com a lista "hipótese". A lista "referência" é curada, anotada por especialistas, e não possui repetições ou diagnósticos similares. Todos os diagnósticos, fatores de risco ou procedimentos da lista "referência" devem estar presentes na lista "hipótese".
 
 Lista “referência”:
 {txt_gt}
@@ -32,17 +32,20 @@ Lista “referência”:
 Lista “hipótese”:
 {txt_llm}
 
-Para calcular a precisão e o recall, primeiro deve ser listados todos os diagnósticos, fatores de risco ou procedimentos pertencentes aos verdadeiros positivos (VP), os itens falsos positivos (FP), e aos diagnósticos falsos negativos (FN).
+Para calcular a precisão e o recall, siga os passos abaixo:
 
-- VP (Verdadeiro Positivo): Diagnósticos listados na lista “hipótese” que estão também listados na lista “referência”.
-- FP (Falso Positivo): Os diagnósticos listados na lista” hipótese” que não estão listados na lista “referência”. Diagnósticos repetidos na lista hipótese também serão considerados Falsos Positivos. Diagnósticos similares ou menos completos a algum diagnóstico listado na lista hipótese também serão considerados Falsos Positivos.
-- FN (Falso Negativo): Os diagnósticos que existem na lista “referência”, mas não foram incluídos na lista “hipótese”.
+1. Para cada item na lista "referência", verifique se ele está presente na lista "hipótese". Com isso, obtenha o total de elementos pertencentes a True Positives (TP).
+2. Com base na verificação da quantidade de TP, calcule o recall.
+3. Com base na verificação da quantidade de TP, calcule o precisão.
 
-Qual a precisão e o recall? 
-Me dê o resultado, sem explicar o que é precisão e recall.
-Mostre a qual grupo (VP, FP, FN) pertence cada resultado.
+### Precisão e Recall:
+Para calcular a precisão e o recall:
+- TP = Número de itens da lista "referência" que estão presentes na lista "hipótese"
+- Recall = TP / (Total de itens na lista "referência")
+- Precisão = TP / (Total de itens na lista "hipótese")
 
-Apresente o recall, a precisão e o ruído no formato: (Precisão, Recall)
+### Resultados:
+Mostre a precisão e o recall no formato: "[[Precisão, Recall]]". Por exemplo, se a precisão for 0.8 e o recall for 0.7, o formato seria "[[0.8, 0.7]]"
 """
 		
 		response = rChatGPT.get_response(prompt)
