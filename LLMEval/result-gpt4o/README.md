@@ -3,6 +3,7 @@
 | F1 Score | Model                |
 |----------|----------------------|
 | 0.869    | GPT o1-preview       |
+| 0.8423   | Human Physician*     |
 | 0.827    | Sonnet 3.5           |
 | 0.800    | GPT4o                |
 | 0.774    | Llama 3.1 405B       |
