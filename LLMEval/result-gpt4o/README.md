@@ -6,6 +6,7 @@
 | 0.842    | Human Physician*     |
 | 0.827    | Sonnet 3.5           |
 | 0.800    | GPT4o                |
+| 0.785    | DeepSeek V3          |
 | 0.774    | Llama 3.1 405B       |
 | 0.768    | Palm 2               |
 | 0.764    | GPT 4.6              |
