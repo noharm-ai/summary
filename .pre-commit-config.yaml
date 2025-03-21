@@ -1,11 +1,20 @@
 repos:
   - repo: https://github.com/psf/black
-    rev: 23.1.0  # Pin to a specific version; update as needed.
+    rev: 23.1.0
     hooks:
       - id: black
         args: ["--line-length", "180"]
 
   - repo: https://github.com/PyCQA/isort
-    rev: 5.12.0  # Pin to a specific version; update as needed.
+    rev: 5.12.0
     hooks:
       - id: isort
+
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: python -m pytest
+        language: system
+        pass_filenames: false  # ensure it doesn't try to pass staged files as args
+        args: ["tests"]
