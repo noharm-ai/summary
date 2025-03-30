@@ -4,7 +4,7 @@
 |-----------|----------------------|---------------:|----------------:|
 | 0.869     | GPT o1-preview       |
 |           | Sonnet 3.7           | 0.94          | 0.88
-| 0.842     | Human Physician*     |
+| 0.842     | Human Physician      |
 | 0.827     | Sonnet 3.5           | 0.88          | 0.84
 | 0.800     | GPT4o                |
 |           | DeepSeek R1          | 0.68          | 0.84
@@ -23,4 +23,5 @@
 | 0.571     | MariTalk 1           |
 
 \*  using out eval script and GPT-4o as a judge
+
 \** using [AWS Bedrock Evaluation](https://docs.aws.amazon.com/bedrock/latest/userguide/evaluation.html) w/ Sonnet 3.5 as a judge
