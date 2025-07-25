@@ -36,7 +36,7 @@ def main(cfg: DictConfig):
     current_dir = os.path.dirname(os.path.abspath(__file__))
 
     # Get list of providers from diagnostics configuration (split by comma)
-    providers = [provider.strip() for provider in cfg.diagnostics.llms.split(",")]
+    providers = cfg.diagnostics.llms
     output_dir = os.path.join(current_dir, cfg.diagnostics.output)
 
     # Read the ground truth TSV file (expects a column "Diagnósticos NER")
@@ -46,6 +46,11 @@ def main(cfg: DictConfig):
 
     # Process each provider
     for provider in providers:
+        output_file = os.path.join(output_dir, f"diagnosticos_{provider}.tsv")
+        if os.path.exists(output_file):
+            print(f"Skipping provider '{provider}' (output already exists at {output_file})")
+            continue
+
         print(f"Running prompt with provider: {provider}")
         llm_client = get_llm_client(provider, cfg.lms)
         print(f"llm client initialized")
@@ -55,10 +60,9 @@ def main(cfg: DictConfig):
             ner_text = row["DIAGNOSTICO_NER"]
             prompt = f"""{cfg.diagnostics.prompt}\n\n{ner_text}"""
             response = llm_client.invoke(prompt)
-            results.append({"DIAGNOSTICOS_LLM": response, "DIAGNOSTICOS_NER": ner_text})
+            results.append({"DIAGNOSTICOS_LLM": response.content, "DIAGNOSTICOS_NER": ner_text})
 
         # Save the results into a TSV file named diagnosticos_{provider}.tsv
-        output_file = os.path.join(output_dir, f"diagnosticos_{provider}.tsv")
         with open(output_file, "w", encoding="utf-8", newline="") as out_file:
             fieldnames = ["DIAGNOSTICOS_LLM", "DIAGNOSTICOS_NER"]
             writer = csv.DictWriter(out_file, fieldnames=fieldnames, delimiter="\t")

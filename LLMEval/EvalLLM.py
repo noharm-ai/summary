@@ -89,7 +89,8 @@ if __name__ == "__main__":
             print("Processing file", file, "...", flush=True)
 
             df_diag = pd.read_csv("./data/" + file, sep="\t")
-            df_diag = df_diag.drop(drop_list)
+            if len(df_diag) == 20:
+                df_diag = df_diag.drop(drop_list)
 
             llm_diag = df_diag["DIAGNOSTICOS_LLM"].values.tolist()
 

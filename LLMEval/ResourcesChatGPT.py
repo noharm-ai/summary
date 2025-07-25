@@ -4,9 +4,9 @@ import time
 
 
 client = AzureOpenAI(
-    azure_endpoint="[azure_endpoint]",
-    api_version="[api_version]",
-    api_key="[api_key]"
+    azure_endpoint="https://projectname.openai.azure.com/",
+    api_version="2024-02-15-preview",
+    api_key="api-key"
 )
 
 user_1 = """A tarefa é comparar a lista “referência” com a lista “hipótese”. Todos os diagnósticos, fatores de risco ou procedimentos da lista “referência” devem estar presentes na lista “hipótese”.
@@ -262,7 +262,7 @@ def get_response(question : str):
         try:
             time.sleep(0.3)
             response = client.chat.completions.create(
-                model="[model]",
+                model="gpt-4o-2024-05-13",
                 messages=[
                     {"role": "user", "content":user_1},
                     {"role": "assistant", "content":assistant_1},

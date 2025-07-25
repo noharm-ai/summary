@@ -1,0 +1,8 @@
+pytest
+pandas
+openai
+omegaconf
+boto3
+hydra-core
+langchain-openai
+langchain-aws

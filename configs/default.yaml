@@ -1,13 +1,121 @@
 lms:
-  openai:
-    class: langchain_openai.OpenAI
+  gpt_o3:
+    class: langchain_openai.ChatOpenAI
     args:
       api_key: ${env:OPENAI_API_KEY}
-      model: "text-davinci-003"
+      model: "o3-2025-04-16"
 
+  gpt_o4_mini:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:OPENAI_API_KEY}
+      model: "o4-mini-2025-04-16"
+
+  gpt_o1:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:OPENAI_API_KEY}
+      model: "o1-2024-12-17"
+
+  gpt_4o:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:OPENAI_API_KEY}
+      model: "gpt-4o-2024-08-06"
+
+  llama3:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "meta.llama3-70b-instruct-v1:0"
+
+  nova_premier:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.amazon.nova-premier-v1:0"
+
+  claude_sonnet4:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-sonnet-4-20250514-v1:0"
+
+  llama4_mav:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.meta.llama4-maverick-17b-instruct-v1:0"
+
+  llama4_scout:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.meta.llama4-scout-17b-instruct-v1:0"
+
+  claude_opus4:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-opus-4-20250514-v1:0"
+
+  sonnet_3_7:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+
+  nova_pro:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "amazon.nova-pro-v1:0"
+
+  deepseekr1:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.deepseek.r1-v1:0"
+
+  mistral_l24:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "mistral.mistral-large-2402-v1:0"
+
+  llama33_70B:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.meta.llama3-3-70b-instruct-v1:0"
 
 diagnostics:
-  llms: openai
-  prompt: "A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças."
+  llms:
+    - nova_premier
+    - claude_sonnet4
+    - claude_opus4
+    - sonnet_3_7
+    - llama4_mav
+    - llama4_scout
+    - nova_pro
+    - deepseekr1
+    - mistral_l24
+    - llama33_70B
+    - gpt_o3
+    - gpt_o4_mini
+    - gpt_o1
+    - gpt_4o
+  prompt: "A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)"
   output: data/
   gt_file: data/gt.tsv
