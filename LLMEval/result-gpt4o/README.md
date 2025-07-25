@@ -7,10 +7,10 @@
 | 0.842     | Human Physician      |
 | 0.827     | Sonnet 3.5           | 0.88          | 0.84
 |           | Sonnet 4             | 0.85          | 0.94
-|           | Llama 4 Mav 17b      | 0.85          | 0.90
+|           | Llama 4 Mav 402B      | 0.85          | 0.90
 |           | Opus 4               | 0.79          | 0.87
 |           | Nova Premier         | 0.79          | 0.82
-|           | Llama 4 Scout 17b    | 0.74          | 0.84
+|           | Llama 4 Scout 109B    | 0.74          | 0.84
 | 0.800     | GPT4o                |
 |           | DeepSeek R1          | 0.68          | 0.84
 | 0.785     | DeepSeek V3          |
