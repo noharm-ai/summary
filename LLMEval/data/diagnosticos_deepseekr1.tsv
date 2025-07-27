@@ -3,30 +3,47 @@ DIAGNOSTICOS_LLM	DIAGNOSTICOS_NER
 
 *HAS *amputado MID (transtibial) *DAOP *DM *amputação transtibila em MID *DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B. ? *IC PERFIL B *amputação transtibial em MID *Infecção da ferida operatória *IC Perfil *IC *Ateromatose em coronárias *IC Perfil B *Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente *DLP<|Assistant|>
 
-Okay, let's tackle this problem. The user wants a list of diagnoses from the given text, ensuring no duplicates and choosing the most complete version when there are similar terms. They also want only the diseases, ignoring other words, and the list should be separated by * without line breaks.
+Okay, let's tackle this problem. The user wants a list of diagnoses without repeating similar ones, choosing the most complete when there are similar terms. They also want only diseases mentioned, ignoring other words, and the list should be separated by * without line breaks.
 
-First, I need to parse the input text. Let's look at each item:
+First, I need to go through each item in the provided list. Let's list them out:
 
-1. *HAS - This is likely Hypertension (Hipertensão Arterial Sistêmica).
-2. *amputado MID (transtibial) - Amputação isn't a disease, it's a procedure. MID might be Membro Inferior Direito. So this is a status, not a diagnosis.
-3. *DAOP - Doença Arterial Obstrutiva Periférica.
-4. *DM - Diabetes Mellitus.
-5. *amputação transtibila em MID - Same as point 2, not a disease.
-6. *DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B. ? - The main diagnosis here is IC Perfil B (Insuficiência Cardíaca Perfil B). The discomfort is a symptom, so we take IC Perfil B.
-7. *IC PERFIL B - Same as above.
-8. *amputação transtibial em MID - Again, procedure, not a disease.
-"	*HAS *amputado MID (transtibial) *DAOP *DM *amputação transtibila em MID *DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B. ? *IC PERFIL B *amputação transtibial em MID *Infecção da ferida operatória *IC Perfil *IC *Ateromatose em coronárias *IC Perfil B *Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente *DLP
-"<|begin_of_sentence|><|Assistant|>
+1. HAS
+2. amputado MID (transtibial)
+3. DAOP
+4. DM
+5. amputação transtibila em MID
+6. DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B. ?
+7. IC PERFIL B
+8. amputação transtibial em MID
+9. Infecção da ferida operatória
+10. IC Perfil
+11. IC
+12. Ateromatose em coronárias
+13. IC Perfil B
+14. Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente
+15. DLP
 
-*Osteomielite  
-*Alzheimer  
-*Carcinoma de face  
-*Infecção de sítio cirúrgico  
-*DLP  
-*DMansine  
-*Infecção de sítio cirúrgico - Prótese de Fêmur Esquerdo  
-*Osteomielite de fêmur e sítio cirúrgico infectado  
-*Infecção de ferida operatória - Fêmur Esquerdo"	*Osteomielite NE *Alzheimer Carcinoma de face *CLIQUE *Infecção de sítio cirurgico *DLP *DMansine *PRÓTESE FEMORAL ESQUERDA. *Infecção de sítio cirurgico - Prótese de *Carcinoma de face *ALZHEIMER *Osteomielite NE 16/10/23 M86 *INFECÇÃO DE SITIO CIRURGICO - FRATURA COLO FEMUR ESQUERDO *OSTEOMIELITE *Alzheimer *Osteomielite NE. *Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo. *Osteomielite *Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo *OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM *INFECÇÃO DE FERIDA OPERATÓRIA - FÊMUR ESQUERDO.
+Now, I need to identify which of these are actual diagnoses. The user mentioned to ignore non-disease terms. Let's analyze each:
+
+1. **HAS**: Hipertensão Arterial Sistêmica (Systemic Arterial Hypertension) - this is a diagnosis.
+2. **amputado MID (t"	*HAS *amputado MID (transtibial) *DAOP *DM *amputação transtibila em MID *DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B. ? *IC PERFIL B *amputação transtibial em MID *Infecção da ferida operatória *IC Perfil *IC *Ateromatose em coronárias *IC Perfil B *Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente *DLP
+"<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)
+
+*Osteomielite NE *Alzheimer Carcinoma de face *CLIQUE *Infecção de sítio cirurgico *DLP *DMansine *PRÓTESE FEMORAL ESQUERDA. *Infecção de sítio cirurgico - Prótese de *Carcinoma de face *ALZHEIMER *Osteomielite NE 16/10/23 M86 *INFECÇÃO DE SITIO CIRURGICO - FRATURA COLO FEMUR ESQUERDO *OSTEOMIELITE *Alzheimer *Osteomielite NE. *Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo. *Osteomielite *Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo *OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM *INFECÇÃO DE FERIDA OPERATÓRIA - FÊMUR ESQUERDO.<|Assistant|><|endoftext|>
+
+Okay, let's tackle this problem. The user wants a list of diagnoses from the given text, without repeating similar ones. They mentioned that if there are similar diseases, we should pick the most complete version. Also, only include actual diseases and ignore other words. The list should be separated by asterisks with no line breaks.
+
+First, I need to parse the input text. Let me look at each item:
+
+- *Osteomielite NE
+- *Alzheimer
+- Carcinoma de face
+- *CLIQUE (probably not a disease)
+- *Infecção de sítio cirurgico
+- *DLP (could be Dislipidemia?)
+- *DMansine (maybe a typo, unsure)
+- *PRÓTESE FEMORAL ESQUERDA. (this is a medical device, not a disease)
+-"	*Osteomielite NE *Alzheimer Carcinoma de face *CLIQUE *Infecção de sítio cirurgico *DLP *DMansine *PRÓTESE FEMORAL ESQUERDA. *Infecção de sítio cirurgico - Prótese de *Carcinoma de face *ALZHEIMER *Osteomielite NE 16/10/23 M86 *INFECÇÃO DE SITIO CIRURGICO - FRATURA COLO FEMUR ESQUERDO *OSTEOMIELITE *Alzheimer *Osteomielite NE. *Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo. *Osteomielite *Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo *OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM *INFECÇÃO DE FERIDA OPERATÓRIA - FÊMUR ESQUERDO.
 "*Transtorno conversivo  
 *Bloqueio A-V de 1º grau  
 *Sepse de foco a esclarecer (Pulmão)  
@@ -41,67 +58,117 @@ First, I need to parse the input text. Let's look at each item:
 *Doença Renal Crônica estágio G3  
 *Malformações vasculares em todo o cólon  
 *Anemia macrocítica  
-*Angiodisplasia de cólon  
 *Epilepsia  
+*Angiodisplasia de cólon  
+*Anemia crônica da doença renal  
 *Delirium hiperativo  
 *Doença diverticular não complicada do cólon direito  
 *Meningite prévia  
 *Ateromatose difusa  
 *Cistos simples bilaterais  
-*Síndrome demencial  
-*TCE (Traumatismo Cranioencefálico)  
-*HDB (Hemorragia Digestiva Baixa)  
-*Displasia orofaríngea  
-*Tiróide heterogênea  
-*Alteração do relaxamento ventricular  
-*Queda de própria altura  
-*IC compensada  
-*HAS (Hipertensão Arterial Sistêmica)  
-*Anemia crônica  
-*Divertículos de cólon direito  
-*Angiodisplasias dos cólons  
-*Malformação vascular com sinais de sangramento recente em cólon transverso  
-*Sinais de microangiopatia/gliose  
-*DM tipo 2  
 *Suspeito de quadro demencial com início precoce (frontotemporal)  
 *Doença Renal Crônica por depósitos de IgA  
-*SEC A DRC  
-*Hematomas e MMSS<|end_of_sentence|>"	*Transtorno conversivo. *19 *Calcificações parietais nas artérias carótidas internas intracranianas *Bloqueio A-V de 1º grau. *Sepse de foco a esclarecer (Pulmão. *Piora da alteração de *DRC *R53 - *IRA KDIGO 3 *Espondilose dorsal. *DM *Sinais de ateromatose carotídea *Choque Septico de Foco pulmonar (em reversao *Função renal *Sepse foco pulmonar em 01/ *06/11/19 - DIABETES MELLITUS NAO ESPECIFICADO *IRA KDIGO 3 por sepse. *Espondilose dorsolombar e sinais de coxoartrose bilateral. *DOENÇA RENAL CRÔNICA ESTÁGIO G3 *MAL *sem alteração contrátil segmentar em *Malformações vasculares em todo o cólon *Bloqueio A-V de 1º grau *ANEMIA MACROCÍTICA *epilepsia ircagudizada em reversão has gastrite *MAL ESTAR *Angiodisplasia *DRC agudizada KDIGO 3 (Cr basal 2) *DM. *Choque septico de foco pulmonar. *Bexiga *Doença renal crônica estágio G3 *angiodisplasia de colon. *anemia, epilepsia *Tiróide *Anemia cronica da doença renal *EPILEPSIA *Opacidades *Choque septico de foco pulmonar Lra Kdigo 3 - Início de Tsr em 01/10 Delirium hiperativo Melena em 09/10 *Piora da alteração de fala + dificuldade *DM tipo 2 *Sepse de foco a esclarecer *Sepse foco pulmonar *HIPÓTESES DIAGNÓSTICAS *Transição crânio-cervical com aspecto usual *Delirium hiperativo *01/10/2023 - Nova sepse de foco pulmonar. *ora *Sepse foco pulmonar Lra Kdigo 3 *Doença diverticular não complicada do cólon direito. *Epilepsia, Meningite prévia *Choque Septico de Foco pulmonar *Espondilose *IRC agudizada *DRC. *Ateromatose difusa, inclusive coronariana *Cistos simples bilaterais *Miocárdio *CHOQUE SEPTICO DE FOCO PULMONAR 30/ *Suspeito de quadro demencial com inicio precoce (frontotemporal *Transtorno conversivo *DIÁLISE *Espondilose dorsolombar e sinais de coxoartrose bilateral *CHOQUE SEPTICO DEFOCO PULMONAR 30/ *Piora da alteração de fala + dificuldade de deambular + *Doença Renal Crônica por depósitos de IgA *IRA KDIGO 3 POR SEPSE *Divertículos de cólon direito. *Sepse foco a/e 30/09 *sindrome demencial *DRC AGUDIZADO *Anemia cronica *Meningite há 20 anos *TCE 18/09, QUEDA PRÓPRIA *DESLIGADA *HDB *EPILEPSIA, MENINGITE PRÉVIA *sepse pulmonar *Calcificações *HAS *Choque Septico de Foco pulmonar Lra Kdigo 3 *DISFAGIA OROFARÍNGEA *Anemia crônica. *Choque septico de foco pulmonar *Alteração volumétrica *Tiróide heterogênea *Alteração do relaxamento ventricular *Cistos simples bilaterais. *Queda de própria altura *SEC A DRC *Piora da alteração de fala + dificuldade de deambular *Angiorressonância arterial sem alterações relevantes *LIQUEMINE *DRC agudizada KDIGO 3 (Cr basal 2 *Choque septico de foco pulmonar Lra Kdigo 3 - Início de Tsr em 01/10 *R53 - MAL ESTAR *DM2 *DMansine *Sinais de ateromatose carotídea. *Aumento discreto do átrio esquerdo *ora da alteração de fala + dificuldade de deambular *Choque Septico de Foco pulmonar (em reversao) *diverticulos de colon D + angiodisplasias de colon E *Piora da alteração de fala *Anemia crônica *anemia *Angiodisplasia de colon *epilepsia *Angiodiplasia de colon *Ateromatose difusa *Epilepsia após meningite *Angiodisplasias dos cólons *01/10/2023 - Lra Kdigo 3 - Início de Tsr . *Mal-estar inespecífico *Delirium hiperativo. *Sinais de microangiopatia / gliose *Choque septico de foco pulmonar 01/10/2023 - Lra Kdigo 3 *Malformação vascular com sinais de sangramento recente em cólon transverso *IC COMPENSADA *CHOQUE SEPTICO DEFOCO PULMONAR *MAL ESTAR, FADIGA *ANEMIA MACROCÍTICA (B12 *Espondilose dorsal *06 *TIE *Dm tipo II *Epilepsia *Suspeito de quadro demencial com inicio precoce ( *hematomas e mmss
+*Síndrome demencial  
+*HAS (Hipertensão Arterial Sistêmica)  
+*Displasia orofaríngea  
+*TCE (Traumatismo Craniano Encefálico)  
+*HDB (Hemorragia Digestiva Baixa)  
+*Tiróide heterogênea  
+*Alteração do relaxamento ventricular  
+*IC compensada (Insuficiência Cardíaca compensada)  
+*Microangiopatia/gliose  
+*Malformação vascular com sinais de sangramento recente em cólon transverso  
+*DM tipo 2  
+*Queda de própria altura  
+*SEC A DRC (Síndrome de Encefalopatia Crônica associada à DRC)  
+*B12 (Anemia por deficiência de vitamina B12)  
+*TIE (Tromboembolismo pulmonar?)  
+*Hematomas e MMSS (Membros Superiores)  
+
+<|end_of_sentence|>"	*Transtorno conversivo. *19 *Calcificações parietais nas artérias carótidas internas intracranianas *Bloqueio A-V de 1º grau. *Sepse de foco a esclarecer (Pulmão. *Piora da alteração de *DRC *R53 - *IRA KDIGO 3 *Espondilose dorsal. *DM *Sinais de ateromatose carotídea *Choque Septico de Foco pulmonar (em reversao *Função renal *Sepse foco pulmonar em 01/ *06/11/19 - DIABETES MELLITUS NAO ESPECIFICADO *IRA KDIGO 3 por sepse. *Espondilose dorsolombar e sinais de coxoartrose bilateral. *DOENÇA RENAL CRÔNICA ESTÁGIO G3 *MAL *sem alteração contrátil segmentar em *Malformações vasculares em todo o cólon *Bloqueio A-V de 1º grau *ANEMIA MACROCÍTICA *epilepsia ircagudizada em reversão has gastrite *MAL ESTAR *Angiodisplasia *DRC agudizada KDIGO 3 (Cr basal 2) *DM. *Choque septico de foco pulmonar. *Bexiga *Doença renal crônica estágio G3 *angiodisplasia de colon. *anemia, epilepsia *Tiróide *Anemia cronica da doença renal *EPILEPSIA *Opacidades *Choque septico de foco pulmonar Lra Kdigo 3 - Início de Tsr em 01/10 Delirium hiperativo Melena em 09/10 *Piora da alteração de fala + dificuldade *DM tipo 2 *Sepse de foco a esclarecer *Sepse foco pulmonar *HIPÓTESES DIAGNÓSTICAS *Transição crânio-cervical com aspecto usual *Delirium hiperativo *01/10/2023 - Nova sepse de foco pulmonar. *ora *Sepse foco pulmonar Lra Kdigo 3 *Doença diverticular não complicada do cólon direito. *Epilepsia, Meningite prévia *Choque Septico de Foco pulmonar *Espondilose *IRC agudizada *DRC. *Ateromatose difusa, inclusive coronariana *Cistos simples bilaterais *Miocárdio *CHOQUE SEPTICO DE FOCO PULMONAR 30/ *Suspeito de quadro demencial com inicio precoce (frontotemporal *Transtorno conversivo *DIÁLISE *Espondilose dorsolombar e sinais de coxoartrose bilateral *CHOQUE SEPTICO DEFOCO PULMONAR 30/ *Piora da alteração de fala + dificuldade de deambular + *Doença Renal Crônica por depósitos de IgA *IRA KDIGO 3 POR SEPSE *Divertículos de cólon direito. *Sepse foco a/e 30/09 *sindrome demencial *DRC AGUDIZADO *Anemia cronica *Meningite há 20 anos *TCE 18/09, QUEDA PRÓPRIA *DESLIGADA *HDB *EPILEPSIA, MENINGITE PRÉVIA *sepse pulmonar *Calcificações *HAS *Choque Septico de Foco pulmonar Lra Kdigo 3 *DISFAGIA OROFARÍNGEA *Anemia crônica. *Choque septico de foco pulmonar *Alteração volumétrica *Tiróide heterogênea *Alteração do relaxamento ventricular *Cistos simples bilaterais. *Queda de própria altura *SEC A DRC *Piora da alteração de fala + dificuldade de deambular *Angiorressonância arterial sem alterações relevantes *LIQUEMINE *DRC agudizada KDIGO 3 (Cr basal 2 *Choque septico de foco pulmonar Lra Kdigo 3 - Início de Tsr em 01/10 *R53 - MAL ESTAR *DM2 *DMansine *Sinais de ateromatose carotídea. *Aumento discreto do átrio esquerdo *ora da alteração de fala + dificuldade de deambular *Choque Septico de Foco pulmonar (em reversao) *diverticulos de colon D + angiodisplasias de colon E *Piora da alteração de fala *Anemia crônica *anemia *Angiodisplasia de colon *epilepsia *Angiodiplasia de colon *Ateromatose difusa *Epilepsia após meningite *Angiodisplasias dos cólons *01/10/2023 - Lra Kdigo 3 - Início de Tsr . *Mal-estar inespecífico *Delirium hiperativo. *Sinais de microangiopatia / gliose *Choque septico de foco pulmonar 01/10/2023 - Lra Kdigo 3 *Malformação vascular com sinais de sangramento recente em cólon transverso *IC COMPENSADA *CHOQUE SEPTICO DEFOCO PULMONAR *MAL ESTAR, FADIGA *ANEMIA MACROCÍTICA (B12 *Espondilose dorsal *06 *TIE *Dm tipo II *Epilepsia *Suspeito de quadro demencial com inicio precoce ( *hematomas e mmss
 "<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)
 
-*NASOFARINGITE AGUDA *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE *Us torácico extracardíaco *Dermatite MSE *D. Parkinson. *Pequeno derrame pleural à direita *NEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL- > 10/10 *DISFAGIA OROFARÍNGEA *Derrame pleural *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE. *PAC *Mínimo derrame pleural laminar à esquerda *PNM BACTERIANA + TEP + TVP MID *BCP aspirativa *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE . *PNEUMONIA BACTERIANA *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA *10/10 TEP + TVP MID *TVP MID. *Cistos renais *TVP,TEP *Espondilose torácica. *DP com exsudato + TVP + TEP *Dermatite MSE 10/ *Infecção pulmonar *Cistos renais Bosniak 1 e 2 *parkinson *PNM bacteriana *Mínimo derrame pleural laminar à esquerda. *DEFORMIDADE COTOVELO *D. Parkinson *Infecção pulmonar – TEP c/ infarto pulm + infecção 2a. *PNEUMONIA BACTERIANA NAO *Toracocentese *NASOFARINGITE AGUDA [RESFRIADO COMUM] *Alterações degenerativas na coluna estudada. *Pneumonia. *Toracocentese à D - 600 ml *Adenoma na adrenal esquerda"	*NASOFARINGITE AGUDA *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE *Us torácico extracardíaco *Dermatite MSE *D. Parkinson. *Pequeno derrame pleural à direita *NEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL- > 10/10 *DISFAGIA OROFARÍNGEA *Derrame pleural *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE. *PAC *Mínimo derrame pleural laminar à esquerda *PNM BACTERIANA + TEP + TVP MID *BCP aspirativa *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE . *PNEUMONIA BACTERIANA *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA *10/10 TEP + TVP MID *TVP MID. *Cistos renais *TVP,TEP *Espondilose torácica. *DP com exsudato + TVP + TEP *Dermatite MSE 10/ *Infecção pulmonar *Cistos renais Bosniak 1 e 2 *parkinson *PNM bacteriana *Mínimo derrame pleural laminar à esquerda. *DEFORMIDADE COTOVELO *D. Parkinson *Infecção pulmonar – TEP c/ infarto pulm + infecção 2a. *PNEUMONIA BACTERIANA NAO *Toracocentese *NASOFARINGITE AGUDA [RESFRIADO COMUM] *Alterações degenerativas na coluna estudada. *Pneumonia. *Toracocentese à D - 600 ml *Adenoma na adrenal esquerda *PNM *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL *Cistos renais Bosniak 1 e 2. *NASOFARINGITE AGUDA [RESFRIADO COMUM *D. Parkinson avançado *Broncopneumonia *Ateromatose na aorta torácica e nos troncos supra-aórticos *PAC PORT IV
+*NASOFARINGITE AGUDA *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE *Us torácico extracardíaco *Dermatite MSE *D. Parkinson. *Pequeno derrame pleural à direita *NEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL- > 10/10 *DISFAGIA OROFARÍNGEA *Derrame pleural *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE. *PAC *Mínimo derrame pleural laminar à esquerda *PNM BACTERIANA + TEP + TVP MID *BCP aspirativa *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE . *PNEUMONIA BACTERIANA *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA *10/10 TEP + TVP MID *TVP MID. *Cistos renais *TVP,TEP *Espondilose torácica. *DP com exsudato + TVP + TEP *Dermatite MSE 10/ *Infecção pulmonar *Cistos renais Bosniak 1 e 2 *parkinson *PNM bacteriana *Mínimo derrame pleural laminar à esquerda. *DEFORMIDADE COTOVELO *D. Parkinson *Infecção pulmonar – TEP c/ infarto pulm + infecção 2a. *PNEUMONIA BACTERIANA NAO *Toracocentese *NASOFARINGITE AGUDA [RESFRIADO COMUM] *Alterações degenerativas na coluna estudada. *Pneumonia. *Toracocentese à D - 600 ml *Adenoma na adrenal"	*NASOFARINGITE AGUDA *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE *Us torácico extracardíaco *Dermatite MSE *D. Parkinson. *Pequeno derrame pleural à direita *NEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL- > 10/10 *DISFAGIA OROFARÍNGEA *Derrame pleural *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE. *PAC *Mínimo derrame pleural laminar à esquerda *PNM BACTERIANA + TEP + TVP MID *BCP aspirativa *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE . *PNEUMONIA BACTERIANA *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA *10/10 TEP + TVP MID *TVP MID. *Cistos renais *TVP,TEP *Espondilose torácica. *DP com exsudato + TVP + TEP *Dermatite MSE 10/ *Infecção pulmonar *Cistos renais Bosniak 1 e 2 *parkinson *PNM bacteriana *Mínimo derrame pleural laminar à esquerda. *DEFORMIDADE COTOVELO *D. Parkinson *Infecção pulmonar – TEP c/ infarto pulm + infecção 2a. *PNEUMONIA BACTERIANA NAO *Toracocentese *NASOFARINGITE AGUDA [RESFRIADO COMUM] *Alterações degenerativas na coluna estudada. *Pneumonia. *Toracocentese à D - 600 ml *Adenoma na adrenal esquerda *PNM *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL *Cistos renais Bosniak 1 e 2. *NASOFARINGITE AGUDA [RESFRIADO COMUM *D. Parkinson avançado *Broncopneumonia *Ateromatose na aorta torácica e nos troncos supra-aórticos *PAC PORT IV
 "<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)
 
 TEP - 3x: 02 episódios em Anticoagulação 2022 + março/2023 *TEP agudo - PESI I *ASMA. *BRONQUITE. *TEP *03/2021 *TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário *OBESIDADE *Obesidade Grau III *TEP segmentar bilateral *EMBOLIA PULMONAR *TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário - Bova 5 Classe III: Alto Risco *TEP Agudo *Anemia ferropriva secundaria a menometrorragia . *TEP Submaciço: Segmentar Bilateral *TEP agudo *Sindrome astenica ae *OBESIDADE + BRONQUITE CRONICA *Asma *1999 por *Anemia ferropriva secundaria a menometrorragia . *TEP agudo - PESI *Miomatose *TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário - Bova 5 Classe III: Alto *TEP Submaciço: Segmentar Bilateral - 02 *TEP março e julho/2023 *OBESIDADE. *ASMA BRONQUITE *obesidade e asma *Asma Grave *IC *PCR 1999 por Hipóxia *TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário - *HAS *Alterações degenerativas incipientes na coluna estudada *Obesidade. *TEP Submaciço: Segmentar Bilateral - 02/10 *ASMA *Anemia. *TEP"	TEP - 3x: 02 episódios em Anticoagulação 2022 + março/2023 *TEP agudo - PESI I *ASMA. *BRONQUITE. *TEP *03/2021 *TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário *OBESIDADE *Obesidade Grau III *TEP segmentar bilateral *EMBOLIA PULMONAR *TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário - Bova 5 Classe III: Alto Risco *TEP Agudo *Anemia ferropriva secundaria a menometrorragia . *TEP Submaciço: Segmentar Bilateral *TEP agudo *Sindrome astenica ae *OBESIDADE + BRONQUITE CRONICA *Asma *1999 por *Anemia ferropriva secundaria a menometrorragia . *TEP agudo - PESI *Miomatose *TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário - Bova 5 Classe III: Alto *TEP Submaciço: Segmentar Bilateral - 02 *TEP março e julho/2023 *OBESIDADE. *ASMA BRONQUITE *obesidade e asma *Asma Grave *IC *PCR 1999 por Hipóxia *TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário - *HAS *Alterações degenerativas incipientes na coluna estudada *Obesidade. *TEP Submaciço: Segmentar Bilateral - 02/10 *ASMA *Anemia. *TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário - Bova 5 Classe III: *Anemia ferropriva secundaria a menometrorragia *obesidade *TEP Submaciço: Segmentar Bilateral -
-"<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)
+"<|begin_of_sentence|><|Assistant|>
 
-Primeira Crise epiléptica a/e Pneumonia Comunitária *CRISE CONVULSIVA *Evidência de lesão em lábio e mordedura na região lateral E da língua. *Crise epiléptica em 09/10 - provável epilepsia focal secundária *DISFAGIA OROFARÍNGEA *Has *Crise epiléptica em 09/10 - provável epilepsia focal secundária a Avcs prévios *Crise epiléptica em 09/10 - provável epilepsia focal secundária a Avcs prévios Pneumonia Comunitária *Primeira Crise epiléptica a/e Pneumonia + *Crise epiléptica em 09/10 *1ª crise epiléptica *Primeira Crise epiléptica a/e Pneumonia comunitária *Primeira Crise epiléptica *CRISE EPILÉPTICA *HAS *Crise epiléptica em 09/ *Dupla hemiparesia (grau IV D e III a E) *Crise epiléptica a/e *Ataxia marcha *Pneumonia comunitária *Crise epiléptica em 09/10 - provável *Pneumonia Comunitária *EPILEPSIA *Transtornos *CATETERISMO DE ALIVIO PARA *Pneumonia + Itu comunitária *Primeira Crise epiléptica a/e<|Assistant|>
+*Primeira Crise Epiléptica  
+*Pneumonia Comunitária  
+*CRISE CONVULSIVA  
+*Epilepsia Focal Secundária  
+*DISFAGIA OROFARÍNGEA  
+*HAS  
+*Dupla Hemiparesia  
+*Ataxia de Marcha  
+*ITU Comunitária"	Primeira Crise epiléptica a/e Pneumonia Comunitária *CRISE CONVULSIVA *Evidência de lesão em lábio e mordedura na região lateral E da língua. *Crise epiléptica em 09/10 - provável epilepsia focal secundária *DISFAGIA OROFARÍNGEA *Has *Crise epiléptica em 09/10 - provável epilepsia focal secundária a Avcs prévios *Crise epiléptica em 09/10 - provável epilepsia focal secundária a Avcs prévios Pneumonia Comunitária *Primeira Crise epiléptica a/e Pneumonia + *Crise epiléptica em 09/10 *1ª crise epiléptica *Primeira Crise epiléptica a/e Pneumonia comunitária *Primeira Crise epiléptica *CRISE EPILÉPTICA *HAS *Crise epiléptica em 09/ *Dupla hemiparesia (grau IV D e III a E) *Crise epiléptica a/e *Ataxia marcha *Pneumonia comunitária *Crise epiléptica em 09/10 - provável *Pneumonia Comunitária *EPILEPSIA *Transtornos *CATETERISMO DE ALIVIO PARA *Pneumonia + Itu comunitária *Primeira Crise epiléptica a/e
+"Okay, let's tackle this. The user wants a list of diagnoses without repeating similar ones, choosing the most complete term when there are similar diseases. They also want only the diseases mentioned, ignoring other words, and the list should be separated by asterisks with no line breaks.
 
-Okay, let's tackle this user's request. They want a list of diagnoses without repeating similar ones, choosing the most complete when there are similar diseases. The input has some extra words that aren't diseases, so I need to filter those out. The output should be separated by * with no line breaks.
+First, I need to go through the provided text and extract all the terms that are actual diseases. Let me list them out:
 
-First, I'll go through each item in the input. Let"	Primeira Crise epiléptica a/e Pneumonia Comunitária *CRISE CONVULSIVA *Evidência de lesão em lábio e mordedura na região lateral E da língua. *Crise epiléptica em 09/10 - provável epilepsia focal secundária *DISFAGIA OROFARÍNGEA *Has *Crise epiléptica em 09/10 - provável epilepsia focal secundária a Avcs prévios *Crise epiléptica em 09/10 - provável epilepsia focal secundária a Avcs prévios Pneumonia Comunitária *Primeira Crise epiléptica a/e Pneumonia + *Crise epiléptica em 09/10 *1ª crise epiléptica *Primeira Crise epiléptica a/e Pneumonia comunitária *Primeira Crise epiléptica *CRISE EPILÉPTICA *HAS *Crise epiléptica em 09/ *Dupla hemiparesia (grau IV D e III a E) *Crise epiléptica a/e *Ataxia marcha *Pneumonia comunitária *Crise epiléptica em 09/10 - provável *Pneumonia Comunitária *EPILEPSIA *Transtornos *CATETERISMO DE ALIVIO PARA *Pneumonia + Itu comunitária *Primeira Crise epiléptica a/e
-"Okay, let's tackle this user's request. They want a list of diagnoses from the provided text, ensuring no repetition of similar terms and selecting the most complete ones when there are similar diseases. Also, they only want the diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
+- Dispnéia leve
+- Insuf mitral
+- FA com ARV
+- Fibrilação atrial crônica
+- Insuf mitral (repeated)
+- Ateromatose incipiente
+- IC perfil
+- Fibrilação atrial permanente
+- Insuf mitral (again)
+- Artrose AVCH HÁ 5 ANOS
+- IC PERFIL B
+- Varizes calibrosas
+- HAS
+- IC perfil B (same as above)
+- Artrose. (with a period)
+- Disfunção renal aguda
+- MCP
+- Osteoporose
+- Alterações degenerativas da coluna vertebral
+- TVP em MIE RAM
+- Insuf cardiaca congestiva
+- Pneumonia
+- Descongestão. (not a disease)
+- IC descompensada perfil B. ?
+- Bundle (not a disease)
+- TVP em MIE . (with period)
+- Artrose (again)
+- Fibrilação atrial crônica (again)
+- IC (abbreviation)
+- has (lowercase, probably HAS)
+- Fibrilação atrial permanente (again)
+- TVP em MIE . (again)
 
-First, I need to parse the input text. Let me look at each term. There are several mentions of ""Insuf mitral"" which I recognize as Mitral Insufficiency. Then ""FA com ARV"" and ""Fibrilação atrial crônica"" – FA is Fibrilação Atrial, so the more complete term here would be Fibrilação Atrial Crônica. Similarly, ""Fibrilação atrial permanente"" is another form, so I should include both if they are distinct.
+Now, I need to remove non-disease terms like ""Descongestão"", ""Bundle"", and ""HÁ 5 ANOS"" (which is a time reference). Also, ""IC"" is an abbreviation, so I should use the full form when available.
 
-Next, ""Ateromatose incipiente"" – that's early-stage Atherosclerosis. ""IC perfil"" and ""IC PERFIL B"" – IC is Insuficiência Cardíaca (Heart Failure), so the more complete term is Insuficiência Cardíaca perfil B. There's also ""IC descompensada perfil B"" which is a decompensated state, so that's more specific and should replace the simpler IC perfil B.
+Next, group similar terms and pick the most complete one. For example:
 
-""Artrose AVCH HÁ 5 ANOS"" – Artrose is Osteoarthritis, AVCH might be a typo or abbreviation, but since the user wants only diseases, I'll take Artrose (Osteoarthritis). ""Varizes calibrosas"" are varicose veins. ""HAS"" is Hipertensão Arterial Sistêmica. ""Disfunção renal aguda"" is Acute Renal Dysfunction. ""MCP"" – not sure, maybe a typo? The user said to ignore non-diseases, so maybe skip it. ""Osteoporose"" is clear. ""Alterações degenerativas da coluna vertebral"" – Degenerative changes in the spine. ""TVP em MIE RAM"" and ""TVP em MIE"" – TVP is Trombose Venosa Profunda (Deep Vein Thrombosis), MIE is likely left lower limb. So the more complete term is TVP em MIE. ""Insuf cardiaca congestiva"" is Congestive Heart Failure. ""Pneumonia"" stays. ""Descongestão"" is a procedure, not a disease,"	Dispnéia leve *Insuf mitral *FA com ARV *Fibrilação atrial crônica Insuf mitral *Ateromatose incipiente *IC perfil *Fibrilação atrial permanente Insuf mitral *Artrose AVCH HÁ 5 ANOS *IC PERFIL B *Varizes calibrosas *HAS *IC perfil B *Artrose. *Disfunção renal aguda *MCP *Osteoporose . *Alterações degenerativas da coluna vertebral *TVP em MIE RAM *Insuf cardiaca congestiva *Pneumonia *Descongestão. *IC descompensada perfil B. ? *Bundle *TVP em MIE . *Artrose *Fibrilação atrial crônica *IC *has *Fibrilação atrial permanente *TVP em MIE .
+- ""Fibrilação atrial crônica"" and ""Fibrilação atrial permanente"" are both types of atrial fibrillation. The user wants the most complete term. ""Fibrilação atrial crônica"" and ""Fibrilação atrial permanente"" are both specific, so they might be considered separate. But in some contexts, ""permanente"" is a subtype of ""crônica"". Need to check if they are distinct here. Since both are present, maybe list both.
+
+- ""Ins"	Dispnéia leve *Insuf mitral *FA com ARV *Fibrilação atrial crônica Insuf mitral *Ateromatose incipiente *IC perfil *Fibrilação atrial permanente Insuf mitral *Artrose AVCH HÁ 5 ANOS *IC PERFIL B *Varizes calibrosas *HAS *IC perfil B *Artrose. *Disfunção renal aguda *MCP *Osteoporose . *Alterações degenerativas da coluna vertebral *TVP em MIE RAM *Insuf cardiaca congestiva *Pneumonia *Descongestão. *IC descompensada perfil B. ? *Bundle *TVP em MIE . *Artrose *Fibrilação atrial crônica *IC *has *Fibrilação atrial permanente *TVP em MIE .
 "<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)
 
 Contratilidade miocárdica preservada *Hiponatremia *DEPRESSÃO *IC FEp. *IC PERFIL B IC FEp *ASMA . *ITU *INSUFICIENCIA CARDIACA *ICFEp PERFIL B *Afirma *IC DIREITA. *IC PERFIL B *DLP *IC FEp PERFIL B *ASMA . *HAS *IC PERFIL B. ? *Disfunção diastólica do ventrículo esquerdo de grau II. *Presença de hipertensão pulmonar (PSAP= 44 mmHg, estimada pelo refluxo tricuspídeo<|Assistant|>
 
-*Hiponatremia *Depressão *Insuficiência Cardíaca com Fração de Ejeção Preservada (IC FEp) *Asma *Infecção do Trato Urinário (ITU) *Dislipidemia (DLP) *Hipertensão Arterial Sistêmica (HAS) *Disfunção Diastólica do Ventrículo Esquerdo Grau II *Hipertensão Pulmonar"	Contratilidade miocárdica preservada *Hiponatremia *DEPRESSÃO *IC FEp. *IC PERFIL B IC FEp *ASMA . *ITU *INSUFICIENCIA CARDIACA *ICFEp PERFIL B *Afirma *IC DIREITA. *IC PERFIL B *DLP *IC FEp PERFIL B *ASMA . *HAS *IC PERFIL B. ? *Disfunção diastólica do ventrículo esquerdo de grau II. *Presença de hipertensão pulmonar (PSAP= 44 mmHg, estimada pelo refluxo tricuspídeo
+*Hiponatremia *Depressão *Asma *Infecção do trato urinário *Dislipidemia *Hipertensão arterial sistêmica *Insuficiência cardíaca com fração de ejeção preservada perfil B *Disfunção diastólica do ventrículo esquerdo grau II *Hipertensão pulmonar"	Contratilidade miocárdica preservada *Hiponatremia *DEPRESSÃO *IC FEp. *IC PERFIL B IC FEp *ASMA . *ITU *INSUFICIENCIA CARDIACA *ICFEp PERFIL B *Afirma *IC DIREITA. *IC PERFIL B *DLP *IC FEp PERFIL B *ASMA . *HAS *IC PERFIL B. ? *Disfunção diastólica do ventrículo esquerdo de grau II. *Presença de hipertensão pulmonar (PSAP= 44 mmHg, estimada pelo refluxo tricuspídeo
 "<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)
 
 Desnutrido *Carcinoma peritoneal seroso de alto grau ki-67 80% *Carcinoma seroso de alto grau pT3b *Cirurgia *Carcinoma seroso de alto grau 1º de peritonio. *Obstrucao intestinal pos-operatoria Abdome agudo obstrutivo (aderência. *ITU. *Tabagismo *Obstrucao intestinal pos-operatoria . *Carcinoma seroso de alto grau ki-67 80% *Surpote clinico. *K913 - K91.3 Obstrucao intestinal pos-operatoria *Carcinomatose peritoneal *K91.3 Obstrucao intestinal pos-operatoria *CA PERITONEO *carcinoma seroso de alto grau pT3b *abdome agudo obstrutivo (aderência. *Abdome agudo obstrutivo (aderência. *Obstrucao intestinal pos-operatoria - Abdome agudo obstrutivo (aderência. *Obstrucao intestinal pos-operatoria *carcinoma seroso de alto grau ki-67 80% *carcinomatose peritoneal *Carcinomatose peritoneal - Diagnosticada em 2021<|Assistant|>
 
-Okay, let's tackle this user's request. They want a list of diagnoses without repeating similar ones, choosing the most complete when there are similar diseases. The input has some extra words that aren't diseases, so I need to filter those out. First, I'll go through each item in the provided text.
+Okay, let's tackle this problem. The user wants a list of diagnoses from the provided text, without repeating similar ones and choosing the most complete when there are similar diseases. They also want only the diseases mentioned, ignoring other terms, and the list should be separated by asterisks with no line breaks.
 
-Starting with ""Desnutrido"" – that's Portuguese for ""Malnourished,"" which is a condition, so it should be included. Next, ""Carcinoma peritoneal seroso de alto grau ki-67 80%."" This seems like a specific type of cancer with a Ki-67 index. Then ""Carcinoma seroso de alto grau pT3b"" – same cancer but with a pT3b staging"	Desnutrido *Carcinoma peritoneal seroso de alto grau ki-67 80% *Carcinoma seroso de alto grau pT3b *Cirurgia *Carcinoma seroso de alto grau 1º de peritonio. *Obstrucao intestinal pos-operatoria Abdome agudo obstrutivo (aderência. *ITU. *Tabagismo *Obstrucao intestinal pos-operatoria . *Carcinoma seroso de alto grau ki-67 80% *Surpote clinico. *K913 - K91.3 Obstrucao intestinal pos-operatoria *Carcinomatose peritoneal *K91.3 Obstrucao intestinal pos-operatoria *CA PERITONEO *carcinoma seroso de alto grau pT3b *abdome agudo obstrutivo (aderência. *Abdome agudo obstrutivo (aderência. *Obstrucao intestinal pos-operatoria - Abdome agudo obstrutivo (aderência. *Obstrucao intestinal pos-operatoria *carcinoma seroso de alto grau ki-67 80% *carcinomatose peritoneal *Carcinomatose peritoneal - Diagnosticada em 2021
-"Okay, let's tackle this task. The user wants a list of diagnoses from the provided text, ensuring that similar diseases are not repeated and the most complete term is used. They also want only the diseases mentioned, without any extra words or formatting—just a list separated by asterisks and no line breaks.
+First, I need to parse the input text. Let me look at each item after the asterisks. The entries are:
 
-First, I need to parse through the given text and identify all the terms that are actual medical diagnoses. The user mentioned that there are other words which are not diseases, so I have to be careful to exclude those. Let's look at the list provided:
+- Desnutrido
+- Carcinoma peritoneal seroso de alto grau ki-67 80%
+- Carcinoma seroso de alto grau pT3b
+- Cirurgia
+- Carcinoma seroso de alto grau 1º de peritonio.
+- Obstrucao"	Desnutrido *Carcinoma peritoneal seroso de alto grau ki-67 80% *Carcinoma seroso de alto grau pT3b *Cirurgia *Carcinoma seroso de alto grau 1º de peritonio. *Obstrucao intestinal pos-operatoria Abdome agudo obstrutivo (aderência. *ITU. *Tabagismo *Obstrucao intestinal pos-operatoria . *Carcinoma seroso de alto grau ki-67 80% *Surpote clinico. *K913 - K91.3 Obstrucao intestinal pos-operatoria *Carcinomatose peritoneal *K91.3 Obstrucao intestinal pos-operatoria *CA PERITONEO *carcinoma seroso de alto grau pT3b *abdome agudo obstrutivo (aderência. *Abdome agudo obstrutivo (aderência. *Obstrucao intestinal pos-operatoria - Abdome agudo obstrutivo (aderência. *Obstrucao intestinal pos-operatoria *carcinoma seroso de alto grau ki-67 80% *carcinomatose peritoneal *Carcinomatose peritoneal - Diagnosticada em 2021
+"Okay, let's tackle this task. The user wants a list of diagnoses from the provided text, ensuring no repetition of similar terms and selecting the most complete ones when there are similar diseases. They also want only the diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
+
+First, I need to go through each item in the input. Let's list them out:
 
 - HAS
 - Pequena hérnia gástrica-hiatal
@@ -136,28 +203,41 @@ First, I need to parse through the given text and identify all the terms that ar
 - ICFEP (repeated)
 - Espondilose dorsal (repeated)
 - HAS (repeated)
-- Cardiopatia. (repeated)
+- Cardiopatia (repeated)
 - DPOC exacerbado (repeated)
-- Pneumonia NE . (repeated)
+- Pneumonia NE (repeated)
 - BRONCOESPASMO GRAVE NA MADRUGADA
 
-Now, I need to filter out non-diseases. Terms like ""TRANSFERENCIA PARA SEMI"" and ""PNM/"" don't seem like diagnoses. ""Transtornos"" is too vague. ""quadriplex negativo"" and ""há 1 semana"" are probably descriptors or time frames, not diseases.
+Now, I need to identify which terms are actual diseases. Some terms like ""TRANSFERENCIA PARA SEMI"" and ""Transtornos"" might not be specific diseases. ""TINOCA"" and ""PNM"" are unclear; maybe abbreviations? But since the user wants only diseases, I should check if these are valid. TINOCA might be a typo or an abbreviation not commonly recognized. PNM could be pneumonia, but there's already ""Pneumonia NE"". Maybe PNM is part of ""DPOC PNM"","	*HAS . *Pequena hérnia gástrica-hiatal. *HAS. *Cardiopatia *TINOCA - *DPOC PNM *TINOCA *Sepse - DPOC Exacerbado *Injuria miocardica aguda *Cardiopatia . *DPOC *Ateromatose aórtica e coronariana *TINOCA - Injúria Miocárdica Inflamatória *Sd gripal - quadriplex negativo *Espondilose dorsal. *gripal *Transtornos *ICFEP . *Pneumonia NE . *Pneumonia NE DPOC exacerbado *DLP *sindrome gripal há 1 semana *TRANSFERENCIA PARA SEMI . *Ateromatose aórtica e coronariana. *Injuria miocardica *Pneumonia NE *Injúria Miocárdica Inflamatória *DPOC . *Sd gripal *PNM/ *ICFEP *Espondilose dorsal *HAS *Cardiopatia. *DPOC exacerbado *Pneumonia NE . *BRONCOESPASMO GRAVE NA MADRUGADA
+"<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)
 
-Next, consolidate similar terms. For example, """	*HAS . *Pequena hérnia gástrica-hiatal. *HAS. *Cardiopatia *TINOCA - *DPOC PNM *TINOCA *Sepse - DPOC Exacerbado *Injuria miocardica aguda *Cardiopatia . *DPOC *Ateromatose aórtica e coronariana *TINOCA - Injúria Miocárdica Inflamatória *Sd gripal - quadriplex negativo *Espondilose dorsal. *gripal *Transtornos *ICFEP . *Pneumonia NE . *Pneumonia NE DPOC exacerbado *DLP *sindrome gripal há 1 semana *TRANSFERENCIA PARA SEMI . *Ateromatose aórtica e coronariana. *Injuria miocardica *Pneumonia NE *Injúria Miocárdica Inflamatória *DPOC . *Sd gripal *PNM/ *ICFEP *Espondilose dorsal *HAS *Cardiopatia. *DPOC exacerbado *Pneumonia NE . *BRONCOESPASMO GRAVE NA MADRUGADA
-"<|begin_of_sentence|><|assistant|>
+*Hemoglobinopatia *Anemia falciforme *Hemoglobinopatia SS . *anemia falciforme *Abstinência de opioides *Anemia Falciforme Crise Algica *Dor *Anemia *Hemoglobinopatia SS *D570 *ANEMIA FALCIFORME ANEMIA FALCIFORME *Anemia Falciforme *Anemia Falciforme. *HAS *Anemia falciforme c/crise *uptodade 29 *ANEMIA FALCIFORME *SDem evacuação *Transtornos de Adaptação *Hydrea 1 *Anemia Falciforme .<|Assistant|>
 
-*Hemoglobinopatia  
-*Anemia falciforme  
-*Abstinência de opioides  
-*Anemia Falciforme Crise Algica  
-*Hemoglobinopatia SS  
-*D570  
-*HAS  
-*SDem evacuação  
-*Transtornos de Adaptação  
-*Hydrea 1  
+Okay, let's tackle this problem. The user wants a list of diagnoses from the provided text, without repeating similar ones and choosing the most complete when there are similar terms. They also want only diseases, ignoring other words, and the list should be separated by * without line breaks.
 
-<|end_of_sentence|>"	*Hemoglobinopatia *Anemia falciforme *Hemoglobinopatia SS . *anemia falciforme *Abstinência de opioides *Anemia Falciforme Crise Algica *Dor *Anemia *Hemoglobinopatia SS *D570 *ANEMIA FALCIFORME ANEMIA FALCIFORME *Anemia Falciforme *Anemia Falciforme. *HAS *Anemia falciforme c/crise *uptodade 29 *ANEMIA FALCIFORME *SDem evacuação *Transtornos de Adaptação *Hydrea 1 *Anemia Falciforme .
+First, I need to go through each item in the given list. Let's list them out:
+
+1. Hemoglobinopatia
+2. Anemia falciforme
+3. Hemoglobinopatia SS
+4. anemia falciforme
+5. Abstinência de opioides
+6. Anemia Falciforme Crise Algica
+7. Dor
+8. Anemia
+9. Hemoglobinopatia SS
+10. D570
+11. ANEMIA FALCIFORME ANEMIA FALCIFORME
+12. Anemia Falciforme
+13. Anemia Falciforme.
+14. HAS
+15. Anemia falciforme c/crise
+16. uptodade 29
+17. ANEMIA FALCIFORME
+18. SDem evacuação
+19. Transtornos de Adaptação
+20. Hydrea 1
+21. Anemia Falc"	*Hemoglobinopatia *Anemia falciforme *Hemoglobinopatia SS . *anemia falciforme *Abstinência de opioides *Anemia Falciforme Crise Algica *Dor *Anemia *Hemoglobinopatia SS *D570 *ANEMIA FALCIFORME ANEMIA FALCIFORME *Anemia Falciforme *Anemia Falciforme. *HAS *Anemia falciforme c/crise *uptodade 29 *ANEMIA FALCIFORME *SDem evacuação *Transtornos de Adaptação *Hydrea 1 *Anemia Falciforme .
 "<|begin_of_sentence|><|assistant|>
 
 *Hérnia inguinal  
@@ -171,7 +251,7 @@ Next, consolidate similar terms. For example, """	*HAS . *Pequena hérnia gástr
 *Hérnia de hiato  
 *Gastrite  
 *Doença renal crônica agudizada  
-*Câncer de próstata  
+*Carcinoma de próstata  
 *Cistos corticais simples  
 *Adenocarcinoma de próstata Gleason 8 metastático com acometimento ósseo  
 *Nefrolitíase  
@@ -183,95 +263,92 @@ Next, consolidate similar terms. For example, """	*HAS . *Pequena hérnia gástr
 
 *Neoplasia de papila duodenal. *sintoamticos *urinária *Infecção urinária : sim *TRANSFERENCIA PARA SEMI . *pélvicos *ITU *05/10/23 C25 - NEOPLASIA MALIGNA DO PANCREAS *Artrite *HAS *Neoplasia maligna do corpo do útero. *Transfusão de CH hoje. *adenocarcinoma de pâncreas metastático *Neoplasia de papila duodenal *Sepse de foco urinário *C25 *CA de pâncreas avançado, em tratamento paliativo *adenocarcinoma endometrioide . *Sepse de foco urinario *Parkinson *Adenocarcinoma ductal cabeça de pancreas *DM *Ateromatose aorotilíaca *NEOPLASIA MALIGNA DO PANCREAS *constipação *Sepse de foco urinário. *05/10/23 C25 *Sepse de foco urinario tratada<|Assistant|>
 
-Okay, let's tackle this task. The user wants a list of diagnoses without repeating similar ones. They mentioned that if there are similar diseases, I should pick the most complete one. Also, I need to ignore any non-disease terms and only list the diseases, separated by * without line breaks.
+Okay, let's tackle this task. The user wants a list of diagnoses from the provided text, without repeating similar ones and choosing the most complete when there are similar terms. They also want only the diseases, ignoring other words, and the list should be separated by * without line breaks.
 
-First, I'll go through each item in the provided text. Let's list them out:
+First, I need to go through each item in the input. Let's list them out:
 
 1. Neoplasia de papila duodenal.
-2. sintoamticos (probably a typo, maybe ""sintomáticos"" which means symptomatic, not a disease)
-3. urinária (urinary, an adjective, not a disease)
-4. Infecção urinária : sim (Urinary infection, but ""sim"" is ""yes"", so the disease is Infecção urinária)
-5. TRANSFERENCIA PARA SEMI . (Transfer to semi-intensive care, not a disease)
-"	*Neoplasia de papila duodenal. *sintoamticos *urinária *Infecção urinária : sim *TRANSFERENCIA PARA SEMI . *pélvicos *ITU *05/10/23 C25 - NEOPLASIA MALIGNA DO PANCREAS *Artrite *HAS *Neoplasia maligna do corpo do útero. *Transfusão de CH hoje. *adenocarcinoma de pâncreas metastático *Neoplasia de papila duodenal *Sepse de foco urinário *C25 *CA de pâncreas avançado, em tratamento paliativo *adenocarcinoma endometrioide . *Sepse de foco urinario *Parkinson *Adenocarcinoma ductal cabeça de pancreas *DM *Ateromatose aorotilíaca *NEOPLASIA MALIGNA DO PANCREAS *constipação *Sepse de foco urinário. *05/10/23 C25 *Sepse de foco urinario tratada
-"<|begin_of_sentence|>Aqui está a lista de diagnósticos consolidada, priorizando os termos mais completos e evitando repetições similares:
+2. sintoamticos
+3. urinária
+4. Infecção urinária : sim
+5. TRANSFERENCIA PARA SEMI .
+6. pélvicos
+7. ITU
+8. 05/10/23 C25 - NEOPLASIA MALIGNA DO PANCREAS
+9. Artrite
+10. HAS
+11. Neoplasia maligna do corpo do útero.
+12. Transfusão de CH hoje"	*Neoplasia de papila duodenal. *sintoamticos *urinária *Infecção urinária : sim *TRANSFERENCIA PARA SEMI . *pélvicos *ITU *05/10/23 C25 - NEOPLASIA MALIGNA DO PANCREAS *Artrite *HAS *Neoplasia maligna do corpo do útero. *Transfusão de CH hoje. *adenocarcinoma de pâncreas metastático *Neoplasia de papila duodenal *Sepse de foco urinário *C25 *CA de pâncreas avançado, em tratamento paliativo *adenocarcinoma endometrioide . *Sepse de foco urinario *Parkinson *Adenocarcinoma ductal cabeça de pancreas *DM *Ateromatose aorotilíaca *NEOPLASIA MALIGNA DO PANCREAS *constipação *Sepse de foco urinário. *05/10/23 C25 *Sepse de foco urinario tratada
+"<|begin_of_sentence|>Aqui está a lista de diagnósticos consolidados, priorizando os termos mais completos e evitando repetições:
 
-*IRCD  
-*ICFER  
+*Insuficiência Renal Crônica Dialítica  
 *Dislipidemia  
-*DM  
-*Artropatia de Charcot em MIE  
-*Transtornos de Adaptação  
-*Osteomielite crônica  
-*Choque Circulatório  
-*Cor Anêmico  
-*Hemorragia Digestiva  
-*Pé Diabético: Infecção de Pele e Partes Moles Complicada por Osteomielite em Investigação  
+*Diabetes Mellitus Tipo 2  
+*Artropatia de Charcot em Membro Inferior Esquerdo  
+*Transtorno de Adaptação  
+*Osteomielite Crônica por Staphylococcus aureus  
+*Choque Circulatório com Cor Anêmico e Hemorragia Digestiva  
+*Pé Diabético com Infecção de Pele e Partes Moles Complicada por Osteomielite  
 *Depressão  
-*Neuropatia Diabética Periférica  
-*Adrenais: discoide à direita (variante anatômica)  
-*Pé diabético com úlcera extensa MIE  
-*Anemia  
-*DISFAGIA  
-*ITU  
-*Obesidade Grau 2  
-*Púrpura retiforme em MMSS (E>D) e MMII  
+*Neuropatia Diabética Periférica com Crise Álgica  
 *Nefrolitíase  
-*HAS  
-*Ortostatismo  
-*Osteomielite crônica - S. aureus  
-*DAC: IAM em 2021 ATC c/ 03 Stents  
-*Anemia sintomática  
-*MRC  
-*DM2  
-*ÚLCERA INFECTADA PRÉ E  
-*Pangastrite enantemática leve com componente erosivo plano leve no antro  
-*IRC  
-*DRC com osteomielite crônica em pé esquerdo  
-*Degeneração osteoarticular de Charcot nos Pés Bilateral e Linfedema Secundário à Erisipelas de Repetição  
-*Linfonodomegalias na raiz da coxa  
-*DRC ESTÁGIO G5D DESDE 10/2022  
-*Erisipela  
-*DIH 12/09/2023  
-*Sepse de foco cutâneo/pulmonar  
-*AVC prévio  
-*Esofagite distal erosiva - Grau A de Los Angeles  
-*ICC  
-*Encefalopatia tóxico-metabólica  
-*Ex-tabagista 20 anos-maço - cessou  
-*Colelitiase  
+*Colelitíase  
+*Obesidade Grau 2  
+*Púrpura Retiforme em Membros  
+*Hipertensão Arterial Sistêmica  
+*Doença Arterial Coronariana com Infarto Agudo do Miocárdio em 2021 e Stents  
+*Anemia Sintomática  
+*Disfagia Orofaringeica Neurogênica Moderada  
+*Infecção do Trato Urinário  
+*Esofagite Erosiva Grau A de Los Angeles  
+*Bulboduodenite Erosiva Leve  
+*Pangastrite Enantemática com Componente Erosivo  
 *Hipotireoidismo  
-*TEV  
-*Es"	*IRCD *ICFER *Dislipidemia. *DM. *Artropatia de Charcot em MIE . *Transtornos de Adaptação. *Osteomielite crônica Choque Circulatório - Cor Anêmico - Hemorragia Digestiva *Osteomielite crônica *Pé Diabético: Infecção de Pele e Partes Moles Complicada por Osteomielite em Investigação *Depressão *Diabética Periférica *CHOQUE CIRCULATÓRIO *Adrenais: discoide à direita (variante anatômica *Pé diabetico com ulcera extensa MIE *Anemia *DISFAGIA *Adrenal esquerda normal *ITU *Obesidade Grau 2 . *Charcot *Púrpura retiforme em MMSS (E>D) e MMII *Nefrolitíase. *Pé Diabético: *Osteomielite em Investigação *Choque circulatório, Cor anêmico *Osteomielite crônica Choque Circulatório *HAS *Ortostatismo *Osteomielite crônica - S. aureus. *Periférica *DAC: IAM em 2021 ATC c/ 03 Stents *Anemia sintomática *MRC 12 Tosse produtiva deglutida FR *DM2 *OSTEOMIELITE CRÔNICA- S aureus. *ULCERA INFECTADA PRÉ E, *Pangastrite enantemática leve com componente erosivo plano leve no antro. *Dislipidemia *OSTEOMIELITE CRÔNICA- S aureus *Choque Circulatório - Cor Anêmico *IRC *IRC DIALITICO *DRC com osteomielite crônica em pé esquerdo *DM *ANEMIA A/ *Degeneração osteoarticular de Charcot nos Pés Bilateral e Linfedema Secundário à Erisipelas de Repetição. *Linfonodomegalias na raíz da coxa medindo até *Pé Diabético *Púrpura retiforme em *Choque circulatório *DRC ESTÁGIO G5D DESDE 10/2022 *Erisipela *Osteomielite crônica. *DIH 12/09/2023 *Anemia Sintomática *dm *Sepse de foco cutâneo/pulmonar *Choque Circulatório *Pé Diabético: Infecção de Pele *CHOQUE CIRCULATÓRIO, COR ANÊMICO *AVC prévio *Esofagite distal erosiva - Grau A de Los Angeles. *de *DRC dialitico . *ICC *Nefrolitíase *Encefalopatia tóxico-metabólica *Ex-tabagista 20 anos-maço - cessou *DAC: IAM em 2021 *20 anos-maço *ANEMIA *Retinopatia Diabética . *DIALISE DE DEMANDA *Bulboduodenite erosiva leve *Pé de charcot *Nefrolitíase/Colelitiase *Hipotireoidismo *Insuficiência *lesão *Infecção de Pele e Partes *Osteomielite crônica Choque *IRC Dialitico (2², 4² e 6ª) *Encefalopatia tóxico-metabólica 12 *TEV *19/9 Piora infecciosa *Pé *hd atralgia/ artose *14 *Pé Diabético: Infecção de Pele e Partes Moles Complicada *Doença renal crônica dialítica desde outubro/2022 (diabética e hipertensiva *Esplenomegalia homogênea *Infecção de Pele *ABs *Complicações macro *K921 - K92.1 Melena *Ex-tabagista 20 anos-maço *DRC ESTÁGIO G5D OUT 2022 *DAC: IAM *DRC ESTÁGIO G5D DESDE 10 *Choque Circulatório - Cor Anêmico - Hemorragia Digestiva *ANEMIA / QUEDA DE HB *Crise Álgica de Neuropatia Diabética Periférica *Cárdia preservada *14/9 OMC pé E--- *Ateromatose aortoilíaca e de ramos viscerais *fibroelástica *Erisipela cronica *HIPERCALEMIA GRAVE. *Infecção de *Obesidade Grau 2 *Pé Diabético: Infecção de *Lâminas líquidas articulares com sinovite *Artropatia de Charcot em MIE *Linfangite cronica + dermatite ocre *DRC dialitico *Anemia A/ *Osteomielite crônica Choque Circulatório - Cor Anêmico *neuropatia diabetica . *Tosse produtiva deglutida FR *CAM-ICU *Paciente *Anemia NE . *Pé Diabético: Infecção *CHOQUE CIRCULATÓRIO - COR ANÊMICO *DISFAGIA OROFARINGEA NEUROGENICA MODERADA *taquicardia e hipertensão em controles *diabetes tipo 2 clássico há > 20 anos *Artropatia de Charcot em MIE. *Corrente sanguínea primária *Pé Diabético: Infecção de Pele e Partes *Pé diabético *Anemia NE *ENCEFALOPATIA TÓXICO-METABÓLICA *HIPERCALEMIA *Retinopatia diabética. *20 anos-maço - cessou 1997 *Doença renal crônica dialítica desde outubro/2022 (diabética e hipertensiva) > FAV MSE 30 *Disfunção diastólica de grau *K92.1 Melena *OSTEOMIELITE CRÔNICA *FARMACODERMIA *DISFAGIA OROFARÍNGEA *K92.1 Melena ANEMIA *Insuficiência venosa periférica crônica *Pangastrite enantemática *ULCERA INFECTADA PRÉ E, ARTROPATIA CHARCOT. *K921 *has,dlp,dm *DAC *Ex-tabagista 20 anos-maço - cessou 1997 *OSTEOMIELITE CRÔNICA CHOQUE CIRCULATÓRIO *Pé Diabético: Infecção de Pele e Partes Moles *Lipomatose retroperitoneal *Bulboduodenite erosiva leve. *DRC dialítica desde outubro/2022 (diabética e hipertensiva *Osteomielite crônica- recusa abordagem cirurgica . *DM . *artropatia de charcot em *Ex-tabagista 20 anos-maço (cessou há 26 anos *ICFER . *Retinopatia diabética *osteomielite *Retinopatia Diabética *14/9 OMC pé E *Infecção *diabetes tipo 2 clássico *Osteomielite *Neuropatia periférica com crise álgica *DISFAGIA OROFARÍNGEA LEVE *Sepse de foco cutâneo/pulmonar. *Ex-tabagista 20 anos-maço - cessou 1997 . *IAM *DRC estágio G5D out 2022 *Farmacodermia . *Infecção de Pele e Partes Moles Complicada por Osteomielite em Investigação *QUEDA DE HB *Encefalopatia Tóxico-Metabólica *CHOQUE CIRCULATÓRIO - COR ANÊMICO - HEMORRAGIA DIGESTIVA *Osteomielite crônica - S. aureus *DRC Dialítica desde outubro/2022
-"Okay, let's tackle this user's request. They want a list of diagnoses from the given text, ensuring not to repeat similar ones and choosing the most complete term when there are similar diseases. Also, they only want the diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
+*Encefalopatia Tóxico-Metabólica  
+*Tromboembolismo Venoso  
+*Erisipela Crônica  
+*Hipercalemia Grave  
+*Retinopatia Diabética  
+*Esplenomegalia Homogênea  
+*Lipomatose Retroperitoneal  
+*Insuficiência Cardíaca Congestiva  
+*Disfunção Diastólica de Grau Leve  
+*Farmacodermia  
+*Linfangite Crônica com Dermatite Ocre  
+*Sepse de Foco Cutâneo/Pulmonar  
+*Melena (K92.1)  
+*Doença Renal Crônica Dialítica Estágio G5D desde Outubro/2022  
+*Acidente Vascular Cerebral Prévia  
+*Síndrome de Ortostatismo  
+*Adrenais: Discoide"	*IRCD *ICFER *Dislipidemia. *DM. *Artropatia de Charcot em MIE . *Transtornos de Adaptação. *Osteomielite crônica Choque Circulatório - Cor Anêmico - Hemorragia Digestiva *Osteomielite crônica *Pé Diabético: Infecção de Pele e Partes Moles Complicada por Osteomielite em Investigação *Depressão *Diabética Periférica *CHOQUE CIRCULATÓRIO *Adrenais: discoide à direita (variante anatômica *Pé diabetico com ulcera extensa MIE *Anemia *DISFAGIA *Adrenal esquerda normal *ITU *Obesidade Grau 2 . *Charcot *Púrpura retiforme em MMSS (E>D) e MMII *Nefrolitíase. *Pé Diabético: *Osteomielite em Investigação *Choque circulatório, Cor anêmico *Osteomielite crônica Choque Circulatório *HAS *Ortostatismo *Osteomielite crônica - S. aureus. *Periférica *DAC: IAM em 2021 ATC c/ 03 Stents *Anemia sintomática *MRC 12 Tosse produtiva deglutida FR *DM2 *OSTEOMIELITE CRÔNICA- S aureus. *ULCERA INFECTADA PRÉ E, *Pangastrite enantemática leve com componente erosivo plano leve no antro. *Dislipidemia *OSTEOMIELITE CRÔNICA- S aureus *Choque Circulatório - Cor Anêmico *IRC *IRC DIALITICO *DRC com osteomielite crônica em pé esquerdo *DM *ANEMIA A/ *Degeneração osteoarticular de Charcot nos Pés Bilateral e Linfedema Secundário à Erisipelas de Repetição. *Linfonodomegalias na raíz da coxa medindo até *Pé Diabético *Púrpura retiforme em *Choque circulatório *DRC ESTÁGIO G5D DESDE 10/2022 *Erisipela *Osteomielite crônica. *DIH 12/09/2023 *Anemia Sintomática *dm *Sepse de foco cutâneo/pulmonar *Choque Circulatório *Pé Diabético: Infecção de Pele *CHOQUE CIRCULATÓRIO, COR ANÊMICO *AVC prévio *Esofagite distal erosiva - Grau A de Los Angeles. *de *DRC dialitico . *ICC *Nefrolitíase *Encefalopatia tóxico-metabólica *Ex-tabagista 20 anos-maço - cessou *DAC: IAM em 2021 *20 anos-maço *ANEMIA *Retinopatia Diabética . *DIALISE DE DEMANDA *Bulboduodenite erosiva leve *Pé de charcot *Nefrolitíase/Colelitiase *Hipotireoidismo *Insuficiência *lesão *Infecção de Pele e Partes *Osteomielite crônica Choque *IRC Dialitico (2², 4² e 6ª) *Encefalopatia tóxico-metabólica 12 *TEV *19/9 Piora infecciosa *Pé *hd atralgia/ artose *14 *Pé Diabético: Infecção de Pele e Partes Moles Complicada *Doença renal crônica dialítica desde outubro/2022 (diabética e hipertensiva *Esplenomegalia homogênea *Infecção de Pele *ABs *Complicações macro *K921 - K92.1 Melena *Ex-tabagista 20 anos-maço *DRC ESTÁGIO G5D OUT 2022 *DAC: IAM *DRC ESTÁGIO G5D DESDE 10 *Choque Circulatório - Cor Anêmico - Hemorragia Digestiva *ANEMIA / QUEDA DE HB *Crise Álgica de Neuropatia Diabética Periférica *Cárdia preservada *14/9 OMC pé E--- *Ateromatose aortoilíaca e de ramos viscerais *fibroelástica *Erisipela cronica *HIPERCALEMIA GRAVE. *Infecção de *Obesidade Grau 2 *Pé Diabético: Infecção de *Lâminas líquidas articulares com sinovite *Artropatia de Charcot em MIE *Linfangite cronica + dermatite ocre *DRC dialitico *Anemia A/ *Osteomielite crônica Choque Circulatório - Cor Anêmico *neuropatia diabetica . *Tosse produtiva deglutida FR *CAM-ICU *Paciente *Anemia NE . *Pé Diabético: Infecção *CHOQUE CIRCULATÓRIO - COR ANÊMICO *DISFAGIA OROFARINGEA NEUROGENICA MODERADA *taquicardia e hipertensão em controles *diabetes tipo 2 clássico há > 20 anos *Artropatia de Charcot em MIE. *Corrente sanguínea primária *Pé Diabético: Infecção de Pele e Partes *Pé diabético *Anemia NE *ENCEFALOPATIA TÓXICO-METABÓLICA *HIPERCALEMIA *Retinopatia diabética. *20 anos-maço - cessou 1997 *Doença renal crônica dialítica desde outubro/2022 (diabética e hipertensiva) > FAV MSE 30 *Disfunção diastólica de grau *K92.1 Melena *OSTEOMIELITE CRÔNICA *FARMACODERMIA *DISFAGIA OROFARÍNGEA *K92.1 Melena ANEMIA *Insuficiência venosa periférica crônica *Pangastrite enantemática *ULCERA INFECTADA PRÉ E, ARTROPATIA CHARCOT. *K921 *has,dlp,dm *DAC *Ex-tabagista 20 anos-maço - cessou 1997 *OSTEOMIELITE CRÔNICA CHOQUE CIRCULATÓRIO *Pé Diabético: Infecção de Pele e Partes Moles *Lipomatose retroperitoneal *Bulboduodenite erosiva leve. *DRC dialítica desde outubro/2022 (diabética e hipertensiva *Osteomielite crônica- recusa abordagem cirurgica . *DM . *artropatia de charcot em *Ex-tabagista 20 anos-maço (cessou há 26 anos *ICFER . *Retinopatia diabética *osteomielite *Retinopatia Diabética *14/9 OMC pé E *Infecção *diabetes tipo 2 clássico *Osteomielite *Neuropatia periférica com crise álgica *DISFAGIA OROFARÍNGEA LEVE *Sepse de foco cutâneo/pulmonar. *Ex-tabagista 20 anos-maço - cessou 1997 . *IAM *DRC estágio G5D out 2022 *Farmacodermia . *Infecção de Pele e Partes Moles Complicada por Osteomielite em Investigação *QUEDA DE HB *Encefalopatia Tóxico-Metabólica *CHOQUE CIRCULATÓRIO - COR ANÊMICO - HEMORRAGIA DIGESTIVA *Osteomielite crônica - S. aureus *DRC Dialítica desde outubro/2022
+"Okay, let's tackle this user's request. They want a list of diagnoses from the given text, making sure not to repeat similar ones and choosing the most complete term when there are similar diseases. Also, they only want the diseases mentioned, ignoring other words, and the list should be separated by * without line breaks.
 
-First, I need to parse the input text. Let's look at each item:
+First, I need to parse the input text. The user provided: *HAS *Varizes membros infer c/ulcera e inflam *Dermatite Ocre + cicatriz relacionado a tratramento *TEP *DMansine *Tabagismo *has *Lesão por adesivo *Doença ulcera periférica *has. *DERMATITE OCRE. *Dispensação *CFelipe *ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO.
 
-- HAS: This is likely ""Hipertensão Arterial Sistêmica"" (Systemic Arterial Hypertension). It's mentioned multiple times (HAS, has, has.), so I need to deduplicate and use the most complete term. The standard abbreviation is HAS, so that's the one to keep.
+I notice some entries are duplicates or variations. For example, ""HAS"" and ""has"" are the same, likely referring to Hypertension (Hipertensão Arterial Sistêmica in Portuguese). ""Varizes membros infer c/ulcera e inflam"" seems to be varicose veins with ulcer and inflammation, but there's also ""ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO"" which is a venous ulcer in the right lower limb. These might be similar, so I should choose the more specific one.
 
-- Varizes membros infer c/ulcera e inflam: This translates to ""Varicose veins of lower extremities with ulcer and inflammation."" The user wants the most complete term, so this one is better than others that might be shorter.
+""Dermatite Ocre"" appears twice, once with a mention of a scar related to treatment. Since the user wants the most complete term, maybe keep ""Dermatite Ocre"" without the extra info. ""TEP"" is probably Tromboembolismo Pulmonar. ""DMansine"" might be a typo, possibly ""Diabetes Mellitus"" (DM) with a misspelling. ""Tabagismo"" is smoking, which is a condition but not a disease. Wait, the user said to list only diseases. So maybe exclude Tabagismo? But the user included it in their example. Wait, looking at the assistant's answer, they included Tabagismo. Hmm, maybe the user considers it a diagnosis. I'll keep it as per the example.
 
-- Dermatite Ocre + cicatriz relacionado a tratramento: ""Ocher dermatitis + scar related to treatment."" The term here is ""Dermatite Ocre."" It's mentioned again as DERMATITE OCRE, so we'll take the correct capitalization and include it once.
+""Lesão por adesivo"" is an adhesive-related injury, which is a condition. ""Doença ulcera periférica"" is peripheral ulcer disease, which is similar to the venous ulcer. ""Dispensação"" and ""CFelipe"" are not diseases, so exclude those.
 
-- TEP: This stands for ""Tromboembolismo Pulmonar"" (Pulmonary Thromboembolism). It's a standard acronym, so we keep it as TEP.
-
-- DMansine: Hmm, this might be a typo. Common abbreviations include DM (Diabetes Mellitus). Maybe it's ""DM tipo 2"" or another variant, but ""DMansine"" doesn't make sense. Possibly a misspelling. The user might have meant ""DM tipo 2"" or another form. Since the user wants only diseases and to ignore non-diseases, but this isn't a recognized term. Maybe it's ""Diabetes Mellitus insulino-dependente"" (Insulin-dependent DM), but the exact term isn't clear. Alternatively, could it be ""DM associado""? Not sure. Since the user wants to list only valid diseases, perhaps this is an error and should be excluded. Alternatively, if it's a typo for DM tipo 2, but without more context, it's safer to omit it unless confident.
-
-- Tabagismo: This is ""Smoking,"" which is a risk factor, not a disease. The user specified to list only diseases, so this should be excluded"	*HAS *Varizes membros infer c/ulcera e inflam *Dermatite Ocre + cicatriz relacionado a tratramento *TEP *DMansine *Tabagismo *has *Lesão por adesivo *Doença ulcera periférica *has. *DERMATITE OCRE. *Dispensação *CFelipe *ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO.
+"	*HAS *Varizes membros infer c/ulcera e inflam *Dermatite Ocre + cicatriz relacionado a tratramento *TEP *DMansine *Tabagismo *has *Lesão por adesivo *Doença ulcera periférica *has. *DERMATITE OCRE. *Dispensação *CFelipe *ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO.
 "<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)
 
 *ANEMIA CRÔNICA *DRC ESTÁGIO G3 *Anemia *DM tipo 2 *Pielonefrite complicada *PIELONEFRITE COMPLICADA, ABCESSO RENAL D *LRA *Dm *Pielonefrite complicada com abcesso . *Anemia grave. *Bexiga *Pielonefrite complicada - Abcesso renal a direita *DM TIPO 2 *Pielonefrite complicada - abscesso renal a direita. *ANEMIA GRAVE *PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE. *CFelipe *OBESIDADE . *ANEMIA *DM2 *Ureterolitiase *DM . *Infecc do trato urinario de localiz NE . *DMG *DRC estágio G3 *Pielonefrite complicada - abscesso renal a direita + hidronefrose *PIELONEFRITE COM ABSCESSO *DM *LESÕES DE PELE *Pielonefrite complicada - abscesso renal a direita *Infecc do trato urinario de localiz NE *DRC *Anemia em investigação *OBESIDADE.<|Assistant|>
 
-Okay, let's tackle this problem. The user wants a list of diagnoses without repeating similar ones. When there are similar diseases, I need to pick the most complete version. Also, I should only include actual diseases and ignore other words. The list should be separated by * with no line breaks.
+*ANEMIA CRÔNICA *DRC ESTÁGIO G3 *DM TIPO 2 *PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE *LRA *OBESIDADE *URETEROLITIASE *INFECC DO TRATO URINARIO DE LOCALIZ NE *DMG *LESÕES DE PELE"	*ANEMIA CRÔNICA *DRC ESTÁGIO G3 *Anemia *DM tipo 2 *Pielonefrite complicada *PIELONEFRITE COMPLICADA, ABCESSO RENAL D *LRA *Dm *Pielonefrite complicada com abcesso . *Anemia grave. *Bexiga *Pielonefrite complicada - Abcesso renal a direita *DM TIPO 2 *Pielonefrite complicada - abscesso renal a direita. *ANEMIA GRAVE *PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE. *CFelipe *OBESIDADE . *ANEMIA *DM2 *Ureterolitiase *DM . *Infecc do trato urinario de localiz NE . *DMG *DRC estágio G3 *Pielonefrite complicada - abscesso renal a direita + hidronefrose *PIELONEFRITE COM ABSCESSO *DM *LESÕES DE PELE *Pielonefrite complicada - abscesso renal a direita *Infecc do trato urinario de localiz NE *DRC *Anemia em investigação *OBESIDADE.
+"Okay, let's tackle this problem. The user wants a list of diagnoses from the provided text, ensuring that similar ones are not repeated and the most complete version is chosen. They also want only diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
 
-First, I'll go through each item in the provided list. Let's start with ""ANEMIA CRÔNICA"". Then there's ""Anemia"", ""Anemia grave"", ""ANEMIA GRAVE"", ""Anemia em investigação"". These all relate to anemia. The most complete ones here are ""ANEMIA CRÔN"	*ANEMIA CRÔNICA *DRC ESTÁGIO G3 *Anemia *DM tipo 2 *Pielonefrite complicada *PIELONEFRITE COMPLICADA, ABCESSO RENAL D *LRA *Dm *Pielonefrite complicada com abcesso . *Anemia grave. *Bexiga *Pielonefrite complicada - Abcesso renal a direita *DM TIPO 2 *Pielonefrite complicada - abscesso renal a direita. *ANEMIA GRAVE *PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE. *CFelipe *OBESIDADE . *ANEMIA *DM2 *Ureterolitiase *DM . *Infecc do trato urinario de localiz NE . *DMG *DRC estágio G3 *Pielonefrite complicada - abscesso renal a direita + hidronefrose *PIELONEFRITE COM ABSCESSO *DM *LESÕES DE PELE *Pielonefrite complicada - abscesso renal a direita *Infecc do trato urinario de localiz NE *DRC *Anemia em investigação *OBESIDADE.
-"Okay, let's tackle this problem. The user wants a list of diagnoses from the provided text, ensuring that similar diagnoses are not repeated and that the most comprehensive ones are chosen. They also want only diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
+First, I need to go through each item in the given list. Some entries are duplicates or variations. For example, ""Pneumonia Bacteriana"" appears multiple times, sometimes with additional details like ""complicada com derrame pleural"" or ""Em piema"". The goal is to pick the most comprehensive term each time.
 
-First, I need to parse through the given text. The entries are separated by asterisks, but some entries have extra information like dates, codes, or descriptions. My job is to extract only the disease names.
+Looking at ""Broncopneumonia bacteriana com Empiema"" and ""Broncopneumonia bacteriana"", the first one is more complete, so I should include that and exclude the simpler version. Similarly, ""PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE"" is longer than ""PNEUMONIA BACTERIANA"", so the longer one stays.
 
-Looking at the list, I see several repetitions and variations. For example, ""Pneumonia Bacteriana"" appears multiple times in different forms. The user mentioned that when there are similar diseases, the most complete one should be chosen. So, I need to check if any entries have additional descriptors that make them more comprehensive. For instance, ""Broncopneumonia bacteriana com Empiema"" is more specific than just ""Pneumonia Bacteriana"".
+I also need to check for non-disease terms. Words like ""TRANSFERENCIA"", ""23/9"", ""MPBarbosa"" are not diagnoses and should be excluded. Acronyms like ""DM2"" (Diabetes Mellitus type 2) and ""HAS"" (Hipertensão Arterial Sistêmica) are valid diagnoses. ""TEP"" is Tromboembolismo Pulmonar, so that's a diagnosis.
 
-Next, I need to identify non-disease terms. Words like ""TRASFERENCIA"", ""23/9"", ""MPBarbosa"", ""CFelipe"" are not diseases and should be excluded. Also, terms like ""3"", ""22/09"", ""27/8"" are dates or numbers and should be ignored.
+Some entries have extra descriptions, like ""Cistos corticais bilaterais, com até 2,5 cm"". Even though it's descriptive, it's a diagnosis. ""Fistula gástrica salivar"" is another valid one.
 
-Some entries have abbreviations. For example, ""TEP"" likely stands for ""Tromboembolismo Pulmonar"" (Pulmonary Embolism), which is a disease. ""DM2"" is ""Diabetes Mellitus tipo 2"". ""HAS"" is ""Hipertensão Arterial Sistêmica"". These abbreviations should be expanded to their full names for clarity and to avoid repetition. However, the user wants the list in the original terms provided, so maybe keep the abbreviations as they are unless instructed otherwise. Wait, the user said to cite only the diseases as they appear, without adding extras. So I should keep the abbreviations as written if they are standard medical terms. But need to check if ""TEP"" and ""DM2"" are considered valid diagnoses here.
+I need to ensure that similar terms are grouped. For instance, ""Em piema pleural"" and ""Em piema"" – the more specific one (""Em piema pleural"") should be kept. Also, ""LRA"" (Lesão Renal Aguda) and ""LRA Revertida"" – since ""Revertida"" is a status, maybe just keep ""LRA"".
 
-Looking at the list again, ""CA"" appears multiple times. ""CA"" usually stands for ""Câncer"" (Cancer), but without more context, it's unclear. However, since the user wants only diseases mentioned, and ""CA"" is a common abbreviation for cancer, it should be included. But in the list, there's ""CA (Pai)"" which seems to refer to family history,"	*TEP. *pneumonia *Broncopneumonia bacteriana com Empiema *Derrame pleural de contiguidade de coleção periesplenica *3 *Broncopneumonia bacteriana com Empiema *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM *PNEUMONIA BACTERIANA. *Pneumonia Bacteriana *TEP *Pneumonia complicada com derrame pleural- EMPIEMA PLEURAL À ESQ *DM2 *22/09 Broncopneumonia bacteriana *POT gastroplastia redutora *PNEUMONIA BACTERIANA *TRASFERENCIA *EMPIEMA PLEURAL Á ESQ *REABILITAÇÃO *Pneumonia complicada *CA ( *Derrame pleural à esquerda *CA *27/8 Recidiva da febre - infecção PICC *DM . *Fistula gástrica salivar (Teste azul de metileno +: saída pelo dreno epigástrico) *Empiema *MPBarbosa *Fistula gástrica salivar *CA (Pai) *Fistula gástrica salivar (Teste azul de metileno +: saída pelo dreno epigástrico *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE *23/9 Toracocentese. *pneumonia complicada *Hiponatremia - DM mal controlado *DM *Cistos corticais bilaterais, com até 2,5 cm *Cistos corticais bilaterais, com até 2,5 cm. *LRA *DM insulino dependente *DECORTICAÇÃO PULMONAR *CA (Pai *TRANSFERENCIA PARA SEMI *PNM nosocomial complicando com derrame pleural. *EMPIEMA PLEURAL *DM2 insulino dependente *CFelipe *Pneumonia Bacteriana -Empiema. *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE PACIENTE *Obesidade *Recidiva da febre - infecção PICC *03 *Dor osteomuscular *I84 - HEMORROIDAS *ADA LIQ PLEURAL 259 MYCOBACTERIUM TB NÃO DETECTADO *Fistula gástrica salivar 19/ *Derrame pleural pequeno *Pneumonia complicada com derrame pleural. *HAS *Obesidade. *constipação *23 *Estratificação de risco secundário *27/08 Recidiva da febre - infecção PICC *PNEUMONIA BACTERIANA EMPIEMA. *TAQUICARDIA SINUSAL *PNEUMONIA BACTERIANA NAO *Outr pneumonias bacter *LRA Revertida *Relação VD / VE preservada *PNEUMONIA BACTERIANA NAO CLASSIFICADA
+Check for repetitions: ""DM2"" and ""DM2 insulino dependente"" – the latter is more specific, so include that. ""Obesidade"" appears twice; just once is enough.
+
+Finally, compile the list, ensuring all are diseases, no repetitions, and the most complete terms are used. Exclude any non-disease entries and"	*TEP. *pneumonia *Broncopneumonia bacteriana com Empiema *Derrame pleural de contiguidade de coleção periesplenica *3 *Broncopneumonia bacteriana com Empiema *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM *PNEUMONIA BACTERIANA. *Pneumonia Bacteriana *TEP *Pneumonia complicada com derrame pleural- EMPIEMA PLEURAL À ESQ *DM2 *22/09 Broncopneumonia bacteriana *POT gastroplastia redutora *PNEUMONIA BACTERIANA *TRASFERENCIA *EMPIEMA PLEURAL Á ESQ *REABILITAÇÃO *Pneumonia complicada *CA ( *Derrame pleural à esquerda *CA *27/8 Recidiva da febre - infecção PICC *DM . *Fistula gástrica salivar (Teste azul de metileno +: saída pelo dreno epigástrico) *Empiema *MPBarbosa *Fistula gástrica salivar *CA (Pai) *Fistula gástrica salivar (Teste azul de metileno +: saída pelo dreno epigástrico *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE *23/9 Toracocentese. *pneumonia complicada *Hiponatremia - DM mal controlado *DM *Cistos corticais bilaterais, com até 2,5 cm *Cistos corticais bilaterais, com até 2,5 cm. *LRA *DM insulino dependente *DECORTICAÇÃO PULMONAR *CA (Pai *TRANSFERENCIA PARA SEMI *PNM nosocomial complicando com derrame pleural. *EMPIEMA PLEURAL *DM2 insulino dependente *CFelipe *Pneumonia Bacteriana -Empiema. *PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE PACIENTE *Obesidade *Recidiva da febre - infecção PICC *03 *Dor osteomuscular *I84 - HEMORROIDAS *ADA LIQ PLEURAL 259 MYCOBACTERIUM TB NÃO DETECTADO *Fistula gástrica salivar 19/ *Derrame pleural pequeno *Pneumonia complicada com derrame pleural. *HAS *Obesidade. *constipação *23 *Estratificação de risco secundário *27/08 Recidiva da febre - infecção PICC *PNEUMONIA BACTERIANA EMPIEMA. *TAQUICARDIA SINUSAL *PNEUMONIA BACTERIANA NAO *Outr pneumonias bacter *LRA Revertida *Relação VD / VE preservada *PNEUMONIA BACTERIANA NAO CLASSIFICADA

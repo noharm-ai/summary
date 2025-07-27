@@ -27,101 +27,172 @@
 *Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente 
 *DLP<|Assistant|>
 
-Okay, let's tackle this problem. The user wants a list of diagnoses from the given text, ensuring no duplicates and choosing the most complete version when there are similar terms. They also want only the diseases, ignoring other words, and the list should be separated by 
+Okay, let's tackle this problem. The user wants a list of diagnoses without repeating similar ones, choosing the most complete when there are similar terms. They also want only diseases mentioned, ignoring other words, and the list should be separated by 
 * without line breaks.
 
-First, I need to parse the input text. Let's look at each item:
+First, I need to go through each item in the provided list. Let's list them out:
+
+1. HAS
+2. amputado MID (transtibial)
+3. DAOP
+4. DM
+5. amputação transtibila em MID
+6. DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B. ?
+7. IC PERFIL B
+8. amputação transtibial em MID
+9. Infecção da ferida operatória
+10. IC Perfil
+11. IC
+12. Ateromatose em coronárias
+13. IC Perfil B
+14. Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente
+15. DLP
+
+Now, I need to identify which of these are actual diagnoses. The user mentioned to ignore non-disease terms. Let's analyze each:
 
 1. 
-*HAS - This is likely Hypertension (Hipertensão Arterial Sistêmica).
+*HAS
+*: Hipertensão Arterial Sistêmica (Systemic Arterial Hypertension) - this is a diagnosis.
 2. 
-*amputado MID (transtibial) - Amputação isn't a disease, it's a procedure. MID might be Membro Inferior Direito. So this is a status, not a diagnosis.
-3. 
-*DAOP - Doença Arterial Obstrutiva Periférica.
-4. 
-*DM - Diabetes Mellitus.
-5. 
-*amputação transtibila em MID - Same as point 2, not a disease.
-6. 
-*DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B. ? - The main diagnosis here is IC Perfil B (Insuficiência Cardíaca Perfil B). The discomfort is a symptom, so we take IC Perfil B.
-7. 
-*IC PERFIL B - Same as above.
-8. 
-*amputação transtibial em MID - Again, procedure, not a disease.
-"	"Verdadeiros Positivos (VP):
-* Hipertensão Arterial Sistêmica (HAS)
+*amputado MID (t"	"Verdadeiros Positivos (VP):
+* Amputação transtibial em membro inferior direito (MID) 
+* Ateromatose em coronárias
+* Dislipidemia (DLP)
 * Doença Arterial Obstrutiva Periférica (DAOP)
 * Diabetes Mellitus (DM)
+* Hipertensão Arterial Sistêmica (HAS)
+* Infecção da ferida operatória 
 * Insuficiência Cardíaca (IC) Perfil B
-* Ateromatose em coronárias
-* Infecção da ferida operatória
-* Dislipidemia (DLP)
 * Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente
 
 Falsos Positivos (FP):
-* amputado MID (transtibial)
-* amputação transtibila em MID
-* DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B
-* IC
-* IC Perfil
-* amputação transtibial em MID
+* amputado MID (transtibial) [repetido, menos completo]
+* DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B [sintoma, não diagnóstico]
+* IC Perfil [menos completo]
+* IC [menos completo]
 
 Falsos Negativos (FN):
-* Amputação transtibial em membro inferior direito (MID)
+Nenhum (Todos os itens da lista referência estão presentes na lista hipótese)
 
 Cálculo de precisão e recall:
 
-Precisão = VP / (VP + FP) = 8 / (8 + 6) = 8 / 14 ≈ 0.571 (57.1%)
-Recall = VP / (VP + FN) = 8 / (8 + 1) = 8 / 9 ≈ 0.889 (88.9%)
+Precisão = VP / (VP + FP) = 9 / (9 + 4) = 9 / 13 ≈ 0.692 (69.2%)
+Recall = VP / (VP + FN) = 9 / (9 + 0) = 9 / 9 = 1.0 (100%)
 
-(Precisão, Recall) = [[0.571, 0.889]]"
+(Precisão, Recall) = [[0.692, 1.0]]"
 "*Osteomielite 
 *Infecção de sítio cirúrgico (prótese de fêmur esquerdo) 
 *Dislipidemia (DLP)  
 *Carcinoma de Face 
-*Alzheimer "	"*<|begin_of_sentence|><|Assistant|>
+*Alzheimer "	"*<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por 
+* e sem quebra de linha)
 
 
-*Osteomielite  
+*Osteomielite NE 
+*Alzheimer Carcinoma de face 
+*CLIQUE 
+*Infecção de sítio cirurgico 
+*DLP 
+*DMansine 
+*PRÓTESE FEMORAL ESQUERDA. 
+*Infecção de sítio cirurgico - Prótese de 
+*Carcinoma de face 
+*ALZHEIMER 
+*Osteomielite NE 16/10/23 M86 
+*INFECÇÃO DE SITIO CIRURGICO - FRATURA COLO FEMUR ESQUERDO 
+*OSTEOMIELITE 
+*Alzheimer 
+*Osteomielite NE. 
+*Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo. 
+*Osteomielite 
+*Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo 
+*OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM 
+*INFECÇÃO DE FERIDA OPERATÓRIA - FÊMUR ESQUERDO.<|Assistant|><|endoftext|>
 
-*Alzheimer  
+Okay, let's tackle this problem. The user wants a list of diagnoses from the given text, without repeating similar ones. They mentioned that if there are similar diseases, we should pick the most complete version. Also, only include actual diseases and ignore other words. The list should be separated by asterisks with no line breaks.
 
-*Carcinoma de face  
+First, I need to parse the input text. Let me look at each item:
 
-*Infecção de sítio cirúrgico  
+- 
+*Osteomielite NE
+- 
+*Alzheimer
+- Carcinoma de face
+- 
+*CLIQUE (probably not a disease)
+- 
+*Infecção de sítio cirurgico
+- 
+*DLP (could be Dislipidemia?)
+- 
+*DMansine (maybe a typo, unsure)
+- 
+*PRÓTESE FEMORAL ESQUERDA. (this is a medical device, not a disease)
+-"	"Para calcular a precisão e o recall, primeiro devo identificar os elementos verdadeiros positivos, falsos positivos e falsos negativos.
 
-*DLP  
+Lista “referência”:
+* Osteomielite
+* Infecção de sítio cirúrgico (prótese de fêmur esquerdo)
+* Dislipidemia (DLP)
+* Carcinoma de Face
+* Alzheimer
 
-*DMansine  
+Lista “hipótese”:
+* Osteomielite NE
+* Alzheimer
+* Carcinoma de face
+* CLIQUE
+* Infecção de sítio cirurgico
+* DLP
+* DMansine
+* PRÓTESE FEMORAL ESQUERDA.
+* Infecção de sítio cirurgico - Prótese de
+* Carcinoma de face
+* ALZHEIMER
+* Osteomielite NE 16/10/23 M86
+* INFECÇÃO DE SITIO CIRURGICO - FRATURA COLO FEMUR ESQUERDO
+* OSTEOMIELITE
+* Alzheimer
+* Osteomielite NE.
+* Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo.
+* Osteomielite
+* Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo
+* OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM
+* INFECÇÃO DE FERIDA OPERATÓRIA - FÊMUR ESQUERDO.
 
-*Infecção de sítio cirúrgico - Prótese de Fêmur Esquerdo  
+### Verdadeiros Positivos (VP):
+* Osteomielite
+* Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo (versão mais completa de ""Infecção de sítio cirúrgico"")
+* Câncer de colo de útero (Carcinoma de face)
+* Alzheimer
+* DLP (Dislipidemia)
 
-*Osteomielite de fêmur e sítio cirúrgico infectado  
+### Falsos Positivos (FP):
+* Osteomielite NE
+* CLIQUE
+* RPMansine
+* PRÓTESE FEMORAL ESQUERDA.
+* Infecção de sítio cirúrgico - Prótese de
+* ALZHEIMER
+* Osteomielite NE 16/10/23 M86
+* INFECÇÃO DE SITIO CIRURGICO - FRATURA COLO DO FÊMUR ESQUERDO
+* Osteomielite
+* Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo
+* OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM
+* INFECÇÃO DE FERIDA OPERATÓRIA
+* Sangramento Peridreno
+### Falsos Negativos (FN):
+* Infecção de sítio cirúrgico (prótese de fêmur esquerdo) - Apesar de ter a versão completa no Hypothese, uma vez que é um fator de desconsideração dupla 3 eles não fazem parte do cálculo (são repetições). 
+* Carcinoma de Face (De novo uma classificação completa por HP, adendo hipóbulo fratura colo de femur esquerdo)
 
-*Infecção de ferida operatória - Fêmur Esquerdo"	"Verdadeiros Positivos (VP):
-* Osteomielite  
-* Alzheimer  
-* Carcinoma de face  
-* Infecção de sítio cirúrgico (prótese de fêmur esquerdo) - Considerado igual a ""Infecção de sítio cirúrgico - Prótese de Fêmur Esquerdo"" e ""Infecção de ferida operatória - Fêmur Esquerdo""
-* Dislipidemia (DLP) - Similar a ""DLP""
+### Cálculo de precisão e recall:
 
-Falsos Positivos (FP):
-* DMansine - não existe na lista referência
-* Osteomielite de fêmur e sítio cirúrgico infectado - combinação de dois diagnósticos, mas individualmente osteomielite já está contabilizada
+Precisão = VP / (VP + FP) = 5 / (5 + 13) = 5 / 18 = 0.28 (28%)
+Recall = VP / (VP + FN) = 5 / (5 + 2) = 5 / 7 = 0.71 (71%)
 
-Falsos Negativos (FN):
-Nenhum.
+### Resultados:
 
-Cálculo de Precisão e Recall:
-Total de itens na referência: 5
-Total de itens na hipótese: 9
-
-TP = 5
-
-Recall = TP / Total de itens na referência = 5 / 5 = 1.0 (100%)
-Precisão = TP / Total de itens na hipótese = 5 / 9 ≈ 0.56 (56%)
-
-[[0.56, 1.0]]"
+(Precisão, Recall) = [[0.28, 0.71]]"
 "*Transtorno conversivo 
 *Calcificações parietais nas artérias carótidas internas intracranianas ou Ateromatose difusa 
 *Bloqueio atrioventricular de 1º grau 
@@ -170,9 +241,11 @@ Precisão = TP / Total de itens na hipótese = 5 / 9 ≈ 0.56 (56%)
 
 *Anemia macrocítica  
 
+*Epilepsia  
+
 *Angiodisplasia de cólon  
 
-*Epilepsia  
+*Anemia crônica da doença renal  
 
 *Delirium hiperativo  
 
@@ -184,92 +257,101 @@ Precisão = TP / Total de itens na hipótese = 5 / 9 ≈ 0.56 (56%)
 
 *Cistos simples bilaterais  
 
+*Suspeito de quadro demencial com início precoce (frontotemporal)  
+
+*Doença Renal Crônica por depósitos de IgA  
+
 *Síndrome demencial  
 
-*TCE (Traumatismo Cranioencefálico)  
-
-*HDB (Hemorragia Digestiva Baixa)  
+*HAS (Hipertensão Arterial Sistêmica)  
 
 *Displasia orofaríngea  
+
+*TCE (Traumatismo Craniano Encefálico)  
+
+*HDB (Hemorragia Digestiva Baixa)  
 
 *Tiróide heterogênea  
 
 *Alteração do relaxamento ventricular  
 
-*Queda de própria altura  
+*IC compensada (Insuficiência Cardíaca compensada)  
 
-*IC compensada  
-
-*HAS (Hipertensão Arterial Sistêmica)  
-
-*Anemia crônica  
-
-*Divertículos de cólon direito  
-
-*Angiodisplasias dos cólons  
+*Microangiopatia/gliose  
 
 *Malformação vascular com sinais de sangramento recente em cólon transverso  
 
-*Sinais de microangiopatia/gliose  
-
 *DM tipo 2  
 
-*Suspeito de quadro demencial com início precoce (frontotemporal)  
+*Queda de própria altura  
 
-*Doença Renal Crônica por depósitos de IgA  
+*SEC A DRC (Síndrome de Encefalopatia Crônica associada à DRC)  
 
-*SEC A DRC  
+*B12 (Anemia por deficiência de vitamina B12)  
 
-*Hematomas e MMSS<|end_of_sentence|>"	"Verdadeiros Positivos (VP):
-* Transtorno conversivo
-* Bloqueio atrioventricular de 1º grau
-* Choque séptico de foco pulmonar
-* Diabetes Mellitus (DM) tipo 2
-* Doença Renal Crônica (DRC) agudizada KDIGO 3
-* Espondilose dorsolombar
-* Anemia Macrocítica, Anemia Crônica
-* Epilepsia
-* Hipertensão Arterial Sistêmica (HAS)
-* Delirium hiperativo
-* Meningite prévia
-* Traumatismo Cranioencefálico (TCE) por queda da própria altura, Traumatismo Cranioencefálico (TCE)
-* Hemorragia Digestiva Baixa (HDB)
-* Gastrite
-* Doença diverticular não complicada do cólon direito
-* Insuficiência Cardiaca (IC) compensada
-* Sinais de microangiopatia / gliose
-* Síndrome demencial
-* Angiodisplasia de colon, Malformações vasculares do colon
+*TIE (Tromboembolismo pulmonar?)  
 
-Falsos Positivos (FP):
-* Sepse de foco a esclarecer (Pulmão)
-* DRC (Doença Renal Crônica)
-* IRA KDIGO 3
-* Espondilose dorsal
-* Coxoartrose bilateral
-* Doença Renal Crônica estágio G3
-* Sinais de ateromatose carotídea
-* Cistos simples bilaterais
-* Displasia orofaríngea
-* Tiróide heterogênea
-* Alteração do relaxamento ventricular
-* Divertículos de cólon direito
-* Angiodisplasias dos cólons
-* Malformação vascular com sinais de sangramento recente em cólon transverso
-* Suspeito de quadro demencial com início precoce (frontotemporal)
-* Doença Renal Crônica por depósitos de IgA
-* SEC A DRC
-* Hematomas e MMSS
+*Hematomas e MMSS (Membros Superiores)  
 
-Falsos Negativos (FN):
-* Calcificações parietais nas artérias carótidas internas intracranianas ou Ateromatose difusa
-* Disfagia Orofaringea
+<|end_of_sentence|>"	"### Verdadeiros Positivos (TP)
+1. Transtorno conversivo
+2. Bloqueio atrioventricular de 1º grau
+3. Choque séptico de foco pulmonar
+4. Espondilose dorsolombar
+5. Epilepsia
+6. Delirium hiperativo
+7. Meningite prévia
+8. Síndrome demencial
+9. Hemorragia Digestiva Baixa (HDB)
+10. Doença diverticular não complicada do cólon direito
+11. Hipertensão Arterial Sistêmica (HAS)
+12. Insuficiência Cardíaca (IC) compensada
 
-Cálculo de precisão e recall:
-Precisão = TP / (TP + FP) = 19 / (19 + 18) = 19 / 37 ≈ 0.514
-Recall = TP / (TP + FN) = 19 / (19 + 2) = 19 / 21 ≈ 0.905
+### Falsos Positivos (FP)
 
-[[0.514, 0.905]]"
+13. DM (Diabetes Mellitus)
+14. Sinais de ateromatose carotídea
+15. Espondilose dorsal
+16. Coxoartrose bilateral
+17. Doença Renal Crônica estágio G3
+18. Malformações vasculares em todo o cólon.
+19. Anemia crônica da doença renal
+20. Cistos simples bilaterais
+21. Suspeito de quadro demencial com início precoce (frontotemporal)
+22. Doença Renal Crônica por depósitos de IgA
+23. Displasia orofaríngea
+24. Alteração do relaxamento ventricular
+25. Microangiopatia/gliose - embora relacionado com sinais de microangiopatia e gliose, não está detalhado a partir do diagnóstico ""Sinais de microangiopatia / gliose""
+26. Malformação vascular com sinais de sangramento recente
+27. DM tipo 2
+28. Queda de própria altura
+29. SEC A DRC (síndrome de Encefalopatia Crônica associada á DRC)
+30. B12 (anemia por deficiência de vitamina B12)
+31. Tiróide heterogênea
+32. TIE (Tromboembolismo pulmonar?) --ou MMSS
+33. Hematomas ocultos em MMSS
+
+### Falsos Negativos (FN)
+1. Calcificações parietais nas artérias carótidas internas intracranianas ou Ateromatose difusa
+2. Diabetes Mellitus (DM) tipo 2 -- intricadamente detalhado como quadro possivel
+3. Doença Renal Crônica (DRC) agudizada KDIGO 3
+4. Anemia Macrocítica, Anemia Crônica-- estritamente detalhado mais especificamente como quadro anterior
+5. Gastrite
+6. Angiodisplasia de cólon, Malformações vasculares do colon --.realçado
+7. Traumatismo Cranioencefálico (TCE) por queda própria altura, TCE
+8. Disfagia Orofaringea
+9. Sinais de microangiopatia / gliose 
+
+### Cálculos:
+- TP = 12
+- Total de itens na lista ""referência"" = 18
+- Total de itens na lista ""hipótese"" = 41
+
+Recall = TP / (Total de itens na lista ""referência"") = 12 / 18 ≈ 0.6667
+Precisão = TP / (Total de itens na lista ""hipótese"") = 12 / 41 ≈ 0.2927
+
+### Resultados:
+[[0.2927, 0.6667]]"
 "*Nasofaringite Aguda 
 *Pneumonia Bacteriana ou Broncopneumonia aspirativa 
 *Dermatite em membro superior esquerdo (MSE) 
@@ -324,45 +406,75 @@ Recall = TP / (TP + FN) = 19 / (19 + 2) = 19 / 21 ≈ 0.905
 *Alterações degenerativas na coluna estudada. 
 *Pneumonia. 
 *Toracocentese à D - 600 ml 
-*Adenoma na adrenal esquerda"	"Verdadeiros Positivos (VP):
-* Nasofaringite Aguda
-* Pneumonia Bacteriana ou Broncopneumonia aspirativa (considerando todas as variações como Pneumonia Bacteriana e BCP aspirativa)
-* Dermatite em membro superior esquerdo (MSE)
-* Doença de Parkinson, Parkinson
-* Derrame pleural
-* Disfagia orofaringea
-* Tromboembolismo pulmonar (TEP)
-* Trombose venosa profunda (TVP)
-* Espondilose torácica
-* Adenoma na adrenal esquerda
-* Deformidade do cotovelo
+*Adenoma na adrenal"	"### Listas analisadas:
+Lista “referência”:
+* Nasofaringite Aguda 
+* Pneumonia Bacteriana ou Broncopneumonia aspirativa 
+* Dermatite em membro superior esquerdo (MSE) 
+* Doença de Parkinson, Parkinson 
+* Derrame pleural   
+* Disfagia orofaringea 
+* Tromboembolismo pulmonar (TEP),  
+* Trombose venosa profunda (TVP) 
+* Espondilose torácica 
+* Adenoma na adrenal esquerda 
+* Ateromatose na aorta torácica e nos troncos supra-aórticos 
+* Deformidade do cotovelo 
 * Alterações degenerativas na coluna estudada
 
-Falsos Negativos (FN):
-* Ateromatose na aorta torácica e nos troncos supra-aórticos
+Lista “hipótese”:
+* NASOFARINGITE AGUDA 
+* PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE 
+* Dermatite MSE 
+* D. Parkinson 
+* Pequeno derrame pleural à direita 
+* DISFAGIA OROFARÍNGEA 
+* Derrame pleural 
+* Espondilose torácica 
+* DP com exsudato + TVP + TEP 
+* D. Parkinson 
+* PNEUMONIA BACTERIANA NAO 
+* NASOFARINGITE AGUDA [RESFRIADO COMUM] 
+* Alterações degenerativas na coluna estudada 
+* PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE. 
+* Adenoma na adrenal
+
+### Grupos TP, FP e FN:
+Verdadeiros Positivos (TP):
+* Nasofaringite Aguda 
+* Pneumonia Bacteriana NAO CLASSIFICADA EM OUTRA PARTE
+* Dermatite MSE
+* D. Parkinson
+* Pequeno derrame pleural à direita
+* DISFAGIA OROFARÍNGEA
+* Derrame pleural
+* DP com exsudato + TVP + TEP (considerando TEP e TVP como conceitos relevantes)
+* Espondilose torácica 
+* Alterações degenerativas na coluna estudada
+* Adenoma na adrenal
 
 Falsos Positivos (FP):
-* Us torácico extracardíaco
-* Pequeno derrame pleural à direita
-* PAC
-* PNM BACTERIANA + TEP + TVP MID
-* TVP MID
-* Cistos renais
-* DP com exsudato + TVP + TEP
-* Infecção pulmonar
-* Cistos renais Bosniak 1 e 2
-* Infecção pulmonar – TEP c/ infarto pulm + infecção 2a.
-* Toracocentese
-* Toracocentese à D - 600 ml
+* Nenhum (não foi solicitado o cálculo neste requisito)
 
-Cálculo de precisão e recall:
-Total de itens na lista ""referência"": 13
-Total de itens na lista ""hipótese"": 38
+Falsos Negativos (FN):
+* Ateromatose na aorta torácica e nos troncos supra-aórticos 
+* Deformidade do cotovelo
 
-Precisão = VP / (VP + FP) = 12 / 38 ≈ 0.316 (31.6%)
-Recall = VP / (VP + FN) = 12 / 13 ≈ 0.923 (92.3%)
+### Cálculo de precisão, recall:
+- Recall = TP / (Total de itens na lista ""referência"")
+= 11 / 13 
+= 0.846
+= 84.6 %
 
-[[0.316, 0.923]]"
+- Precisão = TP / (Total de itens na lista ""hipótese"")
+= 11 / 14
+= 0.785
+= 78.5%
+
+### Resultados:
+[[0.785, 0.846]]
+
+"
 "*Tromboembolismo pulmonar  (TEP) 
 *Asma,  
 *Obesidade Grau III 
@@ -413,7 +525,8 @@ TEP - 3x: 02 episódios em Anticoagulação 2022 + março/2023
 *TEP Submaciço: Segmentar Bilateral - 02/10 
 *ASMA 
 *Anemia. 
-*TEP"	"Verdadeiros Positivos (VP):
+*TEP"	"### Listas Analisadas:
+Lista “referência”:
 * Tromboembolismo pulmonar (TEP)
 * Asma
 * Obesidade Grau III
@@ -424,30 +537,70 @@ TEP - 3x: 02 episódios em Anticoagulação 2022 + março/2023
 * Parada cardiorrespiratória (PCR) por hipóxia em 1999
 * Hipertensão Arterial Sistêmica (HAS)
 
-Falsos Positivos (FP):
+Lista “hipótese”:
+* TEP - 3x: 02 episódios em Anticoagulação 2022 + março/2023
+* TEP agudo - PESI I
+* ASMA
 * BRONQUITE
-* OBESIDADE (sem especificar grau)
-* OBESIDADE + BRONQUITE CRONICA
-* Embolia pulmonar (outro nome para TEP)
+* TEP
+* 03/2021
+* TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário
+* OBESIDADE
+* Obesidade Grau III
+* TEP segmentar bilateral
+* EMBOLIA PULMONAR
+* TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário - Bova 5 Classe III: Alto Risco
+* TEP Agudo
+* Anemia ferropriva secundaria a menometrorragia
+* TEP Submaciço: Segmentar Bilateral
 * TEP agudo
-* TEP Submaciço
-* Anemia (genérico, sem especificação)
+* Sindrome astenica ae
+* OBESIDADE + BRONQUITE CRONICA
+* Asma
+* 1999 por
+* Anemia ferropriva secundaria a menometrorragia
+* TEP agudo - PESI
+* Miomatose
+* TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III
+* TEP Submaciço: Segmentar Bilateral - 02
+* TEP março e julho/2023
+* OBESIDADE
+* ASMA BRONQUITE
+* obesidade e asma
 * Asma Grave
+* IC
+* PCR 1999 por Hipóxia
+* TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III
+* HAS
 * Alterações degenerativas incipientes na coluna estudada
-* (3 repetições TEP)
+* Obesidade
+* TEP Submaciço: Segmentar Bilateral - 02/10
+* ASMA
+* Anemia
+* TEP
 
-Falsos Negativos (FN):
-* Nenhum
+### Cálculo:
+Verdadeiros Positivos (TP):
+* Tromboembolismo pulmonar (TEP)
+* Asma
+* Obesidade Grau III
+* Anemia Ferropriva Secundária a menotrorragia
+* Síndrome Astênica
+* Miomatose
+* Insuficiência Cardíaca (IC)
+* Parada cardiorrespiratória (PCR) por hipóxia em 1999
+* Hipertensão Arterial Sistêmica (HAS)
 
-Cálculo de precisão e recall:
+Total de elementos na lista ""referência"": 9
+Total de elementos na lista ""hipótese"" relevantes: 41
 
-Total de itens na lista ""referência"" = 9
-Total de itens na lista ""hipótese"" = 15 (considerando repetições apenas uma vez e diagnósticos semelhantes agrupados)
+TP = 9
 
-Precisão = VP / (VP + FP) = 9 / (9 + 15) = 9 / 24 = 0.375 (37.5%)
-Recall = VP / (Total de itens na lista ""referência"") = 9 / 9 = 1 (100%)
+Recall = TP / (Total de itens na lista ""referência"") = 9 / 9 = 1.0 (100%)
+Precisão = TP / (Total de itens na lista ""hipótese"" relevantes) = 9 / 41 ≈ 0.22 (22%)
 
-[[0.375, 1.0]]"
+### Resultados:
+[[0.22, 1.0]]"
 "*Epilepsia 
 *Disfagia Orofaringea 
 *Pneumonia Comunitária 
@@ -455,72 +608,50 @@ Recall = VP / (Total de itens na lista ""referência"") = 9 / 9 = 1 (100%)
 *Dupla hemiparesia (grau IV D e III a E) 
 *Infecção Trato Urinário (ITU) comunitária 
 *Acidentes Vasculares Cerebrais prévios 
-*Lesão de Lábio e mordedura na região lateral e língua"	"*<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por 
-* e sem quebra de linha)
+*Lesão de Lábio e mordedura na região lateral e língua"	"*<|begin_of_sentence|><|Assistant|>
 
-Primeira Crise epiléptica a/e Pneumonia Comunitária 
-*CRISE CONVULSIVA 
-*Evidência de lesão em lábio e mordedura na região lateral E da língua. 
-*Crise epiléptica em 09/10 - provável epilepsia focal secundária 
-*DISFAGIA OROFARÍNGEA 
-*Has 
-*Crise epiléptica em 09/10 - provável epilepsia focal secundária a Avcs prévios 
-*Crise epiléptica em 09/10 - provável epilepsia focal secundária a Avcs prévios Pneumonia Comunitária 
-*Primeira Crise epiléptica a/e Pneumonia + 
-*Crise epiléptica em 09/10 
-*1ª crise epiléptica 
-*Primeira Crise epiléptica a/e Pneumonia comunitária 
-*Primeira Crise epiléptica 
-*CRISE EPILÉPTICA 
-*HAS 
-*Crise epiléptica em 09/ 
-*Dupla hemiparesia (grau IV D e III a E) 
-*Crise epiléptica a/e 
-*Ataxia marcha 
-*Pneumonia comunitária 
-*Crise epiléptica em 09/10 - provável 
-*Pneumonia Comunitária 
-*EPILEPSIA 
-*Transtornos 
-*CATETERISMO DE ALIVIO PARA 
-*Pneumonia + Itu comunitária 
-*Primeira Crise epiléptica a/e<|Assistant|>
 
-Okay, let's tackle this user's request. They want a list of diagnoses without repeating similar ones, choosing the most complete when there are similar diseases. The input has some extra words that aren't diseases, so I need to filter those out. The output should be separated by 
-* with no line breaks.
+*Primeira Crise Epiléptica  
 
-First, I'll go through each item in the input. Let"	"Verdadeiros Positivos (VP):
-* Epilepsia
-* Disfagia Orofaringea
+*Pneumonia Comunitária  
+
+*CRISE CONVULSIVA  
+
+*Epilepsia Focal Secundária  
+
+*DISFAGIA OROFARÍNGEA  
+
+*HAS  
+
+*Dupla Hemiparesia  
+
+*Ataxia de Marcha  
+
+*ITU Comunitária"	"Verdadeiros Positivos (TP):
 * Pneumonia Comunitária
-* Hipertensão Arterial Sistêmica (HAS)
-* Dupla hemiparesia (grau IV D e III a E)
-* Infecção Trato Urinário (ITU) comunitária
+* DISFAGIA OROFARÍNGEA
+* Epilepsia (presente como ""Epilepsia Focal Secundária"", porém entendimento da ""Epilepsia"")
+* HAS (presente como ""Hipertensão Arterial Sistêmica (HAS)"" mas, foi considerado de acordo com a intenção)
+* Dupla Hemiparesia 
+* ITU Comunitária (presente como ""Infecção Trato Urinário (ITU) comunitária"")
+
+Falsos Negativos (FN):
 * Acidentes Vasculares Cerebrais prévios
 * Lesão de Lábio e mordedura na região lateral e língua
 
 Falsos Positivos (FP):
-* Primeira Crise epiléptica a/e Pneumonia Comunitária
-* Crise Convulsiva
-* Crise epiléptica em 09/10 - provável epilepsia focal secundária
-* Crise epiléptica em 09/10 - provável epilepsia focal secundária a Avcs prévios
-* Primeira Crise epiléptica a/e Pneumonia +
-* Crise epiléptica em 09/10    
-* 1ª crise epiléptica
-* Crise epiléptica em 09/10 - provável
-* Primeira Crise epiléptica
-* Ataxia marcha
-* Transtornos
-* Cateterismo de alívio para
+* Primeira Crise Epiléptica
+* CRISE CONVULSIVA
+* Ataxia de Marcha
 
-Falsos Negativos (FN):
-Nenhum
+Número total de itens na lista ""referência"": 8
+Número total de itens na lista ""hipótese"": 9
 
-### Cálculo de precisão e recall:
-Precisão = VP / (VP + FP) = 8 / (8 + 12) = 8 / 20 = 0.4 (40%)
-Recall = VP / (VP + FN) = 8 / (8 + 0) = 8 / 8 = 1.0 (100%)
+TP = 6
+Recall = TP / (Total de itens na lista ""referência"") = 6 / 8 = 0.75 (75%)
+Precisão = TP / (Total de itens na lista ""hipótese"") = 6 / 9 = 0.67 (67%)
 
-[[Precisão, Recall]] = [[0.4, 1.0]]"
+[[0.67, 0.75]]"
 "*Insuficência Mitral 
 *Fibrilação atrial Crônica (FA Crônica) 
 *Ateromatose incipiente 
@@ -533,14 +664,53 @@ Recall = VP / (VP + FN) = 8 / (8 + 0) = 8 / 8 = 1.0 (100%)
 *Trombose Venosa Profunda em Membro Inferior Esquerdo (TVP em MIE) 
 *Pneumonia 
 *Hipertensão Arterial Sistêmica (HAS) 
-*Varizes Calibrosas"	"*Okay, let's tackle this user's request. They want a list of diagnoses from the provided text, ensuring no repetition of similar terms and selecting the most complete ones when there are similar diseases. Also, they only want the diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
+*Varizes Calibrosas"	"*Okay, let's tackle this. The user wants a list of diagnoses without repeating similar ones, choosing the most complete term when there are similar diseases. They also want only the diseases mentioned, ignoring other words, and the list should be separated by asterisks with no line breaks.
 
-First, I need to parse the input text. Let me look at each term. There are several mentions of ""Insuf mitral"" which I recognize as Mitral Insufficiency. Then ""FA com ARV"" and ""Fibrilação atrial crônica"" – FA is Fibrilação Atrial, so the more complete term here would be Fibrilação Atrial Crônica. Similarly, ""Fibrilação atrial permanente"" is another form, so I should include both if they are distinct.
+First, I need to go through the provided text and extract all the terms that are actual diseases. Let me list them out:
 
-Next, ""Ateromatose incipiente"" – that's early-stage Atherosclerosis. ""IC perfil"" and ""IC PERFIL B"" – IC is Insuficiência Cardíaca (Heart Failure), so the more complete term is Insuficiência Cardíaca perfil B. There's also ""IC descompensada perfil B"" which is a decompensated state, so that's more specific and should replace the simpler IC perfil B.
+- Dispnéia leve
+- Insuf mitral
+- FA com ARV
+- Fibrilação atrial crônica
+- Insuf mitral (repeated)
+- Ateromatose incipiente
+- IC perfil
+- Fibrilação atrial permanente
+- Insuf mitral (again)
+- Artrose AVCH HÁ 5 ANOS
+- IC PERFIL B
+- Varizes calibrosas
+- HAS
+- IC perfil B (same as above)
+- Artrose. (with a period)
+- Disfunção renal aguda
+- MCP
+- Osteoporose
+- Alterações degenerativas da coluna vertebral
+- TVP em MIE RAM
+- Insuf cardiaca congestiva
+- Pneumonia
+- Descongestão. (not a disease)
+- IC descompensada perfil B. ?
+- Bundle (not a disease)
+- TVP em MIE . (with period)
+- Artrose (again)
+- Fibrilação atrial crônica (again)
+- IC (abbreviation)
+- has (lowercase, probably HAS)
+- Fibrilação atrial permanente (again)
+- TVP em MIE . (again)
 
-""Artrose AVCH HÁ 5 ANOS"" – Artrose is Osteoarthritis, AVCH might be a typo or abbreviation, but since the user wants only diseases, I'll take Artrose (Osteoarthritis). ""Varizes calibrosas"" are varicose veins. ""HAS"" is Hipertensão Arterial Sistêmica. ""Disfunção renal aguda"" is Acute Renal Dysfunction. ""MCP"" – not sure, maybe a typo? The user said to ignore non-diseases, so maybe skip it. ""Osteoporose"" is clear. ""Alterações degenerativas da coluna vertebral"" – Degenerative changes in the spine. ""TVP em MIE RAM"" and ""TVP em MIE"" – TVP is Trombose Venosa Profunda (Deep Vein Thrombosis), MIE is likely left lower limb. So the more complete term is TVP em MIE. ""Insuf cardiaca congestiva"" is Congestive Heart Failure. ""Pneumonia"" stays. ""Descongestão"" is a procedure, not a disease,"	"### Verdadeiros Positivos (VP)
-* Insuficência Mitral
+Now, I need to remove non-disease terms like ""Descongestão"", ""Bundle"", and ""HÁ 5 ANOS"" (which is a time reference). Also, ""IC"" is an abbreviation, so I should use the full form when available.
+
+Next, group similar terms and pick the most complete one. For example:
+
+- ""Fibrilação atrial crônica"" and ""Fibrilação atrial permanente"" are both types of atrial fibrillation. The user wants the most complete term. ""Fibrilação atrial crônica"" and ""Fibrilação atrial permanente"" are both specific, so they might be considered separate. But in some contexts, ""permanente"" is a subtype of ""crônica"". Need to check if they are distinct here. Since both are present, maybe list both.
+
+- ""Ins"	"### Comparação das Listas
+
+**Lista ""referência"":**
+* Insuficiência Mitral
 * Fibrilação atrial Crônica (FA Crônica)
 * Ateromatose incipiente
 * Insuficiência Cardíaca (IC) Perfil B
@@ -554,25 +724,63 @@ Next, ""Ateromatose incipiente"" – that's early-stage Atherosclerosis. ""IC pe
 * Hipertensão Arterial Sistêmica (HAS)
 * Varizes Calibrosas
 
-### Falsos Positivos (FP)
-* Nenhum item adicional ou repetido que esteja na lista ""hipótese""
+**Lista ""hipótese"":** 
+* Insuf mitral
+* Fibrilação atrial crônica
+* FA com ARV
+* Ateromatose incipiente
+* IC perfil
+* Fibrilação atrial permanente
+* Artrose AVCH HÁ 5 ANOS
+* IC PERFIL B
+* Varizes calibrosas
+* HAS
+* Artrose.
+* Disfunção renal aguda
+* MCP
+* Osteoporose
+* Alterações degenerativas da coluna vertebral
+* TVP em MIE RAM
+* Insuf cardiaca congestiva
+* Pneumonia
+* Descongestão.
+* IC descompensada perfil B. ?
+* Fibrilação atrial crônica
+* TVP em MIE
 
-### Falsos Negativos (FN)
-* Nenhum item ausente na lista ""hipótese"" que esteja presente na lista ""referência""
+### Resultados:
+Verdadeiros Positivos (VP):
+* Insuficiência Mitral = Insuf mitral
+* Fibrilação atrial Crônica (FA crônica) = Fibrilação atrial crônica
+* Ateromatose incipiente
+* Insuficiência Cardíaca (IC) Perfil B = IC PERFIL B 
+* Artrose = Artrose.
+* Acidente Vascular Cerebral Hemorrágico (AVCh) há 5 anos = Artrose AVCH HÁ 5 ANOS
+* Disfunção Renal Aguda
+* Osteoporose
+* Alterações degenerativas da coluna vertebral
+* Trombose Venosa Profunda em Membro Inferior Esquerdo (TVP em MIE) = TVP em MIE
+* Pneumonia
+* Hipertensão Arterial Sistêmica (HAS)
+* Varizes Calibrosas
 
-### Precisão e Recall:
+Falsos Positivos (FP):
+* FA com ARV
+* Fibrilação atrial permanente
+* MCP
+* Descongestão.
+* Insuf cariaca congestiva
+* IC descompensada perfil B. ?
 
-- Verificamos que todos os itens da lista referência apareceram na lista hipótese, nenhum item extra foi adicionado ou repetido.
-- TP = 13 (Todos os itens da lista referência)
-- Total de itens na lista ""referência"" = 13
-- Total de itens na lista ""hipótese"" = 13
+Falsos Negativos (FN):
+(nenhum)
 
-- Recall = TP / (Total de itens na lista ""referência"") = 13 / 13 = 1 (100%)
-- Precisão = TP / (Total de itens na lista ""hipótese"") = 13 / 13 = 1 (100%)
+### Cálculo:
 
-### Resultado:
+Precisão = VP / (VP + FP) = 13 / (13 + 6) = 13/19 ≈ 0.68 (68%)
+Recall = VP / (VP + FN) = 13 / (13 + 0) = 13/13 = 1.0 (100%)
 
-[[1, 1]]"
+[[Precisão, Recall]] = [[0.68, 1.0]]"
 "*Hiponatremia 
 *Depressão 
 *Insufciência Cardiaca Perfil B,  
@@ -607,33 +815,43 @@ Contratilidade miocárdica preservada
 
 *Hiponatremia 
 *Depressão 
-*Insuficiência Cardíaca com Fração de Ejeção Preservada (IC FEp) 
 *Asma 
-*Infecção do Trato Urinário (ITU) 
-*Dislipidemia (DLP) 
-*Hipertensão Arterial Sistêmica (HAS) 
-*Disfunção Diastólica do Ventrículo Esquerdo Grau II 
-*Hipertensão Pulmonar"	"Verdadeiros Positivos (VP):
+*Infecção do trato urinário 
+*Dislipidemia 
+*Hipertensão arterial sistêmica 
+*Insuficiência cardíaca com fração de ejeção preservada perfil B 
+*Disfunção diastólica do ventrículo esquerdo grau II 
+*Hipertensão pulmonar"	"Verdadeiros Positivos (VP):
 * Hiponatremia
 * Depressão
+* Insuficiência Cardíaca Perfil B
 * Asma
-* Infeccão Trato Urinário (ITU)
+* Infecção Trato Urinário (ITU)
 * Dislipidemia (DLP)
 * Hipertensão Arterial Sistêmica (HAS)
 * Disfunção diastólica do ventrículo esquerdo de grau II
 * Hipertensão Pulmonar
 
 Falsos Positivos (FP):
-* ICFEp PERFIL B (semelhante a Insuficiência Cardíaca Perfil B)
+* IC FEp
+* IC PERFIL B IC FEp
+* INSUFICIÊNCIA CARDÍACA
+* ICFEp PERFIL B
+* IC DIREITA
+* IC PERFIL B.
+* IC FEp PERFIL B
+* IC PERFIL B
+* ASMA . (duplicado)
+* Presença de hipertensão pulmonar
 
 Falsos Negativos (FN):
-* Insuficiência Cardíaca Perfil B
+(nenhum item está faltando na lista ""hipótese"")
 
 Cálculo de precisão e recall:
-Precisão = VP / (VP + FP) = 8 / (8 + 1) = 8 / 9 ≈ 0.889 (88,9%)
-Recall = VP / (VP + FN) = 8 / (8 + 1) = 8 / 9 ≈ 0.889 (88,9%)
+- Precisão = VP / (VP + FP) = 9 / (9 + 10) = 9 / 19 = 0.47 (47%)
+- Recall = VP / (VP + FN) = 9 / (9 + 0) = 9 / 9 = 1.00 (100%)
 
-[[Precisão, Recall]] = [[0.889, 0.889]]"
+[[0.47, 1.00]]"
 "* Desnutrição 
 * Carcinomatose Peritoneal 
 * Obstrucao intestinal pos-operatoria (K91.3) ou Abdome agudo obstrutivo 
@@ -665,42 +883,86 @@ Desnutrido
 *carcinomatose peritoneal 
 *Carcinomatose peritoneal - Diagnosticada em 2021<|Assistant|>
 
-Okay, let's tackle this user's request. They want a list of diagnoses without repeating similar ones, choosing the most complete when there are similar diseases. The input has some extra words that aren't diseases, so I need to filter those out. First, I'll go through each item in the provided text.
+Okay, let's tackle this problem. The user wants a list of diagnoses from the provided text, without repeating similar ones and choosing the most complete when there are similar diseases. They also want only the diseases mentioned, ignoring other terms, and the list should be separated by asterisks with no line breaks.
 
-Starting with ""Desnutrido"" – that's Portuguese for ""Malnourished,"" which is a condition, so it should be included. Next, ""Carcinoma peritoneal seroso de alto grau ki-67 80%."" This seems like a specific type of cancer with a Ki-67 index. Then ""Carcinoma seroso de alto grau pT3b"" – same cancer but with a pT3b staging"	"Verdadeiros Positivos (VP):
-* Desnutrição
-* Carcinomatose Peritoneal
-* Obstrucao intestinal pos-operatoria (K91.3) ou Abdome agudo obstrutivo
-* Infeccão Trato Urinário (ITU)
-* Tabagismo
+First, I need to parse the input text. Let me look at each item after the asterisks. The entries are:
 
-Falsos Positivos (FP):
-* Desnutrido - repetição supérflua de Desnutrição
-* Carcinoma peritoneal seroso de alto grau ki-67 80% (1) - similar a Carcinomatose Peritoneal
-* Carcinoma seroso de alto grau pT3b (1) - similar a Carcinomatose Peritoneal
-* Carcinoma seroso de alto grau 1º de peritonio (1) - similar a Carcinomatose Peritoneal
-* Cirurgia - Não é um diagnóstico
-* Carcinoma seroso de alto grau 1º de Peritonio (1)- similar a Carcinomatose Peritoneal
-* Obstrucao intestinal pos-operatoria (Abdome agudo obstrutivo - aderência) (1) - repetição redundante
-* Carcinoma seroso de alto grau ki-67 80% (1) - similar a Carcinomatose Peritoneal
-* Surpote clinico - Não é um diagnóstico
-* K913 - K91.3 Obstrucao intestinal pos-operatoria (1)- repetição redundante
-* CA PERITONEO - repetição de Carcinomatose Peritoneal
-* carcinoma seroso de alto grau pT3b - repetição de diagnóstico similar
-* abdome agudo obstrutivo (aderência) - repetição de diagnóstico similar
-* carcinoma seroso de alto grau ki-67 80% (1)- repetição redundante
-* carcinomatose peritoneal - repetição redundante
-* Carcinomatose peritoneal - Diagnosticada em 2021 - repetição redundante
+- Desnutrido
+- Carcinoma peritoneal seroso de alto grau ki-67 80%
+- Carcinoma seroso de alto grau pT3b
+- Cirurgia
+- Carcinoma seroso de alto grau 1º de peritonio.
+- Obstrucao"	"Vamos analisar e comparar as listas para identificar os Verdadeiros Positivos (VP), Falsos Positivos (FP) e Falsos Negativos (FN):
 
-Falsos Negativos (FN):
+Lista “referência”:
+1. Desnutrição
+2. Carcinomatose Peritoneal
+3. Obstrução intestinal pós-operatória (K91.3) ou Abdome agudo obstrutivo
+4. Infecção Trato Urinário (ITU)
+5. Tabagismo
+
+Lista “hipótese”:
+1. Desnutrido
+2. Carcinoma peritoneal seroso de alto grau ki-67 80%
+3. Carcinoma seroso de alto grau pT3b
+4. Cirurgia
+5. Carcinoma seroso de alto grau 1º de peritonio.
+6. Obstrucao intestinal pos-operatoria Abdome agudo obstrutivo (aderência.
+7. ITU.
+8. Tabagismo
+9. Obstrucao intestinal pos-operatoria .
+10. Carcinoma seroso de alto grau ki-67 80%
+11. Surpote clinico.
+12. K913 - K91.3 Obstrucao intestinal pos-operatoria
+13. Carcinomatose peritoneal
+14. K91.3 Obstrucao intestinal pos-operatoria
+15. CA PERITONEO
+16. carcinoma seroso de alto grau pT3b
+17. abdome agudo obstrutivo (aderência.
+18. Abdome agudo obstrutivo (aderência.
+19. Obstrucao intestinal pos-operatoria - Abdome agudo obstrutivo (aderência.
+20. Obstrucao intestinal pos-operatoria
+21. carcinoma seroso de alto grau ki-67 80%
+22. carcinomatose peritoneal
+23. Carcinomatose peritoneal - Diagnosticada em 2021
+
+### Verdadeiros Positivos (VP):
+1. Desnutrição
+2. Carcinomatose Peritoneal
+3. Obstrução intestinal pós-operatória (K91.3) (representado por várias variantes na lista hipótese)
+4. Infecção Trato Urinário (ITU)
+5. Tabagismo
+
+### Falsos Positivos (FP):
+1. Desnutrido (não listado exatamente como ""Desnutrição"", mas considerado VP em vez de FP)
+2. Carcinoma peritoneal seroso de alto grau ki-67 80%
+3. Carcinoma seroso de alto grau pT3b
+4. Cirurgia
+5. Carcinoma seroso de alto grau 1º de peritonio.
+6. Obstrucao intestinal pos-operatoria Abdome agudo obstrutivo (aderência.
+7. Obstrucao intestinal pos-operatoria . 
+8. Carcinoma seroso de alto grau ki-67 80%
+9. Surpote clinico.
+10. CA PERITONEO
+11. carcinoma seroso de alto grau pT3b
+12. abdome agudo obstrutivo (aderência. 
+13. Abdome agudo obstrutivo (aderência. 
+14. Obstrucao intestinal pos-operatoria - Abdome agudo obstrutivo (aderência.
+15. carcinoma seroso de alto grau ki-67 80%
+16. Carcinomatose peritoneal - Diagnosticada em 2021
+
+### Falsos Negativos (FN):
 Nenhum
 
-Cálculo de precisão e recall:
+### Cálculo de Precisão e Recall:
+VP = 5
+FP = 16
+FN = 0
 
-Precisão = VP / (VP + FP) = 5 / (5 + 15) = 5 / 20 = 0.25 (25%)
-Recall = VP / (VP + FN) = 5 / (5 + 0) = 5 / 5 = 1.0 (100%)
+- Precisão: VP / (VP + FP) = 5 / (5 + 16) = 5 / 21 ≈ 0.238 (23.8%)
+- Recall: VP / (VP + FN) = 5 / (5 + 0) = 5 / 5 = 1 (100%)
 
-[[0.25, 1.0]]"
+(Precisão, Recall) = [[0.238, 1]]"
 "* Hipertensão Arterial Sistêmica (HAS) 
 *Pequena hérnia gástrica-hiatal 
 *Doença Obstrutiva Pulmonar Crônica (DPOC) exacerbado 
@@ -711,9 +973,9 @@ Recall = VP / (VP + FN) = 5 / (5 + 0) = 5 / 5 = 1.0 (100%)
 *Pneumonia 
 *Dislipidemia (DLP) 
 *Sindrome Gripal (Sd Gripal) 
-* Ateromatose aórtica e coronariana  "	"*Okay, let's tackle this task. The user wants a list of diagnoses from the provided text, ensuring that similar diseases are not repeated and the most complete term is used. They also want only the diseases mentioned, without any extra words or formatting—just a list separated by asterisks and no line breaks.
+* Ateromatose aórtica e coronariana  "	"*Okay, let's tackle this task. The user wants a list of diagnoses from the provided text, ensuring no repetition of similar terms and selecting the most complete ones when there are similar diseases. They also want only the diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
 
-First, I need to parse through the given text and identify all the terms that are actual medical diagnoses. The user mentioned that there are other words which are not diseases, so I have to be careful to exclude those. Let's look at the list provided:
+First, I need to go through each item in the input. Let's list them out:
 
 - HAS
 - Pequena hérnia gástrica-hiatal
@@ -748,134 +1010,194 @@ First, I need to parse through the given text and identify all the terms that ar
 - ICFEP (repeated)
 - Espondilose dorsal (repeated)
 - HAS (repeated)
-- Cardiopatia. (repeated)
+- Cardiopatia (repeated)
 - DPOC exacerbado (repeated)
-- Pneumonia NE . (repeated)
+- Pneumonia NE (repeated)
 - BRONCOESPASMO GRAVE NA MADRUGADA
 
-Now, I need to filter out non-diseases. Terms like ""TRANSFERENCIA PARA SEMI"" and ""PNM/"" don't seem like diagnoses. ""Transtornos"" is too vague. ""quadriplex negativo"" and ""há 1 semana"" are probably descriptors or time frames, not diseases.
+Now, I need to identify which terms are actual diseases. Some terms like ""TRANSFERENCIA PARA SEMI"" and ""Transtornos"" might not be specific diseases. ""TINOCA"" and ""PNM"" are unclear; maybe abbreviations? But since the user wants only diseases, I should check if these are valid. TINOCA might be a typo or an abbreviation not commonly recognized. PNM could be pneumonia, but there's already ""Pneumonia NE"". Maybe PNM is part of ""DPOC PNM"","	"### Resultados:
 
-Next, consolidate similar terms. For example, """	"Verdadeiros Positivos (VP):
-* Hipertensão Arterial Sistêmica (HAS)
-* Pequena hérnia gástrica-hiatal
-* Doença Obstrutiva Pulmonar Crônica (DPOC) exacerbado
-* Sepse
-* Espondilose dorsal
-* Injúria Miocárdica Inflamatoria
-* Insuficência Cardiaca Fração Ejeção Preservada (ICFEP)
-* Pneumonia
-* Dislipidemia (DLP)
-* Sindrome Gripal (Sd Gripal)
+Para determinar os verdadeiros positivos (TP), falsos positivos (FP) e falsos negativos (FN), a comparação entre a lista ""referência"" e a lista ""hipótese"" é a seguinte:
+
+**Verdadeiros Positivos (TP)**:
+* Hipertensão Arterial Sistêmica (HAS) 
+* Pequena hérnia gástrica-hiatal 
+* Doença Obstrutiva Pulmonar Crônica (DPOC) exacerbado 
+* Sepse 
+* Espondilose dorsal 
+* Injúria Miocárdica Inflamatoria  
+* Insuficência Cardiaca Fração Ejeção Preservada (ICFEP) 
+* Pneumonia 
+* Dislipidemia (DLP) 
+* Sindrome Gripal (Sd Gripal) 
 * Ateromatose aórtica e coronariana
 
-Falsos Positivos (FP):
-* Okay, let's tackle this task. The user wants a list of diagnoses from the provided text, ensuring that similar diseases are not repeated and the most complete term is used. They also want only the diseases mentioned, without any extra words or formatting—just a list separated by asterisks and no line breaks.
-* HAS (repetição)
-* Cardiopatia (similaridade)
-* TINOCA (similaridade e repetição)
-* DPOC PNM (similaridade)
-* Sepse - DPOC Exacerbado (similaridade)
-* Injuria miocardica aguda (similaridade)
-* TINOCA - Injúria Miocárdica Inflamatória (similaridade)
-* Sd gripal - quadriplex negativo (similaridade)
-* gripal (similaridade)
-* Transtornos (não é diagnóstico específico)
-* Pneumonia NE (similaridade e repetição)
-* Pneumonia NE DPOC exacerbado (similaridade)
-* sindrome gripal há 1 semana (similaridade)
-* TRANSFERENCIA PARA SEMI (não é diagnóstico)
-* Injuria miocardica (similaridade e repetição)
-* PNM/ (não é diagnóstico completo)
-* Cardiopatia. (similaridade)
-* BRONCOESPASMO GRAVE NA MADRUGADA (não é item da lista referência)
+**Falsos Positivos (FP)**:
+* Cardiopatia
+* TINOCA
+* DPOC PNM
+* Injuria miocardica aguda
+* Sd gripal - quadriplex negativo
+* gripal
+* Transtornos
+* Pneumonia NE
+* Pneumonia NE DPOC exacerbado
+* sindrome gripal há 1 semana
+* TRANSFERENCIA PARA SEMI
+* Injuria miocardica
+* PNM/
+* BRONCOESPASMO GRAVE NA MADRUGADA
 
-Falsos Negativos (FN):
-Nenhum
+**Falsos Negativos (FN)**:
+Não houve diagnósticos da lista ""referência"" ausentes na lista ""hipótese"".
 
-Cálculo de precisão e recall:
+#### Cálculo de precisão e recall:
+- TP = 11
+- Total de itens na lista ""referência"" = 11
+- Total de itens na lista ""hipótese"" = 26
+- FP = 15 (Total de itens na lista ""hipótese"" - TP)
 
-Precisão = VP / (VP + FP) = 11 / (11 + 21) = 11 / 32 = 0.34375 (34.38%)
-Recall = VP / (VP + FN) = 11 / (11 + 0) = 11 / 11 = 1.0 (100%)
+**Precisão**:
+\[ \text{Precisão} = \frac{TP}{TP + FP} = \frac{11}{11 + 15} = \frac{11}{26} \approx 0.423 \]
 
-[[0.34375, 1.0]]"
+**Recall**:
+\[ \text{Recall} = \frac{TP}{\text{Total de itens na lista ""referência""}} = \frac{11}{11} = 1.0 \]
+
+### Resultado no formato pedido:
+`[[0.423, 1.0]]`"
 "*Hemoglobinopatia SS ou Anemia Falciforme (D57) 
 *Hipertensão Arterial Sistêmica (HAS) 
 *Transtornos de Adaptação 
-*Abstinência de Opióide"	"*<|begin_of_sentence|><|assistant|>
+*Abstinência de Opióide"	"*<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por 
+* e sem quebra de linha)
 
 
-*Hemoglobinopatia  
+*Hemoglobinopatia 
+*Anemia falciforme 
+*Hemoglobinopatia SS . 
+*anemia falciforme 
+*Abstinência de opioides 
+*Anemia Falciforme Crise Algica 
+*Dor 
+*Anemia 
+*Hemoglobinopatia SS 
+*D570 
+*ANEMIA FALCIFORME ANEMIA FALCIFORME 
+*Anemia Falciforme 
+*Anemia Falciforme. 
+*HAS 
+*Anemia falciforme c/crise 
+*uptodade 29 
+*ANEMIA FALCIFORME 
+*SDem evacuação 
+*Transtornos de Adaptação 
+*Hydrea 1 
+*Anemia Falciforme .<|Assistant|>
 
-*Anemia falciforme  
+Okay, let's tackle this problem. The user wants a list of diagnoses from the provided text, without repeating similar ones and choosing the most complete when there are similar terms. They also want only diseases, ignoring other words, and the list should be separated by 
+* without line breaks.
 
-*Abstinência de opioides  
+First, I need to go through each item in the given list. Let's list them out:
 
-*Anemia Falciforme Crise Algica  
+1. Hemoglobinopatia
+2. Anemia falciforme
+3. Hemoglobinopatia SS
+4. anemia falciforme
+5. Abstinência de opioides
+6. Anemia Falciforme Crise Algica
+7. Dor
+8. Anemia
+9. Hemoglobinopatia SS
+10. D570
+11. ANEMIA FALCIFORME ANEMIA FALCIFORME
+12. Anemia Falciforme
+13. Anemia Falciforme.
+14. HAS
+15. Anemia falciforme c/crise
+16. uptodade 29
+17. ANEMIA FALCIFORME
+18. SDem evacuação
+19. Transtornos de Adaptação
+20. Hydrea 1
+21. Anemia Falc"	"## Diagnósticos Preliminares:
 
-*Hemoglobinopatia SS  
+Vamos primeiro identificar os diagnósticos válidos na lista ""hipótese"" e mapeá-los para os diagnósticos na lista ""referência"".
 
-*D570  
+### Lista ""referência"":
+1. Hemoglobinopatia SS ou Anemia Falciforme (D57)
+2. Hipertensão Arterial Sistêmica (HAS)
+3. Transtornos de Adaptação
+4. Abstinência de Opióide
 
-*HAS  
+### Lista ""hipótese"":
+1. Hemoglobinopatia (similar a Hemoglobinopatia SS ou Anemia Falciforme)
+2. Anemia falciforme (similar a Hemoglobinopatia SS ou Anemia Falciforme)
+3. Hemoglobinopatia SS (similar a Hemoglobinopatia SS ou Anemia Falciforme)
+4. anemia falciforme (similar a Hemoglobinopatia SS ou Anemia Falciforme)
+5. Abstinência de opioides
+6. Anemia Falciforme Crise Algica (similar a Hemoglobinopatia SS ou Anemia Falciforme)
+7. Anemia (não correspondente à lista referência)
+8. Anemia Falciforme (similar a Hemoglobinopatia SS ou Anemia Falciforme)
+9. HAS (similar a Hipertensão Arterial Sistêmica - HAS)
+10. Transtornos de Adaptação
+11. SDem evacuação (não correspondente à lista referência)
 
-*SDem evacuação  
+Os seguintes itens são considerados duplicados ou menos completos e, portanto, serão tratados como Falsos Positivos (FP):
+* Anemia falciforme c/crise - similar a Anemia Falciforme Crise Algica
+* Anemia Falciforme - versão duplicada já considerada anteriormente
+* Anemia falciforme - versão duplicada já considerada anteriormente
+* Hemoglobinopatia SS - versão duplicada já considerada anteriormente
 
-*Transtornos de Adaptação  
+## Verdadeiros Positivos (VP):
+Vamos agora listar os diagnósticos verdadeiros positivos onde há uma correspondência direta ou similaridade clara entre as listas ""referência"" e ""hipótese"":
 
-*Hydrea 1  
+1. Hemoglobinopatia SS ou Anemia Falciforme
+   - Hemoglobinopatia (similar)
+   - Anemia falciforme (similar)
+   - Hemoglobinopatia SS (similar)
+   - Anemia falciforme (similar)
+   - Anemia Falciforme Crise Algica (similar)
+   - Anemia Falciforme (similar)
 
-<|end_of_sentence|>"	"### Análise de True Positives (TP), False Positives (FP) e False Negatives (FN):
+2. Hipertensão Arterial Sistêmica (HAS)
+   - HAS
 
-Lista ""referência"":
-* Hemoglobinopatia SS ou Anemia Falciforme (D57)
-* Hipertensão Arterial Sistêmica (HAS)
-* Transtornos de Adaptação
-* Abstinência de Opióide
+3. Transtornos de Adaptação
+   - Transtornos de Adaptação
 
-Lista ""hipótese"":
-* Hemoglobinopatia
-* Anemia falciforme
-* Abstinência de opioides
-* Anemia Falciforme Crise Algica
-* Hemoglobinopatia SS
-* D570
-* HAS
-* SDem evacuação
-* Transtornos de Adaptação
-* Hydrea 1
+4. Abstinência de Opióide
+   - Abstinência de opioides
 
-#### Verdadeiros Positivos (TP):
-* Hemoglobinopatia SS ou Anemia Falciforme (D57)
-  - Hemoglobinopatia
-  - Anemia falciforme
-  - Anemia Falciforme Crise Algica
-  - Hemoglobinopatia SS
-  - D570
-* Hipertensão Arterial Sistêmica (HAS)
-  - HAS
-* Transtornos de Adaptação
-  - Transtornos de Adaptação
-* Abstinência de Opióide
-  - Abstinência de opioides
+Conta-se a correspondência uma única vez por diagnóstico da lista ""referência"". Ou seja:
+- Hemoglobinopatia SS ou Anemia Falciforme (D57) - conta como 1 VP
+- Hipertensão Arterial Sistêmica (HAS) - conta como 1 VP
+- Transtornos de Adaptação - conta como 1 VP
+- Abstinência de Opióide - conta como 1 VP
 
-#### Falsos Positivos (FP):
-* SDem evacuação
-* Hydrea 1
+## Falsos Positivos (FP):
+Vamos agora listar os diagnósticos ou itens incorretos da lista ""hipótese"" que não correspondem diretamente à lista ""referência"":
 
-#### Falsos Negativos (FN):
-Nenhum (todos os diagnósticos da lista de referência estão na lista de hipótese).
+1. Hemoglobinopatia SS (duplicado)
+2. anemia falciforme (duplicado)
+3. Anemia Falciforme Crise Algica (duplicado)
+4. Anemia (não correspondente)
+5. Anemia Falciforme (duplicado)
+6. Anemia falciforme c/crise (similar e duplicado)
+7. SDem evacuação (não correspondente)
 
-### Cálculo de Precisão e Recall:
-* True Positives (TP) = 4 (cada diagnóstico na lista de referência correspondido pelo menos uma vez na lista de hipótese)
-* Total de itens na lista ""referência"" = 4
-* Total de itens na lista ""hipótese"" = 10
+## Falsos Negativos (FN):
+Vamos listar os diagnósticos da lista ""referência"" que não estão na lista ""hipótese"":
 
-Recall = TP / (Total de itens na lista ""referência"") = 4 / 4 = 1.0
+Nenhuma entrada da lista ""referência"" está faltando. Não há Falsos Negativos.
 
-Precisão = TP / (Total de itens na lista ""hipótese"") = 4 / 10 = 0.4
+## Cálculos:
+### Precisão:
+Precisão = VP / (VP + FP) = 4 / (4 + 7) = 4 / 11 ≈ 0.364 (36.4%)
 
-### Resultados:
-[[0.4, 1.0]]"
+### Recall:
+Recall = VP / (VP + FN) = 4 / (4 + 0) = 4 / 4 = 1 (100%)
+
+(Precisão, Recall) = [[0.364, 1]]"
 "*Hernia Inguinal 
 *Insuficiência Renal Aguda (IRA) KDIGO 3 
 *Cálculo urinário obstrutivo 
@@ -910,7 +1232,7 @@ Precisão = TP / (Total de itens na lista ""hipótese"") = 4 / 10 = 0.4
 
 *Doença renal crônica agudizada  
 
-*Câncer de próstata  
+*Carcinoma de próstata  
 
 *Cistos corticais simples  
 
@@ -925,36 +1247,43 @@ Precisão = TP / (Total de itens na lista ""hipótese"") = 4 / 10 = 0.4
 *Infecção do trato urinário  
 
 *Rim atrófico"	"Verdadeiros Positivos (TP):
-* Hérnia inguinal
-* Insuficiência renal aguda KDIGO III
-* Cálculo urinário obstrutivo
-* Nefrite intersticial por medicação
-* Hérnia de hiato
-* Adenocarcinoma de próstata Gleason 8 metastático com acometimento ósseo
-* Hipertensão arterial sistêmica
-* Infecção do trato urinário
-* Gastrite
 
-Falsos Negativos (FN):
-* Doença Renal Crônica (DRC) agudizada com rim atrófico (não está completa na lista hipótese como no necessário à referência)
+1. Hérnia inguinal
+2. Insuficiência renal aguda KDIGO III
+3. Cálculo urinário obstrutivo
+4. Nefrite intersticial por medicamento
+5. Hérnia de hiato
+6. Adenocarcinoma de próstata Gleason 8 metastático com acometimento ósseo
+7. Hipertensão arterial sistêmica
+8. Infecção do trato urinário
+9. Gastrite
 
 Falsos Positivos (FP):
-* Ureterolitíase (não está na lista referência)
-* Ureterohidronefrose (não está na lista referência)
-* Diabetes mellitus (não está na lista referência)
-* Insuficiência renal crônica (não está na lista referência)
-* Câncer de próstata (menos detalhado do que ""Adenocarcinoma de próstata Gleason 8 metastático com acometimento ósseo"")
-* Cistos corticais simples (não está na lista referência)
-* Nefrolitíase (não está na lista referência)
-* Hematúria (não está na lista referência)
-* Doença renal crônica agudizada (não está completa como na referência)
-* Rim atrófico (não está completo como na referência)
+1. Ureterolitíase
+2. Ureterohidronefrose
+3. Diabetes mellitus
+4. Insuficiência renal crônica
+5. Doença renal crônica agudizada
+6. Carcinoma de próstata
+7. Cistos corticais simples
+8. Nefrolitíase
+9. Hematúria
+10. Rim atrófico
 
-Precisão = TP / (TP + FP) = 9 / (9 + 10) = 9 / 19 = 0.474
+Falsos Negativos (FN):
+1. Doença Renal Crônica (DRC) agudizada com rim atrófico
+2. Nefrite intersticial por medicamento
 
-Recall = TP / (TP + FN) = 9 / (9 + 1) = 9 / 10 = 0.9
+Cálculo de precisão e recall:
 
-[[0.474, 0.9]]"
+Total de itens na lista ""referência"": 10
+Total de itens na lista ""hipótese"": 19
+True Positives (TP): 9
+
+Recall = TP / (Total de itens na lista ""referência"") = 9 / 10 = 0.9
+Precisão = TP / (Total de itens na lista ""hipótese"") = 9 / 19 ≈ 0.474
+
+[[Precisão, Recall]] = [[0.474, 0.9]]"
 "*Neoplasia de papila duodenal 
 *Infecção do Trato Urinário (ITU) ou  Sepse de foco urinário 
 *Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metástatico (C25) 
@@ -997,48 +1326,113 @@ Recall = TP / (TP + FN) = 9 / (9 + 1) = 9 / 10 = 0.9
 *05/10/23 C25 
 *Sepse de foco urinario tratada<|Assistant|>
 
-Okay, let's tackle this task. The user wants a list of diagnoses without repeating similar ones. They mentioned that if there are similar diseases, I should pick the most complete one. Also, I need to ignore any non-disease terms and only list the diseases, separated by 
+Okay, let's tackle this task. The user wants a list of diagnoses from the provided text, without repeating similar ones and choosing the most complete when there are similar terms. They also want only the diseases, ignoring other words, and the list should be separated by 
 * without line breaks.
 
-First, I'll go through each item in the provided text. Let's list them out:
+First, I need to go through each item in the input. Let's list them out:
 
 1. Neoplasia de papila duodenal.
-2. sintoamticos (probably a typo, maybe ""sintomáticos"" which means symptomatic, not a disease)
-3. urinária (urinary, an adjective, not a disease)
-4. Infecção urinária : sim (Urinary infection, but ""sim"" is ""yes"", so the disease is Infecção urinária)
-5. TRANSFERENCIA PARA SEMI . (Transfer to semi-intensive care, not a disease)
-"	"Verdadeiros Positivos (VP):
-* Neoplasia de papila duodenal
-* Infecção do Trato Urinário (ITU) ou Sepse de foco urinário (considerando presença de ""Infecção urinária"", ""ITU"", ""Sepse de foco urinário"" e outras variações como um acerto)
-* Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metalástico (C25) (considerando presença de ""C25 - NEOPLASIA MALIGNA DO PANCREAS"", ""adenocarcinoma de pâncreas metastático"", etc. como um acerto)
-* Artrite
-* Hipertensão Arterial Sistêmica (HAS)
-* Neoplasia maligna do corpo do útero ou Adenocarcinoma do endométrio (considerando presença de ""Neoplasia maligna do corpo do útero"", ""adenocarcinoma endometrioide"" como acerto)
-* Parkinson (considerando presença de ""Doença de Parkinson, Parkinson"")
-* Diabetes Mellitus (DM) (considerando presença de ""DM"")
-* Ateromatose artoiliaca (considerando presença de ""Ateromatose aorotilíaca"")
-* Constipação (considerando presença de ""constipação"")
+2. sintoamticos
+3. urinária
+4. Infecção urinária : sim
+5. TRANSFERENCIA PARA SEMI .
+6. pélvicos
+7. ITU
+8. 05/10/23 C25 - NEOPLASIA MALIGNA DO PANCREAS
+9. Artrite
+10. HAS
+11. Neoplasia maligna do corpo do útero.
+12. Transfusão de CH hoje"	"Vamos começar comparando a lista ""referência"" com a lista ""hipótese"" e classificando cada elemento em verdadeiro positivo (VP), falso positivo (FP) ou falso negativo (FN).
 
-Falsos Positivos (FP):
-* sintoamticos
-* urinária
-* TRANSFERENCIA PARA SEMI .
-* pélvicos
-* Transfusão de CH hoje.
-* CA de pâncreas avançado, em tratamento paliativo (repetição de neoplasia maligna do Pâncreas)
-* Adenocarcinoma ductal cabeça de pancreas (repetição de neoplasia maligna do Pâncreas)
-* Sepse de foco urinario (repetição)
-* Sepse de foco urinário tratada (repetição)
+Lista “referência”:
+1. Neoplasia de papila duodenal 
+2. Infecção do Trato Urinário (ITU) ou Sepse de foco urinário
+3. Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metástatico (C25)
+4. Artrite 
+5. Hipertensão Arterial Sistêmica (HAS)
+6. Neoplasia maligna do corpo do útero ou Adenocarcinoma do endométrio
+7. Doença de Parkinson, Parkinson 
+8. Diabetes Mellitus (DM)
+9. Ateromatose artoiliaca 
+10. Constipação
 
-Falsos Negativos (FN):
-Nenhum. Todos os diagnósticos, fatores de risco ou procedimentos da lista “referência” estão presentes na lista “hipótese”.
+Lista “hipótese”:
+1. Neoplasia de papila duodenal 
+2. sintoamticos 
+3. urinária 
+4. Infecção urinária : sim 
+5. TRANSFERENCIA PARA SEMI .
+6. pélvicos 
+7. ITU 
+8. 05/10/23 C25 - NEOPLASIA MALIGNA DO PANCREAS 
+9. Artrite 
+10. HAS 
+11. Neoplasia maligna do corpo do útero. 
+12. Transfusão de CH hoje. 
+13. adenocarcinoma de pâncreas metastático 
+14. Neoplasia de papila duodenal 
+15. Sepse de foco urinário 
+16. C25 
+17. CA de pâncreas avançado, em tratamento paliativo
+18. adenocarcinoma endometrioide.
+19. Sepse de foco urinario 
+20. Parkinson 
+21. Adenocarcinoma ductal cabeça de pancreas 
+22. DM 
+23. Ateromatose aortilíaca 
+24. NEOPLASIA MALIGNA DO PANCREAS 
+25. constipação 
+26. Sepse de foco urinário. 
+27. 05/10/23 C25 
+28. Sepse de foco urinario tratada.
 
-Cálculo de precisão e recall:
+### **Verdadeiros Positivos (VP):**
+1. Neoplasia de papila duodenal 
+2. Infecção do Trato Urinário (ITU) ou Sepse de foco urinário: **Sepse de foco urinário**
+3. Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metástatico (C25): **NEOPLASIA MALIGNA DO PANCREAS**
+4. Artrite 
+5. Hipertensão Arterial Sistêmica (HAS) 
+6. Neoplasia maligna do corpo do útero ou Adenocarcinoma do endométrio: **Neoplasia maligna do corpo do útero**
+7. Doença de Parkinson, Parkinson: **Parkinson** 
+8. Diabetes Mellitus (DM)
+9. Ateromatose artoiliaca: **Ateromatose aorotilíaca**
+10. Constipação 
 
-Precisão = VP / (VP + FP) = 10 / (10 + 9) = 10 / 19 ≈ 0.526 (52.6%)
-Recall = VP / (VP + FN) = 10 / (10 + 0) = 10 / 10 = 1 (100%)
+### **Falsos Positivos (FP):**
+1. sintoamticos 
+2. urinária 
+3. Infecção urinária: sim 
+4. TRANSFERENCIA PARA SEMI .
+5. pélvicos 
+6. ITU 
+7. 05/10/23 C25 - NEOPLASIA MALIGNA DO PANCREAS (repetido)
+8. Transfusão de CH hoje 
+9. adenocarcinoma de pâncreas metastático (repetido)
+10. Neoplasia de papila duodenal (repetido)
+11. C25 (menos completo comparado com o completo)
+12. CA de pâncreas avançado, em tratamento paliativo (menos completo comparado)
+13. adenocarcinoma endometrioide (repetido)
+14. Adenocarcinoma ductal cabeça de pancreas (repetido)
+15. 05/10/23 C25 (repetido)
+16. Sepse de foco urinario tratada (menos completo)
+17. Sepse de foco urinario (repetido)
+18. Sepse de foco urinário (repetido)
+19. Sepse de foco urinário (repetido)
 
-(Precisão, Recall) = [[0.526, 1.0]]"
+### **Falsos Negativos (FN):**
+Nenhum diagnóstico listado na lista ""referência"" foi omitido na lista ""hipótese"".
+
+### **Cálculo:**
+- **VP (Verdadeiros Positivos):** 10
+- **FP (Falsos Positivos):** 19
+- **FN (Falsos Negativos):** 0
+
+### **Precisão e Recall:**
+- **Precisão:** VP / (VP + FP) = 10 / (10 + 19) = 10 / 29 ≈ 0.34 (34%)
+- **Recall:** VP / (VP + FN) = 10 / (10 + 0) = 10 / 10 = 1.00 (100%)
+
+### **Resultado Final:**
+(Precisão, Recall) = [[0.34, 1.00]]"
 "*Insuficiência Renal Crônica Dialítico (IRCD) 
 *Insuficiência Cardiaca com Fração de Ejeção Reduzida (ICFER), 
 *Dislipidemia (DLP) 
@@ -1081,221 +1475,208 @@ Recall = VP / (VP + FN) = 10 / (10 + 0) = 10 / 10 = 1 (100%)
 *Sinovite 
 *Farmacodermia 
 *Insuficiência venosa periférica crônica 
-*Hipertensão Arterial Sistêmica (HAS)"	"*<|begin_of_sentence|>Aqui está a lista de diagnósticos consolidada, priorizando os termos mais completos e evitando repetições similares:
+*Hipertensão Arterial Sistêmica (HAS)"	"*<|begin_of_sentence|>Aqui está a lista de diagnósticos consolidados, priorizando os termos mais completos e evitando repetições:
 
 
-*IRCD  
-
-*ICFER  
+*Insuficiência Renal Crônica Dialítica  
 
 *Dislipidemia  
 
-*DM  
+*Diabetes Mellitus Tipo 2  
 
-*Artropatia de Charcot em MIE  
+*Artropatia de Charcot em Membro Inferior Esquerdo  
 
-*Transtornos de Adaptação  
+*Transtorno de Adaptação  
 
-*Osteomielite crônica  
+*Osteomielite Crônica por Staphylococcus aureus  
 
-*Choque Circulatório  
+*Choque Circulatório com Cor Anêmico e Hemorragia Digestiva  
 
-*Cor Anêmico  
-
-*Hemorragia Digestiva  
-
-*Pé Diabético: Infecção de Pele e Partes Moles Complicada por Osteomielite em Investigação  
+*Pé Diabético com Infecção de Pele e Partes Moles Complicada por Osteomielite  
 
 *Depressão  
 
-*Neuropatia Diabética Periférica  
-
-*Adrenais: discoide à direita (variante anatômica)  
-
-*Pé diabético com úlcera extensa MIE  
-
-*Anemia  
-
-*DISFAGIA  
-
-*ITU  
-
-*Obesidade Grau 2  
-
-*Púrpura retiforme em MMSS (E>D) e MMII  
+*Neuropatia Diabética Periférica com Crise Álgica  
 
 *Nefrolitíase  
 
-*HAS  
+*Colelitíase  
 
-*Ortostatismo  
+*Obesidade Grau 2  
 
-*Osteomielite crônica - S. aureus  
+*Púrpura Retiforme em Membros  
 
-*DAC: IAM em 2021 ATC c/ 03 Stents  
+*Hipertensão Arterial Sistêmica  
 
-*Anemia sintomática  
+*Doença Arterial Coronariana com Infarto Agudo do Miocárdio em 2021 e Stents  
 
-*MRC  
+*Anemia Sintomática  
 
-*DM2  
+*Disfagia Orofaringeica Neurogênica Moderada  
 
-*ÚLCERA INFECTADA PRÉ E  
+*Infecção do Trato Urinário  
 
-*Pangastrite enantemática leve com componente erosivo plano leve no antro  
+*Esofagite Erosiva Grau A de Los Angeles  
 
-*IRC  
+*Bulboduodenite Erosiva Leve  
 
-*DRC com osteomielite crônica em pé esquerdo  
-
-*Degeneração osteoarticular de Charcot nos Pés Bilateral e Linfedema Secundário à Erisipelas de Repetição  
-
-*Linfonodomegalias na raiz da coxa  
-
-*DRC ESTÁGIO G5D DESDE 10/2022  
-
-*Erisipela  
-
-*DIH 12/09/2023  
-
-*Sepse de foco cutâneo/pulmonar  
-
-*AVC prévio  
-
-*Esofagite distal erosiva - Grau A de Los Angeles  
-
-*ICC  
-
-*Encefalopatia tóxico-metabólica  
-
-*Ex-tabagista 20 anos-maço - cessou  
-
-*Colelitiase  
+*Pangastrite Enantemática com Componente Erosivo  
 
 *Hipotireoidismo  
 
-*TEV  
+*Encefalopatia Tóxico-Metabólica  
 
-*Es"	"Verdadeiros Positivos (TP):
-* Insuficiência Renal Crônica Dialítico (IRCD)
-* Insuficiência Cardiaca com Fração de Ejeção Reduzida (ICFER)
-* Dislipidemia (DLP)
-* Diabetes Mellitus tipo 2 (DM2)
-* Artropatia de Charcot em membro inferior esquerdo (MIE)
-* Pé diabético com ulcera extensa membro inferior esquerdo (MIE)
-* Osteomielite crônica
-* Transtornos de adaptação
-* Melena (K92.1) - Hemorragia Digestiva
-* Pangastrite enantemática leve com componente erosivo plano leve no antro
-* Esofagite distal erosiva - Grau A de Los Angeles
-* Esplenomegalia homogênea (Comentado sobre parente anatômiico adrenais)
-* Depressão
-* Choque circulatório
-* Anemia
-* Disfagia, Disfagia orofaringea neurogenica moderada (DISFAGIA)
-* Infecção de Trato Urinário (ITU)
-* Obesidade Grau 2
-* Púrpura Retiforme em membros superiores (MMSS) e membros inferiores (MMII)
-* Nefrolitíase
-* Colelitíase
-* Infarto Agudo do Miocardio (IAM) em 2021
-* Linfedema Secundário à Erisipelas de Repetição
-* Linfonodomegalias na raíz da coxa
-* Linfangite
-* Sepse de foco cutâneo/ pulmonar
-* Acidente Vascular Cerebral (AVC) prévio
-* Ex-tabagista
-* Retinopatia Diabética ( Assumido como incluído DM2 com neuropatia pega)
+*Tromboembolismo Venoso  
+
+*Erisipela Crônica  
+
+*Hipercalemia Grave  
+
+*Retinopatia Diabética  
+
+*Esplenomegalia Homogênea  
+
+*Lipomatose Retroperitoneal  
+
+*Insuficiência Cardíaca Congestiva  
+
+*Disfunção Diastólica de Grau Leve  
+
+*Farmacodermia  
+
+*Linfangite Crônica com Dermatite Ocre  
+
+*Sepse de Foco Cutâneo/Pulmonar  
+
+*Melena (K92.1)  
+
+*Doença Renal Crônica Dialítica Estágio G5D desde Outubro/2022  
+
+*Acidente Vascular Cerebral Prévia  
+
+*Síndrome de Ortostatismo  
+
+*Adrenais: Discoide"	"Verdadeiros Positivos (TP):
+* Insuficiência Renal Crônica Dialítica 
+* Dislipidemia 
+* Diabetes Mellitus Tipo 2
+* Artropatia de Charcot em Membro Inferior Esquerdo
+* Transtorno de Adaptação 
+* Osteomielite Crônica 
+* Choque Circulatório
+* Pé Diabético com Infecção de Pele e Partes Moles Complicada por Osteomielite 
+* Depressão 
 * Neuropatia Diabética
-* Hipotireoidismo
-* Encefalopatia tóxico-metabólica
-* Tromboembolismo Venoso (TEV)
-* Erisipela crônica
+* Nefrolitíase 
+* Colelitíase 
+* Obesidade Grau 2 
+* Púrpura Retiforme em Membros
+* Hipertensão Arterial Sistêmica 
+* Infarto Agudo do Miocárdio em 2021
+* Anemia 
+* Disfagia Orofaringeica Neurogênica Moderada 
+* Infecção do Trato Urinário 
+* Esofagite Erosiva Grau A de Los Angeles 
+* Bulboduodenite Erosiva Leve 
+* Pangastrite Enantemática com Componente Erosivo 
+* Hipotireoidismo 
+* Encefalopatia Tóxico-Metabólica 
+* Tromboembolismo Venoso 
+* Erisipela Crônica 
 * Hipercalemia Grave 
-* Sinovite
+* Retinopatia Diabética 
+* Esplenomegalia Homogênea  
+* Lipomatose Retroperitoneal 
+* Sepse de Foco Cutâneo/Pulmonar 
+* Melena (K92.1) 
+* Acidente Vascular Cerebral Prévia 
 * Farmacodermia
-* Hipertensão Arterial Sistêmica (HAS)
+
+Falsos Negativos (FN):
+* Insuficiência Cardiaca com Fração de Ejeção Reduzida (ICFER)
+* Artropatia de Charcot em membro inferior esquerdo (MIE) 
+* Linfedema Secundário à Erisipelas de Repetição 
+* Linfonodomegalias na raíz da coxa 
+* Sinovite 
+* Insuficiência venosa periférica crônica 
+* Ex-tabagista 
+* Ateromatose aortoilíaca e de ramos viscerais
 
 
 Falsos Positivos (FP):
-* Adrenais: discoide à direita (variante anatômica) (1) - não correspondente com Esplenomegalia homogênea
-* DAC: IAM em 2021 ATC c/ 03 Stents (1) - especificidade mesma (infarto) mas repetido
-* Ortostatismo (1) - não reconhecimento
-* ÚLCERA INFECTADA PRÉ E (1) - correspondente de pé diabético com úlcera
-* IRC (1) - duplicação de Insuficiência Renal Crônica Dialítico (IRCD)
-* DRC com osteomielite crônica em pé esquerdo (1) - duplicação 
-* Degeneração osteoarticular de Charcot nos Pés Bilateral e Linfedema (1)
-* DRC ESTÁGIO G5D DESDE 10/2022 (1) - duplicação
+* Neuropatia Diabética Periférica com Crise Álgica (similar e mais específico)
+* Doença Arterial Coronariana
+* Disfunção Diastólica de Grau Leve
+* Linfangite Crônica com Dermatite Ocre
+* Doença Renal Crônica Dialítica Estágio G5D desde Outubro/2022
+* Síndrome de Ortostatismo
+* Adrenais: Discoide
 
-Falsos Negativos (FN):
-* Lipomatose retroperitoneal 
-* Ateromatose aortoilíaca e de ramos viscerais
-* Insuficiência venosa periférica crônica
 
-Cálculo de precisão, recall:
-Precisão = TP / (TP + FP) = 37 / (37 + 8) = 37 / 45 ≈ 0.822 (82.2%)
-Recall = TP / (TP + FN) = 37 / (37 + 3) = 37 / 40 = 0.925 (92.5%)
+Calculando precisão e recall:
+Precisão = TP / (TP + FP) = 35 / (35 + 7) = 35 / 42 ≈ 0.833 (83.3%)
+Recall = TP / (TP + FN) = 35 / (35 + 8) = 35 / 43 ≈ 0.813 (81.3%)
 
-[[Precisão, Recall]] = [[0.822, 0.925]]"
+[[0.833, 0.813]]"
 "*Hipertensão Arterial Sistêmica (HAS) 
 *Varizes em Membros Inferior com úlcera, Úlcera Venosa em Membro Inferior direito 
 *Dermatite Ocre 
 * Tromboembolismo Pulmonar (TEP) 
 *Diabetes Mellitus (DM) 
-*Tabagismo "	"*Okay, let's tackle this user's request. They want a list of diagnoses from the given text, ensuring not to repeat similar ones and choosing the most complete term when there are similar diseases. Also, they only want the diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
+*Tabagismo "	"*Okay, let's tackle this user's request. They want a list of diagnoses from the given text, making sure not to repeat similar ones and choosing the most complete term when there are similar diseases. Also, they only want the diseases mentioned, ignoring other words, and the list should be separated by 
+* without line breaks.
 
-First, I need to parse the input text. Let's look at each item:
+First, I need to parse the input text. The user provided: 
+*HAS 
+*Varizes membros infer c/ulcera e inflam 
+*Dermatite Ocre + cicatriz relacionado a tratramento 
+*TEP 
+*DMansine 
+*Tabagismo 
+*has 
+*Lesão por adesivo 
+*Doença ulcera periférica 
+*has. 
+*DERMATITE OCRE. 
+*Dispensação 
+*CFelipe 
+*ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO.
 
-- HAS: This is likely ""Hipertensão Arterial Sistêmica"" (Systemic Arterial Hypertension). It's mentioned multiple times (HAS, has, has.), so I need to deduplicate and use the most complete term. The standard abbreviation is HAS, so that's the one to keep.
+I notice some entries are duplicates or variations. For example, ""HAS"" and ""has"" are the same, likely referring to Hypertension (Hipertensão Arterial Sistêmica in Portuguese). ""Varizes membros infer c/ulcera e inflam"" seems to be varicose veins with ulcer and inflammation, but there's also ""ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO"" which is a venous ulcer in the right lower limb. These might be similar, so I should choose the more specific one.
 
-- Varizes membros infer c/ulcera e inflam: This translates to ""Varicose veins of lower extremities with ulcer and inflammation."" The user wants the most complete term, so this one is better than others that might be shorter.
+""Dermatite Ocre"" appears twice, once with a mention of a scar related to treatment. Since the user wants the most complete term, maybe keep ""Dermatite Ocre"" without the extra info. ""TEP"" is probably Tromboembolismo Pulmonar. ""DMansine"" might be a typo, possibly ""Diabetes Mellitus"" (DM) with a misspelling. ""Tabagismo"" is smoking, which is a condition but not a disease. Wait, the user said to list only diseases. So maybe exclude Tabagismo? But the user included it in their example. Wait, looking at the assistant's answer, they included Tabagismo. Hmm, maybe the user considers it a diagnosis. I'll keep it as per the example.
 
-- Dermatite Ocre + cicatriz relacionado a tratramento: ""Ocher dermatitis + scar related to treatment."" The term here is ""Dermatite Ocre."" It's mentioned again as DERMATITE OCRE, so we'll take the correct capitalization and include it once.
+""Lesão por adesivo"" is an adhesive-related injury, which is a condition. ""Doença ulcera periférica"" is peripheral ulcer disease, which is similar to the venous ulcer. ""Dispensação"" and ""CFelipe"" are not diseases, so exclude those.
 
-- TEP: This stands for ""Tromboembolismo Pulmonar"" (Pulmonary Thromboembolism). It's a standard acronym, so we keep it as TEP.
-
-- DMansine: Hmm, this might be a typo. Common abbreviations include DM (Diabetes Mellitus). Maybe it's ""DM tipo 2"" or another variant, but ""DMansine"" doesn't make sense. Possibly a misspelling. The user might have meant ""DM tipo 2"" or another form. Since the user wants only diseases and to ignore non-diseases, but this isn't a recognized term. Maybe it's ""Diabetes Mellitus insulino-dependente"" (Insulin-dependent DM), but the exact term isn't clear. Alternatively, could it be ""DM associado""? Not sure. Since the user wants to list only valid diseases, perhaps this is an error and should be excluded. Alternatively, if it's a typo for DM tipo 2, but without more context, it's safer to omit it unless confident.
-
-- Tabagismo: This is ""Smoking,"" which is a risk factor, not a disease. The user specified to list only diseases, so this should be excluded"	"Para alcançar sua demanda, primeiro, precisamos identificar os verdadeiros positivos (TP), falsos positivos (FP) e falsos negativos (FN), comparando as listas ""referência"" e ""hipótese"":
-
-### Verdadeiros Positivos (TP):
+"	"### Verdadeiros Positivos (VP):
 * Hipertensão Arterial Sistêmica (HAS)
+* Varizes em Membros Inferior com úlcera, Úlcera Venosa em Membro Inferior direito
 * Dermatite Ocre
 * Tromboembolismo Pulmonar (TEP)
 * Diabetes Mellitus (DM)
 * Tabagismo
 
 ### Falsos Positivos (FP):
-* Okay, let's tackle this user's request. They want a list of diagnoses from the given text, ensuring not to repeat similar ones and choosing the most complete term when there are similar diseases. Also, they only want the diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
-
-First, I need to parse the input text. Let's look at each item:
-
-- HAS: This is likely ""Hipertensão Arterial Sistêmica"" (Systemic Arterial Hypertension). It's mentioned multiple times (HAS, has, has.), so I need to deduplicate and use the most complete term. The standard abbreviation is HAS, so that's the one to keep.
-
-- Varizes membros infer c/ulcera e inflam: This translates to ""Varicose veins of lower extremities with ulcer and inflammation."" The user wants the most complete term, so this one is better than others that might be shorter.
-
-- Dermatite Ocre + cicatriz relacionado a tratramento: ""Ocher dermatitis + scar related to treatment."" The term here is ""Dermatite Ocre."" It's mentioned again as DERMATITE OCRE, so we'll take the correct capitalization and include it once.
-
-- TEP: This stands for ""Tromboembolismo Pulmonar"" (Pulmonary Thromboembolism). It's a standard acronym, so we keep it as TEP.
-
-- DMansine: Hmm, this might be a typo. Common abbreviations include DM (Diabetes Mellitus). Maybe it's ""DM tipo 2"" or another variant, but ""DMansine"" doesn't make sense. Possibly a misspelling. The user might have meant ""DM tipo 2"" or another form. Since the user wants only diseases and to ignore non-diseases, but this isn't a recognized term. Maybe it's ""Diabetes Mellitus insulino-dependente"" (Insulin-dependent DM), but the exact term isn't clear. Alternatively, could it be ""DM associado""? Not sure. Since the user wants to list only valid diseases, perhaps this is an error and should be excluded. Alternatively, if it's a typo for DM tipo 2, but without more context, it's safer to omit it unless confident.
-
-- Tabagismo: This is ""Smoking,"" which is a risk factor, not a disease. The user specified to list only diseases, so this should be excluded
+* Varizes membros infer c/ulcera e inflam - similar a diagnósticos mais completos presentes acima
+* DMansine - suposto erro de digitação
+* Lesão por adesivo - não presente na lista ""referência""
+* Doença ulcera periférica - similar a Varizes em Membros Inferior com úlcera, Úlcera Venosa em Membro Inferior direito
+* Dispensação - não é diagnóstico
+* CFelipe - termo sem relação médica
 
 ### Falsos Negativos (FN):
-* Varizes em Membros Inferior com úlcera, Úlcera Venosa em Membro Inferior direito
+Nenhum, todos os diagnósticos da lista ""referência"" estão presentes na lista ""hipótese"".
 
-### Cálculo de Precisão e Recall:
+### Cálculo de precisão e recall:
 
-* TP = 5
-* FN = 1
-* FP = 1
+#### Precisão:
+\[ \text{Precisão} = \frac{\text{VP}}{\text{VP} + \text{FP}} = \frac{6}{6 + 6} = \frac{6}{12} = 0.5 \]
 
-Precisão = TP / (TP + FP) = 5 / (5 + 1) = 5 / 6 = 0.83 (83%)
-Recall = TP / (TP + FN) = 5 / (5 + 1) = 5 / 6 = 0.83 (83%)
+#### Recall:
+\[ \text{Recall} = \frac{\text{VP}}{\text{VP} + \text{FN}} = \frac{6}{6 + 0} = 1.0 \]
 
 ### Resultado:
-[[0.83, 0.83]]"
+\[[0.5, 1.0]]"
 "*Anemia, Anemia Crônica 
 *Doença Renal Crônica Estágio G3 (DRC) 
 *Diabetes Mellitus Tipo 2 (DM2) 
@@ -1343,68 +1724,63 @@ Recall = TP / (TP + FN) = 5 / (5 + 1) = 5 / 6 = 0.83 (83%)
 *Anemia em investigação 
 *OBESIDADE.<|Assistant|>
 
-Okay, let's tackle this problem. The user wants a list of diagnoses without repeating similar ones. When there are similar diseases, I need to pick the most complete version. Also, I should only include actual diseases and ignore other words. The list should be separated by 
-* with no line breaks.
 
-First, I'll go through each item in the provided list. Let's start with ""ANEMIA CRÔNICA"". Then there's ""Anemia"", ""Anemia grave"", ""ANEMIA GRAVE"", ""Anemia em investigação"". These all relate to anemia. The most complete ones here are ""ANEMIA CRÔN"	"Verdadeiros Positivos (VP):
-* Doença Renal Crônica Estágio G3 (DRC)  -> DRC ESTÁGIO G3(mais completo e detalhado)
-* Ureterolitiase  -> Ureterolitiase
-* Lesões de Pele -> LESÕES DE PELE
-* Anemia, Anemia Crônica -> ANEMIA CRÔNICA (versão mais completa)
-* Pielonefrite com Abcesso Renal à Direita, Pielonefrite complicado com abcesso à direita -> Pielonefrite complicada com abcesso renal a direita (versão completa)
-* Infecção de Trato Urinário -> Infecc do trato urinario de localiz NE (Diagnósticos completos e detalhados)
-* Obesidade -> OBESIDADE. (Diagnósticos completos e detalhados)
-* Lesão Renal Aguda (LRA)  -> LRA
-* Diabetes Mellitus Tipo 2 (DM2) -> DM2 (um versão correta e completa)
- 
+*ANEMIA CRÔNICA 
+*DRC ESTÁGIO G3 
+*DM TIPO 2 
+*PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE 
+*LRA 
+*OBESIDADE 
+*URETEROLITIASE 
+*INFECC DO TRATO URINARIO DE LOCALIZ NE 
+*DMG 
+*LESÕES DE PELE"	"### Pertinência das Listas:
 
-Falsos Positivos (FP):
-* Anemia -> versão menos detalhada de ""Anemia crônica""
-* Anemia grave -> duplicado
-* ANEMIA GRAVE -> duplicado
-* Anemia em investigação
-* ANEMIA -> duplicado
-* Pielonefrite complicada
-* PIELONEFRITE COMPLICADA, ABCESSO RENAL D
-* Dm
-* Pielonefrite complicada com abcesso.
-* Bexiga
-* Pielonefrite complicada - Abcesso renal a direita
-* DM TIPO 2 
-* Pielonefrite complicada - abscesso renal a direita.
-* PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE.
-* Pielonefrite complicada - abscesso renal a direita + hidronefrose
-* PIELONEFRITE COM ABSCESSO
-* DM
-* DM.
-* Infecc do trato urinario de localiz NE (duplicado)
-* DMG
-* DRC estágio G3 (duplicado)
-* DRC
-* CFelipe
-* OBESIDADE. (duplicado)
+Lista ""referência"":
+- Anemia, Anemia Crônica
+- Doença Renal Crônica Estágio G3 (DRC)
+- Diabetes Mellitus Tipo 2 (DM2)
+- Pielonefrite com Abcesso Renal à Direita, Pielonefrite complicado com abcesso à direita
+- Lesão Renal Aguda (LRA)
+- Ureterolitiase
+- Infecção de Trato Urinário
+- Obesidade
+- Lesões de Pele
 
+Lista ""hipótese"":
+- ANEMIA CRÔNICA
+- DRC ESTÁGIO G3
+- DM TIPO 2
+- PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE
+- LRA
+- OBESIDADE
+- URETEROLITIASE
+- INFECC DO TRATO URINARIO DE LOCALIZ NE
+- DMG
+- LESÕES DE PELE
 
-Falsos Negativos (FN):
-* Nenhum - todos presentes e listados
+Conclusão:
+1. True Positives (TP):
+- Anemia, Anemia Crônica -> ANEMIA CRÔNICA
+- Doença Renal Crônica Estágio G3 (DRC) -> DRC ESTÁGIO G3
+- Diabetes Mellitus Tipo 2 (DM2) -> DM TIPO 2
+- Pielonefrite com Abcesso Renal à Direita, Pielonefrite complicado com abcesso à direita -> PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE
+- Lesão Renal Aguda (LRA) -> LRA
+- Ureterolitiase -> URETEROLITIASE
+- Infecção de Trato Urinário -> INFECC DO TRATO URINARIO DE LOCALIZ NE (Reconhecimento de termos similares)
+- Obesidade -> OBESIDADE
+- Lesões de Pele -> LESÕES DE PELE
 
-Cálculo de precisão e recall:
-```
-Precisão = VP / (VP + FP)
-  = 9 / (9 + 20)
-  = 9 / 29
-  = 0.31 (ou 31%)
-```
-```
-Recall = VP / (VP + FN)
-= 9 / (9 + 0)
-= 9 / 9
-= 1.00 (ou 100%)
-```
-### Resultado:
-```
-[[0.31, 1.00]]
-```"
+2. Total de itens na lista ""referência"": 9
+3. Total de itens na lista ""hipótese"": 10
+4. TP = 9
+
+Calculando Precisão e Recall:
+- Recall = TP / (Total de itens na lista ""referência"") = 9 / 9 = 1.0
+- Precisão = TP / (Total de itens na lista ""hipótese"") = 9 / 10 = 0.9
+
+Precisão e Recall no formato: [[Precisão, Recall]]
+[[0.9, 1.0]]"
 "* Tromboembolismo Pulmonar (TEP) 
 * Broncopneumonia bacteriana nosocomial 
 * Empiema 
@@ -1417,17 +1793,21 @@ Recall = VP / (VP + FN)
 * Hemorroidas (CID I84) 
 * Hipertensão Arterial Sistêmica (HAS) 
 * Pós-operatório tardio (POT) de gastroplastia redutora com fístula gástrica salivar 
-* Constipação"	"*Okay, let's tackle this problem. The user wants a list of diagnoses from the provided text, ensuring that similar diagnoses are not repeated and that the most comprehensive ones are chosen. They also want only diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
+* Constipação"	"*Okay, let's tackle this problem. The user wants a list of diagnoses from the provided text, ensuring that similar ones are not repeated and the most complete version is chosen. They also want only diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
 
-First, I need to parse through the given text. The entries are separated by asterisks, but some entries have extra information like dates, codes, or descriptions. My job is to extract only the disease names.
+First, I need to go through each item in the given list. Some entries are duplicates or variations. For example, ""Pneumonia Bacteriana"" appears multiple times, sometimes with additional details like ""complicada com derrame pleural"" or ""Em piema"". The goal is to pick the most comprehensive term each time.
 
-Looking at the list, I see several repetitions and variations. For example, ""Pneumonia Bacteriana"" appears multiple times in different forms. The user mentioned that when there are similar diseases, the most complete one should be chosen. So, I need to check if any entries have additional descriptors that make them more comprehensive. For instance, ""Broncopneumonia bacteriana com Empiema"" is more specific than just ""Pneumonia Bacteriana"".
+Looking at ""Broncopneumonia bacteriana com Empiema"" and ""Broncopneumonia bacteriana"", the first one is more complete, so I should include that and exclude the simpler version. Similarly, ""PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE"" is longer than ""PNEUMONIA BACTERIANA"", so the longer one stays.
 
-Next, I need to identify non-disease terms. Words like ""TRASFERENCIA"", ""23/9"", ""MPBarbosa"", ""CFelipe"" are not diseases and should be excluded. Also, terms like ""3"", ""22/09"", ""27/8"" are dates or numbers and should be ignored.
+I also need to check for non-disease terms. Words like ""TRANSFERENCIA"", ""23/9"", ""MPBarbosa"" are not diagnoses and should be excluded. Acronyms like ""DM2"" (Diabetes Mellitus type 2) and ""HAS"" (Hipertensão Arterial Sistêmica) are valid diagnoses. ""TEP"" is Tromboembolismo Pulmonar, so that's a diagnosis.
 
-Some entries have abbreviations. For example, ""TEP"" likely stands for ""Tromboembolismo Pulmonar"" (Pulmonary Embolism), which is a disease. ""DM2"" is ""Diabetes Mellitus tipo 2"". ""HAS"" is ""Hipertensão Arterial Sistêmica"". These abbreviations should be expanded to their full names for clarity and to avoid repetition. However, the user wants the list in the original terms provided, so maybe keep the abbreviations as they are unless instructed otherwise. Wait, the user said to cite only the diseases as they appear, without adding extras. So I should keep the abbreviations as written if they are standard medical terms. But need to check if ""TEP"" and ""DM2"" are considered valid diagnoses here.
+Some entries have extra descriptions, like ""Cistos corticais bilaterais, com até 2,5 cm"". Even though it's descriptive, it's a diagnosis. ""Fistula gástrica salivar"" is another valid one.
 
-Looking at the list again, ""CA"" appears multiple times. ""CA"" usually stands for ""Câncer"" (Cancer), but without more context, it's unclear. However, since the user wants only diseases mentioned, and ""CA"" is a common abbreviation for cancer, it should be included. But in the list, there's ""CA (Pai)"" which seems to refer to family history,"	"### Verdadeiros Positivos (VP):
+I need to ensure that similar terms are grouped. For instance, ""Em piema pleural"" and ""Em piema"" – the more specific one (""Em piema pleural"") should be kept. Also, ""LRA"" (Lesão Renal Aguda) and ""LRA Revertida"" – since ""Revertida"" is a status, maybe just keep ""LRA"".
+
+Check for repetitions: ""DM2"" and ""DM2 insulino dependente"" – the latter is more specific, so include that. ""Obesidade"" appears twice; just once is enough.
+
+Finally, compile the list, ensuring all are diseases, no repetitions, and the most complete terms are used. Exclude any non-disease entries and"	"Verdadeiros Positivos (VP):
 * Tromboembolismo Pulmonar (TEP)
 * Broncopneumonia bacteriana nosocomial
 * Empiema
@@ -1439,18 +1819,18 @@ Looking at the list again, ""CA"" appears multiple times. ""CA"" usually stands 
 * Dor osteomuscular
 * Hemorroidas (CID I84)
 * Hipertensão Arterial Sistêmica (HAS)
+* Pós-operatório tardio (POT) de gastroplastia redutora com fístula gástrica salivar
 * Constipação
 
-### Falsos Positivos (FP):
-* Pós-operatório tardio (POT) de gastroplastia redutora com fístula gástrica salivar não foi identificado na lista hipótese.
+Falsos Positivos (FP):
+* Nenhum
 
-### Falsos Negativos (FN): 
-* Nenhum item adicional está presente na lista de hipóteses que não esteja compreendido na de referência da nomeação referida.
-* Redução discreta - não é um diagnóstico
+Falsos Negativos (FN):
+* Nenhum
 
-Precisão e Recall:
+Cálculo de precisão e recall:
 
-Precisão = VP / (VP + FP) = 12 / (12 + 2) = 12 / 14 = 0.857 (85.7%)
-Recall = VP / (VP + FN) = 12 / (12 + 1) = 12 / 13 = 0.923 (92.3%)
+Precisão = VP / (VP + FP) = 13 / (13 + 0) = 13 / 13 = 1.00 (100%)
+Recall = VP / (VP + FN) = 13 / (13 + 0) = 13 / 13 = 1.00 (100%)
 
-(Precisão, Recall) = [[0.857, 0.923]]"
+[[Precisão, Recall]] = [[1.00, 1.00]]"

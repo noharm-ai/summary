@@ -23,6 +23,18 @@ lms:
       api_key: ${env:OPENAI_API_KEY}
       model: "gpt-4o-2024-08-06"
 
+  gpt_41:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:OPENAI_API_KEY}
+      model: "gpt-4.1-2025-04-14"
+
+  gpt_35T:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:OPENAI_API_KEY}
+      model: "gpt-3.5-turbo-0125"
+
   llama3:
     class: langchain_aws.ChatBedrock
     args:
@@ -114,6 +126,32 @@ lms:
       credentials_profile_name: "default"
       model_id: "us.meta.llama3-3-70b-instruct-v1:0"
 
+  llama31_405B:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-2"
+      credentials_profile_name: "default"
+      model_id: "us.meta.llama3-1-405b-instruct-v1:0"
+
+  llama31_70B:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.meta.llama3-1-70b-instruct-v1:0"
+
+  sabia_31:
+    class: langchain_community.chat_models.ChatMaritalk
+    args:
+      model: "sabia-3.1"
+      api_key: ${env:MARITACA_API_KEY}
+
+  sabia_3:
+    class: langchain_community.chat_models.ChatMaritalk
+    args:
+      model: "sabia-3"
+      api_key: ${env:MARITACA_API_KEY}
+
 diagnostics:
   llms:
     - nova_premier
@@ -124,6 +162,8 @@ diagnostics:
     - sonnet_3_5v2
     - llama4_mav
     - llama4_scout
+    - llama31_405B
+    - llama31_70B
     - nova_pro
     - deepseekr1
     - mistral_l24
@@ -132,6 +172,10 @@ diagnostics:
     - gpt_o4_mini
     - gpt_o1
     - gpt_4o
+    - gpt_41
+    - gpt_35T
+    - sabia_31
+    - sabia_3
   prompt: "A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)"
   output: data/
   gt_file: data/gt.tsv
