@@ -72,6 +72,20 @@ lms:
       credentials_profile_name: "default"
       model_id: "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
 
+  sonnet_3_5:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-3-5-sonnet-20240620-v1:0"
+
+  sonnet_3_5v2:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-3-5-sonnet-20241022-v2:0"
+
   nova_pro:
     class: langchain_aws.ChatBedrock
     args:
@@ -106,6 +120,8 @@ diagnostics:
     - claude_sonnet4
     - claude_opus4
     - sonnet_3_7
+    - sonnet_3_5
+    - sonnet_3_5v2
     - llama4_mav
     - llama4_scout
     - nova_pro
