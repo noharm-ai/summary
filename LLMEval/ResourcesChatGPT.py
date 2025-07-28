@@ -2,10 +2,9 @@ import os
 from openai import AzureOpenAI
 import time
 
-
 client = AzureOpenAI(
-    azure_endpoint="https://projectname.openai.azure.com/",
-    api_version="2024-02-15-preview",
+    azure_endpoint="https://project-name.openai.azure.com/",
+    api_version="2024-12-01-preview",
     api_key="api-key"
 )
 
@@ -42,7 +41,7 @@ Qual a precisão e o recall?
 Me dê o resultado, sem explicar o que é precisão e recall.
 Mostre a qual grupo (VP, FP, FN) pertence cada resultado.
 
-Apresente o recall, a precisão e o ruído no formato: (Precisão, Recall)
+Apresente o recall, a precisão e o ruído no formato: [[Precisão, Recall]]
 """
 
 assistant_1 = """Verdadeiros Positivos (VP):
@@ -66,7 +65,7 @@ Cálculo de precisão e recall:
 Precisão = VP / (VP + FP) = 7 / (7 + 2) = 7 / 9 ≈ 0.777 (77,77%)
 Recall = VP / (VP + FN) = 7 / (7 + 1) = 7 / 8 = 0.875 (87,5%)
 
-(Precisão, Recall) = (0.777, 0.875)
+[[Precisão, Recall]] = [[0.777, 0.875]]
 """
 
 user_2 = """A tarefa é comparar a lista “referência” com a lista “hipótese”. Todos os diagnósticos, fatores de risco ou procedimentos da lista “referência” devem estar presentes na lista “hipótese”.
@@ -98,7 +97,7 @@ Qual a precisão e o recall?
 Me dê o resultado, sem explicar o que é precisão e recall.
 Mostre a qual grupo (VP, FP, FN) pertence cada resultado.
 
-Apresente o recall, a precisão e o ruído no formato: (Precisão, Recall)
+Apresente o recall, a precisão e o ruído no formato: [[Precisão, Recall]]
 """
 
 assistant_2 = """Verdadeiros Positivos (VP):
@@ -122,7 +121,7 @@ Cálculo de precisão e recall:
 Precisão = VP / (VP + FP) = 3 / (3 + 2) = 3 /6 = 0.5 (50%)
 Recall = VP / (VP + FN) = 3 / (3 + 1) = 3 / 4 = 0.75 (75%)
 
-(Precisão, Recall) = (0.5, 0.75)
+[[Precisão, Recall]] = [[0.5, 0.75]]
 """
 
 user_3 = """A tarefa é comparar a lista “referência” com a lista “hipótese”. Todos os diagnósticos, fatores de risco ou procedimentos da lista “referência” devem estar presentes na lista “hipótese”.
@@ -163,7 +162,7 @@ Qual a precisão e o recall?
 Me dê o resultado, sem explicar o que é precisão e recall.
 Mostre a qual grupo (VP, FP, FN) pertence cada resultado.
 
-Apresente o recall, a precisão e o ruído no formato: (Precisão, Recall)
+Apresente o recall, a precisão e o ruído no formato: [[Precisão, Recall]]
 """
 
 assistant_3 = """Verdadeiros Positivos (VP):
@@ -191,7 +190,7 @@ Cálculo de precisão, recall:
 Precisão = VP / (VP + FP) = 4 / (4 + 9) = 4 / 13 = 0.61 (61%)
 Recall = VP / (VP + FN) = 4 / (4 + 2) = 4 / 6 = 0.67 (67%)
 
-(Precisão, Recall) = (0.61, 0.67)
+[[Precisão, Recall]] = [[0.61, 0.67]]
 """
 
 user_4 = """A tarefa é comparar a lista “referência” com a lista “hipótese”. Todos os diagnósticos, fatores de risco ou procedimentos da lista “referência” devem estar presentes na lista “hipótese”.
@@ -224,7 +223,7 @@ Qual a precisão e o recall?
 Me dê o resultado, sem explicar o que é precisão e recall.
 Mostre a qual grupo (VP, FP, FN) pertence cada resultado.
 
-Apresente o recall, a precisão e o ruído no formato: (Precisão, Recall)
+Apresente o recall, a precisão e o ruído no formato: [[Precisão, Recall]]
 """
 
 assistant_4 = """Verdadeiros Positivos (VP):
@@ -248,7 +247,7 @@ Cálculo de precisão e recall:
 Precisão = VP / (VP + FP) = 4/ (4 + 5) = 4 / 9= 0.44 (44%)
 Recall = VP / (VP + FN) = 4 / (4 + 1) = 4 / 5 = 0.8 (80%)
 
-(Precisão, Recall) = (0.44, 0.8)
+[[Precisão, Recall]] = [[0.44, 0.8]]
 """
 
 
@@ -262,16 +261,16 @@ def get_response(question : str):
         try:
             time.sleep(0.3)
             response = client.chat.completions.create(
-                model="gpt-4o-2024-05-13",
+                model="o3",
                 messages=[
-                    {"role": "user", "content":user_1},
-                    {"role": "assistant", "content":assistant_1},
-                    {"role": "user", "content":user_2},
-                    {"role": "assistant", "content":assistant_2},
-                    {"role": "user", "content":user_3},
-                    {"role": "assistant", "content":assistant_3},
-                    {"role": "user", "content":user_4},
-                    {"role": "assistant", "content":assistant_4},
+                    #{"role": "user", "content":user_1},
+                    #{"role": "assistant", "content":assistant_1},
+                    #{"role": "user", "content":user_2},
+                    #{"role": "assistant", "content":assistant_2},
+                    #{"role": "user", "content":user_3},
+                    #{"role": "assistant", "content":assistant_3},
+                    #{"role": "user", "content":user_4},
+                    #{"role": "assistant", "content":assistant_4},
                     {"role": "user", "content":question},
                 ],
             )

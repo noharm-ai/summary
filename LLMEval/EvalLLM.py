@@ -82,7 +82,7 @@ if __name__ == "__main__":
 
     for file in os.listdir("./data/"):
         if "diag" in file:
-            if os.path.exists("./result-gpt4o/" + file):
+            if os.path.exists("./result-gpto3/" + file):
                 print("[Ignoring] File already processed", file, "...", flush=True)
                 continue
 
@@ -96,4 +96,4 @@ if __name__ == "__main__":
 
             diagnostics_llm = __prepro_diagnostics(llm_diag)
 
-            prompting(gt, diagnostics_llm, "./result-gpt4o/" + file)
+            prompting(gt, diagnostics_llm, "./result-gpto3/" + file)
