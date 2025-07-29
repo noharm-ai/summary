@@ -27,83 +27,31 @@
 *Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente 
 *DLP<|Assistant|>
 
-Okay, let's tackle this problem. The user wants a list of diagnoses without repeating similar ones, choosing the most complete when there are similar terms. They also want only diseases mentioned, ignoring other words, and the list should be separated by 
-* without line breaks.
+Okay, let's tackle this user's request. They want a list of diagnoses without repeating similar ones, choosing the most complete when there are similar terms. The input has some terms that might not be diseases, so I need to filter those out. Let me start by going through each item in the provided list.
 
-First, I need to go through each item in the provided list. Let's list them out:
+First, ""HAS"" is likely ""Hipertensão Arterial Sistêmica,"" which is a common diagnosis. Then ""amputado MID (transtibial)"" – ""amputado"" refers to the status post-amputation, but the actual diagnosis here is the amputation itself. However, ""amputação transtibial em MID"" appears later, which is more complete, so I should use that instead of the shorter ""amputado MID.""
 
-1. HAS
-2. amputado MID (transtibial)
-3. DAOP
-4. DM
-5. amputação transtibila em MID
-6. DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B. ?
-7. IC PERFIL B
-8. amputação transtibial em MID
-9. Infecção da ferida operatória
-10. IC Perfil
-11. IC
-12. Ateromatose em coronárias
-13. IC Perfil B
-14. Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente
-15. DLP
-
-Now, I need to identify which of these are actual diagnoses. The user mentioned to ignore non-disease terms. Let's analyze each:
-
-1. 
-*HAS
-*: Hipertensão Arterial Sistêmica (Systemic Arterial Hypertension) - this is a diagnosis.
-2. 
-*amputado MID (t"	"[[1.0, 1.0]]"
+Next, ""DAOP"" stands for ""Doença Arterial Obstrutiva Periférica,"" which is a valid diagnosis. ""DM"" is ""Diabetes Mellitus,"" straightforward. Then there's ""DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B."" The user wants only the diseases, so ""desconforto respiratório"" is a symptom, not a disease. The secondary cause is ""IC PERFIL B,"" which is ""Insuficiência Cardíaca Perfil B."" But later, ""IC Perfil B"" and ""IC"""	"[[0.6, 1.0]]"
 "*Osteomielite 
 *Infecção de sítio cirúrgico (prótese de fêmur esquerdo) 
 *Dislipidemia (DLP)  
 *Carcinoma de Face 
-*Alzheimer "	"*<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por 
-* e sem quebra de linha)
+*Alzheimer "	"*<|begin_of_sentence|><|Assistant|>
 
 
-*Osteomielite NE 
-*Alzheimer Carcinoma de face 
-*CLIQUE 
-*Infecção de sítio cirurgico 
-*DLP 
-*DMansine 
-*PRÓTESE FEMORAL ESQUERDA. 
-*Infecção de sítio cirurgico - Prótese de 
-*Carcinoma de face 
-*ALZHEIMER 
-*Osteomielite NE 16/10/23 M86 
-*INFECÇÃO DE SITIO CIRURGICO - FRATURA COLO FEMUR ESQUERDO 
-*OSTEOMIELITE 
-*Alzheimer 
-*Osteomielite NE. 
-*Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo. 
-*Osteomielite 
-*Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo 
-*OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM 
-*INFECÇÃO DE FERIDA OPERATÓRIA - FÊMUR ESQUERDO.<|Assistant|><|endoftext|>
+* Osteomielite  
 
-Okay, let's tackle this problem. The user wants a list of diagnoses from the given text, without repeating similar ones. They mentioned that if there are similar diseases, we should pick the most complete version. Also, only include actual diseases and ignore other words. The list should be separated by asterisks with no line breaks.
+* Alzheimer  
 
-First, I need to parse the input text. Let me look at each item:
+* Carcinoma de face  
 
-- 
-*Osteomielite NE
-- 
-*Alzheimer
-- Carcinoma de face
-- 
-*CLIQUE (probably not a disease)
-- 
-*Infecção de sítio cirurgico
-- 
-*DLP (could be Dislipidemia?)
-- 
-*DMansine (maybe a typo, unsure)
-- 
-*PRÓTESE FEMORAL ESQUERDA. (this is a medical device, not a disease)
--"	"[[0.25, 1.0]]"
+* Infecção de sítio cirúrgico  
+
+* DLP  
+
+* DMansine  
+
+* Infecção de ferida operatória - Fêmur esquerdo"	"[[0.71, 1.0]]"
 "*Transtorno conversivo 
 *Calcificações parietais nas artérias carótidas internas intracranianas ou Ateromatose difusa 
 *Bloqueio atrioventricular de 1º grau 
@@ -152,11 +100,9 @@ First, I need to parse the input text. Let me look at each item:
 
 *Anemia macrocítica  
 
-*Epilepsia  
-
 *Angiodisplasia de cólon  
 
-*Anemia crônica da doença renal  
+*Epilepsia  
 
 *Delirium hiperativo  
 
@@ -168,43 +114,35 @@ First, I need to parse the input text. Let me look at each item:
 
 *Cistos simples bilaterais  
 
-*Suspeito de quadro demencial com início precoce (frontotemporal)  
-
-*Doença Renal Crônica por depósitos de IgA  
-
 *Síndrome demencial  
-
-*HAS (Hipertensão Arterial Sistêmica)  
-
-*Displasia orofaríngea  
 
 *TCE (Traumatismo Craniano Encefálico)  
 
 *HDB (Hemorragia Digestiva Baixa)  
 
-*Tiróide heterogênea  
+*Displasia orofaríngea  
 
-*Alteração do relaxamento ventricular  
+*HAS (Hipertensão Arterial Sistêmica)  
 
-*IC compensada (Insuficiência Cardíaca compensada)  
+*Doença Renal Crônica por depósitos de IgA  
+
+*IC compensada  
 
 *Microangiopatia/gliose  
 
 *Malformação vascular com sinais de sangramento recente em cólon transverso  
 
-*DM tipo 2  
+*Tireoide heterogênea  
 
 *Queda de própria altura  
 
-*SEC A DRC (Síndrome de Encefalopatia Crônica associada à DRC)  
+*Anemia crônica  
 
-*B12 (Anemia por deficiência de vitamina B12)  
+*DM tipo 2  
 
-*TIE (Tromboembolismo pulmonar?)  
+*Síndrome demencial frontotemporal  
 
-*Hematomas e MMSS (Membros Superiores)  
-
-<|end_of_sentence|>"	"[[0.48, 0.90]]"
+*Deficiência de vitamina B12 (associada à anemia macrocítica)"	"[[0.53, 0.90]]"
 "*Nasofaringite Aguda 
 *Pneumonia Bacteriana ou Broncopneumonia aspirativa 
 *Dermatite em membro superior esquerdo (MSE) 
@@ -310,7 +248,7 @@ TEP - 3x: 02 episódios em Anticoagulação 2022 + março/2023
 *TEP Submaciço: Segmentar Bilateral - 02/10 
 *ASMA 
 *Anemia. 
-*TEP"	"[[0.225, 1.0]]"
+*TEP"	"[[0.22, 1.0]]"
 "*Epilepsia 
 *Disfagia Orofaringea 
 *Pneumonia Comunitária 
@@ -319,25 +257,15 @@ TEP - 3x: 02 episódios em Anticoagulação 2022 + março/2023
 *Infecção Trato Urinário (ITU) comunitária 
 *Acidentes Vasculares Cerebrais prévios 
 *Lesão de Lábio e mordedura na região lateral e língua"	"*<|begin_of_sentence|><|Assistant|>
-
-
-*Primeira Crise Epiléptica  
-
-*Pneumonia Comunitária  
-
-*CRISE CONVULSIVA  
-
-*Epilepsia Focal Secundária  
-
-*DISFAGIA OROFARÍNGEA  
-
-*HAS  
-
-*Dupla Hemiparesia  
-
-*Ataxia de Marcha  
-
-*ITU Comunitária"	"[[0.67, 0.75]]"
+*Primeira Crise Epiléptica a/e Pneumonia Comunitária 
+*CRISE CONVULSIVA 
+*Epilepsia Focal Secundária 
+*DISFAGIA OROFARÍNGEA 
+*HAS 
+*AVCs Prévioss 
+*Dupla Hemiparesia 
+*Ataxia de Marcha 
+*ITU Comunitária<|end_of_sentence|>"	"[[0.78, 0.88]]"
 "*Insuficência Mitral 
 *Fibrilação atrial Crônica (FA Crônica) 
 *Ateromatose incipiente 
@@ -350,50 +278,16 @@ TEP - 3x: 02 episódios em Anticoagulação 2022 + março/2023
 *Trombose Venosa Profunda em Membro Inferior Esquerdo (TVP em MIE) 
 *Pneumonia 
 *Hipertensão Arterial Sistêmica (HAS) 
-*Varizes Calibrosas"	"*Okay, let's tackle this. The user wants a list of diagnoses without repeating similar ones, choosing the most complete term when there are similar diseases. They also want only the diseases mentioned, ignoring other words, and the list should be separated by asterisks with no line breaks.
+*Varizes Calibrosas"	"*Okay, let's tackle this user's request. They want a list of diagnoses from the provided text, ensuring no repetition of similar terms and selecting the most complete ones when there are similar diseases. Also, they only want the diseases mentioned, no extra words, and the list should be separated by 
+* without line breaks.
 
-First, I need to go through the provided text and extract all the terms that are actual diseases. Let me list them out:
+First, I need to parse the input text. Let me look through each term. I see ""Dispnéia leve"" – that's mild dyspnea, which is a symptom, not a disease, so I should exclude it. Next, ""Insuf mitral"" is mitral insufficiency. Then ""FA com ARV"" – FA is atrial fibrillation, ARV might be something else, but the user wants only disease names, so maybe just Fibrilação Atrial. 
 
-- Dispnéia leve
-- Insuf mitral
-- FA com ARV
-- Fibrilação atrial crônica
-- Insuf mitral (repeated)
-- Ateromatose incipiente
-- IC perfil
-- Fibrilação atrial permanente
-- Insuf mitral (again)
-- Artrose AVCH HÁ 5 ANOS
-- IC PERFIL B
-- Varizes calibrosas
-- HAS
-- IC perfil B (same as above)
-- Artrose. (with a period)
-- Disfunção renal aguda
-- MCP
-- Osteoporose
-- Alterações degenerativas da coluna vertebral
-- TVP em MIE RAM
-- Insuf cardiaca congestiva
-- Pneumonia
-- Descongestão. (not a disease)
-- IC descompensada perfil B. ?
-- Bundle (not a disease)
-- TVP em MIE . (with period)
-- Artrose (again)
-- Fibrilação atrial crônica (again)
-- IC (abbreviation)
-- has (lowercase, probably HAS)
-- Fibrilação atrial permanente (again)
-- TVP em MIE . (again)
+There's ""Fibrilação atrial crônica"" and ""Fibrilação atrial permanente"". These are similar. The user said to pick the most complete term. ""Crônica"" and ""permanente"" are both types, but maybe ""permanente"" is more specific. Wait, but in the input, both terms are present. I need to check if they are considered the same. Atrial fibrillation can be classified as paroxysmal, persistent, long-standing persistent, or permanent. So ""permanente"" is a subtype. The user might consider ""Fibrilação atrial permanente"" as the more complete term, so I should include that and exclude the ""crônica"" one.
 
-Now, I need to remove non-disease terms like ""Descongestão"", ""Bundle"", and ""HÁ 5 ANOS"" (which is a time reference). Also, ""IC"" is an abbreviation, so I should use the full form when available.
+Then ""Ateromatose incipiente"" – early atherosclerosis. ""IC perfil"" – heart failure, but ""perfil"" might refer to the type. Later there's ""IC perfil B"" and ""IC descompensada perfil B"". So ""IC descompensada perfil B"" is more specific, so include that instead of the generic ""IC perfil"".
 
-Next, group similar terms and pick the most complete one. For example:
-
-- ""Fibrilação atrial crônica"" and ""Fibrilação atrial permanente"" are both types of atrial fibrillation. The user wants the most complete term. ""Fibrilação atrial crônica"" and ""Fibrilação atrial permanente"" are both specific, so they might be considered separate. But in some contexts, ""permanente"" is a subtype of ""crônica"". Need to check if they are distinct here. Since both are present, maybe list both.
-
-- ""Ins"	"[[0.41, 1.0]]"
+""Varizes calibrosas"" – varicose veins. ""HAS"" is hypertension. ""Artrose AVCH HÁ 5 ANOS"" – AVCH might be a typo, but Artrose is osteoarthritis. ""Disfunção renal aguda"" – acute renal dysfunction. ""MCP"" – not sure, could be metacarpophalangeal, but that's not a disease. Maybe it's a typo. The user said to include only diseases, so maybe exclude MCP. ""Osteoporose"" is clear. ""Al"	"[[1.0, 0.69]]"
 "*Hiponatremia 
 *Depressão 
 *Insufciência Cardiaca Perfil B,  
@@ -425,16 +319,24 @@ Contratilidade miocárdica preservada
 *Disfunção diastólica do ventrículo esquerdo de grau II. 
 *Presença de hipertensão pulmonar (PSAP= 44 mmHg, estimada pelo refluxo tricuspídeo<|Assistant|>
 
+Okay, let's tackle this problem. The user wants a list of diagnoses from the given text, without repeating similar ones and choosing the most complete when there are similar terms. They also want only the diseases, ignoring other words, and the list should be separated by 
+* without line breaks.
 
-*Hiponatremia 
-*Depressão 
-*Asma 
-*Infecção do trato urinário 
-*Dislipidemia 
-*Hipertensão arterial sistêmica 
-*Insuficiência cardíaca com fração de ejeção preservada perfil B 
-*Disfunção diastólica do ventrículo esquerdo grau II 
-*Hipertensão pulmonar"	"[[1.0, 1.0]]"
+First, I need to parse the input text. Let's look at each item:
+
+- Contratilidade miocárdica preservada: This translates to ""preserved myocardial contractility,"" which is a normal finding, not a disease. So I should exclude it.
+
+- Hiponatremia: This is a condition (low sodium), so include it.
+
+- DEPRESSÃO: Depression, a mental health disorder. Include.
+
+- IC FEp.: Probably ""Insuficiência Cardíaca com Fração de Ejeção preservada"" (Heart Failure with preserved Ejection Fraction). Need to check for similar terms.
+
+- IC PERFIL B IC FEp: ""IC"" is Insuficiência Cardíaca (Heart Failure). ""Perfil B"" might refer to a classification, but combined with FEp, it's likely HFpEF again. So maybe redundant.
+
+- ASMA: Asthma. Include.
+
+- ITU: Infecção do Trato Urinário (Urinary Tract"	"[[0.5, 1.0]]"
 "* Desnutrição 
 * Carcinomatose Peritoneal 
 * Obstrucao intestinal pos-operatoria (K91.3) ou Abdome agudo obstrutivo 
@@ -466,16 +368,15 @@ Desnutrido
 *carcinomatose peritoneal 
 *Carcinomatose peritoneal - Diagnosticada em 2021<|Assistant|>
 
-Okay, let's tackle this problem. The user wants a list of diagnoses from the provided text, without repeating similar ones and choosing the most complete when there are similar diseases. They also want only the diseases mentioned, ignoring other terms, and the list should be separated by asterisks with no line breaks.
 
-First, I need to parse the input text. Let me look at each item after the asterisks. The entries are:
-
-- Desnutrido
-- Carcinoma peritoneal seroso de alto grau ki-67 80%
-- Carcinoma seroso de alto grau pT3b
-- Cirurgia
-- Carcinoma seroso de alto grau 1º de peritonio.
-- Obstrucao"	"[[0.22, 1.0]]"
+*Carcinoma peritoneal seroso de alto grau ki-67 80% 
+*Carcinoma seroso de alto grau pT3b 
+*Obstrucao intestinal pos-operatoria 
+*Abdome agudo obstrutivo (aderência) 
+*Carcinomatose peritoneal 
+*ITU 
+*Tabagismo 
+*Desnutrido"	"[[0.625, 1.0]]"
 "* Hipertensão Arterial Sistêmica (HAS) 
 *Pequena hérnia gástrica-hiatal 
 *Doença Obstrutiva Pulmonar Crônica (DPOC) exacerbado 
@@ -486,49 +387,54 @@ First, I need to parse the input text. Let me look at each item after the asteri
 *Pneumonia 
 *Dislipidemia (DLP) 
 *Sindrome Gripal (Sd Gripal) 
-* Ateromatose aórtica e coronariana  "	"*Okay, let's tackle this task. The user wants a list of diagnoses from the provided text, ensuring no repetition of similar terms and selecting the most complete ones when there are similar diseases. They also want only the diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
+* Ateromatose aórtica e coronariana  "	"*Okay, let's tackle this. The user wants a list of diagnoses from the provided text, making sure not to repeat similar ones and choosing the most complete term when there are similar diseases. They also want only the diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
 
 First, I need to go through each item in the input. Let's list them out:
 
 - HAS
 - Pequena hérnia gástrica-hiatal
-- HAS (repeated)
+- HAS (again)
 - Cardiopatia
 - TINOCA
 - DPOC PNM
-- TINOCA (repeated)
+- TINOCA (again)
 - Sepse - DPOC Exacerbado
 - Injuria miocardica aguda
-- Cardiopatia (repeated)
+- Cardiopatia (again)
 - DPOC
 - Ateromatose aórtica e coronariana
 - TINOCA - Injúria Miocárdica Inflamatória
 - Sd gripal - quadriplex negativo
 - Espondilose dorsal
-- gripal
-- Transtornos
+- gripal (probably same as Sd gripal)
+- Transtornos (too vague, not a disease)
 - ICFEP
 - Pneumonia NE
 - Pneumonia NE DPOC exacerbado
 - DLP
-- sindrome gripal há 1 semana
-- TRANSFERENCIA PARA SEMI
-- Ateromatose aórtica e coronariana (repeated)
-- Injuria miocardica
-- Pneumonia NE (repeated)
-- Injúria Miocárdica Inflamatória (repeated)
-- DPOC (repeated)
-- Sd gripal (repeated)
-- PNM/
-- ICFEP (repeated)
-- Espondilose dorsal (repeated)
-- HAS (repeated)
-- Cardiopatia (repeated)
-- DPOC exacerbado (repeated)
-- Pneumonia NE (repeated)
+- sindrome gripal há 1 semana (same as Sd gripal)
+- TRANSFERENCIA PARA SEMI (not a disease)
+- Ateromatose aórtica e coronariana (again)
+- Injuria miocardica (same as previous but without 'aguda')
+- Pneumonia NE (again)
+- Injúria Miocárdica Inflamatória (similar to previous)
+- DPOC (again)
+- Sd gripal (again)
+- PNM/ (probably part of DPOC PNM)
+- ICFEP (again)
+- Espondilose dorsal (again)
+- HAS (again)
+- Cardiopatia (again)
+- DPOC exacerbado (again)
+- Pneumonia NE (again)
 - BRONCOESPASMO GRAVE NA MADRUGADA
 
-Now, I need to identify which terms are actual diseases. Some terms like ""TRANSFERENCIA PARA SEMI"" and ""Transtornos"" might not be specific diseases. ""TINOCA"" and ""PNM"" are unclear; maybe abbreviations? But since the user wants only diseases, I should check if these are valid. TINOCA might be a typo or an abbreviation not commonly recognized. PNM could be pneumonia, but there's already ""Pneumonia NE"". Maybe PNM is part of ""DPOC PNM"","	"[[0.30, 1.00]]"
+Now, I need to group similar terms and pick the most complete one. Let's see:
+
+- HAS: appears multiple times, just list once.
+- Pequena hérnia gástrica-hiatal: unique.
+- Cardiopatia: repeated, keep once.
+- TINOCA: appears alone and combined. Need to check if combined terms are separate or part of the"	"[[0.65, 1.0]]"
 "*Hemoglobinopatia SS ou Anemia Falciforme (D57) 
 *Hipertensão Arterial Sistêmica (HAS) 
 *Transtornos de Adaptação 
@@ -558,10 +464,10 @@ Now, I need to identify which terms are actual diseases. Some terms like ""TRANS
 *Hydrea 1 
 *Anemia Falciforme .<|Assistant|>
 
-Okay, let's tackle this problem. The user wants a list of diagnoses from the provided text, without repeating similar ones and choosing the most complete when there are similar terms. They also want only diseases, ignoring other words, and the list should be separated by 
+Okay, let's tackle this task. The user wants a list of diagnoses from the provided text, without repeating similar ones and choosing the most complete when there are similar terms. They also want only the diseases, ignoring other words, and the list should be separated by 
 * without line breaks.
 
-First, I need to go through each item in the given list. Let's list them out:
+First, I need to go through each item in the input list. Let's list them out:
 
 1. Hemoglobinopatia
 2. Anemia falciforme
@@ -583,7 +489,7 @@ First, I need to go through each item in the given list. Let's list them out:
 18. SDem evacuação
 19. Transtornos de Adaptação
 20. Hydrea 1
-21. Anemia Falc"	"[[0.19, 1.0]]"
+21. Anemia Falciforme"	"[[0.19, 1.0]]"
 "*Hernia Inguinal 
 *Insuficiência Renal Aguda (IRA) KDIGO 3 
 *Cálculo urinário obstrutivo 
@@ -593,46 +499,52 @@ First, I need to go through each item in the given list. Let's list them out:
 *Hipertensão Arterial Sistêmica (HAS) 
 *Infecção do Trato Urinário (ITU) 
 *Doença Renal Crônica (DRC) agudizada com rim atrófico 
-* Gastrite "	"*<|begin_of_sentence|><|assistant|>
+* Gastrite "	"*<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por 
+* e sem quebra de linha)
 
 
-*Hérnia inguinal  
+*hernia inguinal. 
+*hernia inguinal 
+*INSUFICIENCIA RENAL AGUDA 
+*Lra Kdigo III - Pós Renal por Ureterolitiase + Ureterohidronefrose a Esquerda. 
+*DMansine 
+*Lra Kdigo III. 
+*IRC 
+*Compensação clínica. 
+*CÁLCULO URINÁRIO OBSTRUTIVO ESQ, RIM 
+*Nefrite intersticial por medicação 
+*IRA KDIGO 3 
+*Hérnia de Hiato 
+*Gastrite. 
+*Uretrolitiase obstrutiva esquerda 
+*DRC agudizada 
+*CA PRÓSTATA 
+*Cistos corticais simples 
+*Adenocarcinoma de prostata Gleason 8, metasático com acometimento osseo. 
+*nefrolitiase 
+*CÁLCULO URINÁRIO OBSTRUTIVO, RIM ÚNICO FUNCIONAL 
+*DOR ABDOMINAL E PELVICA 
+*hematúria 
+*IRA 
+*IRA pós renal. 
+*ANESTESIA 
+*Lra Kdigo III 
+*HIPÓTESES DIAGNÓSTICAS 
+*NEOPLASIA MALIGNA DA PROSTATA 
+*IRC AGUDIZADA 
+*Ca próstata com Mtx óssea 
+*CÁLCULO 
+*IRA KDIGO 
+*HAS 
+*IRA pós renal -> Cálculo em ureter a E 
+*Cistos 
+*Rim atrófico a D 
+*CÁLCULO URINÁRIO OBSTRUTIVO, RIM ÚNICO FUNCIONAL. 
+*CA próstata 
+*ITU 
+*Adenocarcinoma de prostata Gleason 8, metasático com acometimento osseo<|Assistant|>
 
-*Insuficiência renal aguda KDIGO III  
-
-*Ureterolitíase  
-
-*Ureterohidronefrose  
-
-*Diabetes mellitus  
-
-*Insuficiência renal crônica  
-
-*Cálculo urinário obstrutivo  
-
-*Nefrite intersticial por medicação  
-
-*Hérnia de hiato  
-
-*Gastrite  
-
-*Doença renal crônica agudizada  
-
-*Carcinoma de próstata  
-
-*Cistos corticais simples  
-
-*Adenocarcinoma de próstata Gleason 8 metastático com acometimento ósseo  
-
-*Nefrolitíase  
-
-*Hematúria  
-
-*Hipertensão arterial sistêmica  
-
-*Infecção do trato urinário  
-
-*Rim atrófico"	"[[0.53, 1.0]]"
+Okay, let's tackle this task. The user wants a list of diagnoses without repeating similar ones. When there are similar diseases, I need to pick the most complete"	"[[0.25, 1.0]]"
 "*Neoplasia de papila duodenal 
 *Infecção do Trato Urinário (ITU) ou  Sepse de foco urinário 
 *Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metástatico (C25) 
@@ -675,23 +587,18 @@ First, I need to go through each item in the given list. Let's list them out:
 *05/10/23 C25 
 *Sepse de foco urinario tratada<|Assistant|>
 
-Okay, let's tackle this task. The user wants a list of diagnoses from the provided text, without repeating similar ones and choosing the most complete when there are similar terms. They also want only the diseases, ignoring other words, and the list should be separated by 
+Okay, let's tackle this task. The user wants a list of diagnoses from the provided text, without repeating similar ones and choosing the most complete version when there are similar terms. They also want only the diseases mentioned, ignoring other words, and the list should be separated by 
 * without line breaks.
 
-First, I need to go through each item in the input. Let's list them out:
+First, I need to go through each item in the text. Let's list them out:
 
 1. Neoplasia de papila duodenal.
-2. sintoamticos
-3. urinária
+2. sintoamticos (probably a typo, maybe ""sintomáticos""? Not a disease)
+3. urinária (adjective, not a disease)
 4. Infecção urinária : sim
-5. TRANSFERENCIA PARA SEMI .
-6. pélvicos
-7. ITU
-8. 05/10/23 C25 - NEOPLASIA MALIGNA DO PANCREAS
-9. Artrite
-10. HAS
-11. Neoplasia maligna do corpo do útero.
-12. Transfusão de CH hoje"	"[[0.36, 1.0]]"
+5. TRANSFERENCIA PARA SEMI (not a disease)
+6. pélvicos (adjective, not a disease)
+7. ITU (abbreviation for Infecção do Trato Urinário, same as Infecção urinária"	"[[0.36, 1.0]]"
 "*Insuficiência Renal Crônica Dialítico (IRCD) 
 *Insuficiência Cardiaca com Fração de Ejeção Reduzida (ICFER), 
 *Dislipidemia (DLP) 
@@ -734,119 +641,75 @@ First, I need to go through each item in the input. Let's list them out:
 *Sinovite 
 *Farmacodermia 
 *Insuficiência venosa periférica crônica 
-*Hipertensão Arterial Sistêmica (HAS)"	"*<|begin_of_sentence|>Aqui está a lista de diagnósticos consolidados, priorizando os termos mais completos e evitando repetições:
+*Hipertensão Arterial Sistêmica (HAS)"	"*<|begin_of_sentence|><|User|>A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por 
+* e sem quebra de linha)
 
 
-*Insuficiência Renal Crônica Dialítica  
-
-*Dislipidemia  
-
-*Diabetes Mellitus Tipo 2  
-
-*Artropatia de Charcot em Membro Inferior Esquerdo  
-
-*Transtorno de Adaptação  
-
-*Osteomielite Crônica por Staphylococcus aureus  
-
-*Choque Circulatório com Cor Anêmico e Hemorragia Digestiva  
-
-*Pé Diabético com Infecção de Pele e Partes Moles Complicada por Osteomielite  
-
-*Depressão  
-
-*Neuropatia Diabética Periférica com Crise Álgica  
-
-*Nefrolitíase  
-
-*Colelitíase  
-
-*Obesidade Grau 2  
-
-*Púrpura Retiforme em Membros  
-
-*Hipertensão Arterial Sistêmica  
-
-*Doença Arterial Coronariana com Infarto Agudo do Miocárdio em 2021 e Stents  
-
-*Anemia Sintomática  
-
-*Disfagia Orofaringeica Neurogênica Moderada  
-
-*Infecção do Trato Urinário  
-
-*Esofagite Erosiva Grau A de Los Angeles  
-
-*Bulboduodenite Erosiva Leve  
-
-*Pangastrite Enantemática com Componente Erosivo  
-
-*Hipotireoidismo  
-
-*Encefalopatia Tóxico-Metabólica  
-
-*Tromboembolismo Venoso  
-
-*Erisipela Crônica  
-
-*Hipercalemia Grave  
-
-*Retinopatia Diabética  
-
-*Esplenomegalia Homogênea  
-
-*Lipomatose Retroperitoneal  
-
-*Insuficiência Cardíaca Congestiva  
-
-*Disfunção Diastólica de Grau Leve  
-
-*Farmacodermia  
-
-*Linfangite Crônica com Dermatite Ocre  
-
-*Sepse de Foco Cutâneo/Pulmonar  
-
-*Melena (K92.1)  
-
-*Doença Renal Crônica Dialítica Estágio G5D desde Outubro/2022  
-
-*Acidente Vascular Cerebral Prévia  
-
-*Síndrome de Ortostatismo  
-
-*Adrenais: Discoide"	"[[0.9, 0.84]]"
+*IRCD 
+*ICFER 
+*Dislipidemia. 
+*DM. 
+*Artropatia de Charcot em MIE . 
+*Transtornos de Adaptação. 
+*Osteomielite crônica Choque Circulatório - Cor Anêmico - Hemorragia Digestiva 
+*Osteomielite crônica 
+*Pé Diabético: Infecção de Pele e Partes Moles Complicada por Osteomielite em Investigação 
+*Depressão 
+*Diabética Periférica 
+*CHOQUE CIRCULATÓRIO 
+*Adrenais: discoide à direita (variante anatômica 
+*Pé diabetico com ulcera extensa MIE 
+*Anemia 
+*DISFAGIA 
+*Adrenal esquerda normal 
+*ITU 
+*Obesidade Grau 2 . 
+*Charcot 
+*Púrpura retiforme em MMSS (E>D) e MMII 
+*Nefrolitíase. 
+*Pé Diabético: 
+*Osteomielite em Investigação 
+*Choque circulatório, Cor anêmico 
+*Osteomielite crônica Choque Circulatório 
+*HAS 
+*Ortostatismo 
+*Osteomielite crônica - S. aureus. 
+*Periférica 
+*DAC: IAM em 2021 ATC c/ 03 Stents 
+*Anemia sintomática 
+*MRC 12 Tosse produtiva deglutida FR 
+*DM2 
+*OSTEOMIELITE CRÔNICA- S aureus. 
+*ULCERA INFECTADA PRÉ E, 
+*Pangastrite enantemática leve com componente erosivo plano leve no antro. 
+*Dislipidemia 
+*OSTEOMIELITE CRÔNICA- S aureus 
+*Choque Circulatório - Cor Anêmico 
+*IRC 
+*IRC DIALITICO 
+*DRC com osteomielite crônica em pé esquerdo 
+*DM 
+*ANEMIA A/ "	"[[0.42, 0.44]]"
 "*Hipertensão Arterial Sistêmica (HAS) 
 *Varizes em Membros Inferior com úlcera, Úlcera Venosa em Membro Inferior direito 
 *Dermatite Ocre 
 * Tromboembolismo Pulmonar (TEP) 
 *Diabetes Mellitus (DM) 
-*Tabagismo "	"*Okay, let's tackle this user's request. They want a list of diagnoses from the given text, making sure not to repeat similar ones and choosing the most complete term when there are similar diseases. Also, they only want the diseases mentioned, ignoring other words, and the list should be separated by 
-* without line breaks.
+*Tabagismo "	"*Okay, let's tackle this user's request. They want a list of diagnoses from the provided text, making sure not to repeat similar ones and choosing the most complete term when there are similar diseases. Also, they only want the diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
 
-First, I need to parse the input text. The user provided: 
-*HAS 
-*Varizes membros infer c/ulcera e inflam 
-*Dermatite Ocre + cicatriz relacionado a tratramento 
-*TEP 
-*DMansine 
-*Tabagismo 
-*has 
-*Lesão por adesivo 
-*Doença ulcera periférica 
-*has. 
-*DERMATITE OCRE. 
-*Dispensação 
-*CFelipe 
-*ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO.
+First, I need to parse the input text. The user provided a list with some entries that are diseases and others that aren't. Let me go through each item:
 
-I notice some entries are duplicates or variations. For example, ""HAS"" and ""has"" are the same, likely referring to Hypertension (Hipertensão Arterial Sistêmica in Portuguese). ""Varizes membros infer c/ulcera e inflam"" seems to be varicose veins with ulcer and inflammation, but there's also ""ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO"" which is a venous ulcer in the right lower limb. These might be similar, so I should choose the more specific one.
-
-""Dermatite Ocre"" appears twice, once with a mention of a scar related to treatment. Since the user wants the most complete term, maybe keep ""Dermatite Ocre"" without the extra info. ""TEP"" is probably Tromboembolismo Pulmonar. ""DMansine"" might be a typo, possibly ""Diabetes Mellitus"" (DM) with a misspelling. ""Tabagismo"" is smoking, which is a condition but not a disease. Wait, the user said to list only diseases. So maybe exclude Tabagismo? But the user included it in their example. Wait, looking at the assistant's answer, they included Tabagismo. Hmm, maybe the user considers it a diagnosis. I'll keep it as per the example.
-
-""Lesão por adesivo"" is an adhesive-related injury, which is a condition. ""Doença ulcera periférica"" is peripheral ulcer disease, which is similar to the venous ulcer. ""Dispensação"" and ""CFelipe"" are not diseases, so exclude those.
-
-"	"[[0.43, 1.0]]"
+- 
+*HAS: This is likely an acronym. In Portuguese, HAS stands for Hipertensão Arterial Sistêmica (Systemic Arterial Hypertension). So, ""HAS"" is a diagnosis.
+- 
+*Varizes membros infer c/ulcera e inflam: Varizes (varicose veins) in lower limbs with ulcer and inflammation. This is a specific condition.
+- 
+*Dermatite Ocre + cicatriz relacionado a tratramento: Dermatite Ocre (Ocher Dermatitis) plus scar related to treatment. The mention of treatment might not be part of the disease name, so focus on Dermatite Ocre.
+- 
+*TEP: Another acronym. TEP in Portuguese is Tromboembolismo Pulmonar (Pulmonary Thromboembolism). So, TEP is a diagnosis.
+- 
+*DMansine: Not sure about this one. Could be a typo. Maybe ""DM"" which is Diabetes Mellitus, but ""ansine"" doesn't make sense. Alternatively, could it be ""DMAE"" (Diabetes Mellitus tipo 2)? But the user wrote DMansine. Maybe it's a misspelling. Need to check the original text again. The user wrote ""DMansine"" which might be a typo for ""DM tipo 2"" or another form. Since it's unclear, maybe include it as is, but the user might want only valid diseases. Alternatively, perhaps it's ""DM associado"" (Diabetes Mellitus associated). Hmm, tricky. Maybe the user made a typo, and it's supposed to be ""DM tipo 2"". But without more context, I'll have to consider if it's a valid disease. Alternatively, maybe it's ""D. Mansine"" which doesn't make sense. Maybe it's an error, so perhaps exclude it? Or include as is but the user might not want invalid entries. Let me check the original input again. The user wrote ""
+*DMansine""."	"[[0.8, 0.67]]"
 "*Anemia, Anemia Crônica 
 *Doença Renal Crônica Estágio G3 (DRC) 
 *Diabetes Mellitus Tipo 2 (DM2) 
@@ -894,17 +757,10 @@ I notice some entries are duplicates or variations. For example, ""HAS"" and ""h
 *Anemia em investigação 
 *OBESIDADE.<|Assistant|>
 
+Okay, let's tackle this user's request. They want a list of diagnoses without repeating similar ones. When there are similar diseases, I need to pick the most complete version. Also, I should only include actual diseases and ignore other words. The list should be separated by 
+* with no line breaks.
 
-*ANEMIA CRÔNICA 
-*DRC ESTÁGIO G3 
-*DM TIPO 2 
-*PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE 
-*LRA 
-*OBESIDADE 
-*URETEROLITIASE 
-*INFECC DO TRATO URINARIO DE LOCALIZ NE 
-*DMG 
-*LESÕES DE PELE"	"[[0.9, 1.0]]"
+First, I'll go through each item in the provided text. Let's start with ""ANEMIA CRÔNICA"" and ""Anemia"". Since ""Anemia"" is general and ""ANEMIA CRÔNICA"" is more specific, I'll keep the latter. But wait, there's also ""Anemia grave"" and"	"[[0.26, 1.0]]"
 "* Tromboembolismo Pulmonar (TEP) 
 * Broncopneumonia bacteriana nosocomial 
 * Empiema 
@@ -917,18 +773,6 @@ I notice some entries are duplicates or variations. For example, ""HAS"" and ""h
 * Hemorroidas (CID I84) 
 * Hipertensão Arterial Sistêmica (HAS) 
 * Pós-operatório tardio (POT) de gastroplastia redutora com fístula gástrica salivar 
-* Constipação"	"*Okay, let's tackle this problem. The user wants a list of diagnoses from the provided text, ensuring that similar ones are not repeated and the most complete version is chosen. They also want only diseases mentioned, ignoring other words, and the list should be separated by asterisks without line breaks.
+* Constipação"	"*Okay, let's tackle this. The user wants a list of diagnoses without repeating similar ones, choosing the most complete when there are similar terms. They also want only diseases mentioned, ignoring other words. Let me start by going through each item in the provided text.
 
-First, I need to go through each item in the given list. Some entries are duplicates or variations. For example, ""Pneumonia Bacteriana"" appears multiple times, sometimes with additional details like ""complicada com derrame pleural"" or ""Em piema"". The goal is to pick the most comprehensive term each time.
-
-Looking at ""Broncopneumonia bacteriana com Empiema"" and ""Broncopneumonia bacteriana"", the first one is more complete, so I should include that and exclude the simpler version. Similarly, ""PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE"" is longer than ""PNEUMONIA BACTERIANA"", so the longer one stays.
-
-I also need to check for non-disease terms. Words like ""TRANSFERENCIA"", ""23/9"", ""MPBarbosa"" are not diagnoses and should be excluded. Acronyms like ""DM2"" (Diabetes Mellitus type 2) and ""HAS"" (Hipertensão Arterial Sistêmica) are valid diagnoses. ""TEP"" is Tromboembolismo Pulmonar, so that's a diagnosis.
-
-Some entries have extra descriptions, like ""Cistos corticais bilaterais, com até 2,5 cm"". Even though it's descriptive, it's a diagnosis. ""Fistula gástrica salivar"" is another valid one.
-
-I need to ensure that similar terms are grouped. For instance, ""Em piema pleural"" and ""Em piema"" – the more specific one (""Em piema pleural"") should be kept. Also, ""LRA"" (Lesão Renal Aguda) and ""LRA Revertida"" – since ""Revertida"" is a status, maybe just keep ""LRA"".
-
-Check for repetitions: ""DM2"" and ""DM2 insulino dependente"" – the latter is more specific, so include that. ""Obesidade"" appears twice; just once is enough.
-
-Finally, compile the list, ensuring all are diseases, no repetitions, and the most complete terms are used. Exclude any non-disease entries and"	"[[0.64, 0.54]]"
+First, I see ""TEP"" and ""TEP"" again. TEP is Portuguese for Pulmonary Embolism (Tromboembolismo Pulmonar), so that's one. Then ""pneumonia"" and ""Broncopneumonia bacteriana com Empiema"". The latter is more specific, so I should include that instead of just pneumonia. ""Derrame pleural de contiguidade de coleção periesplenica"" – that's a pleural effusion related to a perisplenic collection, which is a specific condition. The number ""3"" is not a disease, so skip. Another ""Broncopneumonia bacteriana com Empiema"" – already noted. ""PNEUMONIA BACTERIANA NAO CLASSIFICADA EM"" – incomplete, but the full term later is ""PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE"", which is a specific classification. ""Pneumonia Bacteriana"" is general, so the more specific ones should take precedence. ""Pneumonia complicada com derrame pleural- EMPIEMA PLEURAL À ESQ"" – empyema is a complication, so that's a specific diagnosis. ""DM2"" is Diabetes Mellitus type 2. ""Broncopneumonia bacteriana"" again. ""POT gastroplastia redutora"" – not a disease, it's a surgical procedure. ""PNEUMONIA BACTERIANA"" – again, general. ""TRASFERENCIA"" – not a disease. ""EMPIEMA PLEURAL Á ESQ"" – same as before. ""REABILITAÇÃO"" – not a disease. ""Pneumonia complicada"" – already covered. ""CA ("" – CA is cancer, but without specification, maybe ignore? Later there's ""CA (Pai)"" which seems like family history, so not the patient's diagnosis. ""Derrame pleural à esquerda"" – pleural effusion, but earlier there's a more specific one. ""27/8 Recidiva da febre - infecção PICC"" – PICC line infection. ""DM ."" – Diabetes Mellitus. ""F"	"[[0.71, 0.38]]"

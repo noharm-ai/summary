@@ -49,76 +49,45 @@
 *Disfagia Orofaringea 
 *Insuficiência Cardiaca (IC) compensada  
 *Sinais de microangiopatia / gliose  
-* Síndrome Demencial"	"*Transtorno conversivo. 
-*Calcificações parietais nas artérias carótidas internas intracranianas 
-*Bloqueio A-V de 1º grau. 
-*Sepse de foco a esclarecer (Pulmão. 
-*DRC 
-*IRA KDIGO 3 
-*Espondilose dorsal. 
-*DM 
-*Sinais de ateromatose carotídea 
-*Choque Septico de Foco pulmonar (em reversao 
-*Sepse foco pulmonar em 01/ 
-*DIABETES MELLITUS NAO ESPECIFICADO 
-*IRA KDIGO 3 por sepse. 
-*Espondilose dorsolombar e sinais de coxoartrose bilateral. 
-*DOENÇA RENAL CRÔNICA ESTÁGIO G3 
-*Malformações vasculares em todo o cólon 
-*ANEMIA MACROCÍTICA 
-*epilepsia 
-*Angiodisplasia 
-*DRC agudizada KDIGO 3 (Cr basal 2) 
-*Choque septico de foco pulmonar. 
-*Doença renal crônica estágio G3 
-*angiodisplasia de colon. 
-*anemia 
-*Anemia cronica da doença renal 
-*EPILEPSIA 
-*Doença diverticular não complicada do cólon direito. 
-*Epilepsia, Meningite prévia 
-*Espondilose 
-*IRC agudizada 
-*Ateromatose difusa, inclusive coronariana 
-*Cistos simples bilaterais 
-*CHOQUE SEPTICO DE FOCO PULMONAR 30/ 
-*Suspeito de quadro demencial com inicio precoce (frontotemporal 
-*DIÁLISE 
-*Doença Renal Crônica por depósitos de IgA 
-*Divertículos de cólon direito. 
-*Anemia cronica 
-*Meningite há 20 anos 
-*DESLIGADA 
-*EPILEPSIA, MENINGITE PRÉVIA 
-*sepse pulmonar 
-*HAS 
-*DISFAGIA OROFARÍNGEA 
-*Anemia crônica. 
-*Tiróide heterogênea 
-*Cistos simples bilaterais. 
-*SEC A DRC 
-*Angiorressonância arterial sem alterações relevantes 
-*DRC agudizada KDIGO 3 (Cr basal 2 
-*DM2 
-*DMansine 
-*Aumento discreto do átrio esquerdo 
-*diverticulos de colon D + angiodisplasias de colon E 
-*Angiodisplasia de colon 
-*Angiodiplasia de colon 
-*Ateromatose difusa 
-*Epilepsia após meningite 
-*Angiodisplasias dos cólons 
-*Mal-estar inespecífico 
-*Delirium hiperativo. 
-*Sinais de microangiopatia / gliose 
-*Malformação vascular com sinais de sangramento recente em cólon transverso 
-*IC COMPENSADA 
-*MAL ESTAR, FADIGA 
-*ANEMIA MACROCÍTICA (B12 
-*06 
-*TIE 
-*Dm tipo II 
-*Suspeito de quadro demencial com inicio precoce ("	"[[0.27, 0.9]]"
+* Síndrome Demencial"	"*Transtorno conversivo
+*Calcificações parietais nas artérias carótidas internas intracranianas
+*Bloqueio A-V de 1º grau
+*Sepse de foco a esclarecer (Pulmão)
+*DRC
+*IRA KDIGO 3
+*Espondilose dorsal
+*DM
+*Sinais de ateromatose carotídea
+*Choque Septico de Foco pulmonar
+*Espondilose dorsolombar e sinais de coxoartrose bilateral
+*DOENÇA RENAL CRÔNICA ESTÁGIO G3
+*Anemia macrocítica
+*Epilepsia
+*Angiodisplasia
+*Anemia cronica da doença renal
+*Doença renal crônica estágio G3
+*angiodisplasia de colon
+*Anemia cronica
+*DM tipo 2
+*Delirium hiperativo
+*IRC agudizada
+*Ateromatose difusa, inclusive coronariana
+*Cistos simples bilaterais
+*Doença Renal Crônica por depósitos de IgA
+*Divertículos de cólon direito
+*Anemia crônica
+*Meningite há 20 anos
+*sindrome demencial
+*DRC AGUDIZADO
+*DISFAGIA OROFARÍNGEA
+*Alteração do relaxamento ventricular
+*HAS
+*Anemia crônica
+*Epilepsia após meningite
+*Malformação vascular com sinais de sangramento recente em cólon transverso
+*IC COMPENSADA
+*ANEMIA MACROCÍTICA (B12
+*Epilepsia"	"[[0.46, 0.86]]"
 "*Nasofaringite Aguda 
 *Pneumonia Bacteriana ou Broncopneumonia aspirativa 
 *Dermatite em membro superior esquerdo (MSE) 
@@ -139,12 +108,15 @@
 *DISFAGIA OROFARÍNGEA 
 *Espondilose torácica 
 *Cistos renais 
+*TVP MID 
+*Cistos renais Bosniak 1 e 2 
 *DEFORMIDADE COTOVELO 
 *Infecção pulmonar 
+*Pneumonia 
 *Adenoma na adrenal esquerda 
 *Broncopneumonia 
 *Ateromatose na aorta torácica e nos troncos supra-aórticos 
-*PAC PORT IV"	"[[0.71, 0.77]]"
+*PAC PORT IV"	"[[0.65, 0.85]]"
 "*Tromboembolismo pulmonar  (TEP) 
 *Asma,  
 *Obesidade Grau III 
@@ -169,13 +141,15 @@
 * 
 *Anemia ferropriva secundaria a menometrorragia
 * 
+*Miomatose
+* 
 *Asma Grave
 * 
 *IC
 * 
 *HAS
 * 
-*Obesidade"	"[[0.5, 0.67]]"
+*Obesidade"	"[[0.54, 0.78]]"
 "*Epilepsia 
 *Disfagia Orofaringea 
 *Pneumonia Comunitária 
@@ -222,7 +196,7 @@
 *Insuf cardiaca congestiva 
 *Pneumonia 
 *IC descompensada perfil B 
-*Bundle"	"[[0.68, 1.0]]"
+*Bundle"	"[[0.684, 1.0]]"
 "*Hiponatremia 
 *Depressão 
 *Insufciência Cardiaca Perfil B,  
@@ -237,18 +211,20 @@
 *ASMA 
 *ITU 
 *INSUFICIENCIA CARDIACA 
+*IC DIREITA 
 *DLP 
 *HAS 
 *Disfunção diastólica do ventrículo esquerdo de grau II 
-*Presença de hipertensão pulmonar"	"[[0.9, 1.0]]"
+*Presença de hipertensão pulmonar"	"[[0.82, 1.0]]"
 "* Desnutrição 
 * Carcinomatose Peritoneal 
 * Obstrucao intestinal pos-operatoria (K91.3) ou Abdome agudo obstrutivo 
 * Infeccão Trato Urinário (ITU) 
-* Tabagismo"	"*Carcinoma peritoneal seroso de alto grau ki-67 80% 
+* Tabagismo"	"*Carcinoma peritoneal seroso de alto grau ki-67 80%
+*Carcinoma seroso de alto grau pT3b
 *Obstrucao intestinal pos-operatoria Abdome agudo obstrutivo (aderência
 *ITU
-*Carcinomatose peritoneal"	"[[0.75, 0.6]]"
+*Carcinomatose peritoneal"	"[[0.6, 0.6]]"
 "* Hipertensão Arterial Sistêmica (HAS) 
 *Pequena hérnia gástrica-hiatal 
 *Doença Obstrutiva Pulmonar Crônica (DPOC) exacerbado 
@@ -267,11 +243,14 @@
 *Sepse
 *Injuria miocardica aguda
 *Ateromatose aórtica e coronariana
+*Sd gripal
 *Espondilose dorsal
+*ICFEP
 *Pneumonia NE
 *DLP
-*ICFEP
-*BRONCOESPASMO GRAVE NA MADRUGADA"	"[[0.77, 0.91]]"
+*Injúria Miocárdica Inflamatória
+*PNM
+*BRONCOESPASMO GRAVE NA MADRUGADA"	"[[0.6875, 1.0]]"
 "*Hemoglobinopatia SS ou Anemia Falciforme (D57) 
 *Hipertensão Arterial Sistêmica (HAS) 
 *Transtornos de Adaptação 
@@ -309,18 +288,15 @@
 *hematúria 
 *IRA 
 *IRA pós renal 
-*NEOPLASIA MALIGNA DA PROSTATA 
+*IRA KDIGO 
 *IRC AGUDIZADA 
 *Ca próstata com Mtx óssea 
 *CÁLCULO 
-*IRA KDIGO 
 *HAS 
-*IRA pós renal -> Cálculo em ureter a E 
 *Cistos 
 *Rim atrófico a D 
 *CA próstata 
-*ITU 
-*Adenocarcinoma de prostata Gleason 8, metasático com acometimento osseo"	"[[0.3125, 1.0]]"
+*ITU"	"[[0.34, 1.0]]"
 "*Neoplasia de papila duodenal 
 *Infecção do Trato Urinário (ITU) ou  Sepse de foco urinário 
 *Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metástatico (C25) 
@@ -440,31 +416,23 @@
 *Ateromatose aortoilíaca e de ramos viscerais fibroelástica 
 *Erisipela cronica 
 *HIPERCALEMIA GRAVE 
+*Lâminas líquidas articulares com sinovite 
 *Linfangite cronica + dermatite ocre 
 *Anemia NE 
 *DISFAGIA OROFARINGEA NEUROGENICA MODERADA 
 *ENCEFALOPATIA TÓXICO-METABÓLICA 
 *HIPERCALEMIA 
 *Retinopatia diabética 
-*Disfunção diastólica de grau 
-*K92.1 Melena 
-*OSTEOMIELITE CRÔNICA 
-*FARMACODERMIA 
-*DISFAGIA OROFARÍNGEA 
 *Insuficiência venosa periférica crônica 
-*Pangastrite enantemática 
 *ULCERA INFECTADA PRÉ E, ARTROPATIA CHARCOT 
-*K921 
-*has,dlp,dm 
-*Ex-tabagista 20 anos-maço - cessou 1997 
+*K92.1 Melena ANEMIA 
+*DAC 
 *OSTEOMIELITE CRÔNICA CHOQUE CIRCULATÓRIO 
 *Lipomatose retroperitoneal 
 *DRC dialítica desde outubro/2022 (diabética e hipertensiva 
 *Osteomielite crônica- recusa abordagem cirurgica 
 *artropatia de charcot em 
 *ICFER 
-*Retinopatia diabética 
-*osteomielite 
 *Neuropatia periférica com crise álgica 
 *DISFAGIA OROFARÍNGEA LEVE 
 *Sepse de foco cutâneo/pulmonar 
@@ -474,7 +442,7 @@
 *QUEDA DE HB 
 *Encefalopatia Tóxico-Metabólica 
 *CHOQUE CIRCULATÓRIO - COR ANÊMICO - HEMORRAGIA DIGESTIVA 
-*DRC Dialítica desde outubro/2022"	"[[0.47, 0.95]]"
+*DRC Dialítica desde outubro/2022"	"[[0.5, 0.93]]"
 "*Hipertensão Arterial Sistêmica (HAS) 
 *Varizes em Membros Inferior com úlcera, Úlcera Venosa em Membro Inferior direito 
 *Dermatite Ocre 
@@ -489,7 +457,7 @@
 *Lesão por adesivo 
 *Doença ulcera periférica 
 *DERMATITE OCRE 
-*ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO"	"[[0.6, 1.0]]"
+*ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO."	"[[0.6, 1.0]]"
 "*Anemia, Anemia Crônica 
 *Doença Renal Crônica Estágio G3 (DRC) 
 *Diabetes Mellitus Tipo 2 (DM2) 
@@ -534,13 +502,9 @@
 *pneumonia 
 *Broncopneumonia bacteriana com Empiema 
 *Derrame pleural de contiguidade de coleção periesplenica 
-*PNEUMONIA BACTERIANA NAO CLASSIFICADA EM 
-*DM2 
 *Pneumonia complicada com derrame pleural- EMPIEMA PLEURAL À ESQ 
-*POT gastroplastia redutora 
-*EMPIEMA PLEURAL Á ESQ 
-*Derrame pleural à esquerda 
-*Fistula gástrica salivar 
+*DM2 
+*Pneumonia complicada 
 *Empiema 
 *Hiponatremia - DM mal controlado 
 *Cistos corticais bilaterais, com até 2,5 cm 
@@ -551,20 +515,12 @@
 *EMPIEMA PLEURAL 
 *DM2 insulino dependente 
 *Pneumonia Bacteriana -Empiema. 
-*PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE PACIENTE 
-*Obesidade 
-*Recidiva da febre - infecção PICC 
-*Dor osteomuscular 
-*I84 - HEMORROIDAS 
 *ADA LIQ PLEURAL 259 MYCOBACTERIUM TB NÃO DETECTADO 
 *Fistula gástrica salivar 
 *Derrame pleural pequeno 
 *Pneumonia complicada com derrame pleural. 
 *HAS 
 *Obesidade. 
-*constipação 
+*I84 - HEMORROIDAS 
 *PNEUMONIA BACTERIANA EMPIEMA. 
-*TAQUICARDIA SINUSAL 
-*PNEUMONIA BACTERIANA NAO 
-*LRA Revertida 
-*PNEUMONIA BACTERIANA NAO CLASSIFICADA"	"[[0.34, 1.0]]"
+*TAQUICARDIA SINUSAL"	"[[0.38, 0.77]]"
