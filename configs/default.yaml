@@ -77,6 +77,13 @@ lms:
       credentials_profile_name: "default"
       model_id: "us.anthropic.claude-opus-4-20250514-v1:0"
 
+  claude_opus41:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-opus-4-1-20250805-v1:0"
+
   sonnet_3_7:
     class: langchain_aws.ChatBedrock
     args:
@@ -157,6 +164,7 @@ diagnostics:
     - nova_premier
     - claude_sonnet4
     - claude_opus4
+    - claude_opus41
     - sonnet_3_7
     - sonnet_3_5
     - sonnet_3_5v2
