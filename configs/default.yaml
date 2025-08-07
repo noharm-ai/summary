@@ -1,4 +1,22 @@
 lms:
+  gpt_5:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:OPENAI_API_KEY}
+      model: "gpt-5-2025-08-07"
+
+  gpt_5mini:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:OPENAI_API_KEY}
+      model: "gpt-5-mini-2025-08-07"
+
+  gpt_5nano:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:OPENAI_API_KEY}
+      model: "gpt-5-nano-2025-08-07"
+
   gpt_o3:
     class: langchain_openai.ChatOpenAI
     args:
@@ -176,6 +194,9 @@ diagnostics:
     - deepseekr1
     - mistral_l24
     - llama33_70B
+    - gpt_5
+    - gpt_5mini
+    - gpt_5nano
     - gpt_o3
     - gpt_o4_mini
     - gpt_o1
