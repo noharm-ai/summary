@@ -5,6 +5,18 @@ lms:
       api_key: ${env:OPENAI_API_KEY}
       model: "gpt-5-2025-08-07"
 
+  gpt_52:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:OPENAI_API_KEY}
+      model: "gpt-5.2-2025-12-11"
+
+  gpt_51:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:OPENAI_API_KEY}
+      model: "gpt-5.1-2025-11-13"
+
   gpt_5mini:
     class: langchain_openai.ChatOpenAI
     args:
@@ -67,6 +79,34 @@ lms:
       credentials_profile_name: "default"
       model_id: "us.amazon.nova-premier-v1:0"
 
+  nova_lite_2:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.amazon.nova-2-lite-v1:0"
+
+  nova_sonic_2:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.amazon.nova-premier-v1:0"
+
+  claude_haiku4_5:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+
+  claude_sonnet4_5:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-sonnet-4-5-20250929-v1:0"
+
   claude_sonnet4:
     class: langchain_aws.ChatBedrock
     args:
@@ -101,6 +141,13 @@ lms:
       region_name: "us-east-1"
       credentials_profile_name: "default"
       model_id: "us.anthropic.claude-opus-4-1-20250805-v1:0"
+
+  claude_opus45:
+    class: langchain_aws.ChatBedrock
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-opus-4-5-20251101-v1:0"
 
   sonnet_3_7:
     class: langchain_aws.ChatBedrock
@@ -137,12 +184,61 @@ lms:
       credentials_profile_name: "default"
       model_id: "us.deepseek.r1-v1:0"
 
+  qwen3-next:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "qwen.qwen3-next-80b-a3b"
+
+  qwen3-vl:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "qwen.qwen3-vl-235b-a22b"
+
   mistral_l24:
     class: langchain_aws.ChatBedrock
     args:
       region_name: "us-east-1"
       credentials_profile_name: "default"
       model_id: "mistral.mistral-large-2402-v1:0"
+
+  mistral_l3:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "mistral.mistral-large-3-675b-instruct"
+
+  openai_120b:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "openai.gpt-oss-120b-1:0"
+
+  openai_20b:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "openai.gpt-oss-20b-1:0"
+
+  nvidia_nano3:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "nvidia.nemotron-nano-3-30b"
+
+  gemma_3_27b:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "google.gemma-3-27b-it"
 
   llama33_70B:
     class: langchain_aws.ChatBedrock
@@ -177,12 +273,27 @@ lms:
       model: "sabia-3"
       api_key: ${env:MARITACA_API_KEY}
 
+  sabiazinho_4:
+    class: langchain_community.chat_models.ChatMaritalk
+    args:
+      model: "sabiazinho-4"
+      api_key: ${env:MARITACA_API_KEY}
+
+  sabia_4:
+    class: langchain_community.chat_models.ChatMaritalk
+    args:
+      model: "sabia-4"
+      api_key: ${env:MARITACA_API_KEY}
+
 diagnostics:
   llms:
     - nova_premier
+    - nova_lite_2
+    - claude_sonnet4_5
     - claude_sonnet4
     - claude_opus4
     - claude_opus41
+    - claude_opus45
     - sonnet_3_7
     - sonnet_3_5
     - sonnet_3_5v2
@@ -192,8 +303,17 @@ diagnostics:
     - llama31_70B
     - nova_pro
     - deepseekr1
+    - qwen3-next
+    - qwen3-vl
+    - openai_120b
+    - openai_20b
     - mistral_l24
+    - mistral_l3
+    - nvidia_nano3
+    - gemma_3_27b
     - llama33_70B
+    - gpt_52
+    - gpt_51
     - gpt_5
     - gpt_5mini
     - gpt_5nano
@@ -205,6 +325,8 @@ diagnostics:
     - gpt_35T
     - sabia_31
     - sabia_3
+    - sabiazinho_4
+    - sabia_4
   prompt: "A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)"
   output: data/
   gt_file: data/gt.tsv
