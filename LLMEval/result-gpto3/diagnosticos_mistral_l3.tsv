@@ -1,0 +1,908 @@
+"GT"	"LLM"	"RESPONSES"
+"*Hipertensão Arterial Sistêmica (HAS) 
+*Doença Arterial Obstrutiva Periférica (DAOP) 
+*Diabetes Mellitus (DM) 
+*Insuficiência Cardíaca (IC) Perfil B 
+*Ateromatose em coronárias 
+*Infecção da ferida operatória 
+*Dislipidemia (DLP) 
+*Amputação transtibial em membro inferior direito (MID) 
+*Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente"	"*Aqui está a lista de diagnósticos não repetidos e com os mais completos (quando similares):
+
+
+* Amputação transtibila em MID
+
+* Doença arterial obstrutiva periférica (DAOP)
+
+* Desconforto respiratório secundário a ic perfil B
+
+* Ateromatose em coronárias
+
+* Doença pulmonar obstrutiva (DLP)
+*Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente"	"[[0.83, 0.56]]"
+"*Osteomielite 
+*Infecção de sítio cirúrgico (prótese de fêmur esquerdo) 
+*Dislipidemia (DLP)  
+*Carcinoma de Face 
+*Alzheimer "	"*Aqui está a lista de diagnósticos sem repetições e organizados por similaridade (com a forma mais completa):
+
+
+* 
+*Osteomielite
+*
+
+* 
+*Osteomielite NE
+*
+
+
+* 
+*Alzheimer
+*
+
+* 
+*ALZHEIMER
+*
+
+
+* 
+*Carcinoma de face
+*
+
+* 
+*Carcinoma de face
+* (já citada, 
+*Prótese de Fêmur Esquerdo
+* [similar a carcinoma]
+
+
+* 
+*Infecção de sítio cirurgico
+*
+
+* 
+*INFECÇÃO DE SITIO CIRURGICO
+*
+
+* 
+*INFECÇÃO DE FERIDA OPERATÓRIA - FÊMUR ESQUERDO
+*
+
+* 
+*Infecção de sítio cirurgico - Prótese de Fêmur Esquerdo
+* [similar a infecção cirúrgica]
+
+* 
+*INFECTADO REABORDAGEM
+* [eventualmente relacionada a infecções cirúrgicas]
+
+
+* 
+*DLP
+* [possível abreviação de 
+*Doença Pulmonar Obstrutiva
+* ou similar, 
+*— não detalhado por não ser diagnóstico específico]
+
+
+* 
+*DM
+* [possívelmente abreviação de 
+*Diabetes Melito
+* ou similar]
+
+
+* 
+*Ansine
+* [sem similar próximo identificado]"	"[[0.36, 1.0]]"
+"*Transtorno conversivo 
+*Calcificações parietais nas artérias carótidas internas intracranianas ou Ateromatose difusa 
+*Bloqueio atrioventricular de 1º grau 
+*Choque septico de foco pulmonar 
+*Diabetes Mellitus (DM) tipo 2 
+*Doença Renal Crônica (DRC) agudizada KDIGO 3 
+*Espondilose dorsolombar  
+*Anemia Macrocítica, Anemia Crônica 
+*Epilepsia 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Gastrite 
+*Angiodisplasia de colon, Malformações vasculares do colon 
+*Doença diverticular não complicada do cólon direito 
+*Delirium hiperativo 
+*Meningite prévia 
+*Traumatismo Cranioencefálico (TCE) por queda da própria altura, Traumatismo Cranioencefálico (TCE) 
+*Hemorragia Digestiva Baixa (HDB) 
+*Disfagia Orofaringea 
+*Insuficiência Cardiaca (IC) compensada  
+*Sinais de microangiopatia / gliose  
+* Síndrome Demencial"	"*Aqui está a lista de diagnósticos não repetidos e organizados por similaridade:
+
+
+*Transtorno conversivo
+
+*Epilepsia
+
+*Epilpesia após meningite
+
+*Meningite prévia
+
+*Suspeito de quadro demencial com início precoce (frontotemporal
+
+*TCE
+
+*Delírium hiperativo
+
+*Mal-estar
+
+*R53 - Mal estar
+
+*Síndrome demencial
+
+*Diságia orofaríngea
+
+
+*DM tipo 2
+
+*DM2
+
+*DM
+
+*Diabetes mellitus não especificado
+
+*DMansine
+
+
+*DRC (Doença renl crônica)
+*Doença renal crônica estágio G3
+
+*DRC agudizada KDIGO 3 (Cr basal 2)
+
+*IRC agudizada
+
+*IRC agudizada KDIGO 3
+
+*IRC adudizada KDIGO 3 por sepse
+
+*IRA KDIGO 3
+
+*IRA (Insuiciência renal aguda)
+*LRA KDGIO 3 (Início de TSR em 01/10)
+
+
+*Sepse de fco a esclarecer (Pumão / não especificado)
+
+*Sepse foco puimonar
+
+*Sepse foco a/e
+
+*Choque séptio de focuo lmonar
+
+*Choque séptico de foco lmonar (em reversão)
+
+*Choque Septio de foco lmonar 30/
+
+
+*HAS
+
+*SAinais de ateromatose carotídea
+
+*Sinais de ateromatos difusa,0 (inclusiv coronariana)
+
+*Sinais de microagniopatia / gliose
+
+
+*Espondilose doral
+
+*Espondilose dorsolombar e sinais de coxoartrose bilateral
+
+
+*Angiodisplasia de colón
+
+*Angiodisplasia dos cólons
+
+*Marlformações vasculares em tdo o colón
+
+*Marlformação vascular com sinas de sangrameto recenete em cólon tranvres
+
+*Doença diverticulr não complcada do cólon direit
+
+*Divertícuos de cólon direio
+
+*Diverticulos de cólon D + angiogdispias de cólon E
+
+*HDB
+
+*Melna
+
+*Hematomas e MMSS
+
+
+*Bexiga
+
+*SEC a DRC
+
+
+*Ateração volumètrca
+
+*Anemia macroítica
+
+*Anemia crônica
+
+*Anemia crônca da doenǵa renal
+
+*Anemia
+
+
+*Alteração do relaxameto ventricular
+
+*Aumeto discret do arío esquerodo
+
+
+*Cistos simples bilaterais
+
+
+*Tireóde
+
+*Tireóiide hetergênea
+
+
+*Calcificaões parietais nas atérias carótidas internas intracraniana
+
+
+*Bloqueio AV de 1º grau
+
+
+*Início de diálse
+
+
+*Liquemine
+
+
+*Disfaga orofarínge"	"[[0.30, 0.90]]"
+"*Nasofaringite Aguda 
+*Pneumonia Bacteriana ou Broncopneumonia aspirativa 
+*Dermatite em membro superior esquerdo (MSE) 
+*Doença de Parkinson, Parkinson 
+*Derrame pleural   
+*Disfagia orofaringea 
+*Tromboembolismo pulmonar (TEP),  
+*Trombose venosa profunda (TVP) 
+*Espondilose torácica 
+*Adenoma na adrenal esquerda 
+*Ateromatose na aorta torácica e nos troncos supra-aórticos 
+* Deformidade do cotovelo 
+* Alterações degenerativas na coluna estudada"	"*Aqui está a lista de diagnósticos não repetidos e priorizando os mais completos:
+*
+
+
+*NASOFARINGITE AGUDA [RESFRIADO COMUM]
+
+*PENUMONIA BACTERIANA NÃO CLASSIFICADA EM OUTRA PARTE
+
+*Derrame pleural com exsudato + TVP + TEP
+
+*PNEUMONIA BACTERIANA + TEP + TVP M-ID
+
+*BCP aspirativa
+
+*Infecção pulmonar + TEP c/ infarto pulm + infecção 2a
+
+*Dermatite MSE 10/
+
+*D. Parkinon avançado
+
+*Disfagia orofaríngea
+
+*Espondilose torácica
+
+*Deformiade cotovelo
+
+*Toracocentee à D - 600 ml
+
+*Alterações degeneativas na coluna estudada
+
+*Ateromatose na aota torácica e nos troncos supra-aórticos
+
+*Adneoma na adrneal esquerda
+
+*Cistos renais Bosniak 1 e 2"	"[[0.81, 1.0]]"
+"*Tromboembolismo pulmonar  (TEP) 
+*Asma,  
+*Obesidade Grau III 
+*Anemia Ferropriva Secundária a menotrorragia 
+*Síndrome Astênica  
+*Miomatose 
+*Insuficência Cardíaca (IC) 
+*Parada cardiorrespiratória (PCR) por hipóxia em 1999 
+*Hipertensão Arterial Sistêmica (HAS)"	"*Tromboembolismo pulmonar agudo
+*
+
+*Tromboembolismo pulmonar submaciço
+*
+
+*Embolia pulmonar
+*
+
+*Anemia ferropriva secundária à menometrorragia
+*
+
+*Obesidade
+*
+
+*Asma
+*
+
+*Bronquite crônica
+*
+
+*Hipertensão arterial sistêmica
+*
+
+*Síndrome astenica
+*
+
+*Miomatose
+*
+
+*Insuciência cardíaca
+*
+
+*Alterações degenerativas incipientes na coluna"	"[[0.67, 0.89]]"
+"*Epilepsia 
+*Disfagia Orofaringea 
+*Pneumonia Comunitária 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Dupla hemiparesia (grau IV D e III a E) 
+*Infecção Trato Urinário (ITU) comunitária 
+*Acidentes Vasculares Cerebrais prévios 
+*Lesão de Lábio e mordedura na região lateral e língua"	"*Aqui está a lista de diagnósticos não repetidos e organizados, 
+*sem doenças similares):
+
+
+* Crise epiléptica
+
+* Pneumonia comunitária
+
+* Crise convulsiva
+
+* Epilepsia
+
+* Evidência de lesão em lábio e mordedura na região lateral da língua
+
+* Disfasia orofaríngea
+
+* Ataxia da marcha
+
+* Dupla hemiparesia (grau IV D e III à E)
+
+* Transtornos catatérmicos de alívio paroxístico
+
+* Has"	"[[0.5, 0.625]]"
+"*Insuficência Mitral 
+*Fibrilação atrial Crônica (FA Crônica) 
+*Ateromatose incipiente 
+*Insuficiência Cardíaca (IC) Perfil B 
+*Artrose 
+*Acidente Vascular Cerebral Hemorrágico (AVCh) há 5 anos 
+*Disfunção Renal Aguda 
+*Osteoporose 
+* Alterações degenerativas da coluna vertebral 
+*Trombose Venosa Profunda em Membro Inferior Esquerdo (TVP em MIE) 
+*Pneumonia 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Varizes Calibrosas"	"*Aqui está a lista de diagnósticos não repetidos e sem termos semelhantes ou não relacionados a doenças:
+
+
+* Insuficiência mitral
+
+* Fibrilação atrial crônica
+
+* Fibrilação atrial permanente
+
+* Aterosclerose
+
+* Insuficiência cardíaca congestiva
+
+* Pneumonia
+
+* Osteoporose
+
+* Alterações degenerativas da coluna vertebral
+
+* Disfunção renal aguda
+
+* Descongestão"	"[[0.8, 0.62]]"
+"*Hiponatremia 
+*Depressão 
+*Insufciência Cardiaca Perfil B,  
+*Asma 
+*Infeccão Trato Urinário (ITU) 
+*Dislipidemia (DLP) 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Disfunção diastólica do ventrículo esquerdo de grau II 
+*Hipertensão Pulmonar"	"*Aqui está a lista de diagnósticos sem repetições e ordenada:
+
+
+* Cardiomiopatia hipertrófica
+
+* Insuficiência cardíaca
+
+* Depressão
+
+* Asma
+
+* Disunção diastólica do ventrículo esquerdo de grau II
+
+* Hipertensão pulmonar"	"[[0.83, 0.56]]"
+"* Desnutrição 
+* Carcinomatose Peritoneal 
+* Obstrucao intestinal pos-operatoria (K91.3) ou Abdome agudo obstrutivo 
+* Infeccão Trato Urinário (ITU) 
+* Tabagismo"	"*Aqui está a lista de diagnósticos não repetidos e organizados (com a doença mais completa quando similar):
+
+
+* Desnutrição
+
+* Carcinoma seroso de alto grau pT3b
+
+* Carcinoma seroso de alto grau ki-6780%
+
+* Carcinomatose peritoneal
+
+* Cirurgia
+
+* Obstrução intestinal pos-operatoria
+
+* ITU
+
+* K91.3
+
+* CA PERITONEO
+
+* Tabagismo
+
+* Abdome agudo obstrutivo (aderência)
+
+* Suporte clínico"	"[[0.42, 1.0]]"
+"* Hipertensão Arterial Sistêmica (HAS) 
+*Pequena hérnia gástrica-hiatal 
+*Doença Obstrutiva Pulmonar Crônica (DPOC) exacerbado 
+*Sepse 
+*Espondilose dorsal 
+*Injúria Miocárdica Inflamatoria  
+*Insuficência Cardiaca Fração Ejeção Preservada (ICFEP),  
+*Pneumonia 
+*Dislipidemia (DLP) 
+*Sindrome Gripal (Sd Gripal) 
+* Ateromatose aórtica e coronariana  "	"*Aqui está a lista de diagnósticos não repetidos e com as formas mais completas quando similares:
+
+
+* Hérnia hiatal
+
+* Ateromatose aórtica e coronariana
+
+* Cardiopatia
+
+* Infarto do miocárdio agudo (Injúria Miocárdica / Injúria Miocárdica Inflamatória)
+
+* Pneumonia
+
+* Síndrome gripal (Sd gripal)
+
+* Dorsalgia (Espondilose dorsal)
+
+* Transtornos do sono (TRANSFERENCIA PARA SEMI)
+
+* Insificiência cardíaca (ICFEP grave)
+
+* DPOC exacerbado
+
+* Broncoespasmo grave na madrugada"	"[[0.73, 0.73]]"
+"*Hemoglobinopatia SS ou Anemia Falciforme (D57) 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Transtornos de Adaptação 
+*Abstinência de Opióide"	"*Aqui está a lista de diagnósticos não repetidos e completos, 
+*separados por
+* :
+
+
+*Hemoglobinopatia SS
+*
+
+*Anemia Falciforme
+*
+
+*Abstinência de opioides
+*
+
+*Crise Algica
+*
+
+*Dor
+*
+
+*HAS
+*
+
+*Transtornos de Adaptação
+*
+
+*Hydrea 1
+*
+
+*SDem evacuação"	"[[0.44, 1.0]]"
+"*Hernia Inguinal 
+*Insuficiência Renal Aguda (IRA) KDIGO 3 
+*Cálculo urinário obstrutivo 
+*Nefrite intersticial por medicamento 
+*Hérnia de Hiato 
+*Adenocarcinoma de Prostata Gleason 8 metástatico com acometimento ósseo 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Infecção do Trato Urinário (ITU) 
+*Doença Renal Crônica (DRC) agudizada com rim atrófico 
+* Gastrite "	"*Aqui está a lista de diagnósticos não repetidos e organizados conforme solicitado:
+
+
+*Hérnia inguinal
+*
+
+*Hérnia de Hiato
+*
+
+*Ureterolitíase obstrutiva esquerda
+*
+
+*Ureterohidronefrose a Esquerda
+*
+
+*Cálculo URINÁRIO OBSTRUTIVO ESQ RIM
+* (mais completa,Uretrolitiase obstrutiva esquerda)
+
+*CÁLCULO URINÁRIO OBSTRUTIVO RIM ÚNICO FUNCIONAL
+* (mais completa que Cálculo URINÁRIO OBSTRUTIVO ESQ RIM)
+
+*Cistos corticais simples
+*
+
+*Cistos corticais com acometimento ósseo
+*
+
+*DRC agudizada
+*
+
+*INSUFICIENCIA RENAL AGUDA
+* (mais completa que DRC)
+
+*CA PRÓSTATA
+*
+
+*ADenocarcinoma de próstata
+* (mais completa que Ca próstata com Mtx óssea e Ca próstata Gleason 8)
+
+*NEOPLASIA MALIGNA DA PROSTATA
+*
+
+*Hematúria
+*
+
+*IRA KDIGO
+*
+
+*ANESTESIA
+*
+
+*IRA pós Renal
+* (mais completa que IRA pós renal)
+
+*IRA
+* (possivelmente refere-se a Insuficiênca Renal,Raiz do original)
+
+*HIPÓTESES DIAGNÓSTICAS
+*
+
+*ITU
+*
+
+*HAS
+*
+
+*Rim atrófico a D
+*
+
+*NEFrite intersticial por medicação
+*
+
+*GAstrite
+*
+
+*Compensação clínica"	"[[0.40, 1.00]]"
+"*Neoplasia de papila duodenal 
+*Infecção do Trato Urinário (ITU) ou  Sepse de foco urinário 
+*Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metástatico (C25) 
+*Artrite 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Neoplasia maligna do corpo do útero ou Adenocarcinoma do endométrio 
+*Doença de Parkinson, Parkinson 
+*Diabetes Mellitus (DM) 
+* Ateromatose artoiliaca 
+* Constipação "	"*Aqui está a lista de diagnósticos não repetidos e organizados (com as doenças similares agrupadas pela mais completa):
+
+
+* Neoplasia maligna do pâncreas
+
+* Adenocarcinoma de pâncreas metastático
+
+* Adenocarcinoma de pâncreas avançado em tratamento paliativo
+
+* Neoplasia de papila duodenal
+
+* Adenocarcinoma ductal cabeça de pâncreas
+
+* Adenocarcinoma endometrioide
+
+* Sepse de foco urinário
+
+* Infecção urinária
+
+* C25
+
+* Parkinson
+
+* Ateromatose aorotilíaca
+
+* DM
+
+* TRANSFERÊNCIA PARA SEMI
+
+* 05/10/23 C25
+
+* ITU
+
+* HAS
+
+* pélvicos
+
+* Artrite
+
+* constipação"	"[[0.53, 1.0]]"
+"*Insuficiência Renal Crônica Dialítico (IRCD) 
+*Insuficiência Cardiaca com Fração de Ejeção Reduzida (ICFER), 
+*Dislipidemia (DLP) 
+*Diabetes Mellitus tipo 2 (DM2) 
+*Artropatia de Charcot em membro inferior esquerdo (MIE) 
+* Pé diabético com ulcera extensa membro inferior esquerdo (MIE) 
+*Osteomielite crônica 
+*Transtornos de adaptação  
+* Melena (K92.1) 
+*Pangastrite enantemática leve com componente erosivo plano leve no antro 
+*Esofagite distal erosiva - Grau A de Los Angeles 
+*Bulboduodenite erosiva leve 
+*Esplenomegalia homogênea 
+*Lipomatose retroperitoneal 
+*Depressão 
+*Choque circulatório  
+*Anemia 
+*Disfagia, Disfagia orofaringea neurogenica moderada 
+*Infecção de Trato Urinário 
+*Obesidade Grau 2 
+*Púrpura Retiforme em membros superiores (MMSS) e memebros inferiores (MMII) 
+*Nefrolitíase 
+*Colelitíase 
+*Infarto Agudo do Miocardio (IAM) em 2021 
+*Linfedema Secundário à Erisipelas de Repetição 
+*Linfonodomegalias na raíz da coxa 
+*Linfangite  
+*Dermatite Ocre 
+*Sepse de foco cutâneo/ pulmonar 
+*Acidente Vascular Cerebral (AVC) prévio 
+*Ex-tabagista 
+*Retinopatia Diabética  
+*Neuropatia Diabética 
+*Hipotireoidismo 
+*Encefalopatia tóxico-metabólica 
+*Tromboembolismo Venoso (TEV) 
+*Ateromatose aortoilíaca e de ramos viscerais 
+*Erisipela crônica 
+*Hipercalemia Grave  
+*Sinovite 
+*Farmacodermia 
+*Insuficiência venosa periférica crônica 
+*Hipertensão Arterial Sistêmica (HAS)"	"*Aqui está a lista de diagnósticos não repetidos e organizados,not completo quando similares:
+
+
+*IRCD
+
+*ICFER
+
+*Dislipidemia
+
+*DM (Diabetes Mellitus)
+
+*Artropatia de Charcot / Degeneração osteoarticular de Charcot nos Pés / Artropatia de Charcot em MIE
+
+*Osteomielite crônica (S. auraeus)
+* / Osteomielite crônica Choque Circulatório
+
+*Pé Diabético / Pé Diabético com ulcra extensa MIE / Pé Diabético: Infceção de Plee e Partes Miles Compicada (por Osteomielite em Investigação)
+*Transtornos de Adaptação
+
+*Choque Circulatório - Cor Anêmico - Hemorrragia Digestiva
+
+*Depressão
+
+*Anemia sintomática / Anemia NE
+
+*ITU (Infceção do Trato Urinário)
+
+*Obsidade Grau 2
+
+*Gangrene enatemática leve com componente erosivo plano no antro
+
+*Púrpura reiforme em MMSS (E>D) MMII
+
+*Nefrólitiase / Colelitíase
+
+*Ersipla / Linfonagite crônica + dermite ocre / Ersipla cronica
+
+*Disafgia Orofarlngea neurogênica
+
+*IAM (Infarto Agudo do Mocarido)
+*ATC c/ 3 Sntes (Angioplastia cornrária)
+
+*MRC
+
+*Hs (Hipertensão Arteriial)
+
+*TVP (Toembo Venso)
+
+*Ic (Isufiência Cardíia Congstia)
+
+*DRC G5D (Doenç Renal Crônica estagio 5 dmálise)
+* / DRC Elmáise (diabética e hipertensiva)
+
+*AUM (Símdromo do Choque Crculatório)
+
+*Ortostatimo
+
+*Ic hemodiálise
+
+*Irsuciência Venosa Permférica Crônica
+
+*Frmacodermia
+
+*DEP (Neuropaita Periérica Diabética)
+
+*Enaeflopaitia Tóxico-Metabólica
+
+*Sepee de foco cutâneo/pumonar
+
+*CAI-UC (Confuso Avaliatvio para a Síımdrome de Diclogagemnóstico amto-UTI)
+
+*ÀCI
+
+*Esplenomegalia omogêna
+
+*Esofagite distal eriva - Grau A
+
+*Reinopatatia Diabática
+
+*Hipotireoidismo
+
+*Pé de Charcot
+
+*Lesão em pé esquerod (OMC)
+
+*MELEA / Hemorrgia Digestia
+
+*Adrnais: discoide à diretia (variant anatômia)
+
+*Adrnal esqueda nrmal"	"[[0.87, 0.79]]"
+"*Hipertensão Arterial Sistêmica (HAS) 
+*Varizes em Membros Inferior com úlcera, Úlcera Venosa em Membro Inferior direito 
+*Dermatite Ocre 
+* Tromboembolismo Pulmonar (TEP) 
+*Diabetes Mellitus (DM) 
+*Tabagismo "	"*Aqui está a lista de diagnósticos não repetidos e agrupados conforme solicitado:
+
+
+* Dermatite
+
+* Úlcera venosa em membro inferior
+
+* Hanseníase
+
+* Doença ulcera periférica
+
+* Lesão por adesivo
+
+* Tabagismo
+
+* TEPT (Trombose venosa profunda)
+
+* DM (Diabetes Mellitus)
+* Depressão"	"[[0.33, 0.5]]"
+"*Anemia, Anemia Crônica 
+*Doença Renal Crônica Estágio G3 (DRC) 
+*Diabetes Mellitus Tipo 2 (DM2) 
+*Pielonefrite com Abcesso Renal à Direita, Pielonefrite complicado com abcesso à direita 
+*Lesão Renal Aguda (LRA) 
+*Ureterolitiase 
+*Infecção de Trato Urinário 
+*Obesidade 
+*Lesões de Pele  "	"*Aqui está a lista de diagnósticos não repetidos e separados por 
+*:
+
+
+*ANEMIA CRÔNICA
+
+*ANEMIA GRAVE
+
+*DRC ESTÁGIO G3
+
+*DM tipo 2
+
+*DMG
+
+*PIELONEFRITE COMPLICADA
+
+*PIELONEFRITE COMPLICADA COM ABCESSO RENAL D
+
+*PIELONEFRITE COMPLICADA - Abcesso renal a direita
+
+*PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE
+
+*CFelipe (não é doença,Pi
+
+*OBESIDADE (não é doençaPi
+
+*DM2
+
+*Ureterolitíase
+
+*Infeccção do trato urinario de localiz NE (não é doençaPi
+
+*LESÕES DE PELE"	"[[0.53, 0.89]]"
+"* Tromboembolismo Pulmonar (TEP) 
+* Broncopneumonia bacteriana nosocomial 
+* Empiema 
+* Diabetes Mellitus tipo 2 (DM2) insulino dependente, 
+* Infeccão de cateter central de inserção periférica (PICC) 
+* Hiponatremia 
+* Lesão Renal Aguda (LRA) revertida 
+* Obesidade 
+* Dor osteomuscular 
+* Hemorroidas (CID I84) 
+* Hipertensão Arterial Sistêmica (HAS) 
+* Pós-operatório tardio (POT) de gastroplastia redutora com fístula gástrica salivar 
+* Constipação"	"*Aqui está a lista de diagnósticos não repetidos e organizados (com os mais completos quando semelhantes):
+
+
+*Pneumonia
+
+*Broncopneumonia bacteriana com Empiema
+
+*Derrame pleural de contiguidade de coleção periesplênica
+
+*PNEUMONIA BACTERIANA NÃO CLASSIFICADA EM OUTRA PARTE
+
+*Pneumonia complicada com derrrame pleural- EMPIEMA PLEURAL À ESQ
+
+*DM2
+
+*Fistula gástrica salivar (Teste azul de metileno +: saída pelo dreno epigástrico)
+
+*Empiema
+
+*LRA
+
+*DECORTICAÇÃO PULMONAR
+
+*PNM nosocomial complicanda com derrame pleural
+
+*Obesidade
+
+*I84 - HEMORROIDAS
+
+*TAQICUARDIA SINUSAL
+
+*Outr pneumonias bacter"	"[[0.47, 0.54]]"

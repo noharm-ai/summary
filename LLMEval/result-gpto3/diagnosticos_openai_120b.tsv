@@ -1,0 +1,614 @@
+"GT"	"LLM"	"RESPONSES"
+"*Hipertensão Arterial Sistêmica (HAS) 
+*Doença Arterial Obstrutiva Periférica (DAOP) 
+*Diabetes Mellitus (DM) 
+*Insuficiência Cardíaca (IC) Perfil B 
+*Ateromatose em coronárias 
+*Infecção da ferida operatória 
+*Dislipidemia (DLP) 
+*Amputação transtibial em membro inferior direito (MID) 
+*Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to list diseases only, no extra text, separate by 
+* without line breaks. Must not repeat similar diseases; choose most complete. Identify diseases in the text: HAS (hipertensão arterial sistêmica?), that\'s a disease. amputado MID? Not disease. DAOP? unknown. DM (diabetes mellitus) disease. Desconforto respiratório - secundário a IC PERFIL B? IC = insuficiência cardíaca? That\'s disease. Ateromatose em coronárias (coronary atherosclerosis) disease. Moderado derrame pleural bilateral com atelectasia passiva... pleural effusion, atelectasis not diseases? Could be pleural effusion. DLP - dislipidemia? It\'s disease. So list distinct diseases, not repeating similar. Choose most complete: ""Insuficiência cardíaca"" (IC) maybe ""Insuficiência cardíaca (perfil B)"". So we include: Hipertensão arterial sistêmica, Diabetes mellitus, Insuficiência cardíaca, Ateromatose coronariana, Derrame pleural bilateral, Dislipidemia. Also maybe ""Infecção da ferida operatória"" infection, that\'s disease (wound infection). Add ""Infecção da ferida operatória"". Not repeat amputations. So final list separated by 
+* nothing else.\n\nThus output: 
+*Hipertensão arterial sistêmica
+*Diabetes mellitus
+*Insuficiência cardíaca
+*Ateromatose coronariana
+*Derrame pleural bilateral
+*Dislipidemia
+*Infecção da ferida operatória', 'signature': ''}}, {'type': 'text', 'text': '
+*Hipertensão arterial sistêmica
+*Diabetes mellitus
+*Insuficiência cardíaca
+*Ateromatose coronariana
+*Derrame pleural bilateral
+*Dislipidemia
+*Infecção da ferida operatória'}]"	"[[1.0, 0.78]]"
+"*Osteomielite 
+*Infecção de sítio cirúrgico (prótese de fêmur esquerdo) 
+*Dislipidemia (DLP)  
+*Carcinoma de Face 
+*Alzheimer "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to output list of diagnoses, not repeating similar, and when similar diseases, bring most complete. Only diseases, no extra, separated by 
+* and no line breaks.\n\nWe have many terms: Osteomielite NE, Alzheimer, Carcinoma de face, Infecção de sítio cirúrgico, DLP, DMansine, PRÓTESE FEMORAL ESQUERDA (that\'s not a disease, it\'s a prosthesis), etc. Need only diseases. Also ""INFECÇÃO DE FERIDA OPERATÓRIA - FÊMUR ESQUERDO"" similar to ""Infecção de sítio cirurgico"". Should treat as same category. So we need most complete name: maybe ""Infecção de sítio cirúrgico - Prótese de Fêmur Esquerdo"" is more specific. Also ""OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM"" includes osteomielite and infection. But we choose most complete disease? The instruction: ""Quando tiver doenças parecidas, trazer a mais completa."" So for similar diseases (like Osteomielite, Osteomielite NE, OSTEOMIELITE DE FEMUR...), choose most complete descriptor. Likely ""OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM"". For Alzheimer\'s, multiple mentions (Alzheimer, ALZHEIMER) same. So one entry: Alzheimer. Carcinoma de face repeated. So include ""Carcinoma de face"". DLP and DMansine are not diseases? DLP maybe ""Dislipidemia""? Might be disease. DMansine is maybe a drug? Not disease. Probably ignore non-disease. So list:\n\n- OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM\n- Alzheimer\n- Carcinoma de face\n- Infecção de sítio cirúrgico - Prótese de Fêmur Esquerdo (but infection already covered? This is similar to above infection. The most complete includes both infection and prosthesis. The earlier most complete includes infection and reabordagem, maybe ""OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM"" already includes infection. But still separate disease Infect? Might be considered same. We need separate disease categories: Osteomielite, Infecção de sítio cirúrgico, Alzheimer, Carcinoma de face. The most complete for osteomielite: OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM includes osteomyelitis plus infection site. That\'s overlapping. Let\'s treat osteomielite separate and infection separate. Provide most complete names:\n\n- OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM\n- INFECÇÃO DE SÍTIO CIRÚRGICO - PRÓTESE DE FÊMUR ESQUERDO\n- ALZHEIMER\n- CARCINOMA DE FACE\n\nAll separated by 
+*. No line breaks.', 'signature': ''}}, {'type': 'text', 'text': 'OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM
+*INFECÇÃO DE SÍTIO CIRÚRGICO - PRÓTESE DE FÊMUR ESQUERDO
+*ALZHEIMER
+*CARCINOMA DE FACE'}]"	"[[1.0, 0.8]]"
+"*Transtorno conversivo 
+*Calcificações parietais nas artérias carótidas internas intracranianas ou Ateromatose difusa 
+*Bloqueio atrioventricular de 1º grau 
+*Choque septico de foco pulmonar 
+*Diabetes Mellitus (DM) tipo 2 
+*Doença Renal Crônica (DRC) agudizada KDIGO 3 
+*Espondilose dorsolombar  
+*Anemia Macrocítica, Anemia Crônica 
+*Epilepsia 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Gastrite 
+*Angiodisplasia de colon, Malformações vasculares do colon 
+*Doença diverticular não complicada do cólon direito 
+*Delirium hiperativo 
+*Meningite prévia 
+*Traumatismo Cranioencefálico (TCE) por queda da própria altura, Traumatismo Cranioencefálico (TCE) 
+*Hemorragia Digestiva Baixa (HDB) 
+*Disfagia Orofaringea 
+*Insuficiência Cardiaca (IC) compensada  
+*Sinais de microangiopatia / gliose  
+* Síndrome Demencial"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'The user wants a list of diagnoses, not repeating similar ones, when there are similar diseases, provide the most complete one. Only diseases, no extra text, separated by 
+* and no line breaks. So output a single line starting with 
+*? They say ""separa do por 
+* e sem quebra de linha"". Likely they expect each disease preceded by an asterisk, separated by asterisk. Probably start with 
+* and list.\n\nNow we need to extract disease names from the text, deduplicate similar, merging similar synonyms.\n\nDiseases present:\n\n- Transtorno conversivo (conversion disorder) maybe not a disease but included.\n- Calcificações parietais nas artérias carótidas internas intracranianas (calcifications - not disease)\n- Bloqueio A-V de 1º grau (AV block) - cardiac conduction disorder.\n- Sepse de foco a esclarecer (Pulmão) -> sepsis pulmonary focus.\n- DRC (Doença Renal Crônica) -> chronic kidney disease.\n- IRA KDIGO 3 (Insuficiência Renal Aguda) KDIGO stage 3.\n- Espondilose dorsal.\n- DM (Diabetes Mellitus) unspecified.\n- Sinais de ateromatose carotídea (atheromatous carotid disease)\n- Choque Septico de Foco pulmonar (septic shock pulmonary focus)\n- Função renal (not disease)\n- Diabetes Mellitus nao especificado (again)\n- Espondilose dorsolombar e sinais de coxoartrose bilateral (spinal osteoarthritis)\n- DOENÇA RENAL CRÔNICA ESTÁGIO G3 (CKD stage G3)\n- Mal (maybe ""mal""? ignore)\n- Malformações vasculares em todo o cólon (vascular malformations colon)\n- ANEMIA MACROCÍTICA (macrocytic anemia)\n- Epilepsia (epilepsy)\n- gastrite (gastritis)\n- Angiodisplasia (vascular malformation)\n- Angiodisplasia de colon.\n- anemia, epilepsia (already)\n- Tiróide (thyroid) - maybe thyroid disease unspecified.\n- Anemia cronica da doença renal (anemia of chronic kidney disease)\n- Opacidades (no)\n- Delirium hiperativo (delirium)\n- Melena (GI bleeding)\n- DM tipo 2 (type 2 diabetes)\n- HIPÓTESES DIAGNÓSTICAS (not)\n- Transição crânio-cervical (not)\n- Doença diverticular não complicada do cólon direito (diverticular disease of right colon)\n- Epilepsia, Meningite prévia (meningitis)\n- Ateromatose difusa, inclusive coronariana (diffuse atheromatosis)\n- Cistos simples bilaterais (simple bilateral cysts) maybe renal cysts.\n- Miocárdio (myocardium - not disease)\n- Suspeito de quadro demencial com inicio precoce (frontotemporal) (suspected frontotemporal dementia)\n- DIÁLISE (dialysis)\n- Doença Renal Crônica por depósitos de IgA (IgA nephropathy)\n- Divertículos de cólon direito (repeat).\n- síndrome demencial (dementia syndrome)\n- DRC AGUDIZADO (acute on chronic kidney disease)\n- Anemia cronica (chronic anemia)\n- Meningite há 20 anos (meningitis)\n- TCE 18/09, QUEDA PRÓPRIA (traumatic brain injury)\n- HDB (maybe hemorrhagic disease? unknown)\n- HAS (hypertension arterial systemic).\n- DISFAGIA OROFARÍNGEA (dysphagia).\n- Tiróide heterogênea (thyroid heterogeneity)\n- Alteração do relaxamento ventricular (ventricular relaxation alteration)\n- SEC A DRC (not)\n- Angiorressonância arterial sem alterações relevantes (no disease)\n- LIQUEMINE (maybe ""liquemia""? not disease)\n- R53 - MAL ESTAR (symptom)\n- DM2 (type2 diabetes)\n- DMansine (typo)\n- Aumento discreto do átrio esquerdo (enlarged left atrium)\n- diverticulos de colon D + angiodisplasias de colon E (diverticulosis, angiodysplasias)\n- Mal-estar inespecífico\n- Sinais de microangiopatia / gliose (microangiopathy)\n- Malformação vascular com sinais de sangramento recente em cólon transverso (vascular malformation colon)\n- IC COMPENSADA (compensated heart failure)\n- MAL ESTAR, FADIGA (symptom)\n- ANEMIA MACROCÍTICA (B12) (macrocytic anemia B12)\n- Espondilose dorsal (repeat)\n- TIE (maybe thromboembolic)\n- Dm tipo II (type II diabetes)\n- Suspeito de quadro demencial com inicio precoce (again)\n- hematomas e mmss (hematomas)\n\nNow we need to produce list with most complete forms for similar diseases: e.g., ""Doença Renal Crônica estágio G3"" vs ""Doença Renal Crônica por depósitos de IgA"". Both are CKD but different cause. Should keep both if distinct. For ""Doença Renal Crônica estágio G3"" and ""Doença Renal Crônica"" maybe keep the more complete: ""Doença Renal Crônica estágio G3"". Also ""Doença Renal Crônica por depósitos de IgA"" is specific type, keep it.\n\nFor ""IRA KDIGO 3"" and ""IRA KDIGO 3 por sepse"", keep ""IRA KDIGO 3 por sepse"" (more complete). Also ""DRC agudizada KDIGO 3"" similar. The most complete: maybe ""DRC agudizada KDIGO 3"". Could keep ""DRC agudizada KDIGO 3"". But also there is ""DRC agudizada"". We\'ll keep ""DRC agudizada KDIGO 3"". Also ""IRAKDIGO 3"" duplicates. Use one.\n\nFor ""Sepse foco pulmonar"" multiple times; keep ""Sepse de foco pulmonar"". Also ""Choque septico de foco pulmonar"". That is septic shock with pulmonary focus. Keep that one as distinct from sepsis. So list both: ""Sepse de foco pulmonar"" and ""Choque séptico de foco pulmonar"".\n\nFor ""Espondilose dorsal"" and ""Espondilose dorsolombar e sinais de coxoartrose bilateral"". The more complete is latter. So keep ""Espondilose dorsolombar com sinais de coxoartrose bilateral"". Might phrase: ""Espondilose dorsolombar com sinais de coxoartrose bilateral"". Use that.\n\nFor ""Angiodisplasia de colon"", ""Angiodisplasia"", ""Angiodisplasias dos cólons"". Keep one: ""Angiodisplasia de cólon"".\n\nFor ""Diverticulose do cólon direito"" vs ""Doença diverticular não complicada do cólon direito"". Keep the more complete: ""Doença diverticular não complicada do cólon direito"".\n\nFor ""Meningite prévia"" and ""Meningite há 20 anos"". Keep one: ""Meningite prévia"". Maybe ""Meningite prévia (há 20 anos)"" but that\'s too long. We\'ll keep ""Meningite prévia"".\n\nFor ""Anemia macrocítica (B12)"" and ""Anemia macrocítica"". Use the one with B12. So ""Anemia macrocítica (deficiência de B12)"".\n\nFor ""Anemia crônica da doença renal"" vs ""Anemia crônica"". Keep the specific: ""Anemia crônica da doença renal"".\n\nFor ""Anemia"" generic: maybe not needed as covered. So drop generic.\n\nFor ""Epilepsia"" appears many times; keep ""Epilepsia"". Also ""Epilepsia após meningite"". More specific: ""Epilepsia secundária à meningite"". Use that.\n\nFor ""Delirium hiperativo"". Keep ""Delirium hiperativo"".\n\nFor ""Transtorno conversivo"". Keep ""Transtorno conversivo"".\n\nFor ""Suspeito de quadro demencial com início precoce (frontotemporal)"". Keep ""Demência frontotemporal de início precoce (suspeita)"". Use ""Demência frontotemporal de início precoce (suspeita)"".\n\nFor ""IC compensada"". That\'s compensated heart failure. So ""Insuficiência cardíaca compensada"".\n\nFor ""Bloqueio A-V de 1º grau"". Keep ""Bloqueio atrioventricular de primeiro grau"".\n\nFor ""Ateromatose carotídea"" and ""Ateromatose difusa, inclusive coronariana"". Could merge as ""Ateromatose difusa (carotídea e coronariana)"". Use ""Ateromatose difusa (incluindo carotídea e coronariana)"".\n\nFor ""Cistos simples bilaterais"". We\'ll keep ""Cistos renais simples bilaterais"".\n\nFor ""Tiróide heterogênea"". That\'s thyroid heterogeneity, maybe ""Doença da tireoide"" but not specific. Could keep ""Tireoidite (tireoide heterogênea)"". We\'ll just list ""Tireoide heterogênea"".\n\nFor ""Disfagia orofaríngea"". Keep ""Disfagia orofaríngea"".\n\nFor ""Hematomas e mmss"" likely ""Hematomas"". Not disease. Omit.\n\nFor ""Miocárdio"" not disease.\n\nFor ""TCE 18/09, queda própria"" -> traumatic brain injury. So ""Trauma craniano (queda)"".\n\nFor ""HAS"" -> hypertension systemic. Keep ""Hipertensão arterial sistêmica"".\n\nFor ""TIE"" unknown; ignore.\n\nFor ""R53 - MAL ESTAR"" symptom, ignore.\n\nFor ""DM"", ""DM tipo 2"", ""DM2"", ""Dm tipo II"". Keep ""Diabetes mellitus tipo 2"".\n\nFor ""DM"" unspecified: generic, but we already have type 2; keep type 2.\n\nNow compile list:\n\n
+*Transtorno conversivo\n
+*Bloqueio atrioventricular de primeiro grau\n
+*Sepse de foco pulmonar\n
+*Choque séptico de foco pulmonar\n
+*DRC agudizada KDIGO 3 (por sepse)\n
+*Doença renal crônica estágio G3\n
+*Doença renal crônica por depósitos de IgA\n
+*Espondilose dorsolombar com sinais de coxoartrose bilateral\n
+*Diabetes mellitus tipo 2\n
+*Ateromatose difusa (incluindo carotídea e coronariana)\n
+*Anemia macrocítica (deficiência de B12)\n
+*Anemia crônica da doença renal\n
+*Angiodisplasia de cólon\n
+*Doença diverticular não complicada do cólon direito\n
+*Meningite prévia\n
+*Epilepsia secundária à meningite\n
+*Delirium hiperativo\n
+*Demência frontotemporal de início precoce (suspeita)\n
+*Insuficiência cardíaca compensada\n
+*Anemia macrocítica (B12) already listed, ok\n
+*Cistos renais simples bilaterais\n
+*Tireoidite (tireoide heterogênea) maybe just ""Tireoidite""\n
+*Disfagia orofaríngea\n
+*Trauma craniano (queda)\n
+*Hipertensão arterial sistêmica\n\nCheck duplicates: ""Anemia macrocítica"" appears once.\n\nNow must separate with 
+* and no line breaks. Starting with 
+*. Ensure each entry preceded by 
+*. Should we have spaces after asterisk? In example they have ""
+*Transtorno conversivo."" So we can have ""
+*Transtorno conversivo 
+*Bloqueio atrioventricular..."" but they said ""separa do por 
+* e sem quebra de linha"". Means separate by 
+*? ambiguous. Could be each preceded by 
+*. We\'ll produce a string like ""
+*Transtorno conversivo 
+*Bloqueio atrioventricular de primeiro grau 
+*Sepse de foco pulmonar ..."" all on one line. Probably preferred.\n\nLet\'s craft the final answer.', 'signature': ''}}, {'type': 'text', 'text': '
+*Transtorno conversivo 
+*Bloqueio atrioventricular de primeiro grau 
+*Sepse de foco pulmonar 
+*Choque séptico de foco pulmonar 
+*DRC agudizada KDIGO 3 (por sepse) 
+*Doença renal crônica estágio G3 
+*Doença renal crônica por depósitos de IgA 
+*Espondilose dorsolombar com sinais de coxoartrose bilateral 
+*Diabetes mellitus tipo 2 
+*Ateromatose difusa (incluindo carotídea e coronariana) 
+*Anemia macrocítica (deficiência de B12) 
+*Anemia crônica da doença renal 
+*Angiodisplasia de cólon 
+*Doença diverticular não complicada do cólon direito 
+*Meningite prévia 
+*Epilepsia secundária à meningite 
+*Delirium hiperativo 
+*Demência frontotemporal de início precoce (suspeita) 
+*Insuficiência cardíaca compensada 
+*Cistos renais simples bilaterais 
+*Tireoidite (tireoide heterogênea) 
+*Disfagia orofaríngea 
+*Trauma craniano (queda) 
+*Hipertensão arterial sistêmica'}]"	"[[0.75, 0.86]]"
+"*Nasofaringite Aguda 
+*Pneumonia Bacteriana ou Broncopneumonia aspirativa 
+*Dermatite em membro superior esquerdo (MSE) 
+*Doença de Parkinson, Parkinson 
+*Derrame pleural   
+*Disfagia orofaringea 
+*Tromboembolismo pulmonar (TEP),  
+*Trombose venosa profunda (TVP) 
+*Espondilose torácica 
+*Adenoma na adrenal esquerda 
+*Ateromatose na aorta torácica e nos troncos supra-aórticos 
+* Deformidade do cotovelo 
+* Alterações degenerativas na coluna estudada"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to output a list of diseases only, no extra text, separated by 
+* and no line breaks. Also, we must not repeat similar diagnoses; when there are similar diseases, bring the most complete one.\n\nWe need to parse the input and extract disease names.\n\nList of entries in the input (separated by 
+*):\n\n- NASOFARINGITE AGUDA\n- PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE\n- Us torácico extracardíaco\n- Dermatite MSE\n- D. Parkinson.\n- Pequeno derrame pleural à direita\n- NEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL- > 10/10\n- DISFAGIA OROFARÍNGEA\n- Derrame pleural\n- PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE.\n- PAC\n- Mínimo derrame pleural laminar à esquerda\n- PNM BACTERIANA + TEP + TVP MID\n- BCP aspirativa\n- PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE .\n- PNEUMONIA BACTERIANA\n- PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA\n- 10/10 TEP + TVP MID\n- TVP MID.\n- Cistos renais\n- TVP,TEP\n- Espondilose torácica.\n- DP com exsudato + TVP + TEP\n- Dermatite MSE 10/\n- Infecção pulmonar\n- Cistos renais Bosniak 1 e 2\n- parkinson\n- PNM bacteriana\n- Mínimo derrame pleural laminar à esquerda.\n- DEFORMIDADE COTOVELO\n- D. Parkinson\n- Infecção pulmonar – TEP c/ infarto pulm + infecção 2a.\n- PNEUMONIA BACTERIANA NAO\n- Toracocentese\n- NASOFARINGITE AGUDA [RESFRIADO COMUM]\n- Alterações degenerativas na coluna estudada.\n- Pneumonia.\n- Toracocentese à D - 600 ml\n- Adenoma na adrenal esquerda\n- PNM\n- PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL\n- Cistos renais Bosniak 1 e 2.\n- NASOFARINGITE AGUDA [RESFRIADO COMUM\n- D. Parkinson avançado\n- Broncopneumonia\n- Ateromatose na aorta torácica e nos troncos supra-aórticos\n- PAC PORT IV\n\nNow we need to extract diseases only. Some entries are procedures (Toracocentese, Adenoma na adrenal esquerda) which are not diseases; but question: ""citar apenas as doenças"". So we should exclude non-diseases like ""Us torácico extracardíaco"", ""PAC"", ""BCP aspirativa"", ""Toracocentese"", ""Adenoma na adrenal esquerda"", ""Alterações degenerativas na coluna estudada."", ""Ateromatose..."", ""DEFORMIDADE COTOVELO"". Also ""PAC PORT IV"" maybe a medication. So exclude.\n\nWe need to treat similar diseases: e.g., ""NASOFARINGITE AGUDA"" appears multiple times, also with [RESFRIADO COMUM]. The most complete maybe ""NASOFARINGITE AGUDA [RESFRIADO COMUM]""? Or just ""NASOFARINGITE AGUDA"". Provide the most complete version. So choose ""NASOFARINGITE AGUDA [RESFRIADO COMUM]"". However there is one entry missing closing bracket: ""NASOFARINGITE AGUDA [RESFRIADO COMUM"". Might be incomplete. We\'ll take the version with brackets closed: ""NASOFARINGITE AGUDA [RESFRIADO COMUM]"". If we think that is more complete. We\'ll include one entry.\n\n""PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE"" appears many times, sometimes with extra info like TVP, TEP, DERRAME PLEURAL. The most complete is ""PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL"". Actually there is ""NEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL- > 10/10"". Let\'s choose ""PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL"". Another entry ""PNEUMONIA BACTERIANA"" generic. But the specific NAO CLASSIFICADA is more detailed. So include that one.\n\n""Broncopneumonia"" is a separate disease.\n\n""Pneumonia."" generic; but we already have specific pneumonia; this is less detailed. So maybe not needed if we have pneumonia bacterial. But ""Pneumonia"" generic could be considered separate but similar to ""PNEUMONIA BACTERIANA"". The instruction: ""não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa."" So choose the more complete version among pneumonia. We have ""PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE ..."", which is more specific than ""Pneumonia."" and ""Broncopneumonia"". Broncopneumonia is a type of pneumonia, maybe similar but distinct. Might treat as separate disease? It\'s a specific type. Could be considered similar to pneumonia bacterial. Maybe we include both ""Broncopneumonia"" and the bacterial pneumonia classification? The instruction to avoid similar diagnoses: ""quando houver doenças parecidas, trazer a mais completa"". So ""Broncopneumonia"" vs ""PNEUMONIA BACTERIANA NAO CLASSIFICADA"": both are pneumonia types. The more complete might be the latter, but broncopneumonia is a distinct entity. But they are similar—they are both pneumonia; so we could present the more complete: ""PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL"". We\'ll exclude broncopneumonia.\n\n""D. Parkinson"", ""parkinson"", ""D. Parkinson avançado"". Most complete: ""D. Parkinson avançado"". We\'ll include that.\n\n""Infecção pulmonar"" and ""Infecção pulmonar – TEP c/ infarto pulm + infecção 2a."" More complete version includes details. So include ""Infecção pulmonar – TEP c/ infarto pulm + infecção 2a.""\n\n""Dermatite MSE"" appears; also with extra ""10/"". Most complete ""Dermatite MSE"" (same). Keep one.\n\n""DISFAGIA OROFARÍNGEA"" - include.\n\n""Pequeno derrame pleural à direita"" and ""Derrame pleural"" and ""Mínimo derrame pleural laminar à esquerda"". Could be considered similar—they are pleural effusion. Most complete might be both sides? Not across. Maybe combine? The most comprehensive might be ""Pequeno derrame pleural à direita"". But also ""Mínimo derrame pleural laminar à esquerda"". They are separate laterality. The instruction maybe treat as similar disease X (pleural effusion). Could include one aggregated? Probably include one: ""Derrame pleural"". But that\'s less specific. Might choose ""Pequeno derrame pleural à direita"" as most specific. We\'ll include that only.\n\n""Cistos renais"" and ""Cistos renais Bosniak 1 e 2"". More complete: ""Cistos renais Bosniak 1 e 2"". Include that.\n\n""Espondilose torácica."" include.\n\n""DEFORMIDADE COTOVELO"" include.\n\n""Us torácico extracardíaco"" - not a disease (maybe syndrome). Might exclude.\n\n""PNM BACTERIANA + TEP + TVP MID"", ""PNM bacteriana"", ""PNM"". Not sure what PNM stands for; maybe ""Pneumonia necrotizante""? Not clear; but appears as disease? Might be abbreviation for ""Pneumonia"" maybe. Could exclude ambiguous.\n\n""TVP"", ""TEP"" are thromboembolic events: ""TVP"" (trombo veia profunda) and ""TEP"" (tromboembolismo pulmonar). These are diseases. Should include them maybe. The list includes ""TVP"", ""TEP"". They appear as part of the pneumonia line but also separate. Since they are diseases, include both ""TVP"" and ""TEP""? But we need not repeat similar; they are distinct. So include ""TVP"" and ""TEP"". However there is ""TVP MID"", ""TVP,TEP"". The more complete? Perhaps ""TVP MID"" is specific. Let\'s include ""TVP MID"". For TEP we have ""TEP"". Also ""TEP c/ infarto pulm"" is in infection line. The most complete could be just TEP generic? Might include ""TEP"". But we can include ""TEP c/ infarto pulmonar"" if want completeness. Since part of infection line, we already have infection line. To avoid duplication, maybe just include ""TEP"". We\'ll include ""TVP MID"" as more specific.\n\n""PAC"", ""PAC PORT IV"" maybe medication. Exclude.\n\n""Us torácico extracardíaco"" - not disease.\n\n""Atramatose"" not disease? It\'s a condition of aorta, considered disease. Might include ""Ateromatose na aorta torácica e nos troncos supra-aórticos"". That is a disease. Let\'s include.\n\nNow compile list of selected diseases, removing duplicates.\n\nList:\n\n- NASOFARINGITE AGUDA [RESFRIADO COMUM]\n- PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL\n- D. Parkinson avançado\n- Infecção pulmonar – TEP c/ infarto pulm + infecção 2a.\n- Dermatite MSE\n- DISFAGIA OROFARÍNGEA\n- Pequeno derrame pleural à direita\n- Cistos renais Bosniak 1 e 2\n- Espondilose torácica\n- DEFORMIDADE COTOVELO\n- TVP MID\n- TEP\n- Ateromatose na aorta torácica e nos troncos supra-aórticos\n\nCheck if any other disease: ""Us torácico extracardíaco"" maybe is ""Síndrome de Us""? Not recognized; skip.\n\n""PNM BACTERIANA + TEP + TVP MID"" is overlapping with pneumonia and TVP, TEP; we already have pneumonia.\n\nNow output as one line separated by 
+*. Ensure no line breaks.', 'signature': ''}}, {'type': 'text', 'text': 'NASOFARINGITE AGUDA [RESFRIADO COMUM]
+*PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL
+*D. Parkinson avançado
+*Infecção pulmonar – TEP c/ infarto pulm + infecção 2a.
+*Dermatite MSE
+*DISFAGIA OROFARÍNGEA
+*Pequeno derrame pleural à direita
+*Cistos renais Bosniak 1 e 2
+*Espondilose torácica
+*DEFORMIDADE COTOVELO
+*TVP MID
+*TEP
+*Ateromatose na aorta torácica e nos troncos supra-aórticos'}]"	"[[0.85, 0.85]]"
+"*Tromboembolismo pulmonar  (TEP) 
+*Asma,  
+*Obesidade Grau III 
+*Anemia Ferropriva Secundária a menotrorragia 
+*Síndrome Astênica  
+*Miomatose 
+*Insuficência Cardíaca (IC) 
+*Parada cardiorrespiratória (PCR) por hipóxia em 1999 
+*Hipertensão Arterial Sistêmica (HAS)"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'The user wants a list of diagnoses, not repeating similar ones. When diseases are similar, bring the most complete one. Only list diseases, separated by 
+* and no line breaks. So need to parse text, extract disease names.\n\nList in text includes TEP (tromboembolismo pulmonar), TEPA etc. Need to avoid duplicates like ""TEP"", ""TEP agudo"", ""TEP Submaciço: Segmentar Bilateral ..."" These are similar; we should choose most complete: perhaps ""TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário"". That\'s a detailed descriptor.\n\nAlso Asma, Asma Grave, Asma. Choose most complete: ""Asma Grave"". Bronquite, ""Bronquite Crônica"". Anemia ferropriva secundaria a menometrorragia (specific). Obesidade, Obesidade Grau III (most complete). Miomatose. IC (insuficiência cardíaca?) but just ""IC"". PCR 1999 por Hipóxia (maybe ""Hipóxia""). HAS (hipertensão arterial sistêmica). Alterações degenerativas incipientes na coluna (maybe not a disease? but it\'s a finding). Por simplicity, include if disease. Also ""Sindrome astenica ae"" likely ""Síndrome astenica""? Not sure; but include it.\n\nNow build unique list, picking most complete for similar categories.\n\nList candidates:\n\n- TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário\n- Asma Grave\n- Bronquite Crônica\n- Anemia ferropriva secundaria a menometrorragia\n- Obesidade Grau III\n- Miomatose\n- IC (Insuficiência Cardíaca?) just ""IC""\n- Hipóxia (PCR 1999 por Hipóxia)\n- HAS (Hipertensão arterial sistêmica)\n- Síndrome astenica ae (keeping as given)\n- Alterações degenerativas incipientes na coluna\n\nCheck duplicates: TEP also appears as ""TEP agudo"", ""TEP"". Use most complete as above.\n\nNow list separated by 
+*. No line breaks. Ensure no extra text.\n\n', 'signature': ''}}, {'type': 'text', 'text': '
+*TEP Submaciço: Segmentar Bilateral - 02/10 - PESI 95 Classe III: Intermediário
+*Asma Grave
+*Bronquite Crônica
+*Anemia ferropriva secundaria a menometrorragia
+*Obesidade Grau III
+*Miomatose
+*IC
+*Hipóxia
+*HAS
+*Síndrome astenica ae
+*Alterações degenerativas incipientes na coluna'}]"	"[[0.73, 0.89]]"
+"*Epilepsia 
+*Disfagia Orofaringea 
+*Pneumonia Comunitária 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Dupla hemiparesia (grau IV D e III a E) 
+*Infecção Trato Urinário (ITU) comunitária 
+*Acidentes Vasculares Cerebrais prévios 
+*Lesão de Lábio e mordedura na região lateral e língua"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to extract only diseases (diagnoses) from the given text, not repeating similar ones, and for similar diseases bring the most complete one. Output list separated by 
+* and no line breaks.\n\nWe need to parse the text. Let\'s identify disease terms:\n\n- ""Crise epiléptica"" / ""epilepsia"" - basically seizure/epilepsy. We have multiple mentions: ""Primeira Crise epiléptica"", ""Crise convulsiva"", ""Crise epiléptica em 09/10 - provável epilepsia focal secundária"", ""EPILEPSIA"". So disease is epilepsy (or seizure disorder). The most complete phrasing: ""epilepsia focal secundária"". Probably choose ""epilepsia focal secundária"". Or maybe ""epilepsia"". We\'ll decide.\n\n- ""Pneumonia Comunitária"" appears many times. That\'s a disease: ""pneumonia comunitária"". So include that.\n\n- ""DISFAGIA OROFARÍNGEA"" = oropharyngeal dysphagia. disease: ""disfagia orofaríngea"".\n\n- ""HAS"" seems to be abbreviation for hypertension (hipertensão arterial sistêmica). So disease: ""hipertensão arterial sistêmica"".\n\n- ""Dupla hemiparesia (grau IV D e III a E)"" - hemiparesia is a symptom, not a disease. Might not count as disease. Could be ""hemiparesia"". But it\'s a sign, maybe not a disease. The instruction: ""citar apenas as doenças"". Hemiparesia is a condition. Might consider as disease? Probably not. We\'ll omit.\n\n- ""Ataxia marcha"" - gait ataxia, again a sign.\n\n- ""Transtornos"" is generic.\n\n- ""CATETERISMO DE ALIVIO PARA"" not disease.\n\n- ""Itu comunitária""? maybe ""pneumonia + Itu comunitária""? Actually ""Itu"" might be misrecognized. Not a disease.\n\nThus list diseases: ""epilepsia focal secundária"", ""pneumonia comunitária"", ""disfagia orofaríngea"", ""hipertensão arterial sistêmica"". Ensure no duplicates.\n\nNeed to separate with 
+*. No extra line breaks. So output:\n\nepilepsia focal secundária
+*pneumonia comunitária
+*disfagia orofaríngea
+*hipertensão arterial sistêmica\n\nCheck ordering? Not specified. Provide as list.\n\n', 'signature': ''}}, {'type': 'text', 'text': 'epilepsia focal secundária
+*pneumonia comunitária
+*disfagia orofaríngea
+*hipertensão arterial sistêmica'}]"	"[[1.0, 0.5]]"
+"*Insuficência Mitral 
+*Fibrilação atrial Crônica (FA Crônica) 
+*Ateromatose incipiente 
+*Insuficiência Cardíaca (IC) Perfil B 
+*Artrose 
+*Acidente Vascular Cerebral Hemorrágico (AVCh) há 5 anos 
+*Disfunção Renal Aguda 
+*Osteoporose 
+* Alterações degenerativas da coluna vertebral 
+*Trombose Venosa Profunda em Membro Inferior Esquerdo (TVP em MIE) 
+*Pneumonia 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Varizes Calibrosas"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to extract disease names only, no extra text, no repeats, and when similar diseases appear, bring the most complete one. Provide list separated by 
+* and no line breaks. So produce a single line: disease1
+* disease2
+*... No extra spaces? Probably fine to have spaces after 
+*. The text includes many disease terms: ""Dispnéia leve"" (dyspnea mild) - is a symptom not disease, but possibly considered a diagnosis? The instruction: ""citar apenas as doenças"" - dyspnea is a symptom, not a disease. Might skip. Terms: ""Insuf mitral"" (mitral insufficiency) - disease. ""FA com ARV"" maybe ""FA"" is fibrilação atrial, ARV maybe ""arritmia ventricular""? Not sure. ""Fibrilação atrial crônica"" persistent atrial fibrillation. ""Insuf mitral"" repeated. ""Ateromatose incipiente"". ""IC perfil"" maybe ""Insuficiência cardíaca"" profile? ""Fibrilação atrial permanente"". ""Artrose AVCH HÁ 5 ANOS"" (osteoarthritis?). There\'s ""Varizes calibrosas"". ""HAS"" (hipertensão arterial sistêmica). ""Disfunção renal aguda"". ""MCP"" maybe ""ménisco patelar""? Not disease? Might be ""MCP"" unclear. ""Osteoporose"". ""Alterações degenerativas da coluna vertebral"". ""TVP em MIE RAM"" - deep vein thrombosis in lower limb? ""Insuf cardiaca congestiva"". ""Pneumonia"". ""Descongestão."" not disease. ""IC descompensada perfil B."" repeated. ""Bundle"". Could be ""Bundle branch block""? Not disease. ""TVP em MIE"". ""Artrose"". ""has"" duplicate.\n\nWe need to avoid similar diseases; choose most complete: e.g., ""Fibrilação atrial crônica"" vs ""Fibrilação atrial permanente"" vs ""FA com ARV"" vs ""FA"". The most complete could be ""Fibrilação atrial permanente"" (permanent). Or maybe combine? We\'ll include both chronic and permanent? They are similar but permanent is more specific, so we choose permanent only. Also ""Insuf mitral"" appears multiple; keep one. ""IC perfil B"" vs ""IC descompensada perfil B"" vs ""Insuf cardiaca congestiva"" vs ""IC"" generic. The more complete: ""Insuficiência cardíaca descompensada, perfil B"". We\'ll maybe use ""Insuficiência cardíaca congestiva descompensada, perfil B"". Keep one.\n\nList diseases:\n\n- Insuficiência mitral (Insuf mitral)\n- Fibrilação atrial permanente\n- Ateromatose incipiente\n- Insuficiência cardíaca descompensada, perfil B (or Insuficiência cardíaca congestiva descompensada, perfil B)\n- Artrose (include AVCH?? Just Artrose)\n- Varizes calibrosas\n- Hipertensão arterial sistêmica (HAS)\n- Disfunção renal aguda\n- Osteoporose\n- Alterações degenerativas da coluna vertebral\n- Trombose venosa profunda em membro inferior (TVP em MIE)\n- Pneumonia\n\nAlso maybe ""Dispnéia leve"" is symptom, skip.\n\nAlso ""Bundle"" ignore.\n\nThus list separated by 
+*. Ensure no line break.\n\nWrite: Insuficiência mitral
+*Fibrilação atrial permanente
+*Ateromatose incipiente
+*Insuficiência cardíaca descompensada, perfil B
+*Artrose
+*Varizes calibrosas
+*Hipertensão arterial sistêmica
+*Disfunção renal aguda
+*Osteoporose
+*Alterações degenerativas da coluna vertebral
+*Trombose venosa profunda em membro inferior
+*Pneumonia\n\nCheck duplicates: No.\n\nReturn exactly that.', 'signature': ''}}, {'type': 'text', 'text': 'Insuficiência mitral
+*Fibrilação atrial permanente
+*Ateromatose incipiente
+*Insuficiência cardíaca descompensada, perfil B
+*Artrose
+*Varizes calibrosas
+*Hipertensão arterial sistêmica
+*Disfunção renal aguda
+*Osteoporose
+*Alterações degenerativas da coluna vertebral
+*Trombose venosa profunda em membro inferior
+*Pneumonia'}]"	"[[1.0, 0.92]]"
+"*Hiponatremia 
+*Depressão 
+*Insufciência Cardiaca Perfil B,  
+*Asma 
+*Infeccão Trato Urinário (ITU) 
+*Dislipidemia (DLP) 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Disfunção diastólica do ventrículo esquerdo de grau II 
+*Hipertensão Pulmonar"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to output just a list of diseases, no repeats, and when similar diseases appear, bring the most complete one. Use 
+* as separator, no line breaks.\n\nWe have input with many terms, some are disease names, some are abbreviations etc. We must extract diseases.\n\nList the diseases present:\n\n- Contratilidade miocárdica preservada (that\'s a condition but not disease? It\'s a preserved myocardial contractility, seems not a disease; maybe it\'s a finding, but likely not considered disease.)\n- Hiponatremia (disease)\n- DEPRESSÃO (depression)\n- IC FEp. (IC? Iron? Probably ""insuficiência cardíaca""? abbreviation for heart failure. ""IC FEp"" maybe ""insuficiência cardíaca""? We\'ll treat as disease: Insuficiência Cardíaca (Heart failure). There\'s also ""IC PERFIL B"", ""IC DIREITA"", etc. Should consolidate to most complete: maybe ""Insuficiência Cardíaca"" is generic, but there are specifics: ""Insuficiência Cardíaca Direita"", ""Insuficiência Cardíaca com perfil B""? This seems repetitive. The instruction: when similar diseases, bring the most complete. So we need to pick the most comprehensive phrase: maybe ""Insuficiência Cardíaca com perfil B"" includes direction? But ""IC DIREITA"" is a specific type. Which is more complete? Hard to decide. Could treat ""Insuficiência Cardíaca"" as the base disease, and ""Insuficiência Cardíaca Direita"" as a specific sub-type. Are they similar? Possibly. The instruction: not repeat similar diagnoses, bring the most complete. So likely choose ""Insuficiência Cardíaca Direita"" if present because it\'s more specific than generic ""Insuficiência Cardíaca"". However also there is ""Insuficiência Cardíaca com perfil B"" appears multiple times. Which is more complete? ""Insuficiência Cardíaca Direita"" indicates laterality, but ""IC PERFIL B"" possibly a classification. I\'d choose the most detailed inclusive: maybe ""Insuficiência Cardíaca Direita com perfil B""? Not present. So choose the longest phrase: ""Insuficiência Cardíaca Direita"". That\'s one.\n\nAlso ""ASMA"" appears duplicated.\n\n""ITU"" (Infecção do Trato Urinário) -> disease.\n\n""DISFUNÇÃO DIASTÓLICA DO VENTRÍCULO ESQUERDO DE GRAU II"" is a disease/condition.\n\n""Presença de hipertensão pulmonar (PSAP= 44 mmHg, estimada pelo refluxo tricuspídeo)"" - Hypertension pulmonar.\n\n""DLP"" maybe ""Dislipidemia""? DLP abbreviation for Dyslipidemia. It\'s a disease.\n\n""HAS"" likely ""Hipertensão Arterial Sistêmica"" (systemic hypertension). So include Hypertension.\n\nOther terms: ""Afirma"" not disease, ignore.\n\n""IC FEp PERFIL B"" similar to previous.\n\nSo compile unique disease list:\n\n- Hiponatremia\n- Depressão\n- Insuficiência Cardíaca Direita\n- Asma\n- Infecção do Trato Urinário\n- Disfunção diastólica do ventrículo esquerdo de grau II\n- Hipertensão pulmonar\n- Dislipidemia\n- Hipertensão arterial sistêmica\n\nCheck also ""Contratilidade miocárdica preservada"" is not a disease, ignore.\n\nMake list separated by 
+*. No line breaks.\n\nThus output:\n\nHiponatremia
+*Depressão
+*Insuficiência Cardíaca Direita
+*Asma
+*Infecção do Trato Urinário
+*Disfunção diastólica do ventrículo esquerdo de grau II
+*Hipertensão pulmonar
+*Dislipidemia
+*Hipertensão arterial sistêmica\n\nMake sure no extra spaces? Probably okay. Use exact accent.\n\n', 'signature': ''}}, {'type': 'text', 'text': 'Hiponatremia
+*Depressão
+*Insuficiência Cardíaca Direita
+*Asma
+*Infecção do Trato Urinário
+*Disfunção diastólica do ventrículo esquerdo de grau II
+*Hipertensão pulmonar
+*Dislipidemia
+*Hipertensão arterial sistêmica'}]"	"[[1.0, 1.0]]"
+"* Desnutrição 
+* Carcinomatose Peritoneal 
+* Obstrucao intestinal pos-operatoria (K91.3) ou Abdome agudo obstrutivo 
+* Infeccão Trato Urinário (ITU) 
+* Tabagismo"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to parse the user\'s request: list of diagnoses, not repeating similar diagnoses, when diseases are similar bring the most complete. Only diseases, no extra text, separated by 
+* and no line breaks. So output a single line string with diseases separated by asterisks.\n\nGiven list in text contains many entries, many duplicates. We need to deduplicate similar. Let\'s extract disease names:\n\n- Desnutrido (maybe ""Desnutrido"" is a condition, not disease but nutritional status; consider as diagnosis)\n- Carcinoma peritoneal seroso de alto grau ki-67 80%\n- Carcinoma seroso de alto grau pT3b\n- Cirurgia (surgery) not disease; exclude.\n- Carcinoma seroso de alto grau 1º de peritonio. (maybe ""Carcinoma seroso de alto grau 1º de peritonio"" is similar to carcinoma peritoneal seroso; we need most complete. The most complete includes ""Carcinoma peritoneal seroso de alto grau ki-67 80%"" (includes peritoneal and ki-67). Also ""Carcinoma seroso de alto grau pT3b"". There\'s also ""carcinoma seroso de alto grau ki-67 80%"" duplicate. So we need choose one most comprehensive? They are similar but one includes ki-67. Another includes pT3b. Different aspects, but both could be considered separate. They are similar (same carcinoma type). The instruction: ""não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa."" So for carcinoma seroso de alto grau, we have variations: with ki-67 80%, with pT3b, with peritoneal involvement. The most complete maybe combine all attributes? But need separate list items, can\'t combine. We can choose the most complete description among them: maybe ""Carcinoma peritoneal seroso de alto grau ki-67 80% pT3b"" but that exact phrase not present. The given most complete could be ""Carcinoma peritoneal seroso de alto grau ki-67 80%"" which includes peritoneal location and Ki-67. Another has pT3b. Which is more complete? Hard. I\'d pick the one with both peritoneal and Ki-67 as the most complete; others are omitted.\n\n- Obstrução intestinal pós-operatória (multiple times) – disease. Combined with ""abdome agudo obstrutivo (aderência)"" which is similar. We should choose most complete: maybe ""Obstrução intestinal pós-operatória - Abdome agudo obstrutivo (aderência)"" combine both. Or the phrase ""Obstrução intestinal pós-operatória"" is generic. The more complete includes ""abdome agudo obstrutivo (aderência)"". I\'d output ""Obstrução intestinal pós-operatória – Abdome agudo obstrutivo (aderência)"". But need consistent naming.\n\n- ITU (infecção do trato urinário) – disease.\n\n- Tabagismo – not disease (risk factor) maybe exclude.\n\n- Carcinomatose peritoneal (multiple). That\'s similar to carcinoma peritoneal seroso? Carcinomatose peritoneal is peritoneal dissemination of carcinoma. Might be considered similar but not the same phrase. It\'s a separate diagnosis.\n\n- CA PERITONEO (câncer peritoneal) similar to carcinoma peritoneal seroso. Choose most complete: we already have carcinoma peritoneal seroso. So we can drop CA PERITONEO.\n\n- K913 - K91.3 Obstrução intestinal pos-operatoria – it\'s just code for obstruction.\n\n- K91.3 Obstrução intestinal pos-operatoria – same.\n\nSo compile unique diseases:\n\n1. Desnutrido\n2. Carcinoma peritoneal seroso de alto grau ki-67 80%\n3. Carcinoma seroso de alto grau pT3b (maybe omitted if we think similar? but not included in the more complete one; could be considered separate stage info. I\'ll include as separate as it\'s distinct info.)\n4. Obstrução intestinal pós-operatória – Abdome agudo obstrutivo (aderência)\n5. ITU\n6. Carcinomatose peritoneal\n\nBut need to avoid similar duplicate: Carcinoma seroso de alto grau pT3b vs Carcinoma peritoneal seroso de alto grau ki-67 80% are similar but different attributes; I\'d keep both? Might be considered similar ""Carcinoma seroso de alto grau"". The most complete includes both Ki-67 and pT3b? Not present. Maybe we should pick the more comprehensive: the one with Ki-67 includes peritoneal infiltration but not stage. The other includes stage pT3b but not Ki-67. Which is more complete? Hard. Might choose the one with Ki-67 as most complete and drop the pT3b version. The instruction: ""quando tiver doenças parecidas, trazer a mais completa."" So between those two, which is more complete? The Ki-67 version includes peritoneal location too; pT3b version includes stage but not Ki-67. I\'d say Ki-67 is more specific biomarker, so include that one only.\n\nThus list:\n\nDesnutrido 
+* Carcinoma peritoneal seroso de alto grau ki-67 80% 
+* Obstrução intestinal pós-operatória – Abdome agudo obstrutivo (aderência) 
+* ITU 
+* Carcinomatose peritoneal\n\nNo line breaks. Ensure spaces around asterisks? The spec: separate by 
+* and without line break. Probably ""Desnutrido
+*Carcinoma peritoneal seroso de alto grau ki-67 80%
+*Obstrução intestinal pós-operatória – Abdome agudo obstrutivo (aderência)
+*ITU
+*Carcinomatose peritoneal"". No extra spaces? Could include spaces, but safe to not include extra spaces. We\'ll output that.', 'signature': ''}}, {'type': 'text', 'text': 'Desnutrido
+*Carcinoma peritoneal seroso de alto grau ki-67 80%
+*Obstrução intestinal pós-operatória – Abdome agudo obstrutivo (aderência)
+*ITU
+*Carcinomatose peritoneal'}]"	"[[0.8, 0.8]]"
+"* Hipertensão Arterial Sistêmica (HAS) 
+*Pequena hérnia gástrica-hiatal 
+*Doença Obstrutiva Pulmonar Crônica (DPOC) exacerbado 
+*Sepse 
+*Espondilose dorsal 
+*Injúria Miocárdica Inflamatoria  
+*Insuficência Cardiaca Fração Ejeção Preservada (ICFEP),  
+*Pneumonia 
+*Dislipidemia (DLP) 
+*Sindrome Gripal (Sd Gripal) 
+* Ateromatose aórtica e coronariana  "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'The user wants: ""A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por 
+* e sem quebra de linha)"". They give a list with many items separated by 
+* and with periods etc. Need to produce a list of diseases, no duplicates, and for similar diseases choose the most complete. Use 
+* as separator and no line breaks. Just the list.\n\nWe need to parse diseases:\n- HAS (hipertensão arterial sistêmica)\n- Pequena hérnia gástrica-hiatal (maybe ""hérnia gástrica hiatal"")\n- Cardiopatia (generic)\n- TINOCA (type 2 myocardial infarction? It\'s a condition ""Takotsubo""? Actually TINOCA is ""troponin positive non-obstructive coronary artery disease"" maybe treat as a diagnosis)\n- DPOC PNM (DPOC = COPD, PNM = maybe ""pneumonia""? Might be ""DPOC"" separate)\n- Sepse - DPOC Exacerbado (Sepse is sepsis, DPOC Exacerbado is COPD exacerbated)\n- Injuria miocardica aguda (acute myocardial injury)\n- Ateromatose aórtica e coronariana (atherosclerosis aortic and coronary)\n- TINOCA - Injúria Miocárdica Inflamatória (TINOCA - Inflammatory myocardial injury)\n- Sd gripal - quadriplex negativo (influenza syndrome? but disease ""síndrome gripal"")\n- Espondilose dorsal (dorsal spondylosis)\n- gripal (gripal? influenza)\n- Transtornos (non-specific)\n- ICFEP (maybe ""insuficiência cardíaca""? Not sure. Could be a code)\n- Pneumonia NE (pneumonia not elsewhere specified)\n- DLP (dislipidemia)\n- sindrome gripal há 1 semana (influenza syndrome)\n- TRANSFERENCIA PARA SEMI (not a disease)\n- Injuria miocardica (myocardial injury)\n- Broncoespasmo grave na madrugada (severe bronchospasm)\n- etc.\n\nWe need to include each disease only once, with the most complete version when similar.\n\nLet\'s group similar ones:\n- HAS appears many times: include ""HAS"".\n- Pequena hérnia gástrica-hiatal -> include as ""Pequena hérnia gástrica hiatal"".\n- Cardiopatia appears multiple, also ""Cardiopatia"". Could be generic but keep ""Cardiopatia"".\n- TINOCA appears multiple, also with ""Injúria Miocárdica Inflamatória"". The most complete is ""TINOCA - Injúria Miocárdica Inflamatória"". So include that and not separate TINOCA or TINOCA alone.\n- DPOC appears multiple, also ""DPOC exacerbado"", ""DPOC PNM"". The most complete maybe ""DPOC exacerbado"" (since includes exacerbation). Also ""DPOC PNM"" might indicate COPD with pneumonia. The most complete could be ""DPOC exacerbado"". Include that.\n- Sepse - DPOC Exacerbado: includes sepsis and COPD exacerbated. More complete? It\'s ""Sepse"". We have sepsis (sepse) plus COPD exacerbated. We already have COPD exacerbado, but sepsis not included yet. So include ""Sepse"".\n- Injuria miocardica aguda vs Injuria miocardica vs Injuria Miocárdica Inflamatória (connected with TINOCA). The most complete is ""Injuria Miocárdica Inflamatória"". However, there is also ""Injuria miocardica aguda"" which is distinct (acute). Should we include both? They are similar but ""aguda"" vs ""inflamatória"". Probably treat as separate? The instruction: ""não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa."" So for myocardial injury, the more complete is ""Injuria Miocárdica Inflamatória"". So we include that only.\n- Ateromatose aórtica e coronariana appears multiple; include once.\n- Sd gripal (síndrome gripal) appears multiple; include most complete ""síndrome gripal há 1 semana"" maybe includes timeframe. But disease is same (influenza syndrome). Probably include ""Síndrome gripal"".\n- Espondilose dorsal appears multiple; include once.\n- gripal, gripal (just ""gripal"") same as syndrome gripal; we already have syndrome gripal.\n- Transtornos (non-specific) not a disease; ignore.\n- ICFEP? Not sure disease; maybe ""Insuficiência Cardíaca Crônica""? Could ignore if unknown. But treat as ""ICFEP"" as a diagnosis term, include if considered disease. It\'s ambiguous. The instruction: only list diseases. ICFEP maybe a code for ""Câncer""? Not sure. Might exclude because ambiguous.\n- Pneumonia NE appears multiple; include once.\n- DLP (dislipidemia) is disease; include ""DLP"".\n- Broncoespasmo grave na madrugada - include ""Broncoespasmo grave"".\n- Sepse - already have sepsis.\n- ""TRANSFERENCIA PARA SEMI"" not disease.\n- ""Transtornos"" not disease.\n\nLet\'s produce list separated by 
+*. Order? Not specified; just produce list.\n\nList items:\nHAS\nPequena hérnia gástrica hiatal\nCardiopatia\nTINOCA - Injúria Miocárdica Inflamatória\nSepse\nDPOC exacerbado\nAteromatose aórtica e coronariana\nSíndrome gripal\nEspondilose dorsal\nPneumonia NE\nDLP\nBroncoespasmo grave\n\nMake sure no duplicate. Use 
+* separator, single line, no extra spaces maybe? Format: 
+* between items, but likely they want ""
+*item1
+*item2
+*item3"". The instruction: ""sepára do por 
+* e sem quebra de linha"". Means separate items by 
+*. Probably start with first item without leading 
+*. So e.g.: HAS
+*Pequena hérnia gástrica hiatal
+*Cardiopatia
+*...\n\nWill include accent correct. Use same case as original maybe. Provide final.\n\n', 'signature': ''}}, {'type': 'text', 'text': 'HAS
+*Pequena hérnia gástrica hiatal
+*Cardiopatia
+*TINOCA - Injúria Miocárdica Inflamatória
+*Sepse
+*DPOC exacerbado
+*Ateromatose aórtica e coronariana
+*Síndrome gripal
+*Espondilose dorsal
+*Pneumonia NE
+*DLP
+*Broncoespasmo grave'}]"	"[[0.83, 0.91]]"
+"*Hemoglobinopatia SS ou Anemia Falciforme (D57) 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Transtornos de Adaptação 
+*Abstinência de Opióide"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to output a list of diseases, no repeats, choose most complete when similar. We have many variations of same disease: Hemoglobinopathy, Anemia falciforme, Hemoglobinopatia SS, Anemia falciforme crise algica, Dor (pain) not a disease? Dor is symptom, not disease. HAS (hipertensão arterial sistêmica) maybe disease but abbreviation? Probably consider hypertension but not clear. Transtornos de Adaptação - mental disorder. Hydrea 1 is medication, not disease. D570 is code for sickle-cell disease (ICD). So main disease: Sickle cell disease (Anemia falciforme / Hemoglobinopatia). Hemoglobinopatia (generic) but more specific is Hemoglobinopatia SS (sickle). So choose most complete: Anemia Falciforme (Sickle cell disease). Also maybe ""Transtornos de Adaptação"". Also ""Anemia"" generic but less specific. ""Hemoglobinopatia"" generic. The instruction: when similar diseases, bring most complete. So we keep only ""Anemia falciforme"" (or maybe ""Hemoglobinopatia SS""? Which is more specific). I think ""Anemia falciforme"" is the common name.\n\nList should be separated by 
+* and no line breaks. So output: 
+*Anemia falciforme 
+*Transtornos de Adaptação\n\nBut also ""Hemoglobinopatia SS"" considered maybe more complete (specify genotype). The instruction: bring most complete. That would be ""Hemoglobinopatia SS"". However the phrase ""Anemia falciforme"" is the disease name. ""Hemoglobinopatia SS"" is basically same disease. Which is more complete? I\'d argue ""Hemoglobinopatia SS"" is more specific. But the list should include disease names; we could include both? No repeats similar. So pick most complete: Hemoglobinopatia SS. Also ""Transtornos de Adaptação"". Also maybe ""HAS"" (hipertensão arterial sistêmica) could be considered disease. Not sure. The text includes ""
+*HAS
+*"" but no context. Might be a disease. Should we include? Probably yes as disease.\n\nThus list: 
+*Hemoglobinopatia SS 
+*Transtornos de Adaptação 
+*HAS\n\nCheck other: ""Abstinência de opioides"" is condition. Not disease. ""Dor"" symptom. ""Hydrea 1"" drug. ""uptodade 29"" nonsense. ""SDem evacuação"" maybe not. ""D570"" code for sickle cell disease, but we already have.\n\nThus final answer.', 'signature': ''}}, {'type': 'text', 'text': '
+*Hemoglobinopatia SS 
+*Transtornos de Adaptação 
+*HAS'}]"	"[[1.0, 0.75]]"
+"*Hernia Inguinal 
+*Insuficiência Renal Aguda (IRA) KDIGO 3 
+*Cálculo urinário obstrutivo 
+*Nefrite intersticial por medicamento 
+*Hérnia de Hiato 
+*Adenocarcinoma de Prostata Gleason 8 metástatico com acometimento ósseo 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Infecção do Trato Urinário (ITU) 
+*Doença Renal Crônica (DRC) agudizada com rim atrófico 
+* Gastrite "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to produce a list of diseases, not repeating similar diagnoses, and when diseases are similar, bring the most complete one. Provide only list, each preceded by 
+*, no line breaks (i.e., all in one line separated by 
+*). No extra text.\n\nWe need to parse the given text, extract disease names. The text includes many entries, some repeated. Need unique list, with most complete version for similar.\n\nLet\'s list all disease terms present:\n\n- hernia inguinal (appears twice)\n- INSUFICIENCIA RENAL AGUDA (Acute renal insufficiency)\n- Lra Kdigo III - Pós Renal por Ureterolitiase + Ureterohidronefrose a Esquerda. (LRA KDIGO III post-renal due to ureterolithiasis + ureterohydronephrosis left)\n- DMansine (maybe a typo, not disease)\n- Lra Kdigo III. (again)\n- IRC (Insuficiência renal crônica - chronic renal insufficiency)\n- Compensação clínica. (not disease)\n- CÁLCULO URINÁRIO OBSTRUTIVO ESQ, RIM (Obstructive urinary calculus left kidney)\n- Nefrite intersticial por medicação (interstitial nephritis drug-induced)\n- IRA KDIGO 3 (Acute renal injury KDIGO 3)\n- Hérnia de Hiato (hiatal hernia)\n- Gastrite (gastritis)\n- Uretrolitiase obstrutiva esquerda (obstructive ureterolithiasis left)\n- DRC agudizada (aggravated chronic renal disease? likely acute on chronic renal failure)\n- CA PRÓSTATA (prostate cancer)\n- Cistos corticais simples (simple cortical cysts)\n- Adenocarcinoma de prostata Gleason 8, metasático com acometimento osseo (metastatic prostate adenocarcinoma Gleason 8 with bone involvement)\n- nefrolitiase (nephrolithiasis)\n- CÁLCULO URINÁRIO OBSTRUTIVO, RIM ÚNICO FUNCIONAL (obstructive urinary calculus, single functional kidney)\n- DOR ABDOMINAL E PELVICA (abdominal and pelvic pain) not disease.\n- hematúria (hematuria) not disease\n- IRA (acute renal injury) duplicates\n- IRA pós renal (post-renal acute renal injury) duplicate of earlier\n- ANESTESIA (not disease)\n- HIPÓTESES DIAGNÓSTICAS (not disease)\n- NEOPLASIA MALIGNA DA PROSTATA (malignant prostate neoplasm) similar to prostate cancer\n- IRC AGUDIZADA (aggravated chronic renal insufficiency) duplicate\n- Ca próstata com Mtx óssea (prostate cancer with bone metastasis)\n- CÁLCULO (calc)\n- IRA KDIGO (duplicate)\n- HAS (hipertensão arterial sistêmica) hypertension\n- Cálculo em ureter a E (ureteral calculus left)\n- Cistos (cysts) generic\n- Rim atrófico a D (atrophic right kidney) not disease maybe condition.\n- CA próstata (prostate cancer)\n- ITU (infecção do trato urinário - urinary tract infection)\n- Adenocarcinoma de prostata Gleason 8, metasático com acometimento osseo (duplicate)\n\nNow need to create list, not repeating similar. For similar group like ""hernia inguinal"", one entry ""
+*hernia inguinal"". For ""prostate cancer"" there are multiple versions: ""CA PRÓSTATA"", ""NEOPLASIA MALIGNA DA PROSTATA"", ""Ca próstata com Mtx óssea"", ""Adenocarcinoma de prostata Gleason 8, metasático com acometimento osseo"". We should bring the most complete one: probably the detailed one: ""Adenocarcinoma de prostata Gleason 8, metasático com acometimento osseo"". So we include that and not the simpler.\n\nFor renal disease: there are multiple forms: ""INSUFICIENCIA RENAL AGUDA"", ""IRA KDIGO 3"", ""Lra Kdigo III - Pós Renal por Ureterolitiase + Ureterohidronefrose a Esquerda."", ""Lra Kdigo III"", ""IRC"", ""DRC agudizada"", ""IRC AGUDIZADA"". Need most complete? Might be ""Lra Kdigo III - Pós Renal por Ureterolitiase + Ureterohidronefrose a Esquerda."" That\'s specific. Also ""Nefrite intersticial por medicação"", ""CÁLCULO URINÁRIO OBSTRUTIVO ESQ, RIM"", ""Uretrolitiase obstrutiva esquerda"", ""nefrolitiase"", ""CÁLCULO URINÁRIO OBSTRUTIVO, RIM ÚNICO FUNCIONAL"", ""Cálculo em ureter a E"". These are about kidney stones. Might choose the most comprehensive: maybe ""CÁLCULO URINÁRIO OBSTRUTIVO, RIM ÚNICO FUNCIONAL"". Also ""CÁLCULO URINÁRIO OBSTRUTIVO ESQ, RIM"". Could combine? Probably choose the more detailed: ""CÁLCULO URINÁRIO OBSTRUTIVO, RIM ÚNICO FUNCIONAL"". For ureteral obstruction left, could include ""Uretrolitiase obstrutiva esquerda"". Might be similar but we choose one.\n\nAlso Interstitial nephritis, simple. ""Nefrite intersticial por medicação"". Include.\n\n""Hérnia de Hiato"" keep.\n\n""Gastrite"" keep.\n\n""HAS"" hypertension.\n\n""ITU"" urinary tract infection.\n\n""Cistos corticais simples"" maybe keep as ""Cistos corticais simples"". Also ""Cistos"" generic not needed.\n\n""Rim atrófico a D"" maybe not disease.\n\n""DRC agudizada"" maybe same as acute on chronic renal disease; but we already have specific LRA.\n\nOkay compile list:\n\n
+*hernia inguinal\n
+*insuficiência renal aguda\n
+*Lra Kdigo III - Pós Renal por Ureterolitiase + Ureterohidronefrose a Esquerda\n
+*IRC\n
+*nefrite intersticial por medicação\n
+*hernia de hiato\n
+*gastrite\n
+*uretolitiase obstrutiva esquerda\n
+*calcúlo urinário obstrutivo, rim único funcional\n
+*adenocarcinoma de próstata Gleason 8, metastático com acometimento ósseo\n
+*câncer de próstata? Already included.\n
+*has\n
+*itu\n
+*cistos corticais simples\n\nNeed to ensure no duplicate and formatting with 
+* and no line breaks: all separated by 
+*. Provide as a single line.\n\nCheck case: Use proper accents.\n\nMake list:\n\n
+*hernia inguinal 
+*insuficiência renal aguda 
+*Lra Kdigo III - Pós Renal por Ureterolitiase + Ureterohidronefrose a Esquerda 
+*IRC 
+*nefrite intersticial por medicação 
+*hernia de hiato 
+*gastrite 
+*uretolitiase obstrutiva esquerda 
+*cálculo urinário obstrutivo, rim único funcional 
+*adenocarcinoma de próstata Gleason 8, metastático com acometimento ósseo 
+*HAS 
+*ITU 
+*cistos corticais simples\n\nMake sure no extra spaces at beginning? It\'s okay.\n\nReturn only that string.', 'signature': ''}}, {'type': 'text', 'text': '
+*hernia inguinal 
+*insuficiência renal aguda 
+*Lra Kdigo III - Pós Renal por Ureterolitiase + Ureterohidronefrose a Esquerda 
+*IRC 
+*nefrite intersticial por medicação 
+*hernia de hiato 
+*gastrite 
+*uretolitiase obstrutiva esquerda 
+*cálculo urinário obstrutivo, rim único funcional 
+*adenocarcinoma de próstata Gleason 8, metastático com acometimento ósseo 
+*HAS 
+*ITU 
+*cistos corticais simples'}]"	"[[0.77, 1.0]]"
+"*Neoplasia de papila duodenal 
+*Infecção do Trato Urinário (ITU) ou  Sepse de foco urinário 
+*Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metástatico (C25) 
+*Artrite 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Neoplasia maligna do corpo do útero ou Adenocarcinoma do endométrio 
+*Doença de Parkinson, Parkinson 
+*Diabetes Mellitus (DM) 
+* Ateromatose artoiliaca 
+* Constipação "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to output list of diseases only, no duplicates, and when similar, bring the most complete. Use 
+* as separator and no line breaks. So single line with 
+* delimiter? The instruction: ""separa do por 
+* e sem quebra de linha"". Means separate each disease with 
+*, no line breaks.\n\nWe need to parse the text and extract disease names. List includes:\n\n- Neoplasia de papila duodenal (appears multiple times)\n- Infecção urinária\n- ITU (urinary tract infection) maybe duplicate of Infecção urinária, similar? We need most complete; ""Infecção urinária"" is more complete? ITU is abbreviation; probably same. Keep ""Infecção urinária"".\n- NEOPLASIA MALIGNA DO PANCREAS (C25) - also ""adenocarcinoma de pâncreas metastático"", ""adenocarcinoma ductal cabeça de pancreas"", ""CA de pâncreas avançado"". They are similar (pancreas cancer). Most complete perhaps ""adenocarcinoma de pâncreas metastático"" is specific. But also ""NEOPLASIA MALIGNA DO PANCREAS"" generic. The instruction: when diseases similar, bring the most complete. The most specific should be chosen. So for pancreas cancer, pick ""adenocarcinoma de pâncreas metastático"". Also ""adenocarcinoma ductal cabeça de pancreas"" is specific. Which is more complete? Maybe the metastatic one includes stage. Could include both? But they are similar disease (pancreatic adenocarcinoma). Choose the most complete: ""adenocarcinoma de pâncreas metastático"".\n\n- Neoplasia maligna do corpo do útero (uterus body malignant neoplasia). Also ""adenocarcinoma endometrioide"". Which is more complete? adenocarcinoma endometrioide is specific type of uterine cancer. Could be considered more complete. So choose ""adenocarcinoma endometrioide"".\n\n- Artrite (arthritis)\n\n- HAS (hipertensão arterial sistêmica) - hypertension\n\n- Sepse de foco urinário (sepsis of urinary focus) appears multiple times. Keep one.\n\n- Parkinson\n\n- DM (diabetes mellitus) - maybe include ""Diabetes mellitus""\n\n- Ateromatose aortoilíaca (atheromatosis aortoiliac) - atherosclerosis of aortoiliac.\n\n- Constipação (constipation)\n\n- Transfusão de CH hoje. That\'s not a disease, ignore.\n\n- ""sintoamticos"", ""urinária"", ""pélvicos"", ""TRANSFERENCIA PARA SEMI"", etc not diseases.\n\n- ""05/10/23 C25"" is just code.\n\nThus final list: Neoplasia de papila duodenal, Infecção urinária, adenocarcinoma de pâncreas metastático, adenocarcinoma endometrioide, Artrite, HAS, Sepse de foco urinário, Parkinson, Diabetes mellitus, Ateromatose aortoilíaca, Constipação\n\nNeed to separate with 
+* and no newline. So produce ""
+*Neoplasia de papila duodenal 
+*Infecção urinária 
+*adenocarcinoma de pâncreas metastático 
+*adenocarcinoma endometrioide 
+*Artrite 
+*HAS 
+*Sepse de foco urinário 
+*Parkinson 
+*Diabetes mellitus 
+*Ateromatose aortoilíaca 
+*Constipação"". Ensure no leading/trailing spaces? Likely okay.', 'signature': ''}}, {'type': 'text', 'text': '
+*Neoplasia de papila duodenal 
+*Infecção urinária 
+*adenocarcinoma de pâncreas metastático 
+*adenocarcinoma endometrioide 
+*Artrite 
+*HAS 
+*Sepse de foco urinário 
+*Parkinson 
+*Diabetes mellitus 
+*Ateromatose aortoilíaca 
+*Constipação'}]"	"[[0.91, 1.0]]"
+"*Insuficiência Renal Crônica Dialítico (IRCD) 
+*Insuficiência Cardiaca com Fração de Ejeção Reduzida (ICFER), 
+*Dislipidemia (DLP) 
+*Diabetes Mellitus tipo 2 (DM2) 
+*Artropatia de Charcot em membro inferior esquerdo (MIE) 
+* Pé diabético com ulcera extensa membro inferior esquerdo (MIE) 
+*Osteomielite crônica 
+*Transtornos de adaptação  
+* Melena (K92.1) 
+*Pangastrite enantemática leve com componente erosivo plano leve no antro 
+*Esofagite distal erosiva - Grau A de Los Angeles 
+*Bulboduodenite erosiva leve 
+*Esplenomegalia homogênea 
+*Lipomatose retroperitoneal 
+*Depressão 
+*Choque circulatório  
+*Anemia 
+*Disfagia, Disfagia orofaringea neurogenica moderada 
+*Infecção de Trato Urinário 
+*Obesidade Grau 2 
+*Púrpura Retiforme em membros superiores (MMSS) e memebros inferiores (MMII) 
+*Nefrolitíase 
+*Colelitíase 
+*Infarto Agudo do Miocardio (IAM) em 2021 
+*Linfedema Secundário à Erisipelas de Repetição 
+*Linfonodomegalias na raíz da coxa 
+*Linfangite  
+*Dermatite Ocre 
+*Sepse de foco cutâneo/ pulmonar 
+*Acidente Vascular Cerebral (AVC) prévio 
+*Ex-tabagista 
+*Retinopatia Diabética  
+*Neuropatia Diabética 
+*Hipotireoidismo 
+*Encefalopatia tóxico-metabólica 
+*Tromboembolismo Venoso (TEV) 
+*Ateromatose aortoilíaca e de ramos viscerais 
+*Erisipela crônica 
+*Hipercalemia Grave  
+*Sinovite 
+*Farmacodermia 
+*Insuficiência venosa periférica crônica 
+*Hipertensão Arterial Sistêmica (HAS)"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to parse instructions: Provide a list of diagnoses, not repeating similar ones. When diseases are similar, provide the most complete. The output should be just the list, separated by 
+* and no line breaks. So a single line with 
+* delimiters. No extra text.\n\nWe need to extract diseases from the given text, ignoring non-disease words. Need to avoid duplicates and similar (e.g., ""osteomielite crônica"" appears many times; choose the most complete like ""Osteomielite crônica - S. aureus"" maybe). Also ""anemia"", ""anemia sintomática"", ""anemia A/"", ""ANEMIA NE"". Choose most complete? Probably ""Anemia sintomática"" is more specific than plain anemia. Also ""choque circulatório"" appears many times; maybe just ""Choque circulatório - Cor anêmico - Hemorragia digestiva"" is most complete (includes cor anêmico, hemorragia digestiva). There\'s also ""Choque circulatório"" alone, but we pick the most detailed version.\n\nSimilarly ""diabetes mellitus"": there are ""DM"", ""DM2"", ""diabetes tipo 2 clássico"". Most complete: ""Diabetes mellitus tipo 2"". Might just use ""Diabetes mellitus tipo 2"". There is also ""diabética periférica"" maybe that\'s ""Neuropatia diabética periférica"". But we have separate ""Neuropatia diabetica"". The text includes ""Neuropatia Diabética Periférica"" and ""Neuropatia periférica"". We could combine into ""Neuropatia diabética periférica"". Also ""Retinopatia diabética"". There is ""Retinopatia Diabética"". Keep.\n\nList of distinct diseases:\n\n- Insuficiência renal crônica dialítica (DRC dialítica) maybe ""Doença renal crônica dialítica"". The most complete: ""Doença renal crônica dialítica"". Also ""IRC"" (insuficiência renal crônica), but we choose the dialysis stage version.\n\n- Osteomielite crônica - S. aureus (most complete includes organism)\n\n- Pé diabético com úlcera infeccionada (maybe ""Pé diabético com úlcera extensa"" or ""Pé diabético: Infecção de pele e partes moles complicada por osteomielite"". Choose comprehensive: ""Pé diabético com infecção de pele e partes moles complicada por osteomielite"". Might be lengthy but okay. Keep as ""Pé diabético com infecção de pele e partes moles complicada por osteomielite"".\n\n- Charcot artropatia: ""Artropatia de Charcot em MIE"" also ""Degeneração osteoarticular de Charcot nos pés"". Choose ""Artropatia de Charcot"". But more complete maybe ""Artropatia de Charcot em membro inferior"". We\'ll list ""Artropatia de Charcot"".\n\n- Dislipidemia\n\n- Transtorno de adaptação (maybe ""Transtorno de adaptação"").\n\n- Depressão\n\n- Anemia sintomática\n\n- Disfagia orofaringea (moderada). We have ""DISFAGIA OROFARINGEA MODERADA"" and also ""DISFAGIA OROFARÍNGEA LEVE"". Choose ""Disfagia orofaringea moderada"".\n\n- Anemia (covered by symptomatic).\n\n- Obesidade grau 2.\n\n- Púrpura retiforme\n\n- Nefrolitíase\n\n- HAS (hipertensão arterial sistêmica). ""HAS""\n\n- Ortostatismo\n\n- DAC (doença arterial coronariana) - ""Doença arterial coronariana"" with IAM in 2021; also ""DAC: IAM"". Choose ""Doença arterial coronariana com infarto agudo do miocárdio em 2021"".\n\n- AVC prévio\n\n- Esplenomegalia homogênea\n\n- Melena (K92.1 melena)\n\n- Hipertireoidismo? Actually hypothyroidism ""Hipotireoidismo"".\n\n- Insuficiência venosa periférica crônica\n\n- Erisipela (crônica). Provide ""Erisipela crônica"".\n\n- Linfadenopatia?? ""Linfonodomegalias"".\n\n- Retinopatia diabética\n\n- Diabete (already). Possibly ""Neuropatia diabética"". Include ""Neuropatia diabética periférica"" maybe.\n\n- Crise álgica de neuropatia diabética periférica (painful neuropathy). Already captured.\n\n- Trombose venosa profunda (TEV) appears as ""TEV"".\n\n- Apo que ""pneumonia""? not. ""Sepse de foco cutâneo/pulmonar"". So ""Sepse de foco cutâneo/pulmonar"".\n\n- Pneumonia? Not.\n\n- Encefalopatia tóxico-metabólica\n\n- Hipercalemia grave\n\n- Ateromatose aortoilíaca e de ramos viscerais (maybe atherosclerosis). Could list ""Ateromatose aortoilíaca"".\n\n- Fibroelástica? Not disease.\n\n- Lipomatose retroperitoneal\n\n- Bulboduodenite erosiva leve\n\n- Pangastrite enantematica (Pangastrite enantematica leve com componente erosivo).\n\n- Esófagite distal erosiva (esofagite).\n\n- Infecção de pele e partes moles (already part of foot infection). Might keep separate.\n\n- Infecção de pele e partes moles (general) but may be redundant with foot infection.\n\n- Farmacodermia\n\n- Cor anêmico (maybe descriptor of shock, but part of shock entry.\n\n- Hemorragia digestiva (maybe part of shock entry). Already in shock.\n\n- Cardiovascular: ""Cárdia preservada"" not disease.\n\n- Disfunção diastólica de grau (diastolic dysfunction). Could list ""Disfunção diastólica"".\n\n- Hipertensão pulmonar? Not.\n\n- DLP (dislipidemia) already.\n\n- DM2 (again).\n\n- DRC estágio G5D (but already in renal disease). Keep ""Doença renal crônica estágio G5D"".\n\nNow need to remove duplicates and similar. Provide each unique as most complete. Also need to separate by 
+*. No line breaks.\n\nLet\'s compile final list in Portuguese as given:\n\n- Doença renal crônica dialítica (DRC dialítica) (maybe include estágio G5D)\n- Osteomielite crônica - Staphylococcus aureus\n- Pé diabético com infecção de pele e partes moles complicada por osteomielite\n- Artropatia de Charcot\n- Dislipidemia\n- Transtorno de adaptação\n- Depressão\n- Anemia sintomática\n- Disfagia orofaringea moderada\n- Obesidade grau 2\n- Púrpura retiforme\n- Nefrolitíase\n- Hipertensão arterial sistêmica (HAS)\n- Ortostatismo\n- Doença arterial coronariana com infarto agudo do miocárdio em 2021\n- Acidente vascular cerebral prévio\n- Esplenomegalia homogênea\n- Melena\n- Hipotireoidismo\n- Insuficiência venosa periférica crônica\n- Erisipela crônica\n- Linfonodomegalias\n- Retinopatia diabética\n- Neuropatia diabética periférica\n- Trombose venosa profunda (TEV)\n- Sepse de foco cutâneo/pulmonar\n- Encefalopatia tóxico-metabólica\n- Hipercalemia grave\n- Ateromatose aortoilíaca e de ramos viscerais\n- Lipomatose retroperitoneal\n- Bulboduodenite erosiva leve\n- Pangastrite enantematica leve com componente erosivo\n- Esofagite distal erosiva\n- Farmacodermia\n- Disfunção diastólica de grau\n\nNow need to format separated by 
+*. The instruction: ""separa do por 
+* e sem quebra de linha"". So start with first item, then 
+* then second etc. No extra spaces? Could include spaces after 
+*? Not specified, but likely okay. Provide as single line.\n\nLet\'s produce.', 'signature': ''}}, {'type': 'text', 'text': 'Doença renal crônica dialítica (estágio G5D)
+*Osteomielite crônica - Staphylococcus aureus
+*Pé diabético com infecção de pele e partes moles complicada por osteomielite
+*Artropatia de Charcot
+*Dislipidemia
+*Transtorno de adaptação
+*Depressão
+*Anemia sintomática
+*Disfagia orofaringea moderada
+*Obesidade grau 2
+*Púrpura retiforme
+*Nefrolitíase
+*Hipertensão arterial sistêmica (HAS)
+*Ortostatismo
+*Doença arterial coronariana com infarto agudo do miocárdio em 2021
+*Acidente vascular cerebral prévio
+*Esplenomegalia homogênea
+*Melena
+*Hipotireoidismo
+*Insuficiência venosa periférica crônica
+*Erisipela crônica
+*Linfonodomegalias
+*Retinopatia diabética
+*Neuropatia diabética periférica
+*Trombose venosa profunda (TEV)
+*Sepse de foco cutâneo/pulmonar
+*Encefalopatia tóxico-metabólica
+*Hipercalemia grave
+*Ateromatose aortoilíaca e de ramos viscerais
+*Lipomatose retroperitoneal
+*Bulboduodenite erosiva leve
+*Pangastrite enantematica leve com componente erosivo
+*Esofagite distal erosiva
+*Farmacodermia
+*Disfunção diastólica de grau'}]"	"[[0.94, 0.77]]"
+"*Hipertensão Arterial Sistêmica (HAS) 
+*Varizes em Membros Inferior com úlcera, Úlcera Venosa em Membro Inferior direito 
+*Dermatite Ocre 
+* Tromboembolismo Pulmonar (TEP) 
+*Diabetes Mellitus (DM) 
+*Tabagismo "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'The user asks: ""A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por 
+* e sem quebra de linha)"". They provide a text with asterisks etc. We need to extract only disease names, not other words (like ""tabagismo"" maybe is a risk factor, but is it considered disease? It\'s a habit. Probably they want only disease diagnoses. List with 
+* separator, no line break. Also we must not repeat similar diagnoses; when similar, choose the most complete.\n\nLet\'s parse the input:\n\n""
+*HAS 
+*Varizes membros infer c/ulcera e inflam 
+*Dermatite Ocre + cicatriz relacionado a tratramento 
+*TEP 
+*DMansine 
+*Tabagismo 
+*has 
+*Lesão por adesivo 
+*Doença ulcera periférica 
+*has. 
+*DERMATITE OCRE. 
+*Dispensação 
+*CFelipe 
+*ÚLCURA VENOSA EM MEMBRO INFERIOR DIREITO.""\n\nPotential disease terms:\n\n- HAS (hipertensão arterial sistêmica) -> disease.\n- Varizes membros infer c/ulcera e inflam -> varizes (varicose veins) with ulcer and inflammation. Could be considered ""Varizes (com ulceração e inflamação)"".\n- Dermatite Ocre -> disease, also later repeated.\n- TEP -> tromboembolismo pulmonar, disease.\n- DMansine? Possibly ""DM"" diabetes? ""Mansine""? Not sure. Might be a typo not a disease. Could be ""DM"" diabetes mellitus? But ""Mansine"" unknown. Probably not a disease.\n- Tabagismo = smoking habit, not disease, skip.\n- Lesão por adesivo = adhesive injury, not disease.\n- Doença ulcera periférica = peripheral ulcer disease? This is similar to ulcerative disease in peripheral. Could be similar to ""ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO"" (venous ulcer in right lower limb). So we have multiple ulcer-related: Varizes with ulcer, Doença úlcera periférica, ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO. Choose most complete? Maybe ""ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO"" is most specific. Also varizes with ulcer is similar but less specific. So include only the most specific: ""ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO"". But do we also need ""Doença ulcera periférica""? That\'s similar but less specific, skip.\n\n- Dermatite Ocre appears twice (caps and lower). Choose one.\n\n- HAS appears multiple: choose one.\n\n- TEP appears.\n\nThus final list: HAS, Varizes membros inferiores com úlcera e inflamação? But we may include ""Varizes membros inferior com úlcera e inflamação"" but we already have venous ulcer; maybe varices is separate. We can include ""Varizes membros inferiores com úlcera e inflamação"". That is a diagnosis.\n\nBut perhaps they want to avoid overlapping: varizes with ulcer vs venous ulcer basically same. However venous ulcer is a manifestation of varicose veins; but they are similar. The instruction: ""não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa."" So we should decide which is more complete: ""Varizes membros infer c/ulcera e inflam"" vs ""ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO"". The latter is more specific location and etiological (venosa). Varizes with ulcer and inflammation is also specific but includes both varices and ulcer. Might be considered more complete. But the most specific is ""ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO"". However varizes may be separate. But they also both reference ulcer. I think they are similar; choose the most complete: ""Varizes membros inferiores com úlcera e inflamação"". That\'s probably most complete (covers varices and ulcer). So we include that only, not separate ulcer.\n\nNow compile list: HAS, Varizes membros inferiores com úlcera e inflamação, Dermatite Ocre, TEP.\n\nSeparate by 
+* no newline: ""
+*HAS
+*Varizes membros inferiores com úlcera e inflamação
+*Dermatite Ocre
+*TEP""\n\nCheck for any other disease: ""Doença ulcera periférica"" similar to varices ulcer; skip.\n\nThus output exactly that string.', 'signature': ''}}, {'type': 'text', 'text': '
+*HAS
+*Varizes membros inferiores com úlcera e inflamação
+*Dermatite Ocre
+*TEP'}]"	"[[1.0, 0.67]]"
+"*Anemia, Anemia Crônica 
+*Doença Renal Crônica Estágio G3 (DRC) 
+*Diabetes Mellitus Tipo 2 (DM2) 
+*Pielonefrite com Abcesso Renal à Direita, Pielonefrite complicado com abcesso à direita 
+*Lesão Renal Aguda (LRA) 
+*Ureterolitiase 
+*Infecção de Trato Urinário 
+*Obesidade 
+*Lesões de Pele  "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'The user wants a list of diagnoses (diseases) extracted from the text, not repeating similar ones, and when there are similar diseases, bring the most complete one. The format: separate by 
+* and no line breaks. Also no extra text. So we need to parse the input.\n\nInput includes many items, many repeats: ""ANEMIA CRÔNICA"", ""DRC ESTÁGIO G3"", ""Anemia"", ""DM tipo 2"", ""Pielonefrite complicada"", ""PIELONEFRITE COMPLICADA, ABCESSO RENAL D"", ""LRA"", ""Dm"", ""Pielonefrite complicada com abcesso ."", ""Anemia grave."", ""Bexiga"", ""Pielonefrite complicada - Abcesso renal a direita"", ""DM TIPO 2"", ""Pielonefrite complicada - abscesso renal a direita."", ""ANEMIA GRAVE"", ""PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE."", ""CFelipe"", ""OBESIDADE ."", ""ANEMIA"", ""DM2"", ""Ureterolitiase"", ""DM ."", ""Infecc do trato urinario de localiz NE ."", ""DMG"", ""DRC estágio G3"", ""Pielonefrite complicada - abscesso renal a direita + hidronefrose"", ""PIELONEFRITE COM ABSCESSO"", ""DM"", ""LESÕES DE PELE"", ""Pielonefrite complicada - abscesso renal a direita"", ""Infecc do trato urinario de localiz NE"", ""DRC"", ""Anemia em investigação"", ""OBESIDADE.""\n\nWe need to extract disease names only, not unrelated words (""LRA"", ""CFelipe"", ""LESÕES DE PELE"", ""Bexiga""? Bexiga is bladder but not a disease; maybe ""Bexiga"" is not disease. So we skip non-diseases.\n\nList of diseases: Anemia crônica, anemia grave, anemia (maybe same category), anemia em investigação – these are similar; need most complete: ""ANEMIA CRÔNICA"" maybe more specific than ""ANEMIA"". There is also ""Anemia grave"". Which is most complete? Possibly ""ANEMIA CRÔNICA"" is specific to chronic, but ""ANEMIA GRAVE"" denotes severity. The instruction: when diseases are similar, bring the most complete. I\'d interpret ""most comprehensive"" as the one with most detail (including stage, severity, complications). For anemia, we have ""ANEMIA CRÔNICA"", ""ANEMIA GRAVE"", ""ANEMIA"". The most complete might be ""ANEMIA CRÔNICA"" (includes type) and ""ANEMIA GRAVE"" includes severity. Which is more complete? Could combine? But list shouldn\'t repeat similar; we must choose one. Maybe pick ""ANEMIA CRÔNICA"" as it\'s specific type.\n\nNext: DRC estágio G3 - chronic kidney disease stage G3. Appear multiple times: ""DRC ESTÁGIO G3"", ""DRC estágio G3"", ""DRC"". So most complete: ""DRC ESTÁGIO G3"".\n\nDM tipo 2, DM TIPO 2, DM2, DM, DMG? DMG maybe diabetes mellitus gestacional? Could treat as diabetes mellitus type 2 is specific. So choose ""DM TIPO 2"" (or ""DM2""). Choose ""DM TIPO 2"".\n\nPielonefrite complicada with abscess etc: many variations. The most complete includes ""PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE"". That includes abscess and hydronephrosis. Also ""Pielonefrite complicada - abscesso renal a direita + hidronefrose"". Both similar. Choose most comprehensive: ""PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE"".\n\nUTI infection: ""Infecc do trato urinario de localiz NE"". That\'s urinary tract infection localized (maybe ""Infeção do trato urinário""). So include ""Infecção do trato urinário"".\n\nUreterolitiase: ""Ureterolitiase"". That\'s a disease: ureterolithiasis.\n\nObesidade: ""OBESIDADE"". That\'s a condition. Include.\n\nLesões de pele are not disease but condition; maybe not include.\n\n""Bexiga"" is organ not disease.\n\n""LRA"" unknown abbreviation; skip.\n\n""CFelipe"" not disease.\n\nThus final list: ANEMIA CRÔNICA 
+*DRC ESTÁGIO G3 
+*DM TIPO 2 
+*PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE 
+*INFEÇÃO DO TRATO URINÁRIO 
+*URETEROLITIASE 
+*OBESIDADE\n\nCheck spelling: use uppercase? input varied; we can use same uppercase for clarity.\n\nMake sure no line breaks.\n\nReturn exactly that separated by 
+*.', 'signature': ''}}, {'type': 'text', 'text': 'ANEMIA CRÔNICA
+*DRC ESTÁGIO G3
+*DM TIPO 2
+*PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE
+*INFECÇÃO DO TRATO URINÁRIO
+*URETEROLITIASE
+*OBESIDADE'}]"	"[[1.0, 0.78]]"
+"* Tromboembolismo Pulmonar (TEP) 
+* Broncopneumonia bacteriana nosocomial 
+* Empiema 
+* Diabetes Mellitus tipo 2 (DM2) insulino dependente, 
+* Infeccão de cateter central de inserção periférica (PICC) 
+* Hiponatremia 
+* Lesão Renal Aguda (LRA) revertida 
+* Obesidade 
+* Dor osteomuscular 
+* Hemorroidas (CID I84) 
+* Hipertensão Arterial Sistêmica (HAS) 
+* Pós-operatório tardio (POT) de gastroplastia redutora com fístula gástrica salivar 
+* Constipação"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'We need to extract diseases only, list them, no repeats, similar diseases keep most comprehensive. Separate with 
+* and no line breaks. So produce a single line like ""
+*Disease1
+*Disease2
+*...""\n\nWe must parse the input and find disease names. Many entries: TEP (likely ""Tromboembolismo pulmonar""? but TEP is possibly a disease). pneumonia, Broncopneumonia bacteriana com Empiema, Derrame pleural de contiguidade de coleção periesplenica, Pneumonia bacteriana nao classificada, Pneumonia Bacteriana, Pneumonia complicada com derrame pleural, DM2 (diabetes mellitus type 2) is disease, etc. Also ""DM"" (diabetes mellitus), ""Hiponatremia - DM mal controlado"" (hiponatremia is a condition). ""Cistos corticais bilaterais"" (cysts). ""LRA"" unknown. ""DECORTICAÇÃO PULMONAR"" is a procedure. ""CFelipe"" ignore. ""Obesidade"" disease. ""I84 - HEMORROIDAS"" disease. ""MYCOBACTERIUM TB NÃO DETECTADO"" means TB not detected; maybe not disease. ""HAS"" (hipertensão arterial sistêmica). ""constipação"" is condition. ""TAQUICARDIA SINUSAL"". ""Relação VD / VE preservada"" not disease.\n\nWe need not repeat similar. For similar (pneumonia) keep most complete: ""Broncopneumonia bacteriana com Empiema"" is more specific than ""Pneumonia bacteriana"". Also ""Pneumonia complicada com derrame pleural- EMPIEMA PLEURAL"" is similar but includes complication. Might decide we keep the most comprehensive: ""Broncopneumonia bacteriana com Empiema"" covers pneumonia, empyema. Also ""Pneumonia complicada com derrame pleural"" maybe distinct? Both have empyema. Empyema itself is a disease. So include ""Empiema pleural"". Also ""Derrame pleural de contiguidade de coleção periesplenica"" maybe specific pleural effusion. ""Derrame pleural pequeno"". Could keep ""Derrame pleural"". Also ""Pneumonia bacteriana nao classificada em outra parte"" maybe not needed if we have more specific. So list diseases:\n\n- Tromboembolismo pulmonar (TEP) (assuming TEP)\n- Broncopneumonia bacteriana com Empiema\n- Derrame pleural (including small, de contiguidade, etc)\n- Diabetes mellitus tipo 2 (DM2)\n- Diabetes mellitus insulino-dependente (DM insulino dependente) (could combine)\n- Hiponatremia\n- Cistos corticais bilaterais (cortical cysts) maybe not disease but structural anomaly; may include.\n- Obesidade\n- Hemorroidas\n- Hipertensão arterial sistêmica (HAS)\n- Constipação\n- Taquicardia sinusal\n- Fístula gástrica salivar (salivary gastric fistula)\n- Mycobacterium tuberculosis não detectado (maybe not disease)\n- Recidiva da febre - infecção PICC (infection of PICC line) maybe disease: ""Infecção de cateter PICC""\n- Decorticação pulmonar is procedure not disease.\n- Toracocentese not disease.\n\nWe also have ""Pneumonia bacteriana"" but covered.\n\nAlso ""Pneumonia bacteriana não classificada em outra parte"" not needed.\n\n""Empiema"" already covered.\n\n""Pulmonary empyema"" covered.\n\n""DM"" generic diabetes mellitus.\n\n""DM mal controlado"" same.\n\nNow compile list without repeats, most comprehensive items.\n\nNeed to separate by 
+*. No extra text.\n\nLet\'s compile:\n\n
+*Tromboembolismo pulmonar
+*Broncopneumonia bacteriana com Empiema
+*Derrame pleural
+*Diabetes mellitus tipo 2
+*Diabetes mellitus insulino-dependente
+*Hiponatremia
+*Cistos corticais bilaterais
+*Obesidade
+*Hemorroidas
+*Hipertensão arterial sistêmica
+*Constipação
+*Taquicardia sinusal
+*Fístula gástrica salivar
+*Infecção de cateter PICC\n\nCheck duplicates: diabetes forms; maybe combine as ""Diabetes mellitus"". Could keep as one generic: ""Diabetes mellitus"". But we have both type 2 and insulin dependent, maybe combine to generic. Most comprehensive: ""Diabetes mellitus"". We\'ll include that only.\n\nReplace the two entries with one.\n\nSo list:\n\n
+*Tromboembolismo pulmonar
+*Broncopneumonia bacteriana com Empiema
+*Derrame pleural
+*Diabetes mellitus
+*Hiponatremia
+*Cistos corticais bilaterais
+*Obesidade
+*Hemorroidas
+*Hipertensão arterial sistêmica
+*Constipação
+*Taquicardia sinusal
+*Fístula gástrica salivar
+*Infecção de cateter PICC\n\nMake sure no line breaks.', 'signature': ''}}, {'type': 'text', 'text': '
+*Tromboembolismo pulmonar
+*Broncopneumonia bacteriana com Empiema
+*Derrame pleural
+*Diabetes mellitus
+*Hiponatremia
+*Cistos corticais bilaterais
+*Obesidade
+*Hemorroidas
+*Hipertensão arterial sistêmica
+*Constipação
+*Taquicardia sinusal
+*Fístula gástrica salivar
+*Infecção de cateter PICC'}]"	"[[0.85, 0.85]]"
