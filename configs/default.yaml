@@ -285,8 +285,48 @@ lms:
       model: "sabia-4"
       api_key: ${env:MARITACA_API_KEY}
 
+  deepseekv32:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "deepseek.v3.2"
+
+  kimik25:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "moonshotai.kimi-k2.5"
+
+  kimik2-think:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "moonshot.kimi-k2-thinking"
+
+  glm47:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "zai.glm-4.7"
+
+  minimax21:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "minimax.minimax-m2.1"
+
 diagnostics:
   llms:
+    - deepseekv32
+    - kimik25
+    - kimik2-think
+    - glm47
+    - minimax21
     - nova_premier
     - nova_lite_2
     - claude_sonnet4_5
