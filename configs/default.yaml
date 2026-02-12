@@ -320,6 +320,13 @@ lms:
       credentials_profile_name: "default"
       model_id: "minimax.minimax-m2.1"
 
+  claude_opus46:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-opus-4-6-v1"
+
 diagnostics:
   llms:
     - deepseekv32
@@ -334,6 +341,7 @@ diagnostics:
     - claude_opus4
     - claude_opus41
     - claude_opus45
+    - claude_opus46
     - sonnet_3_7
     - sonnet_3_5
     - sonnet_3_5v2
