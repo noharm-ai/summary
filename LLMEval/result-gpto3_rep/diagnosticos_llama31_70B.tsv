@@ -1,0 +1,450 @@
+"GT"	"LLM"	"RESPONSES"
+"*Hipertensão Arterial Sistêmica (HAS) 
+*Doença Arterial Obstrutiva Periférica (DAOP) 
+*Diabetes Mellitus (DM) 
+*Insuficiência Cardíaca (IC) Perfil B 
+*Ateromatose em coronárias 
+*Infecção da ferida operatória 
+*Dislipidemia (DLP) 
+*Amputação transtibial em membro inferior direito (MID) 
+*Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente"	"*Ateromatose em coronárias 
+*Infecção da ferida operatória 
+*IC Perfil B 
+*DLP 
+*DM 
+*HAS"	"[[1.0, 0.67]]"
+"*Osteomielite 
+*Infecção de sítio cirúrgico (prótese de fêmur esquerdo) 
+*Dislipidemia (DLP)  
+*Carcinoma de Face 
+*Alzheimer "	"*Osteomielite NE 
+*Alzheimer 
+*Carcinoma de face 
+*Infecção de sítio cirurgico 
+*DLP 
+*DMansine 
+*INFECÇÃO DE SITIO CIRURGICO - FRATURA COLO FEMUR ESQUERDO 
+*OSTEOMIELITE DE FEMUR E SITIO CIRURGICO INFECTADO REABORDAGEM 
+*INFECÇÃO DE FERIDA OPERATÓRIA - FÊMUR ESQUERDO"	"[[0.56, 1.0]]"
+"*Transtorno conversivo 
+*Calcificações parietais nas artérias carótidas internas intracranianas ou Ateromatose difusa 
+*Bloqueio atrioventricular de 1º grau 
+*Choque septico de foco pulmonar 
+*Diabetes Mellitus (DM) tipo 2 
+*Doença Renal Crônica (DRC) agudizada KDIGO 3 
+*Espondilose dorsolombar  
+*Anemia Macrocítica, Anemia Crônica 
+*Epilepsia 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Gastrite 
+*Angiodisplasia de colon, Malformações vasculares do colon 
+*Doença diverticular não complicada do cólon direito 
+*Delirium hiperativo 
+*Meningite prévia 
+*Traumatismo Cranioencefálico (TCE) por queda da própria altura, Traumatismo Cranioencefálico (TCE) 
+*Hemorragia Digestiva Baixa (HDB) 
+*Disfagia Orofaringea 
+*Insuficiência Cardiaca (IC) compensada  
+*Sinais de microangiopatia / gliose  
+* Síndrome Demencial"	"*Transtorno conversivo 
+*Calcificações parietais nas artérias carótidas internas intracranianas 
+*Bloqueio A-V de 1º grau 
+*Sepse de foco a esclarecer 
+*Espondilose dorsal 
+*DM 
+*Sinais de ateromatose carotídea 
+*Choque Septico de Foco pulmonar 
+*Doença Renal Crônica Estágio G3 
+*MAL 
+*Anemia crônica 
+*Angiodisplasia 
+*Epilepsia 
+*Tiróide heterogênea 
+*Delirium hiperativo 
+*Doença diverticular não complicada do cólon direito 
+*Ateromatose difusa 
+*Cistos simples bilaterais 
+*Miocárdio 
+*Suspeito de quadro demencial com inicio precoce 
+*Doença Renal Crônica por depósitos de IgA 
+*Sindrome demencial 
+*Meningite 
+*TCE 
+*Queda de própria altura 
+*DISFAGIA OROFARÍNGEA 
+*Alteração volumétrica 
+*Alteração do relaxamento ventricular 
+*Malformação vascular com sinais de sangramento recente em cólon transverso 
+*IC COMPENSADA 
+*MAL ESTAR, FADIGA 
+*ANEMIA MACROCÍTICA 
+*Espondilose dorsolombar e sinais de coxoartrose bilateral 
+*Angiodisplasias dos cólons 
+*Sinais de microangiopatia / gliose"	"[[0.51, 0.86]]"
+"*Nasofaringite Aguda 
+*Pneumonia Bacteriana ou Broncopneumonia aspirativa 
+*Dermatite em membro superior esquerdo (MSE) 
+*Doença de Parkinson, Parkinson 
+*Derrame pleural   
+*Disfagia orofaringea 
+*Tromboembolismo pulmonar (TEP),  
+*Trombose venosa profunda (TVP) 
+*Espondilose torácica 
+*Adenoma na adrenal esquerda 
+*Ateromatose na aorta torácica e nos troncos supra-aórticos 
+* Deformidade do cotovelo 
+* Alterações degenerativas na coluna estudada"	"*NASOFARINGITE AGUDA 
+*PNEUMONIA BACTERIANA NAO CLASSIFICADA EM OUTRA PARTE 
+*Dermatite MSE 
+*D. Parkinson 
+*DISFAGIA OROFARÍNGEA 
+*PAC 
+*Cistos renais 
+*TVP 
+*TEP 
+*Espondilose torácica 
+*Infecção pulmonar 
+*Cistos renais Bosniak 1 e 2 
+*DEFORMIDADE COTOVELO 
+*Alterações degenerativas na coluna estudada 
+*Adenoma na adrenal esquerda 
+*Ateromatose na aorta torácica e nos troncos supra-aórticos 
+*BCP aspirativa 
+*Broncopneumonia"	"[[0.67, 0.92]]"
+"*Tromboembolismo pulmonar  (TEP) 
+*Asma,  
+*Obesidade Grau III 
+*Anemia Ferropriva Secundária a menotrorragia 
+*Síndrome Astênica  
+*Miomatose 
+*Insuficência Cardíaca (IC) 
+*Parada cardiorrespiratória (PCR) por hipóxia em 1999 
+*Hipertensão Arterial Sistêmica (HAS)"	"*TEP agudo - PESI I 
+*ASMA 
+*BRONQUITE 
+*TEP 
+*OBESIDADE 
+*Obesidade Grau III 
+*EMBOLIA PULMONAR 
+*Anemia ferropriva secundaria a menometrorragia 
+*Sindrome astenica 
+*Miomatose 
+*HAS 
+*Alterações degenerativas incipientes na coluna estudada 
+*Anemia 
+*IC 
+*PCR 
+*Hipóxia"	"[[0.56, 1.0]]"
+"*Epilepsia 
+*Disfagia Orofaringea 
+*Pneumonia Comunitária 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Dupla hemiparesia (grau IV D e III a E) 
+*Infecção Trato Urinário (ITU) comunitária 
+*Acidentes Vasculares Cerebrais prévios 
+*Lesão de Lábio e mordedura na região lateral e língua"	"*EPILEPSIA 
+*DISFAGIA OROFARÍNGEA 
+*Pneumonia Comunitária 
+*CRISE CONVULSIVA 
+*HAS 
+*Dupla hemiparesia 
+*Ataxia marcha"	"[[0.71, 0.62]]"
+"*Insuficência Mitral 
+*Fibrilação atrial Crônica (FA Crônica) 
+*Ateromatose incipiente 
+*Insuficiência Cardíaca (IC) Perfil B 
+*Artrose 
+*Acidente Vascular Cerebral Hemorrágico (AVCh) há 5 anos 
+*Disfunção Renal Aguda 
+*Osteoporose 
+* Alterações degenerativas da coluna vertebral 
+*Trombose Venosa Profunda em Membro Inferior Esquerdo (TVP em MIE) 
+*Pneumonia 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Varizes Calibrosas"	"*Dispnéia leve 
+*Insuficiência mitral 
+*Fibrilação atrial crônica 
+*Ateromatose incipiente 
+*Varizes calibrosas 
+*Hipertensão Arterial Sistêmica 
+*Artrose 
+*Disfunção renal aguda 
+*Osteoporose 
+*Alterações degenerativas da coluna vertebral 
+*Trombose Venosa Profunda 
+*Insuficiência cardíaca congestiva 
+*Pneumonia 
+*Miocardiopatia."	"[[0.86, 0.92]]"
+"*Hiponatremia 
+*Depressão 
+*Insufciência Cardiaca Perfil B,  
+*Asma 
+*Infeccão Trato Urinário (ITU) 
+*Dislipidemia (DLP) 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Disfunção diastólica do ventrículo esquerdo de grau II 
+*Hipertensão Pulmonar"	"*Hiponatremia 
+*DEPRESSÃO 
+*ASMA 
+*ITU 
+*INSUFICIENCIA CARDIACA 
+*DLP 
+*HAS 
+*Disfunção diastólica do ventrículo esquerdo de grau II 
+*Hipertensão pulmonar"	"[[1.0, 1.0]]"
+"* Desnutrição 
+* Carcinomatose Peritoneal 
+* Obstrucao intestinal pos-operatoria (K91.3) ou Abdome agudo obstrutivo 
+* Infeccão Trato Urinário (ITU) 
+* Tabagismo"	"*Desnutrido 
+*Carcinoma peritoneal seroso de alto grau ki-67 80% 
+*Carcinoma seroso de alto grau pT3b 
+*Obstrucao intestinal pos-operatoria 
+*Abdome agudo obstrutivo 
+*ITU 
+*Tabagismo 
+*Carcinomatose peritoneal"	"[[0.625, 1.0]]"
+"* Hipertensão Arterial Sistêmica (HAS) 
+*Pequena hérnia gástrica-hiatal 
+*Doença Obstrutiva Pulmonar Crônica (DPOC) exacerbado 
+*Sepse 
+*Espondilose dorsal 
+*Injúria Miocárdica Inflamatoria  
+*Insuficência Cardiaca Fração Ejeção Preservada (ICFEP),  
+*Pneumonia 
+*Dislipidemia (DLP) 
+*Sindrome Gripal (Sd Gripal) 
+* Ateromatose aórtica e coronariana  "	"*HAS 
+*Pequena hérnia gástrica-hiatal 
+*Cardiopatia 
+*TINOCA 
+*DPOC PNM 
+*Sepse 
+*Injuria miocardica aguda 
+*Ateromatose aórtica e coronariana 
+*Injúria Miocárdica Inflamatória 
+*Sd gripal 
+*Transtornos 
+*ICFEP 
+*Pneumonia NE 
+*DLP 
+*Espondilose dorsal 
+*PNM 
+*BRONCOESPASMO"	"[[0.65, 1.0]]"
+"*Hemoglobinopatia SS ou Anemia Falciforme (D57) 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Transtornos de Adaptação 
+*Abstinência de Opióide"	"*Hemoglobinopatia 
+*Anemia falciforme 
+*Hemoglobinopatia SS 
+*Abstinência de opioides 
+*Anemia Falciforme Crise Algica 
+*Dor 
+*Anemia 
+*HAS 
+*Anemia falciforme c/crise 
+*Transtornos de Adaptação"	"[[0.4, 1.0]]"
+"*Hernia Inguinal 
+*Insuficiência Renal Aguda (IRA) KDIGO 3 
+*Cálculo urinário obstrutivo 
+*Nefrite intersticial por medicamento 
+*Hérnia de Hiato 
+*Adenocarcinoma de Prostata Gleason 8 metástatico com acometimento ósseo 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Infecção do Trato Urinário (ITU) 
+*Doença Renal Crônica (DRC) agudizada com rim atrófico 
+* Gastrite "	"*hernia inguinal 
+*INSUFICIENCIA RENAL AGUDA 
+*Lra Kdigo III - Pós Renal por Ureterolitiase + Ureterohidronefrose a Esquerda 
+*DMansine 
+*IRC 
+*Nefrite intersticial por medicação 
+*Hérnia de Hiato 
+*Gastrite 
+*Uretrolitiase obstrutiva esquerda 
+*DRC agudizada 
+*Adenocarcinoma de prostata Gleason 8, metasático com acometimento osseo 
+*nefrolitiase 
+*Cistos corticais simples 
+*hematúria 
+*HAS 
+*Rim atrófico a D 
+*ITU"	"[[0.59, 1.0]]"
+"*Neoplasia de papila duodenal 
+*Infecção do Trato Urinário (ITU) ou  Sepse de foco urinário 
+*Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metástatico (C25) 
+*Artrite 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Neoplasia maligna do corpo do útero ou Adenocarcinoma do endométrio 
+*Doença de Parkinson, Parkinson 
+*Diabetes Mellitus (DM) 
+* Ateromatose artoiliaca 
+* Constipação "	"*Neoplasia de papila duodenal 
+*Infecção urinária 
+*Artrite 
+*Neoplasia maligna do corpo do útero 
+*adenocarcinoma de pâncreas metastático 
+*Sepse de foco urinário 
+*adenocarcinoma endometrioide 
+*Parkinson 
+*Adenocarcinoma ductal cabeça de pancreas 
+*DM 
+*Ateromatose aorotilíaca 
+*NEOPLASIA MALIGNA DO PANCREAS 
+*constipação"	"[[0.69, 0.9]]"
+"*Insuficiência Renal Crônica Dialítico (IRCD) 
+*Insuficiência Cardiaca com Fração de Ejeção Reduzida (ICFER), 
+*Dislipidemia (DLP) 
+*Diabetes Mellitus tipo 2 (DM2) 
+*Artropatia de Charcot em membro inferior esquerdo (MIE) 
+* Pé diabético com ulcera extensa membro inferior esquerdo (MIE) 
+*Osteomielite crônica 
+*Transtornos de adaptação  
+* Melena (K92.1) 
+*Pangastrite enantemática leve com componente erosivo plano leve no antro 
+*Esofagite distal erosiva - Grau A de Los Angeles 
+*Bulboduodenite erosiva leve 
+*Esplenomegalia homogênea 
+*Lipomatose retroperitoneal 
+*Depressão 
+*Choque circulatório  
+*Anemia 
+*Disfagia, Disfagia orofaringea neurogenica moderada 
+*Infecção de Trato Urinário 
+*Obesidade Grau 2 
+*Púrpura Retiforme em membros superiores (MMSS) e memebros inferiores (MMII) 
+*Nefrolitíase 
+*Colelitíase 
+*Infarto Agudo do Miocardio (IAM) em 2021 
+*Linfedema Secundário à Erisipelas de Repetição 
+*Linfonodomegalias na raíz da coxa 
+*Linfangite  
+*Dermatite Ocre 
+*Sepse de foco cutâneo/ pulmonar 
+*Acidente Vascular Cerebral (AVC) prévio 
+*Ex-tabagista 
+*Retinopatia Diabética  
+*Neuropatia Diabética 
+*Hipotireoidismo 
+*Encefalopatia tóxico-metabólica 
+*Tromboembolismo Venoso (TEV) 
+*Ateromatose aortoilíaca e de ramos viscerais 
+*Erisipela crônica 
+*Hipercalemia Grave  
+*Sinovite 
+*Farmacodermia 
+*Insuficiência venosa periférica crônica 
+*Hipertensão Arterial Sistêmica (HAS)"	"*Dislipidemia 
+*DM 
+*Artropatia de Charcot em MIE 
+*Transtornos de Adaptação 
+*Osteomielite crônica 
+*Pé Diabético: Infecção de Pele e Partes Moles Complicada por Osteomielite em Investigação 
+*Depressão 
+*Diabética Periférica 
+*CHOQUE CIRCULATÓRIO 
+*Adrenais: discoide à direita 
+*Pé diabetico com ulcera extensa MIE 
+*Anemia 
+*DISFAGIA 
+*ITU 
+*Obesidade Grau 2 
+*Charcot 
+*Púrpura retiforme em MMSS 
+*Nefrolitíase 
+*Pé Diabético 
+*Osteomielite em Investigação 
+*Choque circulatório, Cor anêmico 
+*Osteomielite crônica 
+*HAS 
+*Ortostatismo 
+*Osteomielite crônica - S. aureus 
+*Periférica 
+*DAC: IAM em 2021 ATC c/ 03 Stents 
+*Anemia sintomática 
+*MRC 12 Tosse produtiva deglutida FR 
+*DM2 
+*OSTEOMIELITE CRÔNICA- S aureus 
+*ULCERA INFECTADA PRÉ E 
+*Pangastrite enantemática leve 
+*Dislipidemia 
+*OSTEOMIELITE CRÔNICA- S aureus 
+*Choque Circulatório - Cor Anêmico 
+*IRC 
+*IRC DIALITICO 
+*DRC com osteomielite crônica em pé esquerdo 
+*DM 
+*ANEMIA A/ 
+*Degeneração osteoarticular de Charcot nos Pés Bilateral e Linfedema Secundário à Erisipelas de Repetição 
+*Linfonodomegalias na raíz da coxa 
+*Pé Diabético 
+*Púrpura retiforme em 
+*Choque circulatório 
+*DRC ESTÁGIO G5D DESDE 10/2022 
+*Erisipela 
+*Osteomielite crônica 
+*DIH 12/09/2023 
+*Anemia Sintomática 
+*dm 
+*Sepse de foco cutâneo/pulmonar 
+*CHOQUE CIRCULATÓRIO, COR ANÊMICO 
+*AVC prévio 
+*Esofagite distal erosiva - Grau A"	"[[0.43, 0.56]]"
+"*Hipertensão Arterial Sistêmica (HAS) 
+*Varizes em Membros Inferior com úlcera, Úlcera Venosa em Membro Inferior direito 
+*Dermatite Ocre 
+* Tromboembolismo Pulmonar (TEP) 
+*Diabetes Mellitus (DM) 
+*Tabagismo "	"*HAS 
+*Varizes membros inferiores com úlcera e inflamação 
+*Dermatite Ocre 
+*TEP 
+*DM 
+*Tabagismo 
+*Lesão por adesivo 
+*ÚLCERA VENOSA EM MEMBRO INFERIOR"	"[[0.75, 1.0]]"
+"*Anemia, Anemia Crônica 
+*Doença Renal Crônica Estágio G3 (DRC) 
+*Diabetes Mellitus Tipo 2 (DM2) 
+*Pielonefrite com Abcesso Renal à Direita, Pielonefrite complicado com abcesso à direita 
+*Lesão Renal Aguda (LRA) 
+*Ureterolitiase 
+*Infecção de Trato Urinário 
+*Obesidade 
+*Lesões de Pele  "	"*ANEMIA CRÔNICA 
+*DRC ESTÁGIO G3 
+*DM tipo 2 
+*PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE 
+*OBESIDADE 
+*Ureterolitiase 
+*LESÕES DE PELE"	"[[1.0, 0.78]]"
+"* Tromboembolismo Pulmonar (TEP) 
+* Broncopneumonia bacteriana nosocomial 
+* Empiema 
+* Diabetes Mellitus tipo 2 (DM2) insulino dependente, 
+* Infeccão de cateter central de inserção periférica (PICC) 
+* Hiponatremia 
+* Lesão Renal Aguda (LRA) revertida 
+* Obesidade 
+* Dor osteomuscular 
+* Hemorroidas (CID I84) 
+* Hipertensão Arterial Sistêmica (HAS) 
+* Pós-operatório tardio (POT) de gastroplastia redutora com fístula gástrica salivar 
+* Constipação"	"*Broncopneumonia bacteriana com Empiema 
+*Pneumonia complicada com derrame pleural- EMPIEMA PLEURAL À ESQ 
+*PNEUMONIA BACTERIANA 
+*Derrame pleural de contiguidade de coleção periesplenica 
+*DM2 
+*Fistula gástrica salivar 
+*Empiema 
+*Hiponatremia 
+*Cistos corticais bilaterais 
+*LRA 
+*DM insulino dependente 
+*DECORTICAÇÃO PULMONAR 
+*Obesidade 
+*Dor osteomuscular 
+*HEMORROIDAS 
+*TAQUICARDIA SINUSAL 
+*HAS 
+*constipação"	"[[0.61, 0.85]]"

@@ -1,0 +1,437 @@
+"GT"	"LLM"	"RESPONSES"
+"*Hipertensão Arterial Sistêmica (HAS) 
+*Doença Arterial Obstrutiva Periférica (DAOP) 
+*Diabetes Mellitus (DM) 
+*Insuficiência Cardíaca (IC) Perfil B 
+*Ateromatose em coronárias 
+*Infecção da ferida operatória 
+*Dislipidemia (DLP) 
+*Amputação transtibial em membro inferior direito (MID) 
+*Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': ""The user is asking me to extract only the diseases/conditions from the given list and present them as a diagnosis list, without repetition. When diseases are similar, I should keep the most complete one. The output should be separated by asterisks and no line breaks.\n\nLet me analyze the text:\n\n1. HAS - Hipertensão Arterial Sistêmica (disease)\n2. amputado MID (transtibial) - This is describing a patient status (amputee), not a disease\n3. DAOP - Doença Arterial Oclusiva Periférica (disease)\n4. DM - Diabetes Mellitus (disease)\n5. amputação transtibila em MID - This is a surgical procedure, not a disease\n6. DESCONFORTO RESPIRATÓRIO - SECUNDÁRIO A IC PERFIL B - Respiratory discomfort secondary to heart failure, this is a symptom/condition\n7. ? - Not a disease\n8. IC PERFIL B - Insuficiência Cardíaca Profile B (disease)\n9. amputação transtibial em MID - Surgical procedure\n10. Infecção da ferida operatória - Surgical wound infection (disease)\n11. IC Perfil - Insuficiência Cardíaca (incomplete)\n12. IC - Insuficiência Cardíaca (disease)\n13. Ateromatose em coronárias - Atheromatosis in coronaries (disease)\n14. IC Perfil B - Duplicate of #8\n15. Moderado derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente - Moderate bilateral pleural effusion with passive atelectasis (disease/condition)\n16. DLP - Dislipidemia (disease)\n\nDiseases to keep (most complete versions):\n- HAS\n\n\n- DM\n- DAOP\n- Insuficiência Cardíaca Perfil B (including symptoms)\n- Infecção da ferida operatória\n- Ateromatose em coronárias\n- Derrame pleural bilateral com atelectasia passiva\n- DLP\n\nI'll consolidate the list by removing duplicates and incomplete entries, ensuring the most comprehensive disease descriptions are captured. I've identified cardiovascular and metabolic conditions that require careful monitoring and potential intervention.\n\nKey findings include hypertension, diabetes, heart failure, and coronary artery disease, which are significant risk factors for broader health complications. The presence of a surgical site infection and pleural effusion adds complexity to the clinical picture.\n\nThese conditions suggest a complex medical history involving metabolic, cardiovascular, and potential infectious processes that need comprehensive medical evaluation and management.\n"", 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*HAS 
+*DM 
+*DAOP 
+*Insuficiência Cardíaca Perfil B 
+*Infecção da ferida operatória 
+*Ateromatose em coronárias 
+*Derrame pleural bilateral com atelectasia passiva do parênquima pulmonar adjacente 
+*DLP'}]"	"[[1.0, 0.89]]"
+"*Osteomielite 
+*Infecção de sítio cirúrgico (prótese de fêmur esquerdo) 
+*Dislipidemia (DLP)  
+*Carcinoma de Face 
+*Alzheimer "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'O usuário quer que eu extraia apenas as doenças do texto fornecido, sem repetições de diagnósticos similares, e quando houver doenças parecidas, trazer a mais completa. A formatação deve ser uma lista separadas por asterisco (
+*) sem quebra de linha.\n\nVou analisar as entradas:\n\n1. Osteomielite NE - Doença óssea\n2. Alzheimer - Doença neurodegenerativa\n3. Carcinoma de face - Câncer\n4. CLIQUE - Não é doença\n5. Infecção de sítio cirúrgico - Infecção\n6. DLP (Dislipidemia) - Doença metabólica\n7. DMansine - Não conheço como doença (pode ser erro de digitação ou não é doença)\n8. PRÓTESE FEMORAL ESQUERDA - Não é doença, é procedimento/dispositivo\n9. Osteomielite NE 16/10/23 M86 - Repetição de osteomielite\n10. Infecção de sítio cirúrgico - fratura colo fêmur esquerdo - Infecção (mais específica)\n11. Osteomielite de fêmur e sítio cirúrgico infectado - Mais completa\n12. Infecção de ferida operatória - fêmur esquerdo - Sinônimo de infecção de sítio cirúrgico\n\nAgora vou organizar, removendo repetições e deixando as mais completas:\n\n- Osteomielite (já aparece de forma completa em ""Osteomielite de fêmur e sítio cirúrgico"")\n\n\n- Alzheimer\n- Carcinoma de face\n- Infecção de sítio cirúrgico (ou Infecção de ferida operatória - são a mesma coisa)\n- Dislipidemia (DLP)\n- Osteomielite de fêmur e sito cirúrgico infectado\n\nConsiderando o pedido de unificar diagnósticos semelhantes e manter a descrição mais abrangente, vou condensar a lista. A entrada mais detalhada sobre osteomielite e infecção será priorizada, garantindo que tenhamos o diagnóstico mais completo possível. Percebo que preciso manter a integridade das informações originais, mas também atender ao critério de não repetição.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Osteomielite 
+*Alzheimer 
+*Carcinoma de face 
+*Infecção de sítio cirúrgico 
+*Dislipidemia 
+*Osteomielite de fêmur e sítio cirúrgico infectado'}]"	"[[0.83, 1.0]]"
+"*Transtorno conversivo 
+*Calcificações parietais nas artérias carótidas internas intracranianas ou Ateromatose difusa 
+*Bloqueio atrioventricular de 1º grau 
+*Choque septico de foco pulmonar 
+*Diabetes Mellitus (DM) tipo 2 
+*Doença Renal Crônica (DRC) agudizada KDIGO 3 
+*Espondilose dorsolombar  
+*Anemia Macrocítica, Anemia Crônica 
+*Epilepsia 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Gastrite 
+*Angiodisplasia de colon, Malformações vasculares do colon 
+*Doença diverticular não complicada do cólon direito 
+*Delirium hiperativo 
+*Meningite prévia 
+*Traumatismo Cranioencefálico (TCE) por queda da própria altura, Traumatismo Cranioencefálico (TCE) 
+*Hemorragia Digestiva Baixa (HDB) 
+*Disfagia Orofaringea 
+*Insuficiência Cardiaca (IC) compensada  
+*Sinais de microangiopatia / gliose  
+* Síndrome Demencial"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'O usuário está me pedindo para extrair uma lista de diagnósticos médicos de um texto. Preciso:\n1. Identificar apenas as doenças/condições médicas\n2. Não repetir diagnósticos similares\n3. Quando tiver doenças parecidas, trazer a mais completa\n4. Separar por asterisco (
+*) sem quebra de linha\n5. Não adicionar nada além da lista\n\nVou analisar o texto e extrair as doenças, consolidando as similares:\n\nAnalisando o texto:\n\n1. Transtorno conversivo\n2. Calcificações parietais nas artérias carótidas internas intracranianas (doença vascular)\n3. Bloqueio A-V de 1º grau (cardiovascular)\n4. Sepse de foco pulmonar\n5. Doença renal crônica (DRC)\n6. IRA KDIGO 3 (Insuficiência Renal Aguda)\n7. Espondilose dorsal\n8. Diabetes Mellitus (DM - aparece como não especificado, tipo 2)\n9. Ateromatose carotídea\n10. Malformações vasculares cólon\n11. Anemia macrocítica\n12. Epilepsia\n13. Gastrite\n14. Angiodisplasia\n15. Choque septicêmico de foco pulmonar\n16. Doença diverticular do cólon\n17. Meningite prévia\n18. Insuficiência renal crônica agudizada (IRC agudizada)\n\n\n19. Ateromatose difusa (inclusive coronariana)\n20. Cistos simples bilaterais (rins?)\n21. Miocárdio (parece ser referência à função cardíaca)\n22. Quadro demencial precoce (frontotemporal)\n23. Nefropatia por IgA\n24. Hipertensão arterial sistêmica (HAS)\n25. Disfagia orofaríngea\n26. Alteração volumétrica\n27. Tireóide heterogênea\n28. Alteração do relaxamento ventricular\n29. Queda de própria altura\n\nIdentifico mais condições médicas, incluindo problemas cardiovasculares, neurológicos e metabólicos. Consolidarei os diagnósticos semelhantes, buscando uma abordagem mais precisa e completa.\n\ncontinuando a análise, destacam-se dois pontos principais:\nCompilação detalhada de diagnósticos médicos, com foco em condições cardiovasculares, neurológicas e renais. Preparo para listagem padronizada usando asterisco como separador, garantindo clareza e organização das informações de saúde.\n\nA estratégia será mapear sistematicamente cada condição identificada, assegurando representação precisa do histórico clínico.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Transtorno conversivo 
+*Calcificações parietais nas artérias carótidas internas intracranianas 
+*Bloqueio atrioventricular de primeiro grau 
+*Sepse de foco pulmonar 
+*Doença renal crônica estágio G3 
+*Insuficiência renal aguda KDIGO 3 
+*Espondilose dorsolombar 
+*Coxoartrose bilateral 
+*Diabetes mellitus tipo 2 
+*Ateromatose carotídea difusa 
+*Malformações vasculares cólon 
+*Angiodisplasia cólon 
+*Anemia macrocítica por deficiência de B12 
+*Epilepsia 
+*Gastrite 
+*Choque septicêmico de foco pulmonar 
+*Doença diverticular não complicada do cólon direito 
+*Meningite prévia 
+*Insuficiência cardíaca compensada 
+*Nefropatia por depósitos de IgA 
+*Hipertensão arterial sistêmica 
+*Disfagia orofaríngea 
+*Hipotireoidismo 
+*Alteração do relaxamento ventricular 
+*Demência frontotemporal 
+*Lesão renal aguda em terapia renal substitutiva 
+*Delirium hiperativo 
+*Mal-estar inespecífico 
+*Microangiopatia cerebral 
+*Melena por sangramento gastrointestinal 
+*Edema agudo de pulmão'}]"	"[[0.61, 0.90]]"
+"*Nasofaringite Aguda 
+*Pneumonia Bacteriana ou Broncopneumonia aspirativa 
+*Dermatite em membro superior esquerdo (MSE) 
+*Doença de Parkinson, Parkinson 
+*Derrame pleural   
+*Disfagia orofaringea 
+*Tromboembolismo pulmonar (TEP),  
+*Trombose venosa profunda (TVP) 
+*Espondilose torácica 
+*Adenoma na adrenal esquerda 
+*Ateromatose na aorta torácica e nos troncos supra-aórticos 
+* Deformidade do cotovelo 
+* Alterações degenerativas na coluna estudada"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'O usuário quer que eu extraia apenas os diagnósticos desta lista, sem repetições, agrupando doenças similares e trazendo apenas as mais completas. Preciso formar um texto que seja apenas a lista de diagnósticos, separados por asterisco (
+*) e sem quebra de linha. Devo remover palavras que não são doenças como ""Us torácico extracardíaco"", ""Toracocentese"", ""10/10"", ""PAC PORT IV"", etc.\n\nVou analisar item por item:\n\n1. NASOFARINGITE AGUDA - doença\n2. PNEUMONIA BACTERIANA NÃO CLASSIFICADA EM OUTRA PARTE - doença\n3. Us torácico extracardíaco - NÃO É DOENÇA (é exame/procedimento)\n4. Dermatite MSE - doença\n5. D. Parkinson. - doença (doença de Parkinson)\n6. Pequeno derrame pleural à direita - achado/condição, mas vou considerar\n7. NEUMONIA BACTERIANA NÃO CLASSIFICADA EM OUTRA PARTE TVP,TEP DERRAME PLEURAL- > 10/10 - pneumonia bacteriana + TVP + TEP + derrame pleural (mais completa)\n8. DISFAGIA OROFARÍNGEA - doença\n9. Derrame pleural - doença (já citado acima, mas vou verificar)\n10. PNEUMONIA BACTERIANA NÃO CLASSIFICADA EM OUTRA PARTE. - repetido\n\n\n11. PAC - doença (Pneumonia Adquirida na Comunidade)\n12. Mínimo derrame pleural laminar à esquerda - achado, relacionado a derrame pleural\n13. PNM BACTERIANA + TEP + TVP MID - PNM bacteriana + tromboembolismo\n14. BCP aspirativa - Broncopneumonia aspirativa\n15. PNEUMONIA BACTERIANA NÃO CLASSIFICADA EM OUTRA PARTE . - repetido\n16. PNEUMONIA BACTERIANA - doença\n17. PNEUMONIA BACTERIANA NÃO CLASSIFICADA EM OUTRA - doença\n\nIdentifico padrão de repetições significativas de pneumonia bacteriana em diferentes formulações, exigindo consolidação cuidadosa para evitar redundâncias e garantir precisão diagnóstica. Seguirei analisando os próximos itens para mapear completamente a lista de condições médicas.\n\nTromboembolismo venoso e pneumonia são condições críticas que preciso considerar com atenção detalhada, mapeando suas possíveis variações e implicações clínicas. A estratégia será seleccionar a descrição mais abrangente e representativa de cada condição.\n\nConfirmo a especificidade de ""tromboembolismo venoso em membro inferior direito"" como apresentação mais completa. Manterei também a menção a cistos renais e espondilose torácica, que representam achados relevantes sem redundância.\n\nDestaco a importância de registrar pneumonia bacteriana, derrame pleural e tromboembolismo venoso como condições médicas significativas, agrupando-as de forma sistemática e precisa.\n\nObservo variações de apresentação clínica que não alteram fundamentalmente o diagnóstico, como ""derrame pleural laminar mínimo"", mantendo a essência de cada condição médica identificada.\n\nContinuarei organizando as informações de saúde de forma padronizada e concisa.\n\nDetectei um padrão de pneumonia bacteriana em diferentes contextos, incluindo apresentações complicadas com tromboembolismo pulmonar, derrame pleural e condições associadas. A estratégia será simplificar e agrupar os diagnósticos mais representativos, evitando redundâncias.\n\nOs principais diagnósticos a serem consolidados incluem pneumonia bacteriana, derrame pleural, tromboembolismo pulmonar e venoso, doença de Parkinson e condições relacionadas à deglutição e infecções pulmonares específicas.\n\nVou organizar os diagnósticos de forma sistemática, eliminando repetições e agrupando condições semelhantes para uma apresentação mais clara e objetiva.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*NASOFARINGITE AGUDA (RESFRIADO COMUM) 
+*PNEUMONIA BACTERIANA NÃO CLASSIFICADA EM OUTRA PARTE ( associada a TVP, TEP e DERRAME PLEURAL ) 
+*DERMATITE MSE 
+*DOENÇA DE PARKINSON ( avança ) 
+*DERRAME PLEURAL ( laminar mínimo ) 
+*TROMBOEMBOLISMO VENOSO EM MEMBRO INFERIOR DIREITO ( TVP MID ) 
+*TROMBOEMBOLISMO PULMONAR ( TEP com infarto pulmonar ) 
+*Disfagia orofaríngea 
+*Broncopneumonia aspirativa (BCP) 
+*Pneumonia adquirida na comunidade (PAC PORT IV) 
+*Infecção pulmonar 
+*Cistos renais (Bosniak 1 e 2) 
+*Espondilose torácica 
+*Deformidade de cotovelo 
+*Adenoma na adrenal esquerda 
+*Ateromatose na aorta torácica e troncos supra-aórticos 
+*Alterações degenerativas na coluna vertebral'}]"	"[[0.76, 1.0]]"
+"*Tromboembolismo pulmonar  (TEP) 
+*Asma,  
+*Obesidade Grau III 
+*Anemia Ferropriva Secundária a menotrorragia 
+*Síndrome Astênica  
+*Miomatose 
+*Insuficência Cardíaca (IC) 
+*Parada cardiorrespiratória (PCR) por hipóxia em 1999 
+*Hipertensão Arterial Sistêmica (HAS)"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': ""The user is asking me to extract only the diseases/diagnoses from the given text and present them as a list. They want:\n1. No repeated diagnoses or similar ones\n2. When diseases are similar, keep the most complete one\n3. Only cite diseases (no other words)\n4. No extra text, just the list\n5. Separate with 
+* and no line breaks\n\nLet me analyze the text and extract all diseases:\n\nDiseases I can identify:\n- TEP (Tromboembolismo Pulmonar/Pulmonary Embolism) - multiple mentions\n- ASMA (Asthma)\n- BRONQUITE (Bronchitis)\n- OBESIDADE (Obesity) - including Obesidade Grau III (Grade III)\n- EMBOLIA PULMONAR (Pulmonary Emboliosis)\n- Anemia ferropriva secundaria a menometrorragia (Iron deficiency anemia secondary to menometrorrhagia)\n- Sindrome astenica ae (Asthenic syndrome?)\n- BRONQUITE CRONICA (Chronic bronchitis)\n- Miomatosis (Myomatosis)\n- HAS (Hipertensão Arterial Sistêmica/Systemic Arterial Hypertension)\n- Alterações degenerativas incipientes na coluna estudada (Incipient degenerative changes in the studied spine)\n- Anemia (Anemia)\n- IC (Insufeência Cardíaca/Heart Failure)\n- PCR (Parada Cardiorrespiratória/Cardiorespiratory Arrest)\n\nNow, consolidating similar ones:\n- TEP, EMBOLIA PULMONAR = same thing → keep the most complete: TEP Submaciço: Segmentar Bilateral - PESI 95 Classe III: Intermediário - Bova 5 Classe III: Alto Risco\n\n\n- ASMA, Asma Grave → keep Asma Grave (more complete)\n- BRONQUITE, BRONQUITE CRONICA → keep BRONQUITE CRONICA\n- OBESIDADE, Obesidade Grau III → keep Obesidade Grau III\n- Anemia ferropriva secundaria a menometrorragia, Anemia → keep Anemia ferropriva secundaria a menometrorrhagia\n\nI'll analyze the additional diagnoses, focusing on consolidating similar medical conditions. The goal is to create a comprehensive list that captures the most significant and complete medical information from the original text.\n\nKey diagnoses include:\n- TEP Submaciço: Segmentar Bilateral - PESI 95 Classe III: Intermediário - Bova 5 Classe III: Alto Risco\n- Obesidade Grau III\n- Asma Grave\n- BRONQUITE CRONICA\n- Anemia ferropriva secundaria a menometrorragia\n- Miomatosis\n- HAS\n- Sindrome astenica ae\n- Alterações degenerativas incipientes na coluna estudada\n- IC\n- PCR\n\nThe list reflects complex medical conditions with varying degrees of severity, suggesting a comprehensive medical profile of the patient.\n\nI'll carefully format each disease/condition consistently, using the original terminologies and grading to maintain precision. The approach requires distinguishing between specific and general medical descriptors while preserving clinical terminology.\n\nThe standardized list removes redundancy, selecting the most comprehensive medical representations from the original entries. I've consolidated similar conditions like TEP Submaciço and identified the most informative diagnostic descriptions.\n\nFinal disease list highlights key medical conditions with their most precise clinical characterizations, ensuring diagnostic clarity and comprehensive medical documentation.\n"", 'signature': ''}}, {'type': 'text', 'text': '\n\nTEP Submaciço: Segmentar Bilateral - PESI 95 Classe III: Intermediário - Bova 5 Classe III: Alto Risco 
+* Obesidade Grau III 
+* Asma Grave 
+* Bronquite Crônica 
+* Anemia ferropriva secundária a menometrorragia 
+* Miomatose 
+* Hipertensão Arterial Sistêmica (HAS) 
+* Síndrome astênica 
+* Alterações degenerativas incipientes na coluna 
+* Insuficiência Cardíaca (IC) 
+* Parada Cardiorrespiratória (PCR)'}]"	"[[0.82, 1.0]]"
+"*Epilepsia 
+*Disfagia Orofaringea 
+*Pneumonia Comunitária 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Dupla hemiparesia (grau IV D e III a E) 
+*Infecção Trato Urinário (ITU) comunitária 
+*Acidentes Vasculares Cerebrais prévios 
+*Lesão de Lábio e mordedura na região lateral e língua"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'The user is asking me to extract only diseases from a medical text in Portuguese, removing duplicates and keeping only the most complete diagnoses when similar ones exist. I need to separate them by asterisks and not add any extra text or line breaks.\n\nLet me analyze the text and identify the diseases:\n\n1. ""Primeira Crise epiléptica"" / ""Crise epiléptica"" / ""CRISE CONVULSIVA"" / ""CRISE EPILÉPTICA"" / ""1ª crise epiléptica"" → This is essentially the same thing - epileptic seizure/convulsion. I should keep the most complete form.\n\n2. ""Pneumonia Comunitária"" / ""Pneumonia"" / ""Pneumonia + Itu comunitária"" → Community-acquired pneumonia. Keep the complete form ""Pneumonia Comunitária"".\n\n3. ""DISFAGIA OROFARÍNGEA"" / ""HAS"" - These are medical conditions (oropharyngeal dysphagia and hypertension). They should be included.\n\n4. ""EPILEPSIA"" - Epilepsy (separate from a seizure itself).\n\n5. ""AVCs prévios"" / ""Dupla hemiparesia"" - Previous strokes / double hemiparesis.\n\n6. ""Transtornos"" - This is too vague, it\'s just ""disorders"".\n\n7. ""CATETERISMO DE ALIVIO"" - This is a procedure, not a disease.\n\n8. ""Ataxia marcha"" - Gait ataxia.\n\nThe user said to NOT include things that aren\'t diseases. Let me reconsider:\n- ""Transtornos"" is too vague and not a specific disease\n- ""CATETERISMO DE ALIVIO"" is a procedure\n- ""HAS"" is hypertension (a disease)\n\n\n- ""DISFAGIA OROFARÍNGEA"" is a condition\n\nI\'m focusing on the core medical conditions. ""Disfagia Orofaríngea"" represents a specific functional impairment related to swallowing, while ""HAS"" stands for Hypertension, a clear medical diagnosis. The goal is to extract precise, identifiable medical conditions without including vague descriptions or procedural interventions.\n\nThe most comprehensive diagnostic terms emerge as:\n
+* Pneumonia Comunitária\n
+* Crise Epiléptica\n
+* Epilepsia\n
+* Hipertensão Arterial Sistêmica\n
+* Disfagia Orofaríngea\n
+* Acidente Vascular Cerebral\n
+* Ataxia\n\nCareful review reveals subtle distinctions between crises and epilepsy, requiring nuanced medical interpretation.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Pneumonia Comunitária 
+*Crise Epiléptica 
+*Epilepsia 
+*Hipertensão Arterial Sistêmica 
+*Disfagia Orofaríngea 
+*Acidente Vascular Cerebral 
+*Ataxia'}]"	"[[0.71, 0.62]]"
+"*Insuficência Mitral 
+*Fibrilação atrial Crônica (FA Crônica) 
+*Ateromatose incipiente 
+*Insuficiência Cardíaca (IC) Perfil B 
+*Artrose 
+*Acidente Vascular Cerebral Hemorrágico (AVCh) há 5 anos 
+*Disfunção Renal Aguda 
+*Osteoporose 
+* Alterações degenerativas da coluna vertebral 
+*Trombose Venosa Profunda em Membro Inferior Esquerdo (TVP em MIE) 
+*Pneumonia 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Varizes Calibrosas"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': ""The user is asking me to extract diagnoses from a clinical/text and present them as a list. The rules are:\n1. Do not repeat similar diagnoses - when diseases are similar, bring the most complete one\n2. Only cite diseases/medical conditions (not other words)\n3. No extra content - only the list\n4. Separate with 
+* and no line breaks\n\nLet me analyze the text and extract all diagnoses:\n\n1. Dispnéia leve - symptom, not a diagnosis/disease\n2. Insuf mitral - Insuficiência mitral (Mitral insufficiency)\n3. FA com ARV - Fibrilação atrial com resposta ventricular acelerada\n4. Fibrilação atrial crônica - Chronic atrial fibrillation\n5. Ateromatose incipiente - Incipient atheromatosis\n6. IC perfil - Insuficiência cardíaca perfil (incomplete)\n7. Fibrilação atrial permanente - Permanent atrial fibrillation\n8. Artrose - Osteoarthritis\n9. IC PERFIL B - Insuficiência cardíaca perfil B\n10. Varizes calibrosas - Caliberous varicose veins\n11. HAS - Hipertensão arterial sistêmica (systemic arterial hypertension)\n12. Disfunção renal aguda - Acute renal dysfunction\n13. MCP - Doença mitral pura (mitral valve prolapse) or another abbreviation\n14. Osteoporose - Osteoporosis\n\n\n15. Alterações degenerativas da coluna vertebral - Degenerative column changes\n16. TVP em MIE RAM - Trombose venosa profunda em membro inferior direito (DVT)\n17. Insuf cardiaca congestiva - Insuficiência cardíaca congestiva (CHF)\n18. Pneumonia - Pneumonia\n19. IC descompensada perfil B - Decompensated heart failure profile B\n20. Bundle - Bundle branch block?\n\nI'll focus on extracting the most clinically significant diagnoses, noting variations and consolidating similar conditions. The key is to identify unique medical conditions while avoiding redundant entries. Some abbreviations require careful interpretation to ensure accurate representation of the patient's medical profile.\n\nI'll carefully compile precise medical terms, maintaining abbreviation consistency and omitting non-diagnostic clinical descriptions. The goal is to create a concise, accurate list of diagnosed conditions.\n\nThe list reflects multiple interrelated cardiovascular and systemic health issues, highlighting the complexity of potential clinical presentations. Specific conditions like mitral insufficiency, atrial fibrillation variants, and cardiac profiles reveal nuanced diagnostic details.\n\nKey observations include progressive cardiovascular complications involving structural heart disease, rhythm disturbances, and systemic vascular conditions. The medical profile suggests intricatecardiac and peripheral vascular pathology.\n\nThe sequence demonstrates interconnected cardiovascular and musculoskeletal disorders, revealing a comprehensive clinical picture of potential systemic health challenges.\n\nI notice the medical conditions progressively document multiple health issues, focusing on cardiac, vascular, and degenerative conditions. The list aims to consolidate and eliminate duplicate diagnoses while maintaining diagnostic precision.\n\nThe consolidation process involves carefully comparing similar medical terms and abbreviations, ensuring no critical information is lost during the review. Systematic elimination helps streamline the medical documentation.\n\nKey actions include:\n- Preserving consistent medical terminology\n- Removing redundant entries\n- Maintaining original abbreviations\n- Organizing conditions by category or severity\n\nThe cardiovascular conditions reveal complex heart-related pathologies, involving valve dysfunction, rhythm irregularities, and pressure-related complications. Musculoskeletal and degenerative issues complement the cardiovascular profile, suggesting a comprehensive patient assessment.\n"", 'signature': ''}}, {'type': 'text', 'text': '\n\nDispnéia leve 
+* Insuficiência mitral 
+* Fibrilação atrial crônica 
+* Ateromatose incipiente 
+* Insuficiência cardíaca perfil B 
+* Fibrilação atrial permanente 
+* Artrose 
+* Varizes calibrosas 
+* Hipertensão arterial sistêmica 
+* Disfunção renal aguda 
+* Doença do tecido conectivo 
+* Osteoporose 
+* Alterações degenerativas da coluna vertebral 
+* Trombose venosa profunda em membro inferior direito Insuficiência cardíaca congestiva 
+* Pneumonia 
+* Insuficiência cardíaca descompensada perfil B 
+* Bloqueio de ramo.'}]"	"[[0.65, 0.85]]"
+"*Hiponatremia 
+*Depressão 
+*Insufciência Cardiaca Perfil B,  
+*Asma 
+*Infeccão Trato Urinário (ITU) 
+*Dislipidemia (DLP) 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Disfunção diastólica do ventrículo esquerdo de grau II 
+*Hipertensão Pulmonar"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'O usuário quer uma lista de diagnósticos médicos, sem repetições e consolidando diagnósticos similares. Preciso extrair apenas as doenças do texto e formatar como solicitado.\n\nVou analisar o texto:\n- ""Contratilidade miocárdica preservada"" - NÃO é doença, é um achado/normalidade\n- ""Hiponatremia"" - DOENÇA (distúrbio eletrolítico)\n- ""DEPRESSÃO"" - DOENÇA\n- ""IC FEp."" - DOENÇA (Insuficiência Cardíaca com Fração de Ejeção Preservada)\n- ""IC PERFIL B"" - DOENÇA (Insuficiência Cardíaca - perfil B)\n- ""ASMA"" - DOENÇA\n- ""ITU"" - DOENÇA (Infecção do Trato Urinário)\n- ""INSUFICIENCIA CARDIACA"" - DOENÇA\n- ""DLP"" - DOENÇA (Dislipidemia)\n- ""HAS"" - DOENÇA (Hipertensão Arterial Sistêmica)\n- ""Disfunção diastólica do ventrículo esquerdo de grau II"" - DOENÇA\n- ""Hipertensão pulmonar (PSAP= 44 mmHg)"" - DOENÇA\n- ""IC DIREITA"" - DOENÇA (Insuficiência Cardíaca Direita)\n\nAgora preciso consolidar diagnósticos similares:\n- IC FEp, IC PERFIL B, INSUFICIENCIA CARDIACA, ICFEp PERFIL B, IC DIREITA, IC PERFIL B - todos referem-se à Insuficiência Cardiáca, então devo usar ""Insuficiência Cardíaca"" que é o termo mais completo\n\n- ASMA aparece 2x - compto uma vez\n\n\nIdentifico padrões de consolidação para evitar redundâncias nos diagnósticos, selecionando os termos mais abrangentes e representativos de cada condição médica.\n\nHipertensão arterial sistêmica e pulmonar representam condições distintas que devem ser mantidas separadamente. Cada distúrbio possui características específicas e impactos diferentes no sistema cardiovascular.\n\nA lista final inclui distúrbios metabólicos, condição pulmonar obstrutiva e alterações cardiovasculares, com Disfunção diastólica grau II já contemplada no termo geral de Insuficiência Cardíaca.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Hiponatremia 
+*Depressão 
+*Insuficiência Cardíaca 
+*Asma 
+*Infecção do Trato Urinário 
+*Dislipidemia 
+*Hipertensão Arterial Sistêmica 
+*Hipertensão Pulmonar'}]"	"[[1.0, 0.89]]"
+"* Desnutrição 
+* Carcinomatose Peritoneal 
+* Obstrucao intestinal pos-operatoria (K91.3) ou Abdome agudo obstrutivo 
+* Infeccão Trato Urinário (ITU) 
+* Tabagismo"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'The user is asking me to extract only the diseases from a text in Portuguese and present them as a list, without duplicating similar diagnoses. When diseases are similar, I should include the most complete one. They want the format to be separated by 
+* with no line breaks.\n\nLet me analyze the text and extract only the diseases/conditions:\n\n1. ""Desnutrido"" - Malnourished (this is a nutritional condition, not exactly a disease but a condition)\n2. ""Carcinoma peritoneal seroso de alto grau ki-67 80%"" - High-grade serous peritoneal carcinoma, ki-67 80%\n3. ""Carcinoma seroso de alto grau pT3b"" - High-grade serous carcinoma pT3b\n4. ""Cirurgia"" - Surgery (this is a procedure, not a disease)\n5. ""Carcinoma seroso de alto grau 1º de peritonio"" - High-grade serous carcinoma of peritoneum\n6. ""Obstrucao intestinal pos-operatoria"" - Post-operative intestinal obstruction\n7. ""Abdome agudo obstrutivo (aderência)"" - Acute obstructive abdomen (adhesion)\n8. ""ITU"" - UTI - Urinary tract infection\n9. ""Tabagismo"" - Smoking (this is a habit/risk factor, not a disease)\n10. ""Surpote clinico"" - Clinical support (this seems to be a misspelling or incomplete term)\n11. ""K913 - K91.3 Obstrucao intestinal pos-operatoria"" - K91.3 Post-operative intestinal obstruction (this is a diagnosis code)\n12. ""Carcinomatose peritoneal"" - Peritoneal carcinomatosis\n13. ""CA PERITONEO"" - CA Peritoneum (cancer)\n14. ""abdome agudo obstrutivo (aderência)"" - Acute obstructive abdomen (adhesion)\n\n\n15. ""Obstrucao intestinal pos-operatoria - Abdome agudo obstrutivo (aderência)"" - Post-operative intestinal obstruction - Acute obstructive abdomen (adhesion)\n\nI notice some overlapping diagnoses in the text. Post-operative intestinal obstruction and acute obstructive abdomen appear multiple times, indicating potential redundancy. The key distinct diagnoses seem to be high-grade serous carcinoma, peritoneal carcinomatosis, and urinary tract infection. I\'ll need to carefully consolidate these to create a comprehensive yet concise list of medical conditions.\n\nFor the malignancies, I\'ll include both high-grade serous carcinoma variants as they represent different aspects of the disease process. The urinary tract infection requires precise inclusion based on explicit notation. The nutritional status (malnourished) provides important clinical context. Surgical procedures and care support are descriptive notes rather than core diagnoses.\n\nThe key considerations involve ensuring comprehensive yet non-redundant categorization, capturing both the primary pathology and associated clinical conditions. Surgical interventions and care context help provide a holistic understanding of the patient\'s medical scenario.\n\nI\'m combining similar disease states - specifically the abdominal obstruction instances - to streamline diagnostic representation. The approach prioritizes clarity and conciseness while preserving essential clinical information about the patient\'s condition.\n\nThe resulting diagnostic list will systematically group related medical elements, presenting a clear clinical overview that highlights the most significant physiological challenges and clinical support needs.\n\nThe key diagnostic categories emerge as malignancies (primarily high-grade serous carcinoma involving peritoneal regions) and obstruction-related complications, with nutritional status also noted as a significant clinical factor.\n\nI\'ve combined similar diagnostic descriptions, selecting the most comprehensive version for each condition. The final list reflects three primary medical concerns: high-grade serous carcinoma, peritoneal carcinomatosis, and post-operative intestinal obstruction, alongside the patient\'s nutritional compromise.\n\nThe diagnostic progression reveals a complex clinical picture, with malignancy and post-surgical complications taking precedence in the presentation. Each diagnostic term provides incremental context about the patient\'s underlying health challenges.\n\nKey diagnostic categories include malignant conditions involving peritoneal and serous carcinomas, with specific attention to staging parameters like pT3b and proliferative markers such as ki-67. The patient\'s clinical status is further characterized by nutritional compromise and multiple post-surgical abdominal complications.\n\nThe diagnostic hierarchy prioritizes comprehensive disease descriptors, integrating anatomical, histological, and proliferative characteristics while avoiding redundant terminological representation.\n\nSystematic classification reveals interconnected pathological conditions centered on high-grade serous carcinomas, peritoneal involvement, and obstructive abdominal events requiring surgical intervention.\n\nThe diagnostic journey highlights complex medical progression: initial malignancy, surgical management, and subsequent complications including peritoneal carcinomatosis and intestinal obstruction. Multiple hospitalizations and persistent cancer-related challenges characterize the clinical trajectory.\n\nKey medical events span from 2021 diagnosis through ongoing treatment, with surgical procedures and cancer progression marking critical intervention points.\n\nThe comprehensive diagnostic summary captures interconnected medical conditions, prioritizing disease characterization while acknowledging underlying nutritional and physiological factors.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Carcinoma peritoneal seroso de alto grau ki-67 80% 
+*Carcinomatose peritoneal 
+*Obstrução intestinal pós-operatória 
+*Abdome agudo obstrutivo por adesão 
+*Infecção do trato urinário 
+*Desnutrido'}]"	"[[0.67, 0.8]]"
+"* Hipertensão Arterial Sistêmica (HAS) 
+*Pequena hérnia gástrica-hiatal 
+*Doença Obstrutiva Pulmonar Crônica (DPOC) exacerbado 
+*Sepse 
+*Espondilose dorsal 
+*Injúria Miocárdica Inflamatoria  
+*Insuficência Cardiaca Fração Ejeção Preservada (ICFEP),  
+*Pneumonia 
+*Dislipidemia (DLP) 
+*Sindrome Gripal (Sd Gripal) 
+* Ateromatose aórtica e coronariana  "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'O usuário está pedindo para extrair apenas as doenças de uma lista e organizá-las de forma que não haja repetições. Quando houver Diagnósticos similares, devo manter o mais completo. Não devo adicionar nada além da lista, separada por asterisco (
+*) e sem quebra de linha.\n\nVamos analisar o texto e extrair as doenças:\n\n1. HAS - Hipertensão Arterial Sistêmica (repetido várias vezes)\n2. Pequena hérnia gástrica-hiatal\n3. Cardiopatia (repetido)\n4. TINOCA - Isto é ""Tosse Nocturna paroxística do tipo coqueluchoide"" - uma terminologia específica\n5. DPOC - Doença Pulmonar Obstrutiva Crônica (repetido)\n6. PNM - Pneumonia\n7. Sepse (relacionado ao DPOC exacerbado)\n8. Injuria miocardica aguda / Injúria Miocárdica\n9. Ateromatose aórtica e coronariana\n10. Injúria Miocárdica Inflamatória\n11. Sd gripal - Síndrome Gripal\n12. Espondilose dorsal\n13. ICFEP - Insuficiência Cardíaca (possivelmente)\n14. DLP - Dislipidemia\n15. Broncoespasmo grave\n\nAgora, vou:\n- Remover duplicatas\n- Quando houver diagnósticos similares (como ""Injuria miocardica aguda"" e ""Injúria Miocárdica Inflamatória""), manter o mais completo (nesse caso, a inflamatória é mais específica)\n- Manter apenas os diagnósticos, sem outras informações\n\n\n- Organizar a lista de forma padronizada\n\nVou seguir a instrução do usuário sobre a formatação e criar uma lista organizada de diagnósticos, mantendo os critérios estabelecidos. A apresentação será por asterisco sem quebra de linha.\n\nHAS\nHérnia gástrica-hiatal\nCardiopatia\nTINOCA\nDPOC\nSepse\nInjúria Miocárdica Inflamatória\nAteromatose aórtica e coronariana\nSíndrome Gripal\nEspondilose dorsal\nInsuficiência Cardíaca\nPneumonia\nDislipidemia\nBroncoespasmo grave\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Hipertensão Arterial Sistêmica 
+*Hérnia gástrica-hiatal 
+*Cardiopatia 
+*TINOCA 
+*DPOC 
+*Sepse 
+*Injúria Miocárdica Inflamatória 
+*Ateromatose aórtica e coronariana 
+*Síndrome Gripal 
+*Espondilose dorsal 
+*Insuficiência Cardíaca 
+*Pneumonia 
+*Dislipidemia 
+*Broncoespasmo grave'}]"	"[[0.79, 1.0]]"
+"*Hemoglobinopatia SS ou Anemia Falciforme (D57) 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Transtornos de Adaptação 
+*Abstinência de Opióide"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'The user is asking me to extract only the diseases from a list and organize them without repetition, bringing the most complete version when there are similar diseases. They want the output separated by 
+* and without line breaks.\n\nLet me analyze the input:\n- Hemoglobinopatia - disease\n- Anemia falciforme - disease\n- Hemoglobinopatia SS - more complete version\n- anemia falciforme - duplicate\n- Abstinência de opioides - disease (opioid withdrawal)\n- Anemia Falciforme Crise Algica - specific manifestation\n- Dor - symptom, not a disease\n- Anemia - disease but less specific\n- Hemoglobinopatia SS - duplicate\n- D570 - ICD code for sickle cell disease\n- ANEMIA FALCIFORME ANEMIA FALCIFORME - duplicate\n- Anemia Falciforme - duplicate\n- Anemia Falciforme. - duplicate\n- HAS - could be ""Hipertensão Arterial Sistêmica"" (hypertension) or less likely ""Habilidade Adaptativa Sindrome"" - I\'ll include it as hypertension\n- Anemia falciforme c/crise - duplicate with specification\n- uptodade 29 - not a disease\n- ANEMIA FALCIFORME - duplicate\n- SDem evacuação - appears to be a typo or corrupted text, not clear if it\'s a disease\n- Transtornos de Adaptação - disease (adjustment disorders)\n- Hydrea 1 - medication (hydroxyurea), not a disease\n- Anemia Falciforme - duplicate\n\nNow, I need to:\n1. Remove non-diseases (Dor, uptodade 29, Hydrea 1, and SDem evacuação which seems corrupted)\n2. Remove duplicates\n3. Keep the most complete version when there are similar diseases\n\n\n4. Organize by specificity and severity\n\nI\'ll focus on organizing the diseases systematically. I\'ll prioritize comprehensive conditions and group related medical issues, ensuring I capture the most detailed and significant health problems from the list.\n\nThe key is creating a hierarchy that reflects medical complexity, starting with the most encompassing diagnosis and progressively detailing more specific manifestations. This approach helps create a clear, informative medical documentation strategy.\n\nI\'ll structure the ICD code first, then the core disease, followed by specific syndrome variations. The goal is providing a comprehensive yet precise medical overview that captures both primary and secondary health conditions.\n\nThe final list will prioritize clarity, medical accuracy, and systematic presentation, ensuring each condition is represented with appropriate specificity and clinical relevance.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Anemia Falciforme Crise Álgica 
+*Abstinência de Opioides 
+*Hipertensão Arterial Sistêmica 
+*Transtornos de Adaptação'}]"	"[[1.0, 1.0]]"
+"*Hernia Inguinal 
+*Insuficiência Renal Aguda (IRA) KDIGO 3 
+*Cálculo urinário obstrutivo 
+*Nefrite intersticial por medicamento 
+*Hérnia de Hiato 
+*Adenocarcinoma de Prostata Gleason 8 metástatico com acometimento ósseo 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Infecção do Trato Urinário (ITU) 
+*Doença Renal Crônica (DRC) agudizada com rim atrófico 
+* Gastrite "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': ""The user is asking me to extract only diseases from a medical text and present them as a list separated by asterisks (
+*) without line breaks. They want me to avoid duplicates and when there are similar diseases, keep the most complete one.\n\nLet me analyze the text and extract only diseases/specific medical conditions:\n\n1. hernia inguinal - disease\n2. INSUFICIENCIA RENAL AGUDA (Acute Renal Failure) - disease\n3. Lra Kdigo III - Pós Renal por Ureterolitiase + Ureterohidronefrose a Esquerda - more complete form\n4. DMansine - This appears to be a medication (possibly insulin/diabetes medication), not a disease\n5. IRC (Insuficiência Renal Crônica/Chronic Renal Failure) - disease\n6. CÁLCULO URINÁRIO OBSTRUTIVO ESQ, RIM - disease\n7. Nefrite intersticial por medicação (Interstitial nephritis due to medication) - disease\n8. IRA KDIGO 3 - disease (same as IRA)\n9. Hérnia de Hiato (Hiatal hernia) - disease\n10. Gastrite (Gastritis) - disease\n11. Uretrolitiase obstrutiva esquerda (Ureteral stone obstruction left) - disease\n12. DRC agudizada (CRF exacerbated) - disease\n13. CA PRÓSTATA (Prostate cancer) - disease\n14. Cistos corticais simples (Simple cortical cysts) - disease\n15. Adenocarcinoma de prostata Gleason 8, metasático com acometimento osseo - more complete form\n16. nefrolitiase (nephrolithiasis/kidney stones) - disease\n17. CÁLCULO URINÁRIO OBSTRUTIVO, RIM ÚNICO FUNCIONAL - specific form\n\n\n18. DOR ABDOMINAL E PELVICA (abdominal and pelvic pain) - symptom, not a disease\n19. hematúria (hematuria) - symptom, not a disease\n20. IRA (Insuficiência Renal Aguda) - same as above\n21. IRA pós renal (post-renal AKI) - same category\n22. ANESTESIA (Anesthesia) - procedure\n23. HIPÓTESES DIAGNÓSTICAS (Diagnostic hypotheses) - not a disease\n24. NEOPLASIA MALIGNA DA PROSTATA - same as adenocarcinoma\n25. IRC AGUDIZADA - same\n\nI continue filtering out non-disease terms, focusing specifically on medical conditions that qualify as diseases. I've identified symptoms, procedures, and redundant conditions that need to be excluded from my final list. The process requires careful differentiation between actual diseases and other medical terminology.\n\nThe focus remains on identifying distinct, meaningful medical conditions that represent actual pathological states. I'm systematically filtering out symptoms, procedures, and overlapping diagnoses to create a precise, non-redundant compilation of disease classifications.\n\nThe extracted conditions span multiple medical domains: urological, oncological, and inflammatory pathologies. Each identified disease represents a specific clinical entity with unique diagnostic characteristics, ranging from structural abnormalities like hernias to complex neoplastic processes involving the prostate.\n\nSystematic consolidation eliminates redundant terminology, ensuring a comprehensive yet precise medical condition inventory. Renal and prostate-related disorders prominently feature, suggesting significant clinical focus on these anatomical systems.\n\nThe primary pathological categories include musculoskeletal abnormalities, acute and chronic renal insufficiency, urinary tract obstructions, infectious processes, and malignant transformations. Key conditions span hernias, renal failures, calculi, interstitial inflammation, and neoplastic prostate disease.\n\nThe classification emphasizes systematic representation across acute, chronic, and metastatic disease states, highlighting potential clinical progression and interconnected pathological mechanisms.\n"", 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Hernia inguinal 
+*Insuficiência renal aguda 
+*Ureterolitíase com ureterohidronefrose à esquerda 
+*Insuficiência renal crônica 
+*Cálculo urinário obstrutivo 
+*Nefrite intersticial por medicação 
+*IRA KDIGO 3 
+*Hérnia de hiato 
+*Gastrite 
+*Ureterolitíase obstrutiva esquerda 
+*Doença renal crônica agudizada 
+*Adenocarcinoma deprostata Gleason 8 
+*Nefrolitíase 
+*Hipertensão arterial sistêmica 
+*Infecção do trato urinário'}]"	"[[0.53, 0.8]]"
+"*Neoplasia de papila duodenal 
+*Infecção do Trato Urinário (ITU) ou  Sepse de foco urinário 
+*Neoplasia maligna do Pâncreas (C25) ou Adenocarcinoma de pâncreas metástatico (C25) 
+*Artrite 
+*Hipertensão Arterial Sistêmica (HAS) 
+*Neoplasia maligna do corpo do útero ou Adenocarcinoma do endométrio 
+*Doença de Parkinson, Parkinson 
+*Diabetes Mellitus (DM) 
+* Ateromatose artoiliaca 
+* Constipação "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'O usuário quer uma lista de diagnósticos médicos a partir de um texto, sem repetições e consolidando diagnósticos similares. Preciso:\n\n1. Extrair apenas diagnósticos/doenças\n2. Eliminar duplicatas e agrupar similares\n3. Escolher a forma mais completa quando houver variações\n4. Formatar com asterisco e sem quebra de linha\n\nVamos analisar os diagnósticos do texto:\n\n1. Neoplasia de papila duodenal - neoplasia\n2. Infecção urinária / ITU - mesma coisa\n3. Neoplasia maligna do pâncreas (C25) - neoplasia\n4. Artrite - doença\n5. HAS (Hipertensão Arterial Sistêmica) - doença\n6. Neoplasia maligna do corpo do uterus - neoplasia\n7. Adenocarcinoma de pâncreas metastático - neoplasia\n8. Sepse de foco urinário - sepse\n9. CA de pâncreas avançado - câncer/adenocarcinoma\n10. Adenocarcinoma endometrioide - neoplasia\n11. Parkinson - doença\n12. Adenocarcinoma ductal cabeça de pancreas - neoplasia\n13. DM (Diabetes Mellitus) - doença\n14. Ateromatose aortilíaca - doença vascular\n15. Constipação - sintoma/condição\n\nConsolidando similares:\n- Neoplasias de pâncreas: ""Neoplasia maligna do pâncreas"" é a mais completa, cobre as outras formas\n- ""Neoplasia de papila duodenal"" é específica\n- ""Neoplasia maligna do corpo do uterus"" é específica e diferente\n\n\n- Infecção urinária/ITU/Sepse de foco urinário - a sepse é mais completa e grave\n- HAS, DM, Parkinson, Artrite, Ateromatose aortilíaca, Constipação - são diagnósticos únicos\n\nVou manter apenas os diagnósticos únicos e mais representativos, evitando repetições e escolhendo as formas mais completas de cada condição médica identificada.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Neoplasia de papila duodenal 
+*Neoplasia maligna do pâncreas 
+*Neoplasia maligna do corpo do útero 
+*Adenocarcinoma endometrioide 
+*Sepse de foco urinário 
+*Hipertensão Arterial Sistêmica 
+*Artrite 
+*Diabetes Mellitus 
+*Parkinson 
+*Ateromatose aortilíaca 
+*Constipação'}]"	"[[0.91, 1.0]]"
+"*Insuficiência Renal Crônica Dialítico (IRCD) 
+*Insuficiência Cardiaca com Fração de Ejeção Reduzida (ICFER), 
+*Dislipidemia (DLP) 
+*Diabetes Mellitus tipo 2 (DM2) 
+*Artropatia de Charcot em membro inferior esquerdo (MIE) 
+* Pé diabético com ulcera extensa membro inferior esquerdo (MIE) 
+*Osteomielite crônica 
+*Transtornos de adaptação  
+* Melena (K92.1) 
+*Pangastrite enantemática leve com componente erosivo plano leve no antro 
+*Esofagite distal erosiva - Grau A de Los Angeles 
+*Bulboduodenite erosiva leve 
+*Esplenomegalia homogênea 
+*Lipomatose retroperitoneal 
+*Depressão 
+*Choque circulatório  
+*Anemia 
+*Disfagia, Disfagia orofaringea neurogenica moderada 
+*Infecção de Trato Urinário 
+*Obesidade Grau 2 
+*Púrpura Retiforme em membros superiores (MMSS) e memebros inferiores (MMII) 
+*Nefrolitíase 
+*Colelitíase 
+*Infarto Agudo do Miocardio (IAM) em 2021 
+*Linfedema Secundário à Erisipelas de Repetição 
+*Linfonodomegalias na raíz da coxa 
+*Linfangite  
+*Dermatite Ocre 
+*Sepse de foco cutâneo/ pulmonar 
+*Acidente Vascular Cerebral (AVC) prévio 
+*Ex-tabagista 
+*Retinopatia Diabética  
+*Neuropatia Diabética 
+*Hipotireoidismo 
+*Encefalopatia tóxico-metabólica 
+*Tromboembolismo Venoso (TEV) 
+*Ateromatose aortoilíaca e de ramos viscerais 
+*Erisipela crônica 
+*Hipercalemia Grave  
+*Sinovite 
+*Farmacodermia 
+*Insuficiência venosa periférica crônica 
+*Hipertensão Arterial Sistêmica (HAS)"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'The user wants me to extract a list of diseases from the provided text, without repeating similar diagnoses (when diseases are similar, I should include the most complete one), and only list the diseases themselves (no additional text). The format should be separated by asterisks (
+*) without line breaks.\n\nLet me analyze the text and extract the diseases:\n\nLooking at the text, I can identify various diseases and conditions. Let me organize them:\n\n1. Diabetes-related:\n- DM (Diabetes Mellitus)\n- Diabetes tipo 2 clássico\n- DM2\n- Pé Diabético\n- Retinopatia Diabética\n- Neuropatia Diabética Periférica\n- Pé Diabético: Infecção de Pele e Partes Moles\n- Pé diabético com úlcera extensa\n- Pé de Charcot\n- Artropatia de Charcot\n- Pé Diabético: Úlcera infectada\n- Pé Diabético: Infecção de Pele e Partes Moles Complicada por Osteomielite\n\n2. Renal/Urinary:\n- DRC (Doença Renal Crônica)\n- IRC (Insuficiência Renal Crônica)\n- IRC Dialítico\n- Nefrolitíase\n- ITU (Infecção do Trato Urinário)\n- DRC estágio G5D\n\n3. Cardiovascular:\n- HAS (Hipertensão Arterial Sistêmica)\n- DAC (Doença Arterial Coronariana)\n- IAM (Infarto Agudo do Miocárdio)\n- ICC (Insuficiência Cardíaca Congestiva)\n- Choque Circulatório\n- Cor Anêmico\n- AVE/AVC (Acidente Vascular Encefálico/Cerebral)\n- Dislipidemia\n- Insuficiência venosa periférica crônica\n- Ateromatose aortoilíaca\n\n4. Hematologic:\n- Anemia\n- Anemia sintomática\n\n\n- TEV (Tromboembolismo Venoso)\n- Melena\n- Púrpura retiforme\n- QUEDA DE HB\n\n5. Musculoskeletal/Bone:\n- Osteomielite crônica\n- Osteomielite\n- Osteomielite crônica - S. aureus\n- Artrose\n- Artropatia de Charcot\n- Degeneração osteoarticular de Charcot\n- Linfedema\n\nI continue organizing the diseases, focusing on infectious and neurological conditions. The infectious diseases include osteomyelitis, various infections, and systemic conditions like sepsis. Neurological conditions encompass peripheral neuropathies and toxic-metabolic encephalopathy, with additional complexity around Charcot foot pathology.\n\nThe respiratory and gastrointestinal sections reveal additional systemic health challenges. Respiratory issues include productive cough and potential infectious complications. Gastrointestinal findings suggest inflammation in multiple regions - from esophagitis and gastritis to duodenal involvement, indicating a complex clinical picture potentially linked to underlying conditions like diabetes.\n\nMetabolic and electrolyte abnormalities emerge as significant concerns, with critical findings like hyperkalemia requiring immediate intervention. Obesity and complications related to metabolic dysfunction are evident through disease patterns like Charcot foot and peripheral artery disease.\n\nThe comprehensive assessment points to a multifaceted clinical scenario involving metabolic, vascular, and systemic complications that demand careful, integrated management.\n\nI\'ll consolidate these diagnoses, prioritizing the most comprehensive clinical formulations while eliminating redundant entries to create a precise diagnostic overview.\n\nThe approach involves carefully selecting the most complete diagnostic descriptions, removing overlapping or less specific references to ensure clarity and medical precision.\n\nI\'ll focus on presenting the key medical conditions systematically, using concise terminology and maintaining the asterisk-based bullet point format to highlight each diagnostic element clearly.\n\nThe selected conditions represent the most precise and complete diagnostic descriptions from the original documentation, capturing the complex clinical landscape with accuracy and specificity.\n\nI\'m refining the neurological and infectious disease categories, ensuring each diagnostic entry precisely reflects the underlying medical condition while maintaining a structured presentation of the patient\'s complex clinical profile.\n\nThe systematic approach involves carefully evaluating each medical descriptor, eliminating redundant entries and preserving the most clinically significant diagnostic information that captures the patient\'s comprehensive medical status.\n\nKey considerations include distinguishing between similar neurological and infectious presentations, prioritizing the most specific diagnostic terminology that accurately represents the underlying pathological process.\n\nI\'ll focus on precise diagnostic categorizations, ensuring comprehensive yet non-redundant representation of the patient\'s clinical conditions. The goal is creating a hierarchical list that reflects the most clinically significant diagnoses while maintaining accuracy and specificity.\n\nCritical steps involve:\n- Evaluating each potential diagnosis\n- Selecting the most comprehensive descriptor\n- Eliminating overlapping or less precise terminology\n- Preserving the most medically precise language\n\nCharcot foot emerges as a critical diagnostic descriptor, superseding broader terms like ""Pé de Charcot"" or generic ""Charcot"" references. This specific nomenclature captures the neuropathic osteoarthropathy\'s comprehensive clinical presentation.\n\nSystematically consolidating diagnoses requires careful differentiation between similar conditions, prioritizing those with the most clinical information and diagnostic precision.\n\nContinuing the diagnostic mapping:\n- Charcot degenerative joint disease involves bilateral foot and lymphedema progression\n- Erisipela indicates repetitive infectious episodes\n- Linfangite and dermatological changes signal chronic inflammatory processes\n- Thromboembolic events require immediate clinical attention\n- Respiratory and digestive system manifestations suggest complex systemic involvement\n\nHyperkalemia represents a critical electrolyte disturbance requiring urgent intervention. Obesity staging and infectious complications demand comprehensive management strategies.\n\nContinuing the diagnostic assessment, joint and muscular conditions like Charcot arthropathy and osteoarthritis emerge. Neurological manifestations, including dysphagia and neuropathy, complete the intricate clinical picture.\n\nThe revised list consolidates key medical diagnoses, emphasizing precise categorization and eliminating redundant terminology across multiple physiological systems.\n\nCardiovascular conditions reveal complex vascular and cardiac complications: hypertension, coronary artery disease, heart failure, stroke, and peripheral vascular disease. Hematological findings indicate significant hemorrhagic potential through melena and anemia. Infectious processes are marked by recurrent erysipelas and chronic lymphangitis.\n\nThese systematic categorizations highlight interconnected medical challenges requiring comprehensive clinical evaluation and targeted interventions.\n\nThe next set of diagnoses includes dysphagia with neurological origins, liver-related issues like hepatopathy and pharmacodermia, confirming previous systemic patterns of metabolic dysfunction.\n\nI consolidate the final diagnostic list, highlighting the complexity of the patient\'s condition - multiple chronic illnesses spanning metabolic, cardiovascular, renal, and neurological domains.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Diabetes Mellitus tipo 2 
+*Retinopatia Diabética 
+*Neuropatia Diabética Periférica 
+*Pé Diabético com Úlcera Infecionada e Osteomielite 
+*Artropatia de Charcot 
+*Doença Renal Crônica estágio G5D dialítica 
+*Insufficient Renal Crônica crônica 
+*Nefrolitíase 
+*Hipertensão Arterial Sistêmica 
+*Dislipidemia 
+*Doença Arterial Coronariana com Infarto Agudo do Miocárdio prévio 
+*Insuficiência Cardíaca Congestiva 
+*Acidente Vascular Cerebral prévio 
+*Choque Circulatório 
+*Anemia 
+*Melena 
+*Púrpura retiforme 
+*Osteomielite crônica por Staphylococcus aureus 
+*Erisipela de Repetição 
+*Linfangite Crônica com Dermatite Ocre 
+*Sepse de foco cutâneo/pulmonar 
+*Tosse produtiva deglutida 
+*Esofagite distal erosiva 
+*Bulboduodenite erosiva 
+*Pangastrite enantemática 
+*Hipercalemia Grave 
+*Obesidade Grau 2 
+*Artrose 
+*Hipotireoidismo 
+*Insuficiência venosa periférica crônica 
+*Tromboembolismo Venoso 
+*Encefalopatia Tóxico-Metabólica 
+*Disfagia Orofaringea Neurogênica 
+*Linfedema 
+*Hepatopatia 
+*Farmacodermia'}]"	"[[0.92, 0.77]]"
+"*Hipertensão Arterial Sistêmica (HAS) 
+*Varizes em Membros Inferior com úlcera, Úlcera Venosa em Membro Inferior direito 
+*Dermatite Ocre 
+* Tromboembolismo Pulmonar (TEP) 
+*Diabetes Mellitus (DM) 
+*Tabagismo "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'O usuário quer uma lista de diagnósticos extraídos do texto fornecido, sem repetições e consolidando diagnósticos similares, trazendo a versão mais completa. \n\nVou analisar os itens:\n1. HAS - Hipertensão Arterial Sistêmica\n2. Varizes membros infer c/ulcera e inflam - Varizes em membros inferiores com úlcera e inflamação\n3. Dermatite Ocre + cicatriz relacionado a tratamento - Dermatite Ocre\n4. TEP - Tromboembolismo Pulmonar\n5. DMansine - Vou assumir que seja Diabetes Mellitus (DM)\n6. Tabagismo - Hábito de fumar, não é exatamente uma doença\n7. has - mesma que HAS\n8. Lesão por adesivo - Lesão de pele causado por adesivo, não é uma doença em si\n9. Doença ulcera periférica - Úlcera periférica\n10. has - mesma que HAS\n11. DERMATITE OCRE - mesma já listada\n12. Dispensação - não é doença\n13. CFelipe - não entendi o que é, possivelmente nome ou algo não relacionado\n14. ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO - Úlcera venosa em membro inferior direito\n\nAgora vou consolidar:\n- HAS (Hipertensão Arterial Sistêmica) aparece 3x\n- Varizes membros infer c/ulcera e inflam + Doença ulcera periférica + ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO - são similares, vou escolher a mais completa que parece ser ""ÚLCERA VENOSA EM MEMBRO INFERIOR DIREITO"" ou posso deixar ""ÚLCERA VENOSA EM MEMBRO INFERIOR"" que é mais completa\n\n\n- Dermatite Ocre aparece 2x\n- TEP aparece 1x\n- Diabetes Mellitus (assumindo DMansine = DM)\n- Tabagismo (não é doença, vou remover)\n- Lesão por adesivo (não é doença propriamente dita, vou remover)\n- Dispensação (não é doença, vou remover)\n- CFelipe (não é doença, vou remover)\n\nConfirmo os diagnósticos finais: HAS, Dermatite Ocre, TEP, Diabetes Mellitus, ÚLCERA VENOSA EM MEMBRO INFERIOR. Consolidarei as informações para garantir precisão na listagem.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Hipertensão arterial sistêmica 
+*Varizes em membros inferiores com úlcera e inflamação 
+*Dermatite ocre 
+*Tromboembolismo pulmonar 
+*Diabetes mellitus 
+*Úlcera venosa em membro inferior direito'}]"	"[[0.83, 0.83]]"
+"*Anemia, Anemia Crônica 
+*Doença Renal Crônica Estágio G3 (DRC) 
+*Diabetes Mellitus Tipo 2 (DM2) 
+*Pielonefrite com Abcesso Renal à Direita, Pielonefrite complicado com abcesso à direita 
+*Lesão Renal Aguda (LRA) 
+*Ureterolitiase 
+*Infecção de Trato Urinário 
+*Obesidade 
+*Lesões de Pele  "	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'The user is asking me to process a list of medical diagnoses/conditions and create a consolidated list without duplicates. Looking at the conditions:\n\n1. I need to identify only actual diseases/medical conditions\n2. Group similar ones together, keeping the most complete version\n3. Format as a bullet list with 
+* separators and no line breaks\n\nLet me analyze the conditions:\n\nANEMIA / ANEMIA CRÔNICA / ANEMIA GRAVE / Anemia em investigação → Most complete would be ""ANEMIA CRÔNICA"" or ""ANEMIA GRAVE"" depending on severity, but they seem to be referring to the same patient. I\'ll consolidate as ANEMIA (since ""CRÔNICA"" and ""GRAVE"" are descriptors)\n\nDRC ESTÁGIO G3 / DRC → Disease progression, keep ""DRC ESTÁGIO G3""\n\nDM tipo 2 / Dm / DM TIPO 2 / DM2 / DM / DMG → Diabetes Mellitus Tipo 2 is the full diagnosis\n\nPielonefrite complicada / PIELONEFRITE COMPLICADA / Pielonefragite complicada com abcesso / PIELONEFRI... etc. → This appears multiple times. The most complete version is ""PIELONEFRITE COMPLICADA COM ABCESSO RENAL D E HIDRONEFROSE""\n\nLRA → Lesão Renal Aguda (this is a disease)\n\nUreterolitiase → Disease (ureter stones)\n\nInfecc do trato urinario de localiz NE → Infection of urinary tract of unspecified location\n\nOBESIDADE → Disease\n\nLESÕES DE PELE → This is a condition, though somewhat vague. I\'ll keep it.\n\nBexiga → This refers to ""bladder"" but without context it\'s not really a diagnosis. It seems like incomplete text.\n\nCFelipe → This appears to be a name or unrelated text.\n\nSo the consolidated list should be:\n\n\nI\'ve consolidated the complex medical conditions, selecting the most comprehensive descriptions for each diagnosis. The final list captures the key medical issues: chronic anemia, chronic kidney disease stage G3, diabetes mellitus type 2, complex pyelonephritis, acute kidney injury, urinary tract infection, ureterolithiasis, obesity, and skin lesions. The consolidation process prioritized the most detailed medical descriptions while eliminating redundant entries.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*ANEMIA CRÔNICA 
+*DRC ESTÁGIO G3 
+*DIABETES MELLITUS TIPO 2 
+*PIELONEFRITE COMPLICADA COM ABSCESSO RENAL DIREITO E HIDRONEFROSE 
+*LESÃO RENAL AGUDA 
+*URETEROLITÍASE 
+*INFECÇÃO DO TRATO URINÁRIO 
+*OBESIDADE 
+*LESÕES DE PELE'}]"	"[[1.0, 1.0]]"
+"* Tromboembolismo Pulmonar (TEP) 
+* Broncopneumonia bacteriana nosocomial 
+* Empiema 
+* Diabetes Mellitus tipo 2 (DM2) insulino dependente, 
+* Infeccão de cateter central de inserção periférica (PICC) 
+* Hiponatremia 
+* Lesão Renal Aguda (LRA) revertida 
+* Obesidade 
+* Dor osteomuscular 
+* Hemorroidas (CID I84) 
+* Hipertensão Arterial Sistêmica (HAS) 
+* Pós-operatório tardio (POT) de gastroplastia redutora com fístula gástrica salivar 
+* Constipação"	"*[{'type': 'reasoning_content', 'reasoning_content': {'text': 'The user is asking me to extract only the Disease diagnoses from a messy text that contains multiple medical terms, some of which are diseases and some are not. They want:\n1. A list of only diseases\n2. No repeated similar diagnoses (merge similar ones)\n3. When diseases are similar, keep the most complete one\n4. Separate by 
+* (asterisk)\n5. No line breaks\n\nLet me go through the text and identify only the actual diseases:\n\nFrom the text, the actual diseases I can identify are:\n1. TEP (Tromboembolismo Pulmonar)\n2. Pneumonia\n3. Broncopneumonia bacteriana com Empiema\n4. Derrame pleural de contiguidade de coleção periesplênica\n5. Pneumonia bacteriana\n6. Diabetes Mellitus tipo 2 (DM2)\n7. Empiema pleural\n8. Fistula gástrica salivar\n9. Hiponatremia (related to uncontrolled DM)\n10. Cistos corticais bilaterais\n11. LRA (Lesão Renal Aguda)\n12. Obesidade\n13. Dor osteomuscular\n14. Hemorrhoids (I84)\n15. Derrame pleural pequeno\n16. HAS (Hipertensão Arterial Sistêmica)\n17. Constipation\n18. Taquicardia sinusal\n\nNow, let me consolidate similar diagnoses:\n- Pneumonia, Pneumonia bacteriana, Broncopneumonia bacteriana com Empiema, Pneumonia complicada com derrame pleural, Pneumonia nosocomial → Keep the most complete: ""Broncopneumonia bacteriana com Empiema"" or ""Pneumonia complicada com derrame pleural - Empiema pleural""\n- TEP, Derrame pleural → Both are respiratory/thoracic conditions but different\n\n\n- DM, DM2, Diabetes mellitus insulino dependente → ""Diabetes Mellitus tipo 2""\n- Empiema, Empiema pleural → ""Empiema pleural""\n- Fistula gástrica salivar → keep\n- Cistos corticais bilaterais, com até 2,5 cm → keep\n- HAS → keep\n- Obesidade → keep\n- Hiponatremia → keep\n- LRA → keep\n- Taquicardia sinusal → keep\n- Dor osteomuscular → keep\n- Constipação → keep\n\nI\'ll refine the diagnoses by selecting the most comprehensive representations, ensuring precise medical terminology while avoiding redundancy.\n', 'signature': ''}}, {'type': 'text', 'text': '\n\n
+*Tromboembolismo Pulmonar (TEP)\n
+*Broncopneumonia bacteriana com Empiema pleural\n
+*Derrame pleural de contiguidade de coleção periesplênica\n
+*Diabetes Mellitus tipo 2 (DM2)\n
+*Fistula gástrica salivar\n
+*Hiponatremia (DM mal controlado)\n
+*Cistos corticais bilaterais (até 2,5 cm)\n
+*Lesão Renal Aguda (LRA)\n
+*Obesidade\n
+*Dor osteomuscular\n
+*Hemorróidas (I84)\n
+*Derrame pleural pequeno\n
+*Hipertensão Arterial Sistêmica (HAS)\n
+*Constipação\n
+*Taquicardia sinusal'}]"	"[[0.8, 0.92]]"

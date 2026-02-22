@@ -80,15 +80,15 @@ if __name__ == "__main__":
     gt = df_gt["GT"].values.tolist()
     gt = __prepro_diagnostics(gt)
 
-    for file in os.listdir("./data/"):
+    for file in os.listdir("./data_rep/"):
         if "diag" in file:
-            if os.path.exists("./result-gpto3/" + file):
+            if os.path.exists("./result-gpto3_rep/" + file):
                 print("[Ignoring] File already processed", file, "...", flush=True)
                 continue
 
             print("Processing file", file, "...", flush=True)
 
-            df_diag = pd.read_csv("./data/" + file, sep="\t")
+            df_diag = pd.read_csv("./data_rep/" + file, sep="\t")
             if len(df_diag) == 20:
                 df_diag = df_diag.drop(drop_list)
 
@@ -96,4 +96,4 @@ if __name__ == "__main__":
 
             diagnostics_llm = __prepro_diagnostics(llm_diag)
 
-            prompting(gt, diagnostics_llm, "./result-gpto3/" + file)
+            prompting(gt, diagnostics_llm, "./result-gpto3_rep/" + file)
