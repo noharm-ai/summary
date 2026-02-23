@@ -342,9 +342,6 @@ diagnostics:
     - claude_opus41
     - claude_opus45
     - claude_opus46
-    - sonnet_3_7
-    - sonnet_3_5
-    - sonnet_3_5v2
     - llama4_mav
     - llama4_scout
     - llama31_405B
