@@ -285,6 +285,64 @@ lms:
       model: "sabia-4"
       api_key: ${env:MARITACA_API_KEY}
 
+  sabia_4_thinking:
+    class: langchain_community.chat_models.ChatMaritalk
+    args:
+      model: "sabia-4-thinking"
+      api_key: ${env:MARITACA_API_KEY}
+
+  # --- Maritaca Sabiá-4 built-in tools experiment (OpenAI-compatible endpoint) ---
+  # Control: same endpoint/model, no tools, to isolate the effect of each tool.
+  sabia_4_ctrl:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:MARITACA_API_KEY}
+      base_url: "https://chat.maritaca.ai/api"
+      model: "sabia-4"
+      streaming: false
+
+  sabia_4_websearch:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:MARITACA_API_KEY}
+      base_url: "https://chat.maritaca.ai/api"
+      model: "sabia-4"
+      streaming: false
+      extra_body:
+        web_search: true
+
+  # Note: data_ocean / code_execution are only supported on sabia-4-thinking,
+  # not on plain sabia-4 (the API returns tool_not_supported_for_model). Only
+  # web_search works on sabia-4.
+
+  sabia_4_thinking_ctrl:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:MARITACA_API_KEY}
+      base_url: "https://chat.maritaca.ai/api"
+      model: "sabia-4-thinking"
+      streaming: false
+
+  sabia_4_thinking_websearch:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:MARITACA_API_KEY}
+      base_url: "https://chat.maritaca.ai/api"
+      model: "sabia-4-thinking"
+      streaming: false
+      extra_body:
+        web_search: true
+
+  sabia_4_thinking_dataocean:
+    class: langchain_openai.ChatOpenAI
+    args:
+      api_key: ${env:MARITACA_API_KEY}
+      base_url: "https://chat.maritaca.ai/api"
+      model: "sabia-4-thinking"
+      streaming: false
+      extra_body:
+        data_ocean: true
+
   deepseekv32:
     class: langchain_aws.ChatBedrockConverse
     args:
@@ -327,6 +385,39 @@ lms:
       credentials_profile_name: "default"
       model_id: "us.anthropic.claude-opus-4-6-v1"
 
+  # GPT-5.6 on Bedrock: only INFERENCE_PROFILE inference, so the model_id must be
+  # the "us." (or "global.") profile id, not the bare foundation-model id.
+  gpt56_terra:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.openai.gpt-5.6-terra"
+
+  gpt56_luna:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.openai.gpt-5.6-luna"
+
+  gpt56_sol:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.openai.gpt-5.6-sol"
+
+  # Fable 5 requires the account/project data-retention mode to be "provider_data_share"
+  # (set 2026-07-01, account-level). Thinking is always on -> .content is a list of blocks
+  # (handled by extract_text in gen_diagnostics.py).
+  claude_fable5:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-fable-5"
+
 diagnostics:
   llms:
     - deepseekv32
@@ -342,6 +433,7 @@ diagnostics:
     - claude_opus41
     - claude_opus45
     - claude_opus46
+    - claude_fable5
     - llama4_mav
     - llama4_scout
     - llama31_405B
@@ -350,6 +442,9 @@ diagnostics:
     - deepseekr1
     - qwen3-next
     - qwen3-vl
+    - gpt56_terra
+    - gpt56_luna
+    - gpt56_sol
     - openai_120b
     - openai_20b
     - mistral_l24
@@ -372,6 +467,7 @@ diagnostics:
     - sabia_3
     - sabiazinho_4
     - sabia_4
+    - sabia_4_thinking
   prompt: "A tarefa é trazer uma lista de diagnostico, não repetindo diagnósticos similares. Quando tiver doenças parecidas, trazer a mais completa. O texto a seguir contem outras palavras que nao são doençaas, quero que cite apenas as doenças. Não adicionar nada extra além da lista (separa do por * e sem quebra de linha)"
   output: data/
   gt_file: data/gt.tsv
