@@ -2,7 +2,9 @@
 
 | F1 o3 Rep⁴ | F1 Score o3* | F1 Score 4o¹  | Model               | Price³     | Correctness²  | Completeness²  |
 |-----------:|-------------:|--------------:|---------------------|:-----------|--------------:|---------------:|
+|            | 0.939-0.899  |               | Fable 5.1           |
 |            | 0.931-0.930  |               | GPT 5.6 Terra       |  $0.00220
+|            | 0.916-0.918  |               | GPT 6 Astra         |  $0.01000⁵
 |    0.885   | 0.915-0.909  |               | GPT 5 mini          |  $0.00025
 |            | 0.915-0.904  |               | GPT 5.6 Sol         |  $0.00400
 |            | 0.911-0.930  |               | Fable 5             |  $0.01000
@@ -70,4 +72,6 @@
 ³ Price per 1,000 input tokens in AWS Bedrock N. Virginia Standard Tier
 
 ⁴ Using [Prompt Repetition](https://arxiv.org/html/2512.14982v1)
+
+⁵ OpenAI [list price](https://developers.openai.com/api/docs/pricing) per 1,000 input tokens — GPT 6 Astra is not in the AWS Price List API yet
 ^ F1 Score Improve by Prompt Repetition approach

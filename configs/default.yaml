@@ -418,6 +418,21 @@ lms:
       credentials_profile_name: "default"
       model_id: "us.anthropic.claude-fable-5"
 
+  claude_fable51:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-fable-5-1"
+
+  # GPT-6 Astra on Bedrock: INFERENCE_PROFILE-only, like the GPT-5.6 family.
+  gpt6_astra:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.openai.gpt-6-astra"
+
 diagnostics:
   llms:
     - deepseekv32
@@ -434,6 +449,8 @@ diagnostics:
     - claude_opus45
     - claude_opus46
     - claude_fable5
+    - claude_fable51
+    - gpt6_astra
     - llama4_mav
     - llama4_scout
     - llama31_405B
