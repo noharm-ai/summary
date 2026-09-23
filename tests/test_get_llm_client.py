@@ -47,3 +47,20 @@ def test_get_llm_client_invalid_class_path():
 
     with pytest.raises(ValueError, match="Invalid class path: 'InvalidClassPath'.*"):
         get_llm_client("bad", config)
+
+
+class DummyBedrockLLM:
+    def __init__(self, model_id=None, config=None):
+        self.model_id = model_id
+        self.config = config
+
+
+def test_get_llm_client_botocore_config_mapping():
+    from botocore.config import Config
+
+    sys.modules["mock_bedrock"] = SimpleNamespace(DummyBedrockLLM=DummyBedrockLLM)
+    config = OmegaConf.create({"slow": {"class": "mock_bedrock.DummyBedrockLLM", "args": {"model_id": "x", "config": {"read_timeout": 600}}}})
+
+    client = get_llm_client("slow", config)
+    assert isinstance(client.config, Config)
+    assert client.config.read_timeout == 600

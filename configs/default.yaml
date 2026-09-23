@@ -448,6 +448,9 @@ lms:
       region_name: "us-east-1"
       credentials_profile_name: "default"
       model_id: "us.moonshotai.kimi-k3"
+      # Some cases think for >60s (botocore default read timeout) and time out.
+      config:
+        read_timeout: 600
 
 diagnostics:
   llms:

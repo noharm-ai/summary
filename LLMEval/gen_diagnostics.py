@@ -28,7 +28,14 @@ def get_llm_client(provider: str, lms_config: DictConfig):
     module = import_module(module_path)
     client_cls = getattr(module, class_name)
 
-    kwargs = client_config.get("args", {})
+    args = client_config.get("args", {})
+    kwargs = OmegaConf.to_container(args, resolve=True) if OmegaConf.is_config(args) else dict(args)
+    # Bedrock clients take a botocore Config object; allow it as a plain mapping in YAML
+    # (e.g. config: {read_timeout: 600}) for slow thinking models.
+    if isinstance(kwargs.get("config"), dict):
+        from botocore.config import Config
+
+        kwargs["config"] = Config(**kwargs["config"])
     return client_cls(**kwargs)
 
 
