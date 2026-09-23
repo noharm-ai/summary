@@ -433,11 +433,28 @@ lms:
       credentials_profile_name: "default"
       model_id: "us.openai.gpt-6-astra"
 
+  # Opus 5.5 and Kimi K3 on Bedrock: INFERENCE_PROFILE-only. Kimi K3 thinks by default
+  # (list .content, handled by extract_text).
+  claude_opus55:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.anthropic.claude-opus-5-5"
+
+  kimik3:
+    class: langchain_aws.ChatBedrockConverse
+    args:
+      region_name: "us-east-1"
+      credentials_profile_name: "default"
+      model_id: "us.moonshotai.kimi-k3"
+
 diagnostics:
   llms:
     - deepseekv32
     - kimik25
     - kimik2-think
+    - kimik3
     - glm47
     - minimax21
     - nova_premier
@@ -450,6 +467,7 @@ diagnostics:
     - claude_opus46
     - claude_fable5
     - claude_fable51
+    - claude_opus55
     - gpt6_astra
     - llama4_mav
     - llama4_scout
