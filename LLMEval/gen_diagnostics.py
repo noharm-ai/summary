@@ -39,6 +39,14 @@ def build_default_prompt(base_prompt: str, ner_text: str) -> str:
 def build_prompt_repetition_prompt(base_prompt: str, ner_text: str) -> str:
     return f"{base_prompt}\n\n{ner_text}\n\n{base_prompt}\n\n{ner_text}"
 
+
+def extract_text(content) -> str:
+    # Thinking models via ChatBedrockConverse (Fable 5, kimi-think, deepseek r1) return
+    # .content as a list of blocks (reasoning_content + text); keep only the text blocks.
+    if isinstance(content, list):
+        return "".join(block.get("text", "") for block in content if isinstance(block, dict) and block.get("type") == "text")
+    return content
+
 def run_diagnostics_experiment(
     cfg: DictConfig,
     current_dir: str,
@@ -66,7 +74,7 @@ def run_diagnostics_experiment(
             ner_text = row["DIAGNOSTICO_NER"]
             prompt = prompt_builder(ner_text)
             response = llm_client.invoke(prompt)
-            results.append({"DIAGNOSTICOS_LLM": response.content, "DIAGNOSTICOS_NER": ner_text})
+            results.append({"DIAGNOSTICOS_LLM": extract_text(response.content), "DIAGNOSTICOS_NER": ner_text})
 
         with open(output_file, "w", encoding="utf-8", newline="") as out_file:
             fieldnames = ["DIAGNOSTICOS_LLM", "DIAGNOSTICOS_NER"]
@@ -121,4 +129,4 @@ def main_rep(cfg: DictConfig):
     )
 
 if __name__ == "__main__":
-    main_rep()
+    main()
